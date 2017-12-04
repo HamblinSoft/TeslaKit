@@ -1,5 +1,5 @@
 //
-//  TAVehicleOption.swift
+//  TKVehicleOption.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/24/17.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-/// Represents an option of a `TAVehicle`. For all options, see TeslaVehicleOptionCodes.plist in Resources.
-public class TAVehicleOption {
+/// Represents an option of a `TKVehicle`. For all options, see TeslaVehicleOptionCodes.plist in Resources.
+public class TKVehicleOption {
     
     /// The option code
     public let code: String
@@ -33,12 +33,12 @@ public class TAVehicleOption {
     }()
     
 
-    /// Default initializer initializing a new `TAVehicleOption` from a code. The name and description are inferred from the TeslaVehicleOptionCodes.plist in Resources.
+    /// Default initializer initializing a new `TKVehicleOption` from a code. The name and description are inferred from the TeslaVehicleOptionCodes.plist in Resources.
     ///
     /// - Parameter code: The vehicle option code
     public init(code: String) {
         self.code = code
-        self.name = TAVehicleOption.data[code]?["name"] ?? ""
-        self.description = TAVehicleOption.data[code]?["description"] ?? ""
+        self.name = TKVehicleOption.data[code]?["name"] ?? ""
+        self.description = TKVehicleOption.data[code]?["description"] ?? ""
     }
 }

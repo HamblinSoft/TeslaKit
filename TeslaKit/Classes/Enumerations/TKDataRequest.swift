@@ -1,5 +1,5 @@
 //
-//  TADataRequest.swift
+//  TKDataRequest.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum TADataRequest: String, EnumCollection {
+public enum TKDataRequest: String, EnumCollection {
 
     // MARK: - State and Settings
     // These resources are read-only and determine the state of the vehicle's various sub-systems.

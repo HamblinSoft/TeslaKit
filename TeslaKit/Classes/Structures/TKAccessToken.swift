@@ -1,5 +1,5 @@
 //
-//  TAAccessToken.swift
+//  TKAccessToken.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/19/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAAccessToken {
+public struct TKAccessToken {
 
     ///
     public struct Request {
@@ -85,7 +85,7 @@ public struct TAAccessToken {
 }
 
 ///
-extension TAAccessToken.Request: TAMappable {
+extension TKAccessToken.Request: TKMappable {
 
     public mutating func mapping(map: Map) {
         grantType <- map["grant_type"]
@@ -97,7 +97,7 @@ extension TAAccessToken.Request: TAMappable {
 }
 
 ///
-extension TAAccessToken.Response: TAMappable {
+extension TKAccessToken.Response: TKMappable {
 
     public mutating func mapping(map: Map) {
         accessToken <- map["access_token"]

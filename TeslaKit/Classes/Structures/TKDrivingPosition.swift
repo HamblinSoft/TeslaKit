@@ -1,5 +1,5 @@
 //
-//  TADrivingPosition.swift
+//  TKDrivingPosition.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TADrivingPosition {
+public struct TKDrivingPosition {
 
     ///
     public struct Response {
@@ -33,7 +33,7 @@ public struct TADrivingPosition {
     }
 }
 
-extension TADrivingPosition.Response: TADataRequestResponse {
+extension TKDrivingPosition.Response: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         shiftState <- map["response.shift_state"]

@@ -1,5 +1,5 @@
 //
-//  TAChargingState.swift
+//  TKChargingState.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/20/17.
@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum TAChargingState: String {
+public enum TKChargingState: String {
 
     ///
     case disconnected = "Disconnected"

@@ -1,5 +1,5 @@
 //
-//  TAStringArrayTransform.swift
+//  TKStringArrayTransform.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/20/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAStringArrayTransform: TransformType {
+public struct TKStringArrayTransform: TransformType {
 
     ///
     public typealias Object = [String]

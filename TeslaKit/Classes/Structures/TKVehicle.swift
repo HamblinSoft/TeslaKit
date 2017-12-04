@@ -1,5 +1,5 @@
 //
-//  TAVehicle.swift
+//  TKVehicle.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/20/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAVehicle {
+public struct TKVehicle {
 
     /// The unique identifier of the vehicle
     public var id: Int = 0
@@ -25,13 +25,13 @@ public struct TAVehicle {
     public var displayName: String = ""
 
     /// The options of the vehicle
-    public var options: [TAVehicleOption] = []
+    public var options: [TKVehicleOption] = []
 
     /// The vehicle's vehicle identification number
     public var vin: VIN = VIN()
 
     /// The vehicle's current state
-    public var status: TAVehicleStatus = TAVehicleStatus.asleep
+    public var status: TKVehicleStatus = TKVehicleStatus.asleep
 
     /// The vehicle's remote start configuration
     public var remoteStartEnabled: Bool = false
@@ -40,7 +40,7 @@ public struct TAVehicle {
     public init() {}
 
     ///
-    public init(id: Int, vehicleId: Int, userId: Int, displayName: String, vin: String, status: TAVehicleStatus, remoteStartEnabled: Bool) {
+    public init(id: Int, vehicleId: Int, userId: Int, displayName: String, vin: String, status: TKVehicleStatus, remoteStartEnabled: Bool) {
         self.id = id
         self.vehicleId = vehicleId
         self.userId = userId
@@ -51,11 +51,11 @@ public struct TAVehicle {
     }
 }
 
-extension TAVehicle: TAMappable {
+extension TKVehicle: TKMappable {
     public mutating func mapping(map: Map) {
         displayName <- map["display_name"]
         id <- map["id"]
-        options <- (map["option_codes"], TAVehicleOptionTransform(separator: ","))
+        options <- (map["option_codes"], TKVehicleOptionTransform(separator: ","))
         userId <- map["user_id"]
         vehicleId <- map["vehicle_id"]
         vin <- (map["vin"], VINTransform())

@@ -1,5 +1,5 @@
 //
-//  TAClimateSettings.swift
+//  TKClimateSettings.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAClimateSettings {
+public struct TKClimateSettings {
 
     ///
     public struct Response {
@@ -49,7 +49,7 @@ public struct TAClimateSettings {
     }
 }
 
-extension TAClimateSettings.Response: TADataRequestResponse {
+extension TKClimateSettings.Response: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         seatHeaterLeft <- map["response.seat_heater_left"]

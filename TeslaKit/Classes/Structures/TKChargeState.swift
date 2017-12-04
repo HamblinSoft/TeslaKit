@@ -1,5 +1,5 @@
 //
-//  TAChargeState.swift
+//  TKChargeState.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/20/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAChargeState {
+public struct TKChargeState {
 
     ///
     public struct Request {
@@ -25,7 +25,7 @@ public struct TAChargeState {
     public struct Response {
 
         ///
-        public var chargingState: TAChargingState = TAChargingState.complete
+        public var chargingState: TKChargingState = TKChargingState.complete
 
         ///
         public var chargeToMaxRange: Bool = false
@@ -56,7 +56,7 @@ public struct TAChargeState {
     }
 }
 
-extension TAChargeState.Response: TADataRequestResponse {
+extension TKChargeState.Response: TKDataRequestResponse {
     public mutating func mapping(map: Map) {
         chargingState <- (map["response.charging_state"], EnumTransform())
         chargeToMaxRange <- map["response.charge_to_max_range"]

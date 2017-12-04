@@ -1,5 +1,5 @@
 //
-//  TAMappable.swift
+//  TKMappable.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/19/17.
@@ -10,13 +10,13 @@ import Foundation
 import ObjectMapper
 
 ///
-public protocol TAMappable: Mappable {
+public protocol TKMappable: Mappable {
     ///
     init()
 }
 
 ///
-public extension TAMappable {
+public extension TKMappable {
 
     ///
     public init() {

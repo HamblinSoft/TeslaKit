@@ -1,5 +1,5 @@
 //
-//  TAError.swift
+//  TKError.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum TAError: String, Error {
+public enum TKError: String, Error {
 
     ///
     case vehicleUnavailable = "vehicle unavailable"

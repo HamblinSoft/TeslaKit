@@ -75,7 +75,7 @@ extension String {
     }
 }
 
-extension VIN: TAMappable {
+extension VIN: TKMappable {
     public mutating func mapping(map: Map) {
 
     }

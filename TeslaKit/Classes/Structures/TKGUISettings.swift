@@ -1,5 +1,5 @@
 //
-//  TAGUISettings.swift
+//  TKGUISettings.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAGUISettings {
+public struct TKGUISettings {
 
     ///
     public struct Response {
@@ -31,7 +31,7 @@ public struct TAGUISettings {
     }
 }
 
-extension TAGUISettings.Response: TADataRequestResponse {
+extension TKGUISettings.Response: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         guiDistanceUnits <- map["response.gui_distance_units"]

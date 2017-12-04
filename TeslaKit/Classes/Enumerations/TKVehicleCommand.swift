@@ -1,5 +1,5 @@
 //
-//  TAVehicleCommand.swift
+//  TKVehicleCommand.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/24/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Commands that can be sent to the vehicle
-public enum TAVehicleCommand: String, EnumCollection {
+public enum TKVehicleCommand: String, EnumCollection {
 
     /// Wakes up the car from the sleep state. Necessary to get some data from the car.
     case wake = "wake_up"
@@ -115,7 +115,7 @@ public enum TAVehicleCommand: String, EnumCollection {
     }
 }
 
-extension TAVehicleCommand.Response: TAMappable {
+extension TKVehicleCommand.Response: TKMappable {
     public mutating func mapping(map: Map) {
         result <- map["response.result"]
         reason <- map["response.reason"]

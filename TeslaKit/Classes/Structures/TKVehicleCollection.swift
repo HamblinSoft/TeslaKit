@@ -1,5 +1,5 @@
 //
-//  TAVehicleCollection.swift
+//  TKVehicleCollection.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/20/17.
@@ -10,21 +10,21 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAVehicleCollection {
+public struct TKVehicleCollection {
 
     ///
-    public var vehicles: [TAVehicle] = []
+    public var vehicles: [TKVehicle] = []
 
     ///
     public init() {}
 
     ///
-    public init(vehicles: [TAVehicle]) {
+    public init(vehicles: [TKVehicle]) {
         self.vehicles = vehicles
     }
 }
 
-extension TAVehicleCollection: TAMappable {
+extension TKVehicleCollection: TKMappable {
     public mutating func mapping(map: Map) {
         vehicles <- map["response"]
     }

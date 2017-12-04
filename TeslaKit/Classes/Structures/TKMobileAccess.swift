@@ -1,5 +1,5 @@
 //
-//  TAMobileAccess.swift
+//  TKMobileAccess.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAMobileAccess {
+public struct TKMobileAccess {
 
     ///
     public struct Response {
@@ -28,7 +28,7 @@ public struct TAMobileAccess {
     }
 }
 
-extension TAMobileAccess.Response: TADataRequestResponse {
+extension TKMobileAccess.Response: TKDataRequestResponse {
     public mutating func mapping(map: Map) {
         response <- map["response"]
     }

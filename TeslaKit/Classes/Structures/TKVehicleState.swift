@@ -1,5 +1,5 @@
 //
-//  TAVehicleState.swift
+//  TKVehicleState.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TAVehicleState {
+public struct TKVehicleState {
 
     ///
     public struct Response {
@@ -65,7 +65,7 @@ public struct TAVehicleState {
     }
 }
 
-extension TAVehicleState.Response: TADataRequestResponse {
+extension TKVehicleState.Response: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         exteriorColor <- map["response.exterior_color"]
