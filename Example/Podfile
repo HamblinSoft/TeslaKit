@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TeslaKit_Example' do
+  pod 'TeslaKit', :path => '../'
+
+  target 'TeslaKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
