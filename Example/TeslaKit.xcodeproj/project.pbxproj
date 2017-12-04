@@ -43,9 +43,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6B5A14EDE92949B23470B8E7 /* Pods-TeslaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit_Tests/Pods-TeslaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7984215B779CAABC965A6657 /* TeslaKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaKit.podspec; path = ../TeslaKit.podspec; sourceTree = "<group>"; };
-		9281F69FEBC4F0DABE61A53E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B33C6DB3FE944EC7C1F6932A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7984215B779CAABC965A6657 /* TeslaKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TeslaKit.podspec; path = ../TeslaKit.podspec; sourceTree = "<group>"; };
+		9281F69FEBC4F0DABE61A53E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B33C6DB3FE944EC7C1F6932A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E8D8B29F3BB6CC07B6170D36 /* Pods_TeslaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeslaKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4Y79Z2NR75;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 4Y79Z2NR75;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -319,10 +321,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TeslaKit_Example/Pods-TeslaKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TeslaKit/TeslaKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +521,7 @@
 			baseConfigurationReference = 29E2D147D0131257D99C722E /* Pods-TeslaKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Y79Z2NR75;
 				INFOPLIST_FILE = TeslaKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -532,6 +537,7 @@
 			baseConfigurationReference = 50F399F337EC4373F155B515 /* Pods-TeslaKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4Y79Z2NR75;
 				INFOPLIST_FILE = TeslaKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -546,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B5A14EDE92949B23470B8E7 /* Pods-TeslaKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4Y79Z2NR75;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -567,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 290DF2732E88D3E03D550FFD /* Pods-TeslaKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 4Y79Z2NR75;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

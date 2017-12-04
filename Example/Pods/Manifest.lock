@@ -1,7 +1,10 @@
 PODS:
-  - TeslaKit (0.1.0)
+  - ObjectMapper (3.1.0)
+  - TeslaKit (0.1.0):
+    - ObjectMapper (~> 3.0)
 
 DEPENDENCIES:
+  - ObjectMapper (~> 3.0)
   - TeslaKit (from `../`)
 
 EXTERNAL SOURCES:
@@ -9,8 +12,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TeslaKit: f0f22b12c5509c9c7e7566839d1b8799c012b987
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  TeslaKit: d562f456b7e4c37e820a2a4f86be2d7050ffe191
 
-PODFILE CHECKSUM: 3fac93fcd15b031358ff9d8af8e79870a5fd83b8
+PODFILE CHECKSUM: 79d6f4f6c36fae0ffa71964487021bdca6876f4f
 
 COCOAPODS: 1.4.0.beta.2

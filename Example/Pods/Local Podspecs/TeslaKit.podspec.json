@@ -1,7 +1,7 @@
 {
   "name": "TeslaKit",
   "version": "0.1.0",
-  "summary": "A short description of TeslaKit.",
+  "summary": "TeslaKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jjjjaren/TeslaKit",
   "license": {
@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TeslaKit/Classes/**/*"
+  "source_files": "TeslaKit/Classes/**/*",
+  "dependencies": {
+    "ObjectMapper": [
+      "~> 3.0"
+    ]
+  }
 }

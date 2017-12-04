@@ -1,7 +1,12 @@
+#
+
+inhibit_all_warnings!
+
 use_frameworks!
 
 target 'TeslaKit_Example' do
   pod 'TeslaKit', :path => '../'
+  pod 'ObjectMapper', '~> 3.0'
 
   target 'TeslaKit_Tests' do
     inherit! :search_paths
