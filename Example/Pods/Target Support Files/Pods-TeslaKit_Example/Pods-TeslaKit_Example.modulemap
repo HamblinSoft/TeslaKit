@@ -1,0 +1,6 @@
+framework module Pods_TeslaKit_Example {
+  umbrella header "Pods-TeslaKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

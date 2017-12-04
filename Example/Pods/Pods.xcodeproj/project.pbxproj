@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1054241D8953AEC5772855A4215C99CD /* TeslaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1433DA0F3B2FBF82A063BBFB0C8DBB36 /* TeslaKit-dummy.m */; };
+		4F0FE3BA1BE4F509AB2FF6CBC281F20F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5C68BB1554DADAEE3A7D53C1D9BBA76E /* Pods-TeslaKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58348E261CFD81216FA9AA4A93E0C3BA /* Pods-TeslaKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C99619DF5C67F8D9952916672286AA9 /* Pods-TeslaKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D33B384810DEE5255FFEBFFBCDF1B2F4 /* Pods-TeslaKit_Example-dummy.m */; };
+		6D6C88154127DD272895E95FDA6088BA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D863F0C2BF1CD4AFF959ABCC3831888 /* ReplaceMe.swift */; };
+		7CB45B2D10359D47D1CCEDBC982317D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7F57ED9200C87BDDC45765EA43BE83D1 /* Pods-TeslaKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D0C0B66E8FF1C77B0B11C21E3FBFEAD /* Pods-TeslaKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9756E23CB95B18B1921670E62A8D540C /* Pods-TeslaKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 886602B31CF2E3AA1F886551346041F1 /* Pods-TeslaKit_Tests-dummy.m */; };
+		E66A79EE425BA24EA3261A95EC5DD4AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F941625DC1CC125CD3CF85FCE79F501C /* TeslaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F771C4E49C5051DC0E891289A9949F69 /* TeslaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		082A817B0955FDAA638D0E41329DA4E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6835F45B2C0F999E18CC55F97ED21FF1;
+			remoteInfo = TeslaKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BEC61E212C17D45DBF26EFFA7C2C563 /* Pods-TeslaKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TeslaKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1433DA0F3B2FBF82A063BBFB0C8DBB36 /* TeslaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TeslaKit-dummy.m"; sourceTree = "<group>"; };
+		1784E386E4EA40FB7286E3E89A139022 /* Pods-TeslaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3309D52709D1D5014732CE498098E1A6 /* Pods-TeslaKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeslaKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3BD62A989D0F9C1C3B6BF2E7798B5C86 /* Pods-TeslaKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TeslaKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		428FF2960B8C1EA1710CCEE2C65A6796 /* Pods-TeslaKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TeslaKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		54AD01A05C2B8A55400DBF05F9F819A1 /* Pods-TeslaKit_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeslaKit_Tests-resources.sh"; sourceTree = "<group>"; };
+		58348E261CFD81216FA9AA4A93E0C3BA /* Pods-TeslaKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TeslaKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		611775DE52F1A6C3E8A8065BECD64B6B /* Pods-TeslaKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TeslaKit_Tests.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66E56C33DDC682A3F26BE29E1F41820D /* Pods_TeslaKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TeslaKit_Tests.framework; path = "Pods-TeslaKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2D9605142E74A8DDB199CE08F98E8A /* Pods-TeslaKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TeslaKit_Example.modulemap"; sourceTree = "<group>"; };
+		6D0C0B66E8FF1C77B0B11C21E3FBFEAD /* Pods-TeslaKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TeslaKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		6D863F0C2BF1CD4AFF959ABCC3831888 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TeslaKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		6E1B99829BA8CA8511E7E0530CDB8019 /* Pods-TeslaKit_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeslaKit_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6F2F1548BEDBEC2EBEFED05BCC36D5CE /* Pods-TeslaKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		79F6A7DF9BF054FAF0D3D72533986305 /* Pods-TeslaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8459FCA9AEAE4BF8854B67FAE273289E /* Pods_TeslaKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TeslaKit_Example.framework; path = "Pods-TeslaKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		886602B31CF2E3AA1F886551346041F1 /* Pods-TeslaKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TeslaKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		8C64DE5983DE662FB1C78EECC2578CF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922685F9E580B8EAE0D0BBC1FD44ABFD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9850219B8C09733DEBBD25D457AFB0B0 /* TeslaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TeslaKit.xcconfig; sourceTree = "<group>"; };
+		A52A02D8AF92305DA3B5E9F1720521A9 /* Pods-TeslaKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeslaKit_Example-resources.sh"; sourceTree = "<group>"; };
+		BB76B9B8075C87A58178C59BDE569AA9 /* TeslaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TeslaKit.modulemap; sourceTree = "<group>"; };
+		BC5EBC1E17CE47FC131CEBFB9EDD0A4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33B384810DEE5255FFEBFFBCDF1B2F4 /* Pods-TeslaKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TeslaKit_Example-dummy.m"; sourceTree = "<group>"; };
+		DEFC6DC62BF9360B616C0C85E5E0F018 /* Pods-TeslaKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TeslaKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E62D387D57FB4E14A16F413DC5380A83 /* TeslaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-prefix.pch"; sourceTree = "<group>"; };
+		F6C30BEFF22DE1A6D45B7DE4432BEE7D /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TeslaKit.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F771C4E49C5051DC0E891289A9949F69 /* TeslaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-umbrella.h"; sourceTree = "<group>"; };
+		F8115E8294798B05052C2691814AF978 /* Pods-TeslaKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EE9BCD922BA920B4A851DF7D91F7671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A79EE425BA24EA3261A95EC5DD4AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A630352D6A0CE3ED7CD9F1ABCE1E46AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0FE3BA1BE4F509AB2FF6CBC281F20F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74FB67F202A7B7E1EB7EFCDA050617C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB45B2D10359D47D1CCEDBC982317D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D9BD69AF1287EFC37734F0CE8B3F375 /* TeslaKit */ = {
+			isa = PBXGroup;
+			children = (
+				6D863F0C2BF1CD4AFF959ABCC3831888 /* ReplaceMe.swift */,
+				2AD55D32FD628694D91D535038FAFC3A /* Support Files */,
+			);
+			name = TeslaKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		2AD55D32FD628694D91D535038FAFC3A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C64DE5983DE662FB1C78EECC2578CF2 /* Info.plist */,
+				BB76B9B8075C87A58178C59BDE569AA9 /* TeslaKit.modulemap */,
+				9850219B8C09733DEBBD25D457AFB0B0 /* TeslaKit.xcconfig */,
+				1433DA0F3B2FBF82A063BBFB0C8DBB36 /* TeslaKit-dummy.m */,
+				E62D387D57FB4E14A16F413DC5380A83 /* TeslaKit-prefix.pch */,
+				F771C4E49C5051DC0E891289A9949F69 /* TeslaKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TeslaKit";
+			sourceTree = "<group>";
+		};
+		36978D0ADE04E3F14FE7D2970A637B1F /* Pods-TeslaKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				922685F9E580B8EAE0D0BBC1FD44ABFD /* Info.plist */,
+				6B2D9605142E74A8DDB199CE08F98E8A /* Pods-TeslaKit_Example.modulemap */,
+				DEFC6DC62BF9360B616C0C85E5E0F018 /* Pods-TeslaKit_Example-acknowledgements.markdown */,
+				428FF2960B8C1EA1710CCEE2C65A6796 /* Pods-TeslaKit_Example-acknowledgements.plist */,
+				D33B384810DEE5255FFEBFFBCDF1B2F4 /* Pods-TeslaKit_Example-dummy.m */,
+				3309D52709D1D5014732CE498098E1A6 /* Pods-TeslaKit_Example-frameworks.sh */,
+				A52A02D8AF92305DA3B5E9F1720521A9 /* Pods-TeslaKit_Example-resources.sh */,
+				6D0C0B66E8FF1C77B0B11C21E3FBFEAD /* Pods-TeslaKit_Example-umbrella.h */,
+				6F2F1548BEDBEC2EBEFED05BCC36D5CE /* Pods-TeslaKit_Example.debug.xcconfig */,
+				F8115E8294798B05052C2691814AF978 /* Pods-TeslaKit_Example.release.xcconfig */,
+			);
+			name = "Pods-TeslaKit_Example";
+			path = "Target Support Files/Pods-TeslaKit_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				EAB8FC1711A5EDD1BC5A17147C29A92E /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A24E0B2EE5F75D8B941F40C684EDFFD5 /* Products */,
+				EBFF0764513619DDB3D0424965D597E7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A24E0B2EE5F75D8B941F40C684EDFFD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8459FCA9AEAE4BF8854B67FAE273289E /* Pods_TeslaKit_Example.framework */,
+				66E56C33DDC682A3F26BE29E1F41820D /* Pods_TeslaKit_Tests.framework */,
+				F6C30BEFF22DE1A6D45B7DE4432BEE7D /* TeslaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EAB8FC1711A5EDD1BC5A17147C29A92E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D9BD69AF1287EFC37734F0CE8B3F375 /* TeslaKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		EBFF0764513619DDB3D0424965D597E7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				36978D0ADE04E3F14FE7D2970A637B1F /* Pods-TeslaKit_Example */,
+				F174CED2E56C1DF6E774CDD18100373E /* Pods-TeslaKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F174CED2E56C1DF6E774CDD18100373E /* Pods-TeslaKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BC5EBC1E17CE47FC131CEBFB9EDD0A4A /* Info.plist */,
+				611775DE52F1A6C3E8A8065BECD64B6B /* Pods-TeslaKit_Tests.modulemap */,
+				3BD62A989D0F9C1C3B6BF2E7798B5C86 /* Pods-TeslaKit_Tests-acknowledgements.markdown */,
+				0BEC61E212C17D45DBF26EFFA7C2C563 /* Pods-TeslaKit_Tests-acknowledgements.plist */,
+				886602B31CF2E3AA1F886551346041F1 /* Pods-TeslaKit_Tests-dummy.m */,
+				6E1B99829BA8CA8511E7E0530CDB8019 /* Pods-TeslaKit_Tests-frameworks.sh */,
+				54AD01A05C2B8A55400DBF05F9F819A1 /* Pods-TeslaKit_Tests-resources.sh */,
+				58348E261CFD81216FA9AA4A93E0C3BA /* Pods-TeslaKit_Tests-umbrella.h */,
+				79F6A7DF9BF054FAF0D3D72533986305 /* Pods-TeslaKit_Tests.debug.xcconfig */,
+				1784E386E4EA40FB7286E3E89A139022 /* Pods-TeslaKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-TeslaKit_Tests";
+			path = "Target Support Files/Pods-TeslaKit_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1E0576011BD20057BC147430629AD5CC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C68BB1554DADAEE3A7D53C1D9BBA76E /* Pods-TeslaKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		445AC051DE0F2B2A4CBE25DFF01EDC76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F941625DC1CC125CD3CF85FCE79F501C /* TeslaKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560862EC8A44F3BE7A6E44525453F47F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F57ED9200C87BDDC45765EA43BE83D1 /* Pods-TeslaKit_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		255D94E36D92E58799D8586BD9524B86 /* Pods-TeslaKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC0940DCF436258E5210CB37882BAED1 /* Build configuration list for PBXNativeTarget "Pods-TeslaKit_Tests" */;
+			buildPhases = (
+				BC4975A33E436DC29DAB80A25192CCA4 /* Sources */,
+				A630352D6A0CE3ED7CD9F1ABCE1E46AC /* Frameworks */,
+				1E0576011BD20057BC147430629AD5CC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TeslaKit_Tests";
+			productName = "Pods-TeslaKit_Tests";
+			productReference = 66E56C33DDC682A3F26BE29E1F41820D /* Pods_TeslaKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41F4851685B6B468E233DC88D69A64CD /* Pods-TeslaKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E15EB84229AEC4C4DF151EECED934B38 /* Build configuration list for PBXNativeTarget "Pods-TeslaKit_Example" */;
+			buildPhases = (
+				161261FA435A749F5EBD5F16EDC92AB8 /* Sources */,
+				D74FB67F202A7B7E1EB7EFCDA050617C /* Frameworks */,
+				560862EC8A44F3BE7A6E44525453F47F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E88B6B46B4CCF183E7B4A3F522BCC4 /* PBXTargetDependency */,
+			);
+			name = "Pods-TeslaKit_Example";
+			productName = "Pods-TeslaKit_Example";
+			productReference = 8459FCA9AEAE4BF8854B67FAE273289E /* Pods_TeslaKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6835F45B2C0F999E18CC55F97ED21FF1 /* TeslaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6E7A1E2FC717895B9506979FC001E3 /* Build configuration list for PBXNativeTarget "TeslaKit" */;
+			buildPhases = (
+				602B6CA7F7DAE9850A21F6EBF4FD4AAD /* Sources */,
+				7EE9BCD922BA920B4A851DF7D91F7671 /* Frameworks */,
+				445AC051DE0F2B2A4CBE25DFF01EDC76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeslaKit;
+			productName = TeslaKit;
+			productReference = F6C30BEFF22DE1A6D45B7DE4432BEE7D /* TeslaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A24E0B2EE5F75D8B941F40C684EDFFD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41F4851685B6B468E233DC88D69A64CD /* Pods-TeslaKit_Example */,
+				255D94E36D92E58799D8586BD9524B86 /* Pods-TeslaKit_Tests */,
+				6835F45B2C0F999E18CC55F97ED21FF1 /* TeslaKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		161261FA435A749F5EBD5F16EDC92AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C99619DF5C67F8D9952916672286AA9 /* Pods-TeslaKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		602B6CA7F7DAE9850A21F6EBF4FD4AAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D6C88154127DD272895E95FDA6088BA /* ReplaceMe.swift in Sources */,
+				1054241D8953AEC5772855A4215C99CD /* TeslaKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4975A33E436DC29DAB80A25192CCA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9756E23CB95B18B1921670E62A8D540C /* Pods-TeslaKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93E88B6B46B4CCF183E7B4A3F522BCC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TeslaKit;
+			target = 6835F45B2C0F999E18CC55F97ED21FF1 /* TeslaKit */;
+			targetProxy = 082A817B0955FDAA638D0E41329DA4E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1C765C5EB1BC77818E3211433FC24F57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9850219B8C09733DEBBD25D457AFB0B0 /* TeslaKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TeslaKit/TeslaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TeslaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TeslaKit/TeslaKit.modulemap";
+				PRODUCT_NAME = TeslaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3B4874FC2C474CDE70BBDFBA459BA490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8115E8294798B05052C2691814AF978 /* Pods-TeslaKit_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TeslaKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TeslaKit_Example/Pods-TeslaKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TeslaKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4EA51B3EAD529172D1679230802C33BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9850219B8C09733DEBBD25D457AFB0B0 /* TeslaKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TeslaKit/TeslaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TeslaKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TeslaKit/TeslaKit.modulemap";
+				PRODUCT_NAME = TeslaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		731DC216E1A58545B559F6E0A2418060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		85452E948CD5EFD8DC246DAE6F04F0E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2F1548BEDBEC2EBEFED05BCC36D5CE /* Pods-TeslaKit_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TeslaKit_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TeslaKit_Example/Pods-TeslaKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TeslaKit_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8ECC8A66546B19617689152AD7BE88E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F6A7DF9BF054FAF0D3D72533986305 /* Pods-TeslaKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TeslaKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TeslaKit_Tests/Pods-TeslaKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TeslaKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BCA45E6124D15CF43ED45FF4C7DBA7DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1784E386E4EA40FB7286E3E89A139022 /* Pods-TeslaKit_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TeslaKit_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TeslaKit_Tests/Pods-TeslaKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TeslaKit_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */,
+				731DC216E1A58545B559F6E0A2418060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC0940DCF436258E5210CB37882BAED1 /* Build configuration list for PBXNativeTarget "Pods-TeslaKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ECC8A66546B19617689152AD7BE88E8 /* Debug */,
+				BCA45E6124D15CF43ED45FF4C7DBA7DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6E7A1E2FC717895B9506979FC001E3 /* Build configuration list for PBXNativeTarget "TeslaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA51B3EAD529172D1679230802C33BC /* Debug */,
+				1C765C5EB1BC77818E3211433FC24F57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E15EB84229AEC4C4DF151EECED934B38 /* Build configuration list for PBXNativeTarget "Pods-TeslaKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85452E948CD5EFD8DC246DAE6F04F0E8 /* Debug */,
+				3B4874FC2C474CDE70BBDFBA459BA490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

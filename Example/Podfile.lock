@@ -1,0 +1,16 @@
+PODS:
+  - TeslaKit (0.1.0)
+
+DEPENDENCIES:
+  - TeslaKit (from `../`)
+
+EXTERNAL SOURCES:
+  TeslaKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TeslaKit: f0f22b12c5509c9c7e7566839d1b8799c012b987
+
+PODFILE CHECKSUM: 3fac93fcd15b031358ff9d8af8e79870a5fd83b8
+
+COCOAPODS: 1.4.0.beta.2
