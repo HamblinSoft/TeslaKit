@@ -11,27 +11,23 @@ import ObjectMapper
 
 ///
 public struct TKGUISettings {
+    
+    ///
+    public var guiDistanceUnits: String? = nil
+
+    // TODO: Complete other properties
+
+    public var gui_charge_rate_units: String? = nil
+    public var timestamp: Int = 0
+    public var gui_temperature_units: String? = nil
+    public var gui_24_hour_time: Bool = false
+    public var gui_range_display: String? = nil
 
     ///
-    public struct Response {
-
-        ///
-        public var guiDistanceUnits: String? = nil
-
-        // TODO: Complete other properties
-
-        var gui_charge_rate_units: String? = nil
-        var timestamp: Int = 0
-        var gui_temperature_units: String? = nil
-        var gui_24_hour_time: Bool = false
-        var gui_range_display: String? = nil
-
-        ///
-        public init() {}
-    }
+    public init() {}
 }
 
-extension TKGUISettings.Response: TKDataRequestResponse {
+extension TKGUISettings: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         guiDistanceUnits <- map["response.gui_distance_units"]

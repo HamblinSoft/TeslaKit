@@ -13,50 +13,37 @@ import ObjectMapper
 public struct TKChargeState {
 
     ///
-    public struct Request {
-
-        // TODO: Complete other properties
-
-        ///
-        public init() {}
-    }
+    public var chargingState: TKChargingState = TKChargingState.complete
 
     ///
-    public struct Response {
+    public var chargeToMaxRange: Bool = false
 
-        ///
-        public var chargingState: TKChargingState = TKChargingState.complete
+    ///
+    public var fastChargerPresent: Bool = false
 
-        ///
-        public var chargeToMaxRange: Bool = false
+    ///
+    public var batteryRange: Double = 0.0
 
-        ///
-        public var fastChargerPresent: Bool = false
-        
-        ///
-        public var batteryRange: Double = 0.0
-        
-        ///
-        public var estBatteryRange: Double = 0.0
-        
-        ///
-        public var idealBatteryRange: Double = 0.0
-        
-        ///
-        public var batteryLevel: Double = 0.0
-        
-        ///
-        public var timeToFullCharge: Double = 0.0
-        
-        ///
-        public var chargePortDoorOpen: Bool = false
+    ///
+    public var estBatteryRange: Double = 0.0
 
-       
-        public init() {}
-    }
+    ///
+    public var idealBatteryRange: Double = 0.0
+
+    ///
+    public var batteryLevel: Double = 0.0
+
+    ///
+    public var timeToFullCharge: Double = 0.0
+
+    ///
+    public var chargePortDoorOpen: Bool = false
+
+
+    public init() {}
 }
 
-extension TKChargeState.Response: TKDataRequestResponse {
+extension TKChargeState: TKDataRequestResponse {
     public mutating func mapping(map: Map) {
         chargingState <- (map["response.charging_state"], EnumTransform())
         chargeToMaxRange <- map["response.charge_to_max_range"]

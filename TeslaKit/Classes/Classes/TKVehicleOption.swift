@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents an option of a `TKVehicle`. For all options, see TeslaVehicleOptionCodes.plist in Resources.
-public class TKVehicleOption {
+public struct TKVehicleOption {
     
     /// The option code
     public let code: String
@@ -27,7 +27,7 @@ public class TKVehicleOption {
             let data: Data = try? Data(contentsOf: url),
             let plist: [String: Any] = (try? PropertyListSerialization.propertyList(from: data, options: [], format: nil)) as? [String: Any],
             let options: [String: [String: String]] = plist[countryCode] as? [String: [String: String]] else {
-                fatalError()
+                return [:]
         }
         return options
     }()

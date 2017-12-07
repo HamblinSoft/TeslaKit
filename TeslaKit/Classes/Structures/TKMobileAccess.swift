@@ -13,22 +13,18 @@ import ObjectMapper
 public struct TKMobileAccess {
 
     ///
-    public struct Response {
+    public var response: Bool = false
 
-        ///
-        public var response: Bool = false
+    ///
+    public init() {}
 
-        ///
-        public init() {}
-
-        ///
-        public init(response: Bool) {
-            self.response = response
-        }
+    ///
+    public init(response: Bool) {
+        self.response = response
     }
 }
 
-extension TKMobileAccess.Response: TKDataRequestResponse {
+extension TKMobileAccess: TKDataRequestResponse {
     public mutating func mapping(map: Map) {
         response <- map["response"]
     }

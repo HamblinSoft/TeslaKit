@@ -13,43 +13,39 @@ import ObjectMapper
 public struct TKClimateSettings {
 
     ///
-    public struct Response {
+    public var seatHeaterLeft: Int = 0
 
-        ///
-        public var seatHeaterLeft: Int = 0
+    ///
+    public var fanStatus: Int = 0
 
-        ///
-        public var fanStatus: Int = 0
+    // TODO: Complete other properties
 
-        // TODO: Complete other properties
-        
-        var isFrontDefrosterOn: Bool = false
-        var is_rear_defroster_on: Bool = false
-        var is_climate_on: Bool = false
-        var seat_heater_rear_left: Int = 0
-        var min_avail_temp: Int = 0
-        var inside_temp: String?
-        var driver_temp_setting: Double = 0
-        var passenger_temp_setting: Double = 0
-        var outside_temp: String?
-        var seat_heater_rear_center: Int = 0
-        var timestamp: Int = 0
-        var right_temp_direction: String?
-        var left_temp_direction: String?
-        var seat_heater_rear_right: Int = 0
-        var seat_heater_rear_right_back: Int = 0
-        var seat_heater_right: Int = 0
-        var seat_heater_rear_left_back: Int = 0
-        var smart_preconditioning: Bool = false
-        var max_avail_temp: Int = 0
-        var is_auto_conditioning_on: String? = nil
+    public var isFrontDefrosterOn: Bool = false
+    public var is_rear_defroster_on: Bool = false
+    public var is_climate_on: Bool = false
+    public var seat_heater_rear_left: Int = 0
+    public var min_avail_temp: Int = 0
+    public var inside_temp: String?
+    public var driver_temp_setting: Double = 0
+    public var passenger_temp_setting: Double = 0
+    public var outside_temp: String?
+    public var seat_heater_rear_center: Int = 0
+    public var timestamp: Int = 0
+    public var right_temp_direction: String?
+    public var left_temp_direction: String?
+    public var seat_heater_rear_right: Int = 0
+    public var seat_heater_rear_right_back: Int = 0
+    public var seat_heater_right: Int = 0
+    public var seat_heater_rear_left_back: Int = 0
+    public var smart_preconditioning: Bool = false
+    public var max_avail_temp: Int = 0
+    public var is_auto_conditioning_on: String? = nil
 
-        ///
-        public init() {}
-    }
+    ///
+    public init() {}
 }
 
-extension TKClimateSettings.Response: TKDataRequestResponse {
+extension TKClimateSettings: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         seatHeaterLeft <- map["response.seat_heater_left"]

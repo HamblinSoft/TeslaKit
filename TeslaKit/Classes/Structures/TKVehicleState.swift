@@ -12,63 +12,60 @@ import ObjectMapper
 ///
 public struct TKVehicleState {
 
+    public var exteriorColor: String?
+
+    // TODO: Complete other properties
+
+    public var center_display_state: Int = 0
+    public var autopark_style: String?
+    public var remote_start: Bool = false
+    public var odometer: Double = 0
+    public var rt: Int = 0
+    public var sun_roof_percent_open: Int = 0
+    public var vehicle_name: String?
+    public var remote_start_supported: Bool = false
+    public var dark_rims: Bool = false
+    public var locked: Bool = false
+    public var rear_seat_type: Int = 0
+    public var rhd: Bool = false
+    public var autopark_state_v2: String?
+    public var roof_color: String?
+    public var rear_seat_heaters: Int = 0
+    public var valet_mode: Bool = false
+    public var parsed_calendar_supported: Bool = false
+    public var api_version: Int = 0
+    public var homelink_nearby: Bool = false
+    public var autopark_state: String?
+    public var last_autopark_error: String?
+    public var dr: Int = 0
+    public var has_spoiler: Bool = false
+    public var calendar_supported: Bool = false
+    public var sun_roof_state: String?
+    public var df: Int = 0
+    public var valet_pin_needed: Bool = false
+    public var pr: Int = 0
+    public var spoiler_type: String?
+    public var car_type: String?
+    public var perf_config: String?
+    public var car_version: String?
+    public var seat_type: Int = 0
+    public var third_row_seats: String?
+    public var ft: Int = 0
+    public var notifications_supported: Bool = false
+    public var pf: Int = 0
+    public var wheel_type: String?
+    public var sun_roof_installed: Int = 0
+    public var timestamp: Int = 0
+
     ///
-    public struct Response {
-
-        public var exteriorColor: String?
-
-        // TODO: Complete other properties
-
-        var center_display_state: Int = 0
-        var autopark_style: String?
-        var remote_start: Bool = false
-        var odometer: Double = 0
-        var rt: Int = 0
-        var sun_roof_percent_open: Int = 0
-        var vehicle_name: String?
-        var remote_start_supported: Bool = false
-        var dark_rims: Bool = false
-        var locked: Bool = false
-        var rear_seat_type: Int = 0
-        var rhd: Bool = false
-        var autopark_state_v2: String?
-        var roof_color: String?
-        var rear_seat_heaters: Int = 0
-        var valet_mode: Bool = false
-        var parsed_calendar_supported: Bool = false
-        var api_version: Int = 0
-        var homelink_nearby: Bool = false
-        var autopark_state: String?
-        var last_autopark_error: String?
-        var dr: Int = 0
-        var has_spoiler: Bool = false
-        var calendar_supported: Bool = false
-        var sun_roof_state: String?
-        var df: Int = 0
-        var valet_pin_needed: Bool = false
-        var pr: Int = 0
-        var spoiler_type: String?
-        var car_type: String?
-        var perf_config: String?
-        var car_version: String?
-        var seat_type: Int = 0
-        var third_row_seats: String?
-        var ft: Int = 0
-        var notifications_supported: Bool = false
-        var pf: Int = 0
-        var wheel_type: String?
-        var sun_roof_installed: Int = 0
-        var timestamp: Int = 0
-
-        ///
-        public init() {}
-    }
+    public init() {}
 }
 
-extension TKVehicleState.Response: TKDataRequestResponse {
+extension TKVehicleState: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         exteriorColor <- map["response.exterior_color"]
+        odometer <- map["response.odometer"]
     }
 }
 

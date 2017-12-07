@@ -13,27 +13,23 @@ import ObjectMapper
 public struct TKDrivingPosition {
 
     ///
-    public struct Response {
+    public var shiftState: String?
 
-        ///
-        public var shiftState: String?
+    // TODO: Complete other properties
 
-        // TODO: Complete other properties
+    public var speed: String?
+    public var longitude: Double = 0
+    public var gps_as_of: Int = 0
+    public var power: Int = 0
+    public var latitude: Double = 0
+    public var heading: Int = 0
+    public var timestamp: Int = 0
 
-        var speed: String?
-        var longitude: Double = 0
-        var gps_as_of: Int = 0
-        var power: Int = 0
-        var latitude: Double = 0
-        var heading: Int = 0
-        var timestamp: Int = 0
-
-        ///
-        public init() {}
-    }
+    ///
+    public init() {}
 }
 
-extension TKDrivingPosition.Response: TKDataRequestResponse {
+extension TKDrivingPosition: TKDataRequestResponse {
 
     public mutating func mapping(map: Map) {
         shiftState <- map["response.shift_state"]

@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TKVehicle {
+public class TKVehicle {
 
     /// The unique identifier of the vehicle
     public var id: Int = 0
@@ -36,8 +36,16 @@ public struct TKVehicle {
     /// The vehicle's remote start configuration
     public var remoteStartEnabled: Bool = false
 
+    // Convenience
+
     ///
-    public init() {}
+    public var chargeState: TKChargeState = TKChargeState()
+
+    ///
+    public var vehicleState: TKVehicleState = TKVehicleState()
+
+    ///
+    public required init() {}
 
     ///
     public init(id: Int, vehicleId: Int, userId: Int, displayName: String, vin: String, status: TKVehicleStatus, remoteStartEnabled: Bool) {
@@ -52,7 +60,7 @@ public struct TKVehicle {
 }
 
 extension TKVehicle: TKMappable {
-    public mutating func mapping(map: Map) {
+    public func mapping(map: Map) {
         displayName <- map["display_name"]
         id <- map["id"]
         options <- (map["option_codes"], TKVehicleOptionTransform(separator: ","))
@@ -61,6 +69,8 @@ extension TKVehicle: TKMappable {
         vin <- (map["vin"], VINTransform())
         status <- (map["state"], EnumTransform())
         remoteStartEnabled <- map["remote_start_enabled"]
+        chargeState <- map["chargeState"]
+        vehicleState <- map["vehicleState"]
     }
 }
 

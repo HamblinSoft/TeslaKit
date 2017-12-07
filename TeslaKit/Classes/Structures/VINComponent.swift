@@ -32,6 +32,16 @@ public struct VINComponent {
 
         ///
         case model3 = "3"
+
+        /// A readable display name
+        public var name: String {
+            switch self {
+            case .roadster: return "Roadster"
+            case .modelS: return "Model S"
+            case .modelX: return "Model X"
+            case .model3: return "Model 3"
+            }
+        }
     }
 
     ///
