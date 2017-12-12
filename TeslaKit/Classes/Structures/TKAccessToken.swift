@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TKAccessToken {
+public enum TKAccessToken {
 
     ///
     public struct Request {

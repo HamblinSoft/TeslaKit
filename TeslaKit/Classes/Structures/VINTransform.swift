@@ -27,6 +27,7 @@ public struct VINTransform: TransformType {
 
     ///
     public func transformToJSON(_ value: VIN?) -> String? {
-        return value?.vin
+        let vinStringOrNil: String? = value?.vinString
+        return vinStringOrNil
     }
 }

@@ -78,4 +78,22 @@ public struct VINComponent {
         ///
         case performance = "P"
     }
+
+    ///
+    public enum ModelYear: String {
+
+        ///
+        case unknown = ""
+
+        ///
+        case year2016 = "H"
+
+        ///
+        public var name: String {
+            switch self {
+            case .year2016: return "2016"
+            default: return ""
+            }
+        }
+    }
 }

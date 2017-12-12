@@ -28,7 +28,7 @@ public class TKVehicle {
     public var options: [TKVehicleOption] = []
 
     /// The vehicle's vehicle identification number
-    public var vin: VIN = VIN()
+    public var vin: VIN?
 
     /// The vehicle's current state
     public var status: TKVehicleStatus = TKVehicleStatus.asleep
@@ -36,13 +36,27 @@ public class TKVehicle {
     /// The vehicle's remote start configuration
     public var remoteStartEnabled: Bool = false
 
+    ///
+    public var mobileAccess: Bool = true
+
     // Convenience
 
     ///
     public var chargeState: TKChargeState = TKChargeState()
 
     ///
+    public var climateSettings: TKClimateSettings = TKClimateSettings()
+
+    ///
+    public var drivingPosition: TKDrivingPosition = TKDrivingPosition()
+
+    ///
+    public var guiSettings: TKGUISettings = TKGUISettings()
+
+    ///
     public var vehicleState: TKVehicleState = TKVehicleState()
+
+
 
     ///
     public required init() {}
@@ -57,6 +71,19 @@ public class TKVehicle {
         self.status = status
         self.remoteStartEnabled = remoteStartEnabled
     }
+
+    public var summary: TKVehicleSummary {
+        return TKVehicleSummary(displayName: self.displayName,
+                                vin: self.vin,
+                                chargingState: self.chargeState.chargingState,
+                                batteryLevel: self.chargeState.batteryLevel,
+                                batteryRange: self.chargeState.batteryRange,
+                                latitude: self.drivingPosition.latitude,
+                                longitude: self.drivingPosition.longitude,
+                                distanceUnits: self.guiSettings.guiDistanceUnits,
+                                exteriorColor: self.vehicleState.exteriorColor,
+                                odometer: self.vehicleState.odometer)
+    }
 }
 
 extension TKVehicle: TKMappable {
@@ -69,8 +96,12 @@ extension TKVehicle: TKMappable {
         vin <- (map["vin"], VINTransform())
         status <- (map["state"], EnumTransform())
         remoteStartEnabled <- map["remote_start_enabled"]
-        chargeState <- map["chargeState"]
-        vehicleState <- map["vehicleState"]
+        mobileAccess <- map["mobile_access"]
+        chargeState <- map["charge_state"]
+        climateSettings <- map["climate_settings"]
+        drivingPosition <- map["driving_position"]
+        vehicleState <- map["vehicle_state"]
+        guiSettings <- map["gui_settings"]
     }
 }
 
