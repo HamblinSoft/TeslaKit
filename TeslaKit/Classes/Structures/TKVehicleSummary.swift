@@ -14,6 +14,9 @@ public struct TKVehicleSummary {
     // MARK: - Vehicle Info
 
     ///
+    public var vehicleId: Int = 0
+
+    ///
     public var displayName: String = ""
 
     ///
@@ -60,7 +63,8 @@ public struct TKVehicleSummary {
     public init() {}
 
     ///
-    public init(displayName: String, vin: VIN?, chargingState: TKChargingState, batteryLevel: Double, batteryRange: Double, latitude: Double?, longitude: Double?, distanceUnits: String?, exteriorColor: String?, odometer: Double) {
+    public init(vehicleId: Int, displayName: String, vin: VIN?, chargingState: TKChargingState, batteryLevel: Double, batteryRange: Double, latitude: Double?, longitude: Double?, distanceUnits: String?, exteriorColor: String?, odometer: Double) {
+        self.vehicleId = vehicleId
         self.displayName = displayName
         self.vin = vin
         self.chargingState = chargingState
@@ -76,6 +80,7 @@ public struct TKVehicleSummary {
 
 extension TKVehicleSummary: TKMappable {
     public mutating func mapping(map: Map) {
+        vehicleId <- map["vehicleId"]
         displayName <- map["displayName"]
         vin <- (map["vin"], VINTransform())
         chargingState <- (map["chargingState"], EnumTransform())
@@ -89,5 +94,10 @@ extension TKVehicleSummary: TKMappable {
     }
 }
 
-
+extension TKVehicleSummary: Equatable {
+    public static func == (lhs: TKVehicleSummary, rhs: TKVehicleSummary) -> Bool {
+        return lhs.batteryLevel == rhs.batteryLevel
+            && lhs.batteryRange == rhs.batteryRange
+    }
+}
 

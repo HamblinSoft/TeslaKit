@@ -73,7 +73,8 @@ public class TKVehicle {
     }
 
     public var summary: TKVehicleSummary {
-        return TKVehicleSummary(displayName: self.displayName,
+        return TKVehicleSummary(vehicleId: self.id,
+                                displayName: self.displayName,
                                 vin: self.vin,
                                 chargingState: self.chargeState.chargingState,
                                 batteryLevel: self.chargeState.batteryLevel,
@@ -96,12 +97,6 @@ extension TKVehicle: TKMappable {
         vin <- (map["vin"], VINTransform())
         status <- (map["state"], EnumTransform())
         remoteStartEnabled <- map["remote_start_enabled"]
-        mobileAccess <- map["mobile_access"]
-        chargeState <- map["charge_state"]
-        climateSettings <- map["climate_settings"]
-        drivingPosition <- map["driving_position"]
-        vehicleState <- map["vehicle_state"]
-        guiSettings <- map["gui_settings"]
     }
 }
 
