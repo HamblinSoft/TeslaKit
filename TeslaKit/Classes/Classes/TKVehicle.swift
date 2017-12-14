@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Object representing a Tesla vehicle
 public class TKVehicle {
 
     /// The unique identifier of the vehicle
