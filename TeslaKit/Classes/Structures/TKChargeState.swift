@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Returns the state of charge in the battery.
 public struct TKChargeState {
 
     ///

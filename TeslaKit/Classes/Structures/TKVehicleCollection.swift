@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Retrieve a list of your owned vehicles (includes vehicles not yet shipped!)
 public struct TKVehicleCollection {
 
     ///

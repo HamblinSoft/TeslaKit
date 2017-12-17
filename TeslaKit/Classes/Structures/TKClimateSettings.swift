@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Returns the current temperature and climate control state.
 public struct TKClimateSettings {
 
     ///

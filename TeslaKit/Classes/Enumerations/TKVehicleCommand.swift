@@ -16,7 +16,7 @@ public enum TKVehicleCommand: String, EnumCollection {
     case wake = "wake_up"
 
     /// Sets valet mode on or off with a PIN to disable it from within the car. Reuses last PIN from previous valet session. Valet Mode limits the car's top speed to 70MPH and 80kW of acceleration power. It also disables Homelink, Bluetooth and Wifi settings, and the ability to disable mobile access to the car. It also hides your favorites, home, and work locations in navigation.
-//    case setValetMode = "set_valet_mode"
+    case setValetMode = "set_valet_mode"
 
     /// Resets the PIN set for valet mode, if set.
     case resetValetPin = "reset_valet_pin"
@@ -31,7 +31,7 @@ public enum TKVehicleCommand: String, EnumCollection {
     case setChargeLimitToMaxRange = "charge_max_range"
 
     /// Set the charge limit to a custom percentage.
-//    case setChargeLimit = "set_charge_limit?percent=limit_value"
+    case setChargeLimit = "set_charge_limit"
 
     /// Start charging. Must be plugged in, have power available, and not have reached your charge limit.
     case startCharging = "charge_start"
@@ -52,7 +52,7 @@ public enum TKVehicleCommand: String, EnumCollection {
     case lockDoors = "door_lock"
 
     /// Set the temperature target for the HVAC system.
-//    case setTemperature = "set_temps?driver_temp=driver_temp&passenger_temp=passenger_temp"
+    case setTemperature = "set_temps"
 
     /// Start the climate control system. Will cool or heat automatically, depending on set temperature.
     case startHVAC = "auto_conditioning_start"
@@ -61,13 +61,13 @@ public enum TKVehicleCommand: String, EnumCollection {
     case stopHVAC = "auto_conditioning_stop"
 
     /// Controls the car's panoramic roof, if installed.
-//    case movePanoRoof = "sun_roof_control?state=state&percent=percent"
+    case movePanoRoof = "sun_roof_control"
 
     /// Start the car for keyless driving. Must start driving within 2 minutes of issuing this request.
-//    case remoteStart = "remote_start_drive?password=password"
+    case remoteStart = "remote_start_drive"
 
     /// Open the trunk or frunk. Currently inoperable.
-    case openTrunk = "trunk_open"
+//    case openTrunk = "trunk_open"
 
     /// Opens and closes the configured Homelink garage door of the vehicle. Keep in mind this is a toggle and the garage door state is unknown - a major limitation of Homelink
 //    case triggerHomelink = "trigger_homelink"

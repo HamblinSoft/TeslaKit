@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Determines if mobile access to the vehicle is enabled.
 public struct TKMobileAccess {
 
     ///
