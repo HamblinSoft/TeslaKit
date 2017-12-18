@@ -176,4 +176,9 @@ public enum TeslaAPI: String, EnumCollection {
             return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/command/\(self.rawValue)")
         }
     }
+
+
+
+    /// Commands that can be quickliy sent
+    public static let quickCommands: [Command] = [.unlockDoors, .lockDoors, .flashLights, .honkHorn, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]
 }
