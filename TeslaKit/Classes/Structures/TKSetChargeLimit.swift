@@ -12,11 +12,8 @@ import ObjectMapper
 /// Set the charge limit to a custom percentage.
 public struct TKSetChargeLimit {
 
-    /// The id of the Vehicle. Example: 1.
-    public var vehicleId: Int = 0
-
     /// The percentage value Example: 75.
-    public var limitValue: Int = 0
+    public var limitValue: Double = 0
 
     ///
     public init() {}
@@ -27,15 +24,13 @@ public struct TKSetChargeLimit {
     /// - Parameters:
     ///   - vehicleId: The id of the Vehicle. Example: 1.
     ///   - limitValue: The percentage value Example: 75.
-    public init(vehicleId: Int, limitValue: Int) {
-        self.vehicleId = vehicleId
+    public init(limitValue: Double) {
         self.limitValue = limitValue
     }
 }
 
 extension TKSetChargeLimit: TKMappable {
     public mutating func mapping(map: Map) {
-        vehicleId <- map["vehicle_id"]
         limitValue <- map["limit_value"]
     }
 }

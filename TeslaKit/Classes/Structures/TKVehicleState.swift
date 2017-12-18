@@ -61,7 +61,7 @@ public struct TKVehicleState {
     public init() {}
 }
 
-extension TKVehicleState: TKDataRequestResponse {
+extension TKVehicleState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
         exteriorColor <- map["response.exterior_color"]

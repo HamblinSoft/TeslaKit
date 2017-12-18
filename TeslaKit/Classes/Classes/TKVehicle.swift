@@ -37,6 +37,9 @@ public class TKVehicle {
     public var remoteStartEnabled: Bool = false
 
     ///
+    public var tokens: [String] = []
+
+    ///
     public var mobileAccess: Bool = true
 
     // Convenience
@@ -97,6 +100,7 @@ extension TKVehicle: TKMappable {
         vin <- (map["vin"], VINTransform())
         status <- (map["state"], EnumTransform())
         remoteStartEnabled <- map["remote_start_enabled"]
+        tokens <- map["tokens"]
     }
 }
 

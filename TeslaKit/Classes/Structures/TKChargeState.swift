@@ -43,7 +43,7 @@ public struct TKChargeState {
     public init() {}
 }
 
-extension TKChargeState: TKDataRequestResponse {
+extension TKChargeState: TKDataResponse {
     public mutating func mapping(map: Map) {
         chargingState <- (map["response.charging_state"], EnumTransform())
         chargeToMaxRange <- map["response.charge_to_max_range"]

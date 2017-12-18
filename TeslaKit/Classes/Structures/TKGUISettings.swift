@@ -27,7 +27,7 @@ public struct TKGUISettings {
     public init() {}
 }
 
-extension TKGUISettings: TKDataRequestResponse {
+extension TKGUISettings: TKDataResponse {
 
     public mutating func mapping(map: Map) {
         guiDistanceUnits <- map["response.gui_distance_units"]

@@ -19,4 +19,7 @@ public enum TKVehicleStatus: String {
 
     /// Vehicle is dormant
     case asleep
+
+    /// Returns a readable display name text for the status
+    public var displayName: String { return self.rawValue.capitalized }
 }

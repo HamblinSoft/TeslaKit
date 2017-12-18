@@ -29,7 +29,7 @@ public struct TKDrivingPosition {
     public init() {}
 }
 
-extension TKDrivingPosition: TKDataRequestResponse {
+extension TKDrivingPosition: TKDataResponse {
 
     public mutating func mapping(map: Map) {
         shiftState <- map["response.shift_state"]

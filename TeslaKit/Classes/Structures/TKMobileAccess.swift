@@ -24,7 +24,7 @@ public struct TKMobileAccess {
     }
 }
 
-extension TKMobileAccess: TKDataRequestResponse {
+extension TKMobileAccess: TKDataResponse {
     public mutating func mapping(map: Map) {
         response <- map["response"]
     }

@@ -45,7 +45,7 @@ public struct TKClimateSettings {
     public init() {}
 }
 
-extension TKClimateSettings: TKDataRequestResponse {
+extension TKClimateSettings: TKDataResponse {
 
     public mutating func mapping(map: Map) {
         seatHeaterLeft <- map["response.seat_heater_left"]

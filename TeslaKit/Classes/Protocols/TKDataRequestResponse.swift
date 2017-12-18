@@ -1,5 +1,5 @@
 //
-//  TKDataRequestResponse.swift
+//  TKDataResponse.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -9,4 +9,4 @@
 import Foundation
 
 ///
-public protocol TKDataRequestResponse: TKMappable {}
+public protocol TKDataResponse: TKMappable {}
