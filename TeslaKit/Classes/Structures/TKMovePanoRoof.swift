@@ -16,7 +16,7 @@ public struct TKMovePanoRoof {
     public var vehicleId: Int = 0
 
     /// The desired state of the panoramic roof. The approximate percent open values for each state are open = 100%, close = 0%, comfort = 80%, and vent = ~15% Example: open. Possible values:  open , close , comfort , vent , move .
-    public var state: TKPanoRoofState = TKPanoRoofState.closed
+    public var state: TKPanoRoofState = TKPanoRoofState.close
 
     /// The percentage to move the roof to. Example: 50.
     public var percent: Int? = nil
