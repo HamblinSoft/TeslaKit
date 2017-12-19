@@ -48,10 +48,10 @@ public class TKVehicle {
     public var chargeState: TKChargeState = TKChargeState()
 
     ///
-    public var climateSettings: TKClimateSettings = TKClimateSettings()
+    public var climateState: TKClimateState = TKClimateState()
 
     ///
-    public var drivingPosition: TKDrivingPosition = TKDrivingPosition()
+    public var driveState: TKDriveState = TKDriveState()
 
     ///
     public var guiSettings: TKGUISettings = TKGUISettings()
@@ -74,20 +74,6 @@ public class TKVehicle {
         self.status = status
         self.remoteStartEnabled = remoteStartEnabled
     }
-
-    public var summary: TKVehicleSummary {
-        return TKVehicleSummary(vehicleId: self.id,
-                                displayName: self.displayName,
-                                vin: self.vin,
-                                chargingState: self.chargeState.chargingState,
-                                batteryLevel: self.chargeState.batteryLevel,
-                                batteryRange: self.chargeState.batteryRange,
-                                latitude: self.drivingPosition.latitude,
-                                longitude: self.drivingPosition.longitude,
-                                distanceUnits: self.guiSettings.guiDistanceUnits,
-                                exteriorColor: self.vehicleState.exteriorColor,
-                                odometer: self.vehicleState.odometer)
-    }
 }
 
 extension TKVehicle: TKMappable {
@@ -101,6 +87,11 @@ extension TKVehicle: TKMappable {
         status <- (map["state"], EnumTransform())
         remoteStartEnabled <- map["remote_start_enabled"]
         tokens <- map["tokens"]
+        chargeState <- map["charge_state"]
+        climateState <- map["climate_state"]
+        guiSettings <- map["gui_settings"]
+        driveState <- map["drive_state"]
+        vehicleState <- map["vehicle_state"]
     }
 }
 

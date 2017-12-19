@@ -43,13 +43,13 @@ public struct TKVehicleData {
     public var chargeState: TKChargeState = TKChargeState()
 
     ///
-    public var climateSettings: TKClimateSettings = TKClimateSettings()
+    public var climateState: TKClimateState = TKClimateState()
 
     ///
     public var guiSettings: TKGUISettings = TKGUISettings()
 
     ///
-    public var drivePosition: TKDrivingPosition = TKDrivingPosition()
+    public var driveState: TKDriveState = TKDriveState()
 
     ///
     public var vehicleState: TKVehicleState = TKVehicleState()
@@ -70,9 +70,16 @@ extension TKVehicleData: TKDataResponse {
         remoteStartEnabled <- map["response.remote_start_enabled"]
         tokens <- map["response.tokens"]
         chargeState <- map["response.charge_state"]
-        climateSettings <- map["response.climate_state"]
+        climateState <- map["response.climate_state"]
         guiSettings <- map["response.gui_settings"]
-        drivePosition <- map["response.drive_state"]
+        driveState <- map["response.drive_state"]
         vehicleState <- map["response.vehicle_state"]
+    }
+}
+
+extension TKVehicleData: Equatable {
+    public static func == (lhs: TKVehicleData, rhs: TKVehicleData) -> Bool {
+        return lhs.chargeState.batteryLevel == rhs.chargeState.batteryLevel
+            && lhs.chargeState.batteryRange == rhs.chargeState.batteryRange
     }
 }

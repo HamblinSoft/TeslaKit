@@ -45,16 +45,15 @@ public struct TKChargeState {
 
 extension TKChargeState: TKDataResponse {
     public mutating func mapping(map: Map) {
-        chargingState <- (map["response.charging_state"], EnumTransform())
-        chargeToMaxRange <- map["response.charge_to_max_range"]
-        fastChargerPresent <- map["response.fast_charger_present"]
-        batteryRange <- map["response.battery_range"]
-        estBatteryRange <- map["response.est_battery_range"]
-        idealBatteryRange <- map["response.ideal_battery_range"]
-        batteryLevel <- map["response.battery_level"]
-        timeToFullCharge <- map["response.time_to_full_charge"]
-        chargePortDoorOpen <- map["response.charge_port_door_open"]
-        
+        chargingState <- (map["charging_state"], EnumTransform())
+        chargeToMaxRange <- map["charge_to_max_range"]
+        fastChargerPresent <- map["fast_charger_present"]
+        batteryRange <- map["battery_range"]
+        estBatteryRange <- map["est_battery_range"]
+        idealBatteryRange <- map["ideal_battery_range"]
+        batteryLevel <- map["battery_level"]
+        timeToFullCharge <- map["time_to_full_charge"]
+        chargePortDoorOpen <- map["charge_port_door_open"]
     }
 }
 

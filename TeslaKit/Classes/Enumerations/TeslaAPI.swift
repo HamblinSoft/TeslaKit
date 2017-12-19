@@ -64,10 +64,10 @@ public enum TeslaAPI: String, EnumCollection {
         case chargeState = "charge_state"
 
         /// Returns the current temperature and climate control state.
-        case climateSettings = "climate_state"
+        case climateState = "climate_state"
 
         /// Returns the driving and position state of the vehicle.
-        case drivingPosition = "drive_state"
+        case driveState = "drive_state"
 
         /// Returns various information about the GUI settings of the car, such as unit format and range display.
         case guiSettings = "gui_settings"

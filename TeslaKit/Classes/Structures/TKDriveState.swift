@@ -1,5 +1,5 @@
 //
-//  TKDrivingPosition.swift
+//  TKDriveState.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Returns the driving and position state of the vehicle.
-public struct TKDrivingPosition {
+public struct TKDriveState {
 
     ///
     public var shiftState: String?
@@ -29,10 +29,10 @@ public struct TKDrivingPosition {
     public init() {}
 }
 
-extension TKDrivingPosition: TKDataResponse {
+extension TKDriveState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        shiftState <- map["response.shift_state"]
+        shiftState <- map["shift_state"]
     }
 }
 

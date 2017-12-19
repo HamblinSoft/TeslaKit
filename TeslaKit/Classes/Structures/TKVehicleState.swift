@@ -64,8 +64,8 @@ public struct TKVehicleState {
 extension TKVehicleState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        exteriorColor <- map["response.exterior_color"]
-        odometer <- map["response.odometer"]
+        exteriorColor <- map["exterior_color"]
+        odometer <- map["odometer"]
     }
 }
 

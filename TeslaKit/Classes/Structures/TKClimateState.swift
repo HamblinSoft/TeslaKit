@@ -1,5 +1,5 @@
 //
-//  TKClimateSettings.swift
+//  TKClimateState.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Returns the current temperature and climate control state.
-public struct TKClimateSettings {
+public struct TKClimateState {
 
     ///
     public var seatHeaterLeft: Int = 0
@@ -45,12 +45,12 @@ public struct TKClimateSettings {
     public init() {}
 }
 
-extension TKClimateSettings: TKDataResponse {
+extension TKClimateState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        seatHeaterLeft <- map["response.seat_heater_left"]
-        fanStatus <- map["response.fan_status"]
-        isFrontDefrosterOn <- map["response.is_front_defroster_on"]
+        seatHeaterLeft <- map["seat_heater_left"]
+        fanStatus <- map["fan_status"]
+        isFrontDefrosterOn <- map["is_front_defroster_on"]
     }
 }
 
