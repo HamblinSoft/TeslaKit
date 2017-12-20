@@ -1,0 +1,48 @@
+//
+//  Temperature.swift
+//  Pods
+//
+//  Created by Jaren Hamblin on 12/19/17.
+//
+
+import Foundation
+
+/// An object representing a temperature unit
+public struct Temperature {
+
+    /// Returns the temperature in degrees Celsius
+    public let celsius: Double
+
+    /// Returns the temperature in degrees Fahrenheit
+    public let fahrenheit: Double
+
+    /// Initializes a `Temperature` object with degrees Celsius as the base
+    public init(celsius: Double) {
+        self.celsius = celsius
+        self.fahrenheit = Temperature.convert(celsiusToFahrenheit: celsius)
+    }
+
+    /// Initializes a `Temperature` object with degrees Fahrenheit as the base
+    public init(fahrenheit: Double) {
+        self.fahrenheit = fahrenheit
+        self.celsius = Temperature.convert(fahrenheitToCelsius: fahrenheit)
+    }
+
+
+    /// Returns the value of a degree in Celsius in Fahrenheit. 20C = 68F
+    ///
+    /// - Parameter value: Degrees in Celsius
+    /// - Returns: Degrees in Fahrenheit
+    public static func convert(celsiusToFahrenheit value: Double) -> Double {
+        return value * 9/5 + 32
+    }
+
+
+    /// Returns the value of a degree in Fahrenheit in Celsius. 20F = -6.67F
+    ///
+    /// - Parameter value: Degrees in Fahrenheit
+    /// - Returns: Degrees in Celsius
+    public static func convert(fahrenheitToCelsius value: Double) -> Double {
+        return  (value - 32) * 5/9
+    }
+}
