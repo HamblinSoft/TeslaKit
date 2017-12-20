@@ -24,7 +24,7 @@ public struct TKClimateState {
     public var is_rear_defroster_on: Bool = false
     public var is_climate_on: Bool = false
     public var seat_heater_rear_left: Int = 0
-    public var min_avail_temp: Int = 0
+    public var min_avail_temp: Double = 0
     public var inside_temp: String?
     public var driver_temp_setting: Double = 0
     public var passenger_temp_setting: Double = 0
@@ -38,7 +38,7 @@ public struct TKClimateState {
     public var seat_heater_right: Int = 0
     public var seat_heater_rear_left_back: Int = 0
     public var smart_preconditioning: Bool = false
-    public var max_avail_temp: Int = 0
+    public var max_avail_temp: Double = 0
     public var is_auto_conditioning_on: String? = nil
 
     ///
