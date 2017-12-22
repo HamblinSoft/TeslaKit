@@ -180,5 +180,5 @@ public enum TeslaAPI: String, EnumCollection {
 
 
     /// Commands that can be quickliy sent
-    public static let quickCommands: [Command] = [.unlockDoors, .lockDoors, .flashLights, .honkHorn, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]
+    public static let quickCommands: [Command] = [.unlockDoors, .lockDoors, .flashLights, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]
 }

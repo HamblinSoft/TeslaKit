@@ -35,13 +35,10 @@ extension TKGUISettings: TKDataResponse {
 }
 
 //{
-//    "response" : {
-//        "gui_distance_units" : "mi\/hr",
-//        "gui_charge_rate_units" : "mi\/hr",
-//        "timestamp" : 1511681566783,
-//        "gui_temperature_units" : "F",
-//        "gui_24_hour_time" : false,
-//        "gui_range_display" : "Rated"
-//    }
+//    "gui_distance_units" : "mi\/hr",
+//    "gui_charge_rate_units" : "mi\/hr",
+//    "timestamp" : 1513809818903,
+//    "gui_temperature_units" : "F",
+//    "gui_24_hour_time" : false,
+//    "gui_range_display" : "Rated"
 //}
-

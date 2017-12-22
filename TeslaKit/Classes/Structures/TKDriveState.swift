@@ -17,7 +17,7 @@ public struct TKDriveState {
 
     // TODO: Complete other properties
 
-    public var speed: String?
+    public var speed: String? = nil
     public var longitude: Double = 0
     public var gps_as_of: Int = 0
     public var power: Int = 0
@@ -37,14 +37,13 @@ extension TKDriveState: TKDataResponse {
 }
 
 //{
-//    "response" : {
-//        "shift_state" : "P",
-//        "speed" : null,
-//        "longitude" : -117.797279,
-//        "gps_as_of" : 1511681565,
-//        "power" : 0,
-//        "latitude" : 33.689331000000003,
-//        "heading" : 237,
-//        "timestamp" : 1511681566582
-//    }
+//    "shift_state" : "P",
+//    "speed" : null,
+//    "longitude" : -117.896179,
+//    "gps_as_of" : 1513809832,
+//    "power" : 0,
+//    "latitude" : 33.782539,
+//    "heading" : 172,
+//    "timestamp" : 1513809833025
 //}
+

@@ -18,8 +18,14 @@ public enum TKChargingState: String {
     case stopped = "Stopped"
 
     ///
+    case starting = "Starting"
+
+    ///
     case charging = "Charging"
 
     ///
     case complete = "Complete"
+
+    ///
+    public var displayName: String { return self.rawValue }
 }
