@@ -79,7 +79,7 @@ public enum TeslaAPI: String, EnumCollection {
         case data = "data"
 
         ///
-        public func url(vehicleId: Int) -> URL {
+        public func url(vehicleId: Int64) -> URL {
             switch self {
             case .mobileAccess: return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(self.rawValue)")
             case .data: return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(self.rawValue)")
@@ -172,7 +172,7 @@ public enum TeslaAPI: String, EnumCollection {
         public var name: String { return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized }
 
         /// Returns the API URL provided a vehicleId for the command
-        public func url(vehicleId: Int) -> URL {
+        public func url(vehicleId: Int64) -> URL {
             return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/command/\(self.rawValue)")
         }
     }

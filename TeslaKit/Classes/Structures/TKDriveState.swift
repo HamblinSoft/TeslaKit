@@ -10,10 +10,10 @@ import Foundation
 import ObjectMapper
 
 /// Returns the driving and position state of the vehicle.
-public struct TKDriveState {
+public struct TKDriveState { 
 
     ///
-    public var shiftState: String?
+    public var shiftState: TKShiftState = TKShiftState.park
 
     // TODO: Complete other properties
 
@@ -25,6 +25,21 @@ public struct TKDriveState {
     public var heading: Int = 0
     public var timestamp: Int = 0
 
+    public var direction: TKDirection {
+        switch Double(heading) {
+        case 0..<22.5: return .n
+        case 22.5..<67.5: return .ne
+        case 67.5..<112.5: return .e
+        case 112.5..<157.5: return .se
+        case 157.5..<202.5: return .s
+        case 202.5..<247.5: return .sw
+        case 247.5..<292.5: return .w
+        case 292.5..<337.5: return .nw
+        case 337.5..<360: return .n
+        default: return .n
+        }
+    }
+
     ///
     public init() {}
 }
@@ -32,7 +47,8 @@ public struct TKDriveState {
 extension TKDriveState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        shiftState <- map["shift_state"]
+        shiftState <- (map["shift_state"], EnumTransform())
+        heading <- map["heading"]
     }
 }
 

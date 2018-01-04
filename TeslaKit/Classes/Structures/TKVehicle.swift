@@ -1,5 +1,5 @@
 //
-//  TKVehicleData.swift
+//  TKVehicle.swift
 //  TeslaApp
 //
 //  Created by Jaren Hamblin on 11/25/17.
@@ -10,10 +10,10 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct TKVehicleData {
+public struct TKVehicle {
 
     /// The unique identifier of the vehicle
-    public var id: Int = 0
+    public var id: Int64 = 0
 
     /// The unique identifier of the vehicle (use id)
     public var vehicleId: Int = 0
@@ -58,7 +58,7 @@ public struct TKVehicleData {
     public init() {}
 }
 
-extension TKVehicleData: TKDataResponse {
+extension TKVehicle: TKDataResponse {
     public mutating func mapping(map: Map) {
         displayName <- map["response.display_name"]
         id <- map["response.id"]
@@ -77,8 +77,8 @@ extension TKVehicleData: TKDataResponse {
     }
 }
 
-extension TKVehicleData: Equatable {
-    public static func == (lhs: TKVehicleData, rhs: TKVehicleData) -> Bool {
+extension TKVehicle: Equatable {
+    public static func == (lhs: TKVehicle, rhs: TKVehicle) -> Bool {
         return lhs.chargeState.batteryLevel == rhs.chargeState.batteryLevel
             && lhs.chargeState.batteryRange == rhs.chargeState.batteryRange
     }

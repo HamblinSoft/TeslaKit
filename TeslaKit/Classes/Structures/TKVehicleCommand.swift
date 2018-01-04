@@ -25,6 +25,11 @@ public struct TKVehicleCommandResponse {
     public var errorDescription: String?
 
     ///
+    public var allErrorMessages: String {
+        return [self.errorDescription, self.reason, self.errorDescription].flatMap{$0}.joined(separator: ". ")
+    }
+
+    ///
     public init() {}
 
     ///
