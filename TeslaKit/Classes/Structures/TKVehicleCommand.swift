@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// The vehicle command response object indicating whether the command was issued successfully
-public struct TKVehicleCommandResponse {
+public struct TKCommandResponse {
 
     /// Commmand result
     public var result: Bool = false
@@ -40,7 +40,7 @@ public struct TKVehicleCommandResponse {
     }
 }
 
-extension TKVehicleCommandResponse: TKMappable {
+extension TKCommandResponse: TKMappable {
     public mutating func mapping(map: Map) {
         result <- map["response.result"]
         reason <- map["response.reason"]

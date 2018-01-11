@@ -69,14 +69,14 @@ public class TeslaAPI {
     }
 
     /// Send a command to the vehicle
-    public static func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKVehicleCommandResponse) -> Void) {
-        self.service.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, headers: self.headers) { (httpResponse, dataOrNil: TKVehicleCommandResponse?, errorOrNil) in
+    public static func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
+        self.service.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
             guard let data = dataOrNil, httpResponse.statusCode == 200 else {
-                completion(TKVehicleCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
+                completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
                 return
             }
             guard data.result else {
-                completion(TKVehicleCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
+                completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
                 return
             }
             completion(data)
@@ -89,14 +89,14 @@ public class TeslaAPI {
     /// - Parameters:
     ///   - context: TAContext
     ///   - completion: TKVehicleCommandCompletion
-    public static func wake(_ vehicle: TKVehicle, completion: @escaping (TKVehicleCommandResponse) -> Void) {
+    public static func wake(_ vehicle: TKVehicle, completion: @escaping (TKCommandResponse) -> Void) {
         var attempts: Int = 0
         var errorMessage: String?
 
         func doWake() {
 
             guard attempts < DefaultMaxAttempts else {
-                completion(TKVehicleCommandResponse(result: false, reason: errorMessage ?? "An error occurred"))
+                completion(TKCommandResponse(result: false, reason: errorMessage ?? "An error occurred"))
                 return
             }
 
@@ -126,7 +126,7 @@ public class TeslaAPI {
     ///   - context: TAContext
     ///   - command: TKCommand
     ///   - completion: TKVehicleCommandCompletion
-    public static func wake(_ vehicle: TKVehicle, then command: TKCommand, completion: @escaping (TKVehicleCommandResponse) -> Void) {
+    public static func wake(_ vehicle: TKVehicle, then command: TKCommand, completion: @escaping (TKCommandResponse) -> Void) {
         self.wake(vehicle) { response in
             if response.result && command != TKCommand.wake {
                 self.send(command, to: vehicle, completion: completion)
