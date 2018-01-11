@@ -1,9 +1,11 @@
 PODS:
+  - Alamofire (4.6.0)
   - ObjectMapper (3.1.0)
-  - TeslaKit (0.1.0):
+  - TeslaKit (0.1.1):
     - ObjectMapper (~> 3.0)
 
 DEPENDENCIES:
+  - Alamofire
   - ObjectMapper (~> 3.0)
   - TeslaKit (from `../`)
 
@@ -12,9 +14,10 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  TeslaKit: d562f456b7e4c37e820a2a4f86be2d7050ffe191
+  TeslaKit: 5e427d4ad3fdf45165fcbf46bf446947b53a1c22
 
-PODFILE CHECKSUM: 79d6f4f6c36fae0ffa71964487021bdca6876f4f
+PODFILE CHECKSUM: 1ace1abe71efcbfdc627c37836ca787d66355e32
 
 COCOAPODS: 1.4.0.beta.2

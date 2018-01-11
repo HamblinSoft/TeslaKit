@@ -1,9 +1,9 @@
 {
   "name": "TeslaKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "TeslaKit.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jjjjaren/TeslaKit",
+  "homepage": "https://github.com/Jarious-Apps/TeslaKit.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "jjjjaren": "jjjjaren@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jjjjaren/TeslaKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Jarious-Apps/TeslaKit.git",
+    "tag": "0.1.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "8.0",
+    "watchos": "4.0"
   },
   "source_files": "TeslaKit/Classes/**/*",
   "dependencies": {
