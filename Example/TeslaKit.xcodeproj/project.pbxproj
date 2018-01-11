@@ -27,6 +27,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		373B5203200716F900716C56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D4234942E40DD519DCFDE6F /* Pods_TeslaKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeslaKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		290DF2732E88D3E03D550FFD /* Pods-TeslaKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit_Tests/Pods-TeslaKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +185,7 @@
 				607FACCE1AFB9204008FA782 /* Resources */,
 				91DD71F7E165073DC17AF5A1 /* [CP] Embed Pods Frameworks */,
 				1420AF72D60F54B893F9087B /* [CP] Copy Pods Resources */,
+				373B5203200716F900716C56 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

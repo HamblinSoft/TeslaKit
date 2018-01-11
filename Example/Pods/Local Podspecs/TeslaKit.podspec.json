@@ -1,6 +1,6 @@
 {
   "name": "TeslaKit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "TeslaKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Jarious-Apps/TeslaKit.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Jarious-Apps/TeslaKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0",
@@ -21,6 +21,9 @@
   },
   "source_files": "TeslaKit/Classes/**/*",
   "dependencies": {
+    "Alamofire": [
+      "~> 4.0"
+    ],
     "ObjectMapper": [
       "~> 3.0"
     ]
