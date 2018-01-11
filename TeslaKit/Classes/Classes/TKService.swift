@@ -39,11 +39,17 @@ public class TKService: Alamofire.SessionDelegate {
 
     // MARK: - Helpers
 
-    public func request<T: TKMappable>(_ url: URL, method: HTTPMethod, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, mapContext: MapContext = TKMapContext.default, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
+    public func request<T: TKMappable>(_ url: URL,
+                                       method: HTTPMethod,
+                                       parameters: Parameters? = nil,
+                                       encoding: ParameterEncoding = JSONEncoding.default,
+                                       headers: HTTPHeaders? = nil,
+                                       mapContext: MapContext = TKMapContext.default,
+                                       completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
 
         delegate?.activityDidBegin(self)
 
-        self.sessionManager.request(url, method: method, parameters: parameters, headers: headers).responseJSON { dataResponse in
+        self.sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { dataResponse in
             let httpResponse: HTTPURLResponse = dataResponse.response ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
 
             var mappedObjectOrNil: T? = nil
