@@ -43,6 +43,6 @@ public struct Temperature {
     /// - Parameter value: Degrees in Fahrenheit
     /// - Returns: Degrees in Celsius
     public static func convert(fahrenheitToCelsius value: Double) -> Double {
-        return  (value - 32) * 5/9
+        return (value - 32) * 5/9
     }
 }

@@ -37,23 +37,14 @@ public enum TKDirection: String {
     ///
     public var displayName: String {
         switch self {
-
-        case .n:
-            return "North"
-        case .ne:
-            return "North East"
-        case .e:
-            return "East"
-        case .se:
-            return "South East"
-        case .s:
-            return "South"
-        case .sw:
-            return "South West"
-        case .w:
-            return "West"
-        case .nw:
-            return "North West"
+        case .n: return "North"
+        case .ne: return "North East"
+        case .e: return "East"
+        case .se: return "South East"
+        case .s: return "South"
+        case .sw: return "South West"
+        case .w: return "West"
+        case .nw: return "North West"
         }
     }
 
