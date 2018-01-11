@@ -13,7 +13,7 @@ import ObjectMapper
 public struct TKVehicle {
 
     /// The unique identifier of the vehicle
-    public var id: Int64 = 0
+    public var id: String = ""
 
     /// The unique identifier of the vehicle (use id)
     public var vehicleId: Int = 0
@@ -60,20 +60,32 @@ public struct TKVehicle {
 
 extension TKVehicle: TKDataResponse {
     public mutating func mapping(map: Map) {
-        displayName <- map["response.display_name"]
-        id <- map["response.id"]
-        options <- (map["response.option_codes"], TKVehicleOptionTransform(separator: ","))
-        userId <- map["response.user_id"]
-        vehicleId <- map["response.vehicle_id"]
-        vin <- (map["response.vin"], VINTransform())
-        status <- (map["response.state"], EnumTransform())
-        remoteStartEnabled <- map["response.remote_start_enabled"]
-        tokens <- map["response.tokens"]
-        chargeState <- map["response.charge_state"]
-        climateState <- map["response.climate_state"]
-        guiSettings <- map["response.gui_settings"]
-        driveState <- map["response.drive_state"]
-        vehicleState <- map["response.vehicle_state"]
+        if let context = map.context as? TKMapContext, context.vehicleDataMapping {
+            displayName <- map["response.display_name"]
+            id <- map["response.id_s"]
+            options <- (map["response.option_codes"], TKVehicleOptionTransform(separator: ","))
+            userId <- map["response.user_id"]
+            vehicleId <- map["response.vehicle_id"]
+            vin <- (map["response.vin"], VINTransform())
+            status <- (map["response.state"], EnumTransform())
+            remoteStartEnabled <- map["response.remote_start_enabled"]
+            tokens <- map["response.tokens"]
+            chargeState <- map["response.charge_state"]
+            climateState <- map["response.climate_state"]
+            guiSettings <- map["response.gui_settings"]
+            driveState <- map["response.drive_state"]
+            vehicleState <- map["response.vehicle_state"]
+        } else {
+            displayName <- map["display_name"]
+            id <- map["id_s"]
+            options <- (map["option_codes"], TKVehicleOptionTransform(separator: ","))
+            userId <- map["user_id"]
+            vehicleId <- map["vehicle_id"]
+            vin <- (map["vin"], VINTransform())
+            status <- (map["state"], EnumTransform())
+            remoteStartEnabled <- map["remote_start_enabled"]
+            tokens <- map["tokens"]
+        }
     }
 }
 
@@ -82,4 +94,11 @@ extension TKVehicle: Equatable {
         return lhs.chargeState.batteryLevel == rhs.chargeState.batteryLevel
             && lhs.chargeState.batteryRange == rhs.chargeState.batteryRange
     }
+}
+
+public struct TKMapContext: ObjectMapper.MapContext {
+
+    public static let `default`: TKMapContext = TKMapContext()
+
+    public var vehicleDataMapping: Bool = false
 }
