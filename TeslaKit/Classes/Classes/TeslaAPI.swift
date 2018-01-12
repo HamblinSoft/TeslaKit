@@ -70,7 +70,7 @@ public class TeslaAPI {
 
     /// Send a command to the vehicle
     public static func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
-        self.service.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
+        self.service.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, parameters: request?.toJSON(), encoding: JSONEncoding.default, headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
             guard let data = dataOrNil, httpResponse.statusCode == 200 else {
                 completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
                 return

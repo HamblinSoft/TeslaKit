@@ -53,6 +53,9 @@ extension TKClimateState: TKDataResponse {
         isFrontDefrosterOn <- map["is_front_defroster_on"]
         driver_temp_setting <- map["driver_temp_setting"]
         passenger_temp_setting <- map["passenger_temp_setting"]
+        is_climate_on <- map["is_climate_on"]
+        min_avail_temp <- map["min_avail_temp"]
+        max_avail_temp <- map["max_avail_temp"]
     }
 }
 
