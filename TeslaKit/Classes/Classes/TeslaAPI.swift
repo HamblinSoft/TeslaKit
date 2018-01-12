@@ -60,7 +60,7 @@ public class TeslaAPI {
 
     /// Get all data from vehicle
     public static func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.service.request(TKDataRequest.data.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, mapContext: TKMapContext(vehicleDataMapping: true), completion: completion)
+        self.service.request(TKDataRequest.data.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Get some data from the vehicle

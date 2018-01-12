@@ -60,7 +60,8 @@ public struct TKVehicle {
 
 extension TKVehicle: TKDataResponse {
     public mutating func mapping(map: Map) {
-        if let context = map.context as? TKMapContext, context.vehicleDataMapping {
+        let isVehicleData: Bool = !(map.JSON["id_s"] is String)
+        if isVehicleData {
             displayName <- map["response.display_name"]
             id <- map["response.id_s"]
             options <- (map["response.option_codes"], TKVehicleOptionTransform(separator: ","))
@@ -96,9 +97,3 @@ extension TKVehicle: Equatable {
     }
 }
 
-public struct TKMapContext: ObjectMapper.MapContext {
-
-    public static let `default`: TKMapContext = TKMapContext()
-
-    public var vehicleDataMapping: Bool = false
-}

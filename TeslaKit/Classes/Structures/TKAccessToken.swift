@@ -64,7 +64,7 @@ public enum TKAccessToken {
         
         ///
         public var isExpired: Bool {
-            guard let createdAt = self.createdAt, let expiresIn = self.expiresIn else { return true }
+            guard let createdAt = self.createdAt, let expiresIn = self.expiresIn, self.accessToken != nil && self.accessToken != "" else { return true }
             let expiryDate: Date = createdAt.addingTimeInterval(expiresIn)
             let isExpired: Bool = expiryDate <= Date()
             return isExpired

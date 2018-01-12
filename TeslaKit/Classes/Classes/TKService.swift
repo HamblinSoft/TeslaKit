@@ -44,7 +44,6 @@ public class TKService: Alamofire.SessionDelegate {
                                        parameters: Parameters? = nil,
                                        encoding: ParameterEncoding = JSONEncoding.default,
                                        headers: HTTPHeaders? = nil,
-                                       mapContext: MapContext = TKMapContext.default,
                                        completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
 
         delegate?.activityDidBegin(self)
@@ -56,7 +55,7 @@ public class TKService: Alamofire.SessionDelegate {
 
             if let data = dataResponse.data,
                 let json = try? JSONSerialization.jsonObject(with: data),
-                let object = Mapper<T>(context: mapContext).map(JSONObject: json) {
+                let object = Mapper<T>().map(JSONObject: json) {
                 mappedObjectOrNil = object
             }
 
