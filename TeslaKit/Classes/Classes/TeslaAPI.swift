@@ -18,8 +18,6 @@ public class TeslaAPI {
 
     // MARK: - Static Properties
 
-    public static var service = TKService()
-
     ///
     public static let baseURL: URL = URL(string: "https://owner-api.teslamotors.com")!
 
@@ -35,16 +33,32 @@ public class TeslaAPI {
     /// Tesla API owner api client secret
     public static let ownerApiClientSecret: String = "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220"
 
+    ///
+    public let service: TKService
+
+
     // TODO: Consider moving this into a context
-    public static var headers: HTTPHeaders = [
+    public private(set) var headers: HTTPHeaders = [
         "content-type": "application/json",
         "cache-control": "no-cache"
     ]
 
+    public init(service: TKService = TKService()) {
+        self.service = service
+    }
+
+    public func setAccessToken(_ accessToken: String?) {
+        if let accessToken = accessToken {
+            self.headers["Authorization"] = "Bearer " + accessToken
+        } else {
+            self.headers["Authorization"] = nil
+        }
+    }
+
     // MARK: - Core API
 
     /// Performs the login. Takes in an plain text email and password, matching the owner's login information for https://my.teslamotors.com/user/login. Returns a access_token which is passed along as a header with all future requests to authenticate the user.
-    public static func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
+    public func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
         let request = TKAccessToken.Request(grantType: "password",
                                             clientId: TeslaAPI.ownerApiClientId,
                                             clientSecret: TeslaAPI.ownerApiClientSecret,
@@ -54,22 +68,22 @@ public class TeslaAPI {
     }
 
     // A logged in user can have multiple vehicles under their account. This resource is primarily responsible for listing the vehicles and the basic details about them.
-    public static func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
+    public func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
         self.service.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Get all data from vehicle
-    public static func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    public func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.service.request(TKDataRequest.data.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Get some data from the vehicle
-    public static func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
+    public func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
         self.service.request(type.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Send a command to the vehicle
-    public static func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
+    public func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
         self.service.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, parameters: request?.toJSON(), encoding: JSONEncoding.default, headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
             guard let data = dataOrNil, httpResponse.statusCode == 200 else {
                 completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
@@ -89,7 +103,7 @@ public class TeslaAPI {
     /// - Parameters:
     ///   - context: TAContext
     ///   - completion: TKVehicleCommandCompletion
-    public static func wake(_ vehicle: TKVehicle, completion: @escaping (TKCommandResponse) -> Void) {
+    public func wake(_ vehicle: TKVehicle, completion: @escaping (TKCommandResponse) -> Void) {
         var attempts: Int = 0
         var errorMessage: String?
 
@@ -126,7 +140,7 @@ public class TeslaAPI {
     ///   - context: TAContext
     ///   - command: TKCommand
     ///   - completion: TKVehicleCommandCompletion
-    public static func wake(_ vehicle: TKVehicle, then command: TKCommand, completion: @escaping (TKCommandResponse) -> Void) {
+    public func wake(_ vehicle: TKVehicle, then command: TKCommand, completion: @escaping (TKCommandResponse) -> Void) {
         self.wake(vehicle) { response in
             if response.result && command != TKCommand.wake {
                 self.send(command, to: vehicle, completion: completion)
