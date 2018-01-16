@@ -22,9 +22,11 @@ public class TKService: Alamofire.SessionDelegate {
     public weak var delegate: TKServiceDelegate? = nil
 
     ///
-    public lazy var sessionManager: Alamofire.SessionManager! = {
+    public private(set) lazy var sessionManager: Alamofire.SessionManager = self.getSessionManager()
+
+    private func getSessionManager() -> Alamofire.SessionManager {
         return Alamofire.SessionManager(configuration: self.configuration, delegate: self, serverTrustPolicyManager: nil)
-    }()
+    }
 
     ///
     public init(timeout: TimeInterval = 30) {
@@ -72,7 +74,7 @@ public class TKService: Alamofire.SessionDelegate {
         let session = self.sessionManager.session
         session.invalidateAndCancel()
         session.reset {
-            self.sessionManager = nil
+            self.sessionManager = self.getSessionManager()
             completion()
         }
     }
