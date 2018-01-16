@@ -1,5 +1,5 @@
 //
-//  TKService.swift
+//  TKHTTPClient.swift
 //  Pods
 //
 //  Created by Jaren Hamblin on 1/10/18.
@@ -9,27 +9,35 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-public protocol TKServiceDelegate: class {
-    func activityDidBegin(_ service: TKService)
-    func activityDidEnd(_ service: TKService)
+///
+public protocol TKHTTPClientDelegate: class {
+
+    ///
+    func activityDidBegin(_ service: TKHTTPClient)
+
+    ///
+    func activityDidEnd(_ service: TKHTTPClient)
 }
 
-public class TKService: Alamofire.SessionDelegate {
+///
+public class TKHTTPClient: Alamofire.SessionDelegate {
 
     ///
-    public let configuration: URLSessionConfiguration
-
-    public weak var delegate: TKServiceDelegate? = nil
+    public weak var delegate: TKHTTPClientDelegate? = nil
 
     ///
-    public private(set) lazy var sessionManager: Alamofire.SessionManager = self.getSessionManager()
+    private let configuration: URLSessionConfiguration
 
+    ///
+    private lazy var sessionManager: Alamofire.SessionManager = self.getSessionManager()
+
+    ///
     private func getSessionManager() -> Alamofire.SessionManager {
         return Alamofire.SessionManager(configuration: self.configuration, delegate: self, serverTrustPolicyManager: nil)
     }
 
     ///
-    public init(timeout: TimeInterval = 30) {
+    public init(timeout: TimeInterval) {
         // Session Configuration
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
@@ -41,6 +49,7 @@ public class TKService: Alamofire.SessionDelegate {
 
     // MARK: - Helpers
 
+    ///
     public func request<T: TKMappable>(_ url: URL,
                                        method: HTTPMethod,
                                        parameters: Parameters? = nil,
@@ -70,6 +79,7 @@ public class TKService: Alamofire.SessionDelegate {
         }
     }
 
+    ///
     public func clearSession(completion: @escaping () -> Void) {
         let session = self.sessionManager.session
         session.invalidateAndCancel()
