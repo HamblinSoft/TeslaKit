@@ -86,14 +86,38 @@ public struct VINComponent {
         case unknown = ""
 
         ///
-        case year2016 = "H"
+        case year2019 = "K"
+
+        ///
+        case year2018 = "J"
+
+        ///
+        case year2017 = "H"
+
+        ///
+        case year2016 = "G"
+
+        ///
+        case year2015 = "F"
+
+        ///
+        case year2014 = "E"
+
+        ///
+        case year2013 = "D"
+
+        ///
+        case year2012 = "C"
+
+        ///
+        case year2011 = "B"
+
+        ///
+        case year2010 = "A"
 
         ///
         public var name: String {
-            switch self {
-            case .year2016: return "2016"
-            default: return ""
-            }
+            return String(describing: self).replacingOccurrences(of: "year", with: "")
         }
     }
 }

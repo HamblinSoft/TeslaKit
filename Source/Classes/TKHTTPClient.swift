@@ -21,7 +21,7 @@ public protocol TKHTTPClientDelegate: class {
 }
 
 ///
-public class TKHTTPClient: Alamofire.SessionDelegate {
+open class TKHTTPClient: Alamofire.SessionDelegate {
 
     ///
     public weak var delegate: TKHTTPClientDelegate? = nil
@@ -51,7 +51,7 @@ public class TKHTTPClient: Alamofire.SessionDelegate {
     // MARK: - Helpers
 
     ///
-    public func request<T: TKMappable>(_ url: URL,
+    open func request<T: TKMappable>(_ url: URL,
                                        method: HTTPMethod,
                                        parameters: Parameters? = nil,
                                        encoding: ParameterEncoding = JSONEncoding.default,
@@ -81,7 +81,7 @@ public class TKHTTPClient: Alamofire.SessionDelegate {
     }
 
     ///
-    public func clearSession(completion: @escaping () -> Void) {
+    open func clearSession(completion: @escaping () -> Void) {
         let session = self.sessionManager.session
         session.invalidateAndCancel()
         session.reset {

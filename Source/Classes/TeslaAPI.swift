@@ -13,7 +13,7 @@ import ObjectMapper
 fileprivate let DefaultRequestDelay: TimeInterval = 2
 fileprivate let DefaultMaxAttempts: Int = 15
 
-public class TeslaAPI {
+open class TeslaAPI {
 
 
     // MARK: - Static Properties
@@ -60,7 +60,7 @@ public class TeslaAPI {
     // MARK: - Core API
 
     /// Performs the login. Takes in an plain text email and password, matching the owner's login information for https://my.teslamotors.com/user/login. Returns a access_token which is passed along as a header with all future requests to authenticate the user.
-    public func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
+    open func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
         let request = TKAccessToken.Request(grantType: "password",
                                             clientId: TeslaAPI.ownerApiClientId,
                                             clientSecret: TeslaAPI.ownerApiClientSecret,
@@ -70,22 +70,22 @@ public class TeslaAPI {
     }
 
     // A logged in user can have multiple vehicles under their account. This resource is primarily responsible for listing the vehicles and the basic details about them.
-    public func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
+    open func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
         self.httpClient.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Get all data from vehicle
-    public func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    open func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.httpClient.request(TKDataRequest.data.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Get some data from the vehicle
-    public func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
+    open func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
         self.httpClient.request(type.url(vehicleId: vehicle.id), method: HTTPMethod.get, headers: self.headers, completion: completion)
     }
 
     /// Send a command to the vehicle
-    public func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
+    open func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
         self.httpClient.request(command.url(vehicleId: vehicle.id), method: HTTPMethod.post, parameters: request?.toJSON(), encoding: JSONEncoding.default, headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
             guard let data = dataOrNil, httpResponse.statusCode == 200 else {
                 completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
