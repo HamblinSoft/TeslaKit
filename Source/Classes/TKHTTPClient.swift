@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import SwiftyJSON
 
 ///
 public protocol TKHTTPClientDelegate: class {
