@@ -31,6 +31,7 @@ extension TKGUISettings: TKDataResponse {
 
     public mutating func mapping(map: Map) {
         guiDistanceUnits <- map["gui_distance_units"]
+        gui_temperature_units <- map["gui_temperature_units"]
     }
 }
 
