@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TKVehicleState Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/TKVehicleState" class="dashAnchor"></a>
+    <a title="TKVehicleState Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TeslaKit Docs</a> (73% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TeslaKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TKVehicleState Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TKHTTPClient.html">TKHTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken.html">TKAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken/Response.html">– Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKChargingState.html">TKChargingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKCommand.html">TKCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKDataRequest.html">TKDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKDirection.html">TKDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKError.html">TKError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKPanoRoofState.html">TKPanoRoofState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKShiftState.html">TKShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKVehicleStatus.html">TKVehicleStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumCollection.html">EnumCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TKHTTPClientDelegate.html">TKHTTPClientDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TKMappable.html">TKMappable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/TKChargeState.html">TKChargeState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKClimateState.html">TKClimateState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKCommandResponse.html">TKCommandResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKDriveState.html">TKDriveState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKGUISettings.html">TKGUISettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKMobileAccess.html">TKMobileAccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKMovePanoRoof.html">TKMovePanoRoof</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKRemoteStart.html">TKRemoteStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKResetValetPIN.html">TKResetValetPIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSetChargeLimit.html">TKSetChargeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSetTemperature.html">TKSetTemperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKStringArrayTransform.html">TKStringArrayTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicle.html">TKVehicle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleOption.html">TKVehicleOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleOptionTransform.html">TKVehicleOptionTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleState.html">TKVehicleState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VIN.html">VIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent.html">VINComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Manufacturer.html">– Manufacturer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Make.html">– Make</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/BatteryType.html">– BatteryType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/DriveUnit.html">– DriveUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ModelYear.html">– ModelYear</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINTransform.html">VINTransform</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TKVehicleState</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TKVehicleState</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV13exteriorColorSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/exteriorColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV13exteriorColorSSSgv">exteriorColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">exteriorColor</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TODO:%20Complete%20other%20properties"></a>
+                <a name="//apple_ref/swift/Section/TODO: Complete other properties" class="dashAnchor"></a>
+                <a href="#/TODO:%20Complete%20other%20properties">
+                  <h3 class="section-name">TODO: Complete other properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV20center_display_stateSiv"></a>
+                    <a name="//apple_ref/swift/Property/center_display_state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV20center_display_stateSiv">center_display_state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">center_display_state</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV14autopark_styleSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/autopark_style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV14autopark_styleSSSgv">autopark_style</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">autopark_style</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV12remote_startSbv"></a>
+                    <a name="//apple_ref/swift/Property/remote_start" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV12remote_startSbv">remote_start</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">remote_start</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV8odometerSdv"></a>
+                    <a name="//apple_ref/swift/Property/odometer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV8odometerSdv">odometer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">odometer</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2rtSiv"></a>
+                    <a name="//apple_ref/swift/Property/rt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2rtSiv">rt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rt</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV21sun_roof_percent_openSiv"></a>
+                    <a name="//apple_ref/swift/Property/sun_roof_percent_open" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV21sun_roof_percent_openSiv">sun_roof_percent_open</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sun_roof_percent_open</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV12vehicle_nameSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/vehicle_name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV12vehicle_nameSSSgv">vehicle_name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">vehicle_name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV22remote_start_supportedSbv"></a>
+                    <a name="//apple_ref/swift/Property/remote_start_supported" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV22remote_start_supportedSbv">remote_start_supported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">remote_start_supported</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV9dark_rimsSbv"></a>
+                    <a name="//apple_ref/swift/Property/dark_rims" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV9dark_rimsSbv">dark_rims</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dark_rims</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV6lockedSbv"></a>
+                    <a name="//apple_ref/swift/Property/locked" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV6lockedSbv">locked</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">locked</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV14rear_seat_typeSiv"></a>
+                    <a name="//apple_ref/swift/Property/rear_seat_type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV14rear_seat_typeSiv">rear_seat_type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rear_seat_type</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV3rhdSbv"></a>
+                    <a name="//apple_ref/swift/Property/rhd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV3rhdSbv">rhd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rhd</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV17autopark_state_v2SSSgv"></a>
+                    <a name="//apple_ref/swift/Property/autopark_state_v2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV17autopark_state_v2SSSgv">autopark_state_v2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">autopark_state_v2</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV10roof_colorSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/roof_color" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV10roof_colorSSSgv">roof_color</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">roof_color</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV17rear_seat_heatersSiv"></a>
+                    <a name="//apple_ref/swift/Property/rear_seat_heaters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV17rear_seat_heatersSiv">rear_seat_heaters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rear_seat_heaters</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV10valet_modeSbv"></a>
+                    <a name="//apple_ref/swift/Property/valet_mode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV10valet_modeSbv">valet_mode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">valet_mode</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV25parsed_calendar_supportedSbv"></a>
+                    <a name="//apple_ref/swift/Property/parsed_calendar_supported" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV25parsed_calendar_supportedSbv">parsed_calendar_supported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parsed_calendar_supported</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV11api_versionSiv"></a>
+                    <a name="//apple_ref/swift/Property/api_version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV11api_versionSiv">api_version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">api_version</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV15homelink_nearbySbv"></a>
+                    <a name="//apple_ref/swift/Property/homelink_nearby" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV15homelink_nearbySbv">homelink_nearby</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">homelink_nearby</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV14autopark_stateSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/autopark_state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV14autopark_stateSSSgv">autopark_state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">autopark_state</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV19last_autopark_errorSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/last_autopark_error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV19last_autopark_errorSSSgv">last_autopark_error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">last_autopark_error</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2drSiv"></a>
+                    <a name="//apple_ref/swift/Property/dr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2drSiv">dr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">dr</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV11has_spoilerSbv"></a>
+                    <a name="//apple_ref/swift/Property/has_spoiler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV11has_spoilerSbv">has_spoiler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">has_spoiler</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV18calendar_supportedSbv"></a>
+                    <a name="//apple_ref/swift/Property/calendar_supported" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV18calendar_supportedSbv">calendar_supported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">calendar_supported</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV14sun_roof_stateSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/sun_roof_state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV14sun_roof_stateSSSgv">sun_roof_state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sun_roof_state</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2dfSiv"></a>
+                    <a name="//apple_ref/swift/Property/df" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2dfSiv">df</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">df</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV16valet_pin_neededSbv"></a>
+                    <a name="//apple_ref/swift/Property/valet_pin_needed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV16valet_pin_neededSbv">valet_pin_needed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">valet_pin_needed</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2prSiv"></a>
+                    <a name="//apple_ref/swift/Property/pr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2prSiv">pr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pr</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV12spoiler_typeSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/spoiler_type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV12spoiler_typeSSSgv">spoiler_type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">spoiler_type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV8car_typeSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/car_type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV8car_typeSSSgv">car_type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">car_type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV11perf_configSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/perf_config" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV11perf_configSSSgv">perf_config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">perf_config</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV11car_versionSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/car_version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV11car_versionSSSgv">car_version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">car_version</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV9seat_typeSiv"></a>
+                    <a name="//apple_ref/swift/Property/seat_type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV9seat_typeSiv">seat_type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">seat_type</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV15third_row_seatsSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/third_row_seats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV15third_row_seatsSSSgv">third_row_seats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">third_row_seats</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2ftSiv"></a>
+                    <a name="//apple_ref/swift/Property/ft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2ftSiv">ft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ft</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV23notifications_supportedSbv"></a>
+                    <a name="//apple_ref/swift/Property/notifications_supported" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV23notifications_supportedSbv">notifications_supported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notifications_supported</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV2pfSiv"></a>
+                    <a name="//apple_ref/swift/Property/pf" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV2pfSiv">pf</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pf</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV10wheel_typeSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/wheel_type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV10wheel_typeSSSgv">wheel_type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">wheel_type</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV18sun_roof_installedSiv"></a>
+                    <a name="//apple_ref/swift/Property/sun_roof_installed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV18sun_roof_installedSiv">sun_roof_installed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sun_roof_installed</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV9timestampSiv"></a>
+                    <a name="//apple_ref/swift/Property/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV9timestampSiv">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit14TKVehicleStateV7mappingXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/mapping(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKVehicleStateV7mappingXeXeF">mapping(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">mapping</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
