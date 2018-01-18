@@ -13,7 +13,7 @@ import ObjectMapper
 public struct TKChargeState {
 
     ///
-    public var chargingState: TKChargingState = TKChargingState.complete
+    public var chargingState: TKChargingState = TKChargingState.stopped
 
     ///
     public var chargeToMaxRange: Bool = false
