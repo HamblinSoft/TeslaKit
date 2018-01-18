@@ -1,6 +1,6 @@
 //
 //  TKHTTPClient.swift
-//  Pods
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 1/10/18.
 //

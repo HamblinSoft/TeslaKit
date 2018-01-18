@@ -1,6 +1,6 @@
 //
 //  Temperature.swift
-//  Pods
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 12/19/17.
 //
@@ -16,13 +16,13 @@ public struct Temperature {
     /// Returns the temperature in degrees Fahrenheit
     public let fahrenheit: Double
 
-    /// Initializes a `Temperature` object with degrees Celsius as the base
+    /// Initializes a `Temperature` object with degrees Celsius as the starting reference point
     public init(celsius: Double) {
         self.celsius = celsius
         self.fahrenheit = Temperature.convert(celsiusToFahrenheit: celsius)
     }
 
-    /// Initializes a `Temperature` object with degrees Fahrenheit as the base
+    /// Initializes a `Temperature` object with degrees Fahrenheit as the starting reference point
     public init(fahrenheit: Double) {
         self.fahrenheit = fahrenheit
         self.celsius = Temperature.convert(fahrenheitToCelsius: fahrenheit)

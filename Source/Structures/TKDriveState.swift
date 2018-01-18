@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-/// Returns the driving and position state of the vehicle.
+/// Response object containing information about the driving and position state of the vehicle
 public struct TKDriveState { 
 
     ///

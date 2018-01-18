@@ -1,6 +1,6 @@
 //
 //  TKDirection.swift
-//  Pods
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 12/24/17.
 //

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-/// Returns the state of charge in the battery.
+/// Response object containing information about the charge state of the vehicle
 public struct TKChargeState {
 
     ///
@@ -65,6 +65,8 @@ public struct TKChargeState {
 //    public var scheduled_charging_pending: Bool = false
 //    public var not_enough_power_to_heat: Bool = false
 //    public var managed_charging_start_time: String? = nil
+
+    ///
     public var charge_miles_added_rated: Double = 0
 //    public var charge_miles_added_ideal: Int = 0
 //    public var managed_charging_user_canceled: Bool = false
@@ -72,6 +74,7 @@ public struct TKChargeState {
 //    public var eu_vehicle: Bool = false
 //    public var timestamp: Int = 0
 
+    ///
     public init() {}
 }
 

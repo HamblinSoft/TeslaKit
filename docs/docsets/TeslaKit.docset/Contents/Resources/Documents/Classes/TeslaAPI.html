@@ -14,7 +14,7 @@
     <a title="TeslaAPI Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">TeslaKit Docs</a> (73% documented)</p>
+        <p><a href="../index.html">TeslaKit Docs</a> (74% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -204,33 +204,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC7baseURL10Foundation0E0VvZ"></a>
-                    <a name="//apple_ref/swift/Variable/baseURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC7baseURL10Foundation0E0VvZ">baseURL</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Base owner API URL</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="nf">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://owner-api.teslamotors.com"</span><span class="p">)</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:8TeslaKit0A3APIC10apiVersionSivZ"></a>
                     <a name="//apple_ref/swift/Variable/apiVersion" class="dashAnchor"></a>
                     <a class="token" href="#/s:8TeslaKit0A3APIC10apiVersionSivZ">apiVersion</a>
@@ -249,6 +222,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">apiVersion</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit0A3APIC7baseURL10Foundation0E0VvZ"></a>
+                    <a name="//apple_ref/swift/Variable/baseURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC7baseURL10Foundation0E0VvZ">baseURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Base owner API URL</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="nf">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://owner-api.teslamotors.com"</span><span class="p">)</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -363,17 +363,6 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/TODO:%20Consider%20moving%20this%20into%20a%20context"></a>
-                <a name="//apple_ref/swift/Section/TODO: Consider moving this into a context" class="dashAnchor"></a>
-                <a href="#/TODO:%20Consider%20moving%20this%20into%20a%20context">
-                  <h3 class="section-name">TODO: Consider moving this into a context</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -387,7 +376,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Initialize a new instance of TeslaAPI with an optional HTTPClient</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -396,6 +386,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">httpClient</span><span class="p">:</span> <span class="kt"><a href="../Classes/TKHTTPClient.html">TKHTTPClient</a></span> <span class="o">=</span> <span class="nf">TKHTTPClient</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">30</span><span class="p">))</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>httpClient</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TKHTTPClient to be used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -413,7 +422,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Set the accessToken to be used with all requests</p>
 
                       </div>
                       <div class="declaration">
@@ -423,6 +432,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAccessToken</span><span class="p">(</span><span class="n">_</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessToken</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -462,6 +490,49 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>email</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The email of the user</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>password</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The password of the user</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -478,7 +549,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A logged in user can have multiple vehicles under their account. This resource is primarily responsible for listing the vehicles and the basic details about them.</p>
 
                       </div>
                       <div class="declaration">
@@ -488,6 +559,25 @@
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">vehicles</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -505,7 +595,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get all data from vehicle</p>
+                        <p>Get all data from the vehicle</p>
 
                       </div>
                       <div class="declaration">
@@ -516,32 +606,36 @@
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8TeslaKit0A3APIC4datayAA9TKVehicleV3for_AA13TKDataRequestO4typeySo15HTTPURLResponseC_xSgs5Error_pSgtc10completiontAA0G8ResponseRzlF"></a>
-                    <a name="//apple_ref/swift/Method/data(for:type:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC4datayAA9TKVehicleV3for_AA13TKDataRequestO4typeySo15HTTPURLResponseC_xSgs5Error_pSgtc10completiontAA0G8ResponseRzlF">data(for:type:completion:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Get some data from the vehicle</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">data</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a></span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKDataRequest.html">TKDataRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">T</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
-
-                        </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>vehicle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The vehicle to obtain data from</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -569,6 +663,61 @@
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">command</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKCommand.html">TKCommand</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TKMappable.html">TKMappable</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/TKCommandResponse.html">TKCommandResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>command</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The command to be sent</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>vehicle</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The vehicle to send the command to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional data to be included with the command</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion Handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>

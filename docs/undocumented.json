@@ -8,20 +8,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 52,
-      "symbol": "TeslaAPI.setAccessToken(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 73,
-      "symbol": "TeslaAPI.vehicles(completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Enumerations/TKDirection.swift",
       "line": 51,
       "symbol": "TKDirection.shortName",
@@ -86,14 +72,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKChargeState.swift",
-      "line": 68,
-      "symbol": "TKChargeState.charge_miles_added_rated",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKChargeState.swift",
-      "line": 79,
+      "line": 82,
       "symbol": "TKChargeState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

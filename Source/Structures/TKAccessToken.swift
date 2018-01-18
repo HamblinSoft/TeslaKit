@@ -9,25 +9,25 @@
 import Foundation
 import ObjectMapper
 
-///
+/// Response Object
 public enum TKAccessToken {
 
-    ///
+    /// AccessToken Request object containing the required information to receive an accessToken
     public struct Request {
 
-        ///
+        /// Grant type should be "password"
         public var grantType: String? = nil
 
-        ///
+        /// Tesla API owner api client id
         public var clientId: String? = nil
 
-        ///
+        /// Tesla API owner api client secret
         public var clientSecret: String? = nil
 
-        ///
+        /// The email address of a user
         public var email: String? = nil
 
-        ///
+        /// The password of a user
         public var password: String? = nil
 
         ///
@@ -44,25 +44,25 @@ public enum TKAccessToken {
 
     }
 
-    ///
+    /// The response object returned containing an accessToken
     public struct Response {
 
-        ///
+        /// The accessToken that needs to be included with each request to obtain vehicle data and send vehicle commands
         public var accessToken: String? = nil
 
-        ///
+        /// The type of token
         public var tokenType: String? = nil
 
-        ///
+        /// When the access token expires
         public var expiresIn: TimeInterval? = nil
 
-        ///
+        /// The date the access token was created at
         public var createdAt: Date? = nil
 
-        ///
+        /// A refresh token
         public var refreshToken: String? = nil
         
-        ///
+        /// Returns whether the accessToken obejct is valid or has expired
         public var isExpired: Bool {
             guard let createdAt = self.createdAt, let expiresIn = self.expiresIn, self.accessToken != nil && self.accessToken != "" else { return true }
             let expiryDate: Date = createdAt.addingTimeInterval(expiresIn)
