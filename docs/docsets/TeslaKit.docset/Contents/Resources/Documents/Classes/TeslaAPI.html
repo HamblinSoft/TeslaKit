@@ -184,7 +184,7 @@
             <h1>TeslaAPI</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">TeslaAPI</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">TeslaAPI</span></code></pre>
 
                 </div>
               </div>
@@ -458,7 +458,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Enums/TKAccessToken.html">TKAccessToken</a></span><span class="o">.</span><span class="kt">Response</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Enums/TKAccessToken.html">TKAccessToken</a></span><span class="o">.</span><span class="kt">Response</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -485,7 +485,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">vehicles</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">vehicles</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -512,7 +512,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="k">for</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">data</span><span class="p">(</span><span class="k">for</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -539,7 +539,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">data</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a></span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKDataRequest.html">TKDataRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">T</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">data</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a></span><span class="o">&gt;</span><span class="p">(</span><span class="k">for</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKDataRequest.html">TKDataRequest</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">T</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -566,7 +566,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">command</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKCommand.html">TKCommand</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TKMappable.html">TKMappable</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/TKCommandResponse.html">TKCommandResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">command</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKCommand.html">TKCommand</a></span><span class="p">,</span> <span class="n">to</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TKMappable.html">TKMappable</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/TKCommandResponse.html">TKCommandResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -717,7 +717,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-16)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
