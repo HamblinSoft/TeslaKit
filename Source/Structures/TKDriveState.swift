@@ -47,6 +47,7 @@ public struct TKDriveState {
 extension TKDriveState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
+        speed <- map["speed"]
         shiftState <- (map["shift_state"], EnumTransform())
         heading <- map["heading"]
         latitude <- map["latitude"]
