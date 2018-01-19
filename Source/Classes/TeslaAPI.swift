@@ -30,16 +30,14 @@ open class TeslaAPI {
     /// Base owner API URL with api version
     public static let apiBaseURL: URL = baseURL.appendingPathComponent("api/\(TeslaAPI.apiVersion)")
 
-    /// Tesla API owner api client id
-    public static let ownerApiClientId: String = "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e"
-
-    /// Tesla API owner api client secret
-    public static let ownerApiClientSecret: String = "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220"
-
     /// HTTPClient used to make network requests
     public let httpClient: TKHTTPClient
 
+    /// Tesla API owner api client id
+    public let ownerApiClientId: String
 
+    /// Tesla API owner api client secret
+    public let ownerApiClientSecret: String
 
 
 
@@ -59,7 +57,9 @@ open class TeslaAPI {
     /// Initialize a new instance of TeslaAPI with an optional HTTPClient
     ///
     /// - Parameter httpClient: TKHTTPClient to be used
-    public init(httpClient: TKHTTPClient = TKHTTPClient(timeout: 30)) {
+    public init(ownerApiClientId: String, ownerApiClientSecret: String, httpClient: TKHTTPClient = TKHTTPClient(timeout: 30)) {
+        self.ownerApiClientId = ownerApiClientId
+        self.ownerApiClientSecret = ownerApiClientSecret
         self.httpClient = httpClient
     }
 
@@ -104,8 +104,8 @@ open class TeslaAPI {
     ///   - completion: Completion Handler
     open func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
         let request = TKAccessToken.Request(grantType: "password",
-                                            clientId: TeslaAPI.ownerApiClientId,
-                                            clientSecret: TeslaAPI.ownerApiClientSecret,
+                                            clientId: self.ownerApiClientId,
+                                            clientSecret: self.ownerApiClientSecret,
                                             email: email,
                                             password: password)
 
