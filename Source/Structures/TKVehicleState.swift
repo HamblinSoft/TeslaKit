@@ -20,7 +20,7 @@ public struct TKVehicleState {
     public var autopark_style: String? = nil
     public var remote_start: Bool = false
     public var odometer: Double = 0
-    public var rt: Int = 0
+    public var rearTrunkState: Int = 0
     public var sun_roof_percent_open: Int = 0
     public var vehicle_name: String? = nil
     public var remote_start_supported: Bool = false
@@ -37,22 +37,22 @@ public struct TKVehicleState {
     public var homelink_nearby: Bool = false
     public var autopark_state: String? = nil
     public var last_autopark_error: String? = nil
-    public var dr: Int = 0
+    public var driverRearDoorState: Int = 0
     public var has_spoiler: Bool = false
     public var calendar_supported: Bool = false
     public var sun_roof_state: String? = nil
-    public var df: Int = 0
+    public var driverFrontDoorState: Int = 0
     public var valet_pin_needed: Bool = false
-    public var pr: Int = 0
+    public var passengerRearDoorState: Int = 0
     public var spoiler_type: String? = nil
     public var car_type: String? = nil
     public var perf_config: String? = nil
     public var car_version: String? = nil
     public var seat_type: Int = 0
     public var third_row_seats: String? = nil
-    public var ft: Int = 0
+    public var frontTrunkState: Int = 0
     public var notifications_supported: Bool = false
-    public var pf: Int = 0
+    public var passengerFrontDoorState: Int = 0
     public var wheel_type: String? = nil
     public var sun_roof_installed: Int = 0
     public var timestamp: Int = 0
@@ -67,6 +67,12 @@ extension TKVehicleState: TKDataResponse {
         locked <- map["locked"]
         exteriorColor <- map["exterior_color"]
         odometer <- map["odometer"]
+        driverFrontDoorState <- map["df"]
+        driverRearDoorState <- map["dr"]
+        passengerFrontDoorState <- map["pf"]
+        passengerRearDoorState <- map["pr"]
+        frontTrunkState <- map["ft"]
+        rearTrunkState <- map["rt"]
     }
 }
 
