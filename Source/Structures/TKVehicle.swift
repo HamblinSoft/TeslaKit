@@ -56,6 +56,9 @@ public struct TKVehicle {
 
     ///
     public init() {}
+
+    ///
+    public var timestamp: TimeInterval { return self.climateState.timestamp }
 }
 
 extension TKVehicle: TKDataResponse {

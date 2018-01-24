@@ -10,9 +10,6 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-fileprivate let DefaultRequestDelay: TimeInterval = 2
-fileprivate let DefaultMaxAttempts: Int = 15
-
 open class TeslaAPI {
 
 
@@ -183,63 +180,6 @@ open class TeslaAPI {
         }
     }
 
-
-
-
-    
-    // MARK: - Convenience
-
-    /// Attempt to wake the vehicle. Required for vehicle commands.
-    ///
-    /// - Parameters:
-    ///   - context: TAContext
-    ///   - completion: TKVehicleCommandCompletion
-    public func wake(_ vehicle: TKVehicle, completion: @escaping (TKCommandResponse) -> Void) {
-        var attempts: Int = 0
-        var errorMessage: String?
-
-        func doWake() {
-
-            guard attempts < DefaultMaxAttempts else {
-                completion(TKCommandResponse(result: false, reason: errorMessage ?? "An error occurred"))
-                return
-            }
-
-            let requestDelay: TimeInterval = attempts == 0 ? 0 : DefaultRequestDelay
-
-            DispatchQueue.main.asyncAfter(seconds: requestDelay) {
-
-                self.send(.wake, to: vehicle) { response in
-
-                    if response.result {
-                        completion(response)
-                    } else {
-                        errorMessage = response.error ?? response.reason ?? "An error occurred"
-                        doWake()
-                    }
-                }
-
-                attempts += 1
-            }
-        }
-        doWake()
-    }
-
-    /// Attempt to wake vehicle and then issue a command. Wake command will be attempted several times over a time interval.
-    ///
-    /// - Parameters:
-    ///   - context: TAContext
-    ///   - command: TKCommand
-    ///   - completion: TKVehicleCommandCompletion
-    public func wake(_ vehicle: TKVehicle, then command: TKCommand, completion: @escaping (TKCommandResponse) -> Void) {
-        self.wake(vehicle) { response in
-            if response.result && command != TKCommand.wake {
-                self.send(command, to: vehicle, completion: completion)
-            } else {
-                completion(response)
-            }
-        }
-    }
 }
 
 

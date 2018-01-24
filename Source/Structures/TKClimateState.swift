@@ -30,7 +30,7 @@ public struct TKClimateState {
     public var passenger_temp_setting: Double = 0
     public var outside_temp: String? = nil
     public var seat_heater_rear_center: Int = 0
-    public var timestamp: Int = 0
+    public var timestamp: TimeInterval = 0
     public var right_temp_direction: String? = nil
     public var left_temp_direction: String? = nil
     public var seat_heater_rear_right: Int = 0
@@ -56,6 +56,7 @@ extension TKClimateState: TKDataResponse {
         is_climate_on <- map["is_climate_on"]
         min_avail_temp <- map["min_avail_temp"]
         max_avail_temp <- map["max_avail_temp"]
+        timestamp <- map["timestamp"]
     }
 }
 
