@@ -10,6 +10,9 @@ import Foundation
 /// An object representing a temperature unit
 public struct Temperature {
 
+    ///
+    public static let Degree: String = "°"
+
     /// Returns the temperature in degrees Celsius
     public let celsius: Double
 
@@ -44,5 +47,15 @@ public struct Temperature {
     /// - Returns: Degrees in Celsius
     public static func convert(fahrenheitToCelsius value: Double) -> Double {
         return (value - 32) * 5/9
+    }
+
+    ///
+    public var localizedCelsius: String { return String(format: "%.1f", self.celsius) + Temperature.Degree }
+
+    ///
+    public var localizedFahrenheit: String { return String(format: "%.f", self.fahrenheit) + Temperature.Degree }
+
+    public func format(isFahrenheit: Bool) -> String {
+        return isFahrenheit ? self.localizedFahrenheit : self.localizedCelsius
     }
 }
