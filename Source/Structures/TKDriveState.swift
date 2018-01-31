@@ -22,8 +22,8 @@ public struct TKDriveState {
     public var gps_as_of: Int = 0
     public var power: Int = 0
     public var latitude: Double = 0
-    public var heading: Int = 0
-    public var timestamp: Int = 0
+    public var heading: Double = 0
+    public var timestamp: TimeInterval = 0
 
     public var direction: TKDirection {
         switch Double(heading) {
