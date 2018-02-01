@@ -65,7 +65,7 @@ public enum TKCommand: String, EnumCollection {
     case remoteStart = "remote_start_drive"
 
     /// Open the trunk or frunk. Currently inoperable.
-    //    case openTrunk = "trunk_open"
+    case openTrunk = "trunk_open"
 
     /// Opens and closes the configured Homelink garage door of the vehicle. Keep in mind this is a toggle and the garage door state is unknown - a major limitation of Homelink
     //    case triggerHomelink = "trigger_homelink"
