@@ -18,12 +18,15 @@ public struct TKVehicleState {
 
     public var center_display_state: Int = 0
     public var autopark_style: String? = nil
-    public var remote_start: Bool = false
+//    public var remote_start: Bool = false
     public var odometer: Double = 0
     public var rearTrunkState: Int = 0
     public var sun_roof_percent_open: Int = 0
     public var vehicle_name: String? = nil
-    public var remote_start_supported: Bool = false
+
+    ///
+    public var remoteStartSupported: Bool = false
+    
     public var dark_rims: Bool = false
     public var locked: Bool = false
     public var rear_seat_type: Int = 0
@@ -73,6 +76,7 @@ extension TKVehicleState: TKDataResponse {
         passengerRearDoorState <- map["pr"]
         frontTrunkState <- map["ft"]
         rearTrunkState <- map["rt"]
+        remoteStartSupported <- map["remote_start_supported"]
     }
 }
 
