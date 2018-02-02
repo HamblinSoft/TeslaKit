@@ -17,7 +17,7 @@ public struct TKDriveState {
 
     // TODO: Complete other properties
 
-    public var speed: String? = nil
+    public var speed: Int = 0
     public var longitude: Double = 0
     public var gps_as_of: Int = 0
     public var power: Int = 0
