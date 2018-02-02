@@ -23,6 +23,8 @@ public struct TKGUISettings {
     public var gui_24_hour_time: Bool = false
     public var gui_range_display: String? = nil
 
+    public var guiTemperatureUnitsIsFahrenheit: Bool { return self.gui_temperature_units?.lowercased() == "f"}
+
     ///
     public init() {}
 }
