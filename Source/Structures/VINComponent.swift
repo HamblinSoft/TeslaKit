@@ -22,6 +22,9 @@ public struct VINComponent {
     public enum Make: String {
 
         ///
+        case unknown = ""
+
+        ///
         case roadster = "R"
 
         ///
@@ -36,6 +39,7 @@ public struct VINComponent {
         /// A readable display name
         public var name: String {
             switch self {
+            case .unknown: return "Unknown"
             case .roadster: return "Roadster"
             case .modelS: return "Model S"
             case .modelX: return "Model X"

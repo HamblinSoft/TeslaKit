@@ -53,15 +53,15 @@ public struct VIN {
         guard vinString.count > VIN.minimumLength else { return nil }
         let vin: String = vinString.uppercased()
         self.vinString = vin
-        self.manufacturer = VINComponent.Manufacturer(rawValue: String(vin[0..<4])) ?? VINComponent.Manufacturer.tesla
-        self.make = VINComponent.Make(rawValue: String(vin[4..<5])) ?? VINComponent.Make.modelS
-        self.bodyType = String(vin[5..<6])
-        self.restraintSystem = String(vin[6..<7])
-        self.driveUnit = VINComponent.DriveUnit(rawValue: String(vin[7..<8])) ?? VINComponent.DriveUnit.singleMotor
-        self.checkCharacter = String(vin[8..<9])
-        self.modelYear = VINComponent.ModelYear(rawValue: String(vin[9..<10])) ?? VINComponent.ModelYear.unknown
-        self.manufactureLocation = String(vin[10..<11])
-        self.serialNo = String(vin[11...vin.count-1])
+        self.manufacturer = VINComponent.Manufacturer(rawValue: String(vin[0..<3])) ?? VINComponent.Manufacturer.tesla
+        self.make = VINComponent.Make(rawValue: String(vin[3..<4])) ?? VINComponent.Make.unknown
+        self.bodyType = String(vin[4..<5])
+        self.restraintSystem = String(vin[5..<6])
+        self.driveUnit = VINComponent.DriveUnit(rawValue: String(vin[6..<7])) ?? VINComponent.DriveUnit.singleMotor
+        self.checkCharacter = String(vin[7..<8])
+        self.modelYear = VINComponent.ModelYear(rawValue: String(vin[8..<9])) ?? VINComponent.ModelYear.unknown
+        self.manufactureLocation = String(vin[9..<10])
+        self.serialNo = String(vin[10...vin.count-1])
     }
 }
 
