@@ -39,8 +39,11 @@ public struct TKChargeState {
     ///
     public var chargePortDoorOpen: Bool = false
 
-//    public var fast_charger_type: String? = nil
-//    public var user_charge_enable_request: String? = nil
+    ///
+    public var fastChargerType: String? = nil
+    
+    ///
+    public var userChargeEnableRequest: String? = nil
 
     /// The amount of kH added
     public var chargeEnergyAdded: Double = 0
@@ -48,46 +51,89 @@ public struct TKChargeState {
     /// The maximum charge current that can be requested
     public var chargeCurrentRequestMax: Int = 0
 
-//    public var charger_phases: String? = nil
-//    public var battery_heater_on: String? = nil
-//    public var motorized_charge_port: Bool = false
-//    public var trip_charging: Bool = false
-//    public var charge_enable_request: Bool = false
-//    public var charge_limit_soc_std: Int = 0
+    ///
+    public var chargerPhases: String? = nil
+    
+    ///
+    public var batteryHeaterOn: String? = nil
+    
+    ///
+    public var motorizedChargePort: Bool = false
+    
+    ///
+    public var tripCharging: Bool = false
+    
+    ///
+    public var chargeEnableRequest: Bool = false
+    
+    ///
+    public var chargeLimitSocStd: Int = 0
 
     /// The actual current provided by the charger
     public var chargerActualCurrent: Int = 0
 
-//    public var charge_port_latch: String? = nil
-//    public var charge_current_request: Int = 0
+    ///
+    public var chargePortLatch: String? = nil
+    
+    ///
+    public var chargeCurrentRequest: Int = 0
 
     /// The voltage of the charger
     public var chargerVoltage: Int = 0
 
-//    public var managed_charging_active: Bool = false
-//    public var charger_pilot_current: Int = 0
-//    public var charge_rate: Int = 0
-//    public var charge_limit_soc_max: Int = 0
-//    public var charge_limit_soc_min: Int = 0
-//    public var usable_battery_level: Int = 0
-//    public var max_range_charge_counter: Int = 0
+    ///
+    public var managedChargingActive: Bool = false
+    
+    ///
+    public var chargerPilotCurrent: Int = 0
+    
+    ///
+    public var chargeRate: Int = 0
+    
+    ///
+    public var chargeLimitSocMax: Int = 0
+    
+    ///
+    public var chargeLimitSocMin: Int = 0
+    
+    ///
+    public var usableBatteryLevel: Int = 0
+    
+    ///
+    public var maxRangeChargeCounter: Int = 0
 
     /// The start time of the scheduled charging
     public var scheduledChargingStartTime: TimeInterval? = nil
 
-//    public var charger_power: Int = 0
-//    public var scheduled_charging_pending: Bool = false
-
-    public var notEnoughPowerToHeat: Bool = false
-//    public var managed_charging_start_time: String? = nil
+    ///
+    public var chargerPower: Int = 0
+    
+    ///
+    public var scheduledChargingPending: Bool = false
 
     ///
-    public var charge_miles_added_rated: Double = 0
-//    public var charge_miles_added_ideal: Int = 0
-//    public var managed_charging_user_canceled: Bool = false
-//    public var charge_limit_soc: Int = 0
-//    public var eu_vehicle: Bool = false
-//    public var timestamp: Int = 0
+    public var notEnoughPowerToHeat: Bool = false
+    
+    ///
+    public var managedChargingStartTime: String? = nil
+
+    ///
+    public var chargeMilesAddedRated: Double = 0
+    
+    ///
+    public var chargeMilesAddedIdeal: Int = 0
+    
+    ///
+    public var managedChargingUserCanceled: Bool = false
+    
+    ///
+    public var chargeLimitSoc: Int = 0
+    
+    ///
+    public var euVehicle: Bool = false
+    
+    ///
+    public var timeStamp: TimeInterval = 0
 
 
     /// Returns whether the vehicle is connected to a charger or not
@@ -108,13 +154,39 @@ extension TKChargeState: TKDataResponse {
         batteryLevel <- map["battery_level"]
         timeToFullCharge <- map["time_to_full_charge"]
         chargePortDoorOpen <- map["charge_port_door_open"]
-        charge_miles_added_rated <- map["charge_miles_added_rated"]
+        chargeMilesAddedRated <- map["charge_miles_added_rated"]
         chargerActualCurrent <- map["charger_actual_current"]
         chargerVoltage <- map["charger_voltage"]
         chargeCurrentRequestMax <- map["charge_current_request_max"]
         scheduledChargingStartTime <- map["scheduled_charging_start_time"]
         chargeEnergyAdded <- map["charge_energy_added"]
         notEnoughPowerToHeat <- map["not_enough_power_to_heat"]
+        managedChargingActive <- map["managed_charging_active"]
+        fastChargerType <- map["fast_charger_type"]
+        userChargeEnableRequest <- map["user_charge_enable_request"]
+        chargerPhases <- map["charger_phases"]
+        batteryHeaterOn <- map["battery_heater_on"]
+        motorizedChargePort <- map["motorized_charge_port"]
+        tripCharging <- map["trip_charging"]
+        chargeEnableRequest <- map["charge_enable_request"]
+        chargeLimitSocStd <- map["charge_limit_soc_std"]
+        chargePortLatch <- map["charge_port_latch"]
+        chargeCurrentRequest <- map["charge_current_request"]
+        chargerPilotCurrent <- map ["charger_pilot_current"]
+        chargeRate <- map["charge_rate"]
+        chargeLimitSocMax <- map["charge_limit_soc_max"]
+        chargeLimitSocMin <- map["charge_limit_soc_min"]
+        usableBatteryLevel <- map["usable_battery_level"]
+        maxRangeChargeCounter <- map["max_range_charge_counter"]
+        chargerPower <- map["charger_power"]
+        scheduledChargingPending <- map["scheduled_charging_pending"]
+        managedChargingStartTime <- map["managed_charging_start_time"]
+        chargeMilesAddedIdeal <- map["charge_miles_added_ideal"]
+        managedChargingUserCanceled <- map["managed_charging_user_canceled"]
+        chargeLimitSoc <- map["charge_limit_soc"]
+        euVehicle <- map["eu_vehicle"]
+        timeStamp <- map["timestamp"]
+        
     }
 }
 
