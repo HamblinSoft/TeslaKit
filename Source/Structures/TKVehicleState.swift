@@ -18,7 +18,10 @@ public struct TKVehicleState {
 
     public var center_display_state: Int = 0
     public var autopark_style: String? = nil
-//    public var remote_start: Bool = false
+
+    /// Returns whether remote start is active (Driver can begin keyless driving by entering the car, pressing the brake, and selecting Drive)
+    public var remoteStart: Bool = false
+
     public var odometer: Double = 0
     public var rearTrunkState: Int = 0
     public var sun_roof_percent_open: Int = 0
@@ -34,7 +37,10 @@ public struct TKVehicleState {
     public var autopark_state_v2: String? = nil
     public var roof_color: String? = nil
     public var rear_seat_heaters: Int = 0
-    public var valet_mode: Bool = false
+
+    /// Returns whether valet mode is current enabled
+    public var valetMode: Bool = false
+
     public var parsed_calendar_supported: Bool = false
     public var api_version: Int = 0
     public var homelink_nearby: Bool = false
@@ -45,7 +51,10 @@ public struct TKVehicleState {
     public var calendar_supported: Bool = false
     public var sun_roof_state: String? = nil
     public var driverFrontDoorState: Int = 0
-    public var valet_pin_needed: Bool = false
+
+    /// Returns whether valet mode requires PIN
+    public var valetPinNeeded: Bool = false
+
     public var passengerRearDoorState: Int = 0
     public var spoiler_type: String? = nil
     public var car_type: String? = nil
@@ -77,6 +86,9 @@ extension TKVehicleState: TKDataResponse {
         frontTrunkState <- map["ft"]
         rearTrunkState <- map["rt"]
         remoteStartSupported <- map["remote_start_supported"]
+        remoteStart <- map["remote_start"]
+        valetMode <- map["valet_mode"]
+        valetPinNeeded <- map["valet_pin_needed"]
     }
 }
 
