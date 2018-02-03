@@ -14,7 +14,7 @@
     <a title="TKChargeState Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">TeslaKit Docs</a> (74% documented)</p>
+        <p><a href="../index.html">TeslaKit Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,9 +30,6 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/TKHTTPClient.html">TKHTTPClient</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
               </li>
@@ -51,6 +48,9 @@
                 <a href="../Enums/TKAccessToken/Response.html">– Response</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKChargeUnit.html">TKChargeUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKChargingState.html">TKChargingState</a>
               </li>
               <li class="nav-group-task">
@@ -60,16 +60,25 @@
                 <a href="../Enums/TKDataRequest.html">TKDataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TKDirection.html">TKDirection</a>
+                <a href="../Enums/TKDistanceUnit.html">TKDistanceUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKError.html">TKError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKHeading.html">TKHeading</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKPanoRoofState.html">TKPanoRoofState</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKRangeDisplay.html">TKRangeDisplay</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKShiftState.html">TKShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKTemperatureUnit.html">TKTemperatureUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKVehicleStatus.html">TKVehicleStatus</a>
@@ -86,10 +95,10 @@
                 <a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKHTTPClientDelegate.html">TKHTTPClientDelegate</a>
+                <a href="../Protocols/TKMappable.html">TKMappable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKMappable.html">TKMappable</a>
+                <a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a>
               </li>
             </ul>
           </li>
@@ -137,6 +146,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleConfig.html">TKVehicleConfig</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TKVehicleOption.html">TKVehicleOption</a>
@@ -431,9 +443,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit13TKChargeStateV24charge_miles_added_ratedSdv"></a>
-                    <a name="//apple_ref/swift/Property/charge_miles_added_rated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV24charge_miles_added_ratedSdv">charge_miles_added_rated</a>
+                    <a name="/s:8TeslaKit13TKChargeStateV15fastChargerTypeSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/fastChargerType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV15fastChargerTypeSSSgv">fastChargerType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -447,7 +459,845 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">charge_miles_added_rated</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fastChargerType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV23userChargeEnableRequestSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/userChargeEnableRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV23userChargeEnableRequestSSSgv">userChargeEnableRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">userChargeEnableRequest</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV17chargeEnergyAddedSdv"></a>
+                    <a name="//apple_ref/swift/Property/chargeEnergyAdded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV17chargeEnergyAddedSdv">chargeEnergyAdded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The amount of kH added</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeEnergyAdded</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV23chargeCurrentRequestMaxSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeCurrentRequestMax" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV23chargeCurrentRequestMaxSiv">chargeCurrentRequestMax</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The maximum charge current that can be requested</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeCurrentRequestMax</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV13chargerPhasesSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/chargerPhases" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV13chargerPhasesSSSgv">chargerPhases</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargerPhases</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV15batteryHeaterOnSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/batteryHeaterOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV15batteryHeaterOnSSSgv">batteryHeaterOn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">batteryHeaterOn</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV19motorizedChargePortSbv"></a>
+                    <a name="//apple_ref/swift/Property/motorizedChargePort" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV19motorizedChargePortSbv">motorizedChargePort</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">motorizedChargePort</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV12tripChargingSbv"></a>
+                    <a name="//apple_ref/swift/Property/tripCharging" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV12tripChargingSbv">tripCharging</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tripCharging</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV19chargeEnableRequestSbv"></a>
+                    <a name="//apple_ref/swift/Property/chargeEnableRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV19chargeEnableRequestSbv">chargeEnableRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeEnableRequest</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV17chargeLimitSocStdSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeLimitSocStd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV17chargeLimitSocStdSiv">chargeLimitSocStd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeLimitSocStd</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV20chargerActualCurrentSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargerActualCurrent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV20chargerActualCurrentSiv">chargerActualCurrent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The actual current provided by the charger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargerActualCurrent</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV15chargePortLatchSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/chargePortLatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV15chargePortLatchSSSgv">chargePortLatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargePortLatch</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV20chargeCurrentRequestSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeCurrentRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV20chargeCurrentRequestSiv">chargeCurrentRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeCurrentRequest</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV14chargerVoltageSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargerVoltage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV14chargerVoltageSiv">chargerVoltage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The voltage of the charger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargerVoltage</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV21managedChargingActiveSbv"></a>
+                    <a name="//apple_ref/swift/Property/managedChargingActive" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV21managedChargingActiveSbv">managedChargingActive</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">managedChargingActive</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV19chargerPilotCurrentSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargerPilotCurrent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV19chargerPilotCurrentSiv">chargerPilotCurrent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargerPilotCurrent</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV10chargeRateSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV10chargeRateSiv">chargeRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeRate</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV17chargeLimitSocMaxSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeLimitSocMax" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV17chargeLimitSocMaxSiv">chargeLimitSocMax</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeLimitSocMax</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV17chargeLimitSocMinSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeLimitSocMin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV17chargeLimitSocMinSiv">chargeLimitSocMin</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeLimitSocMin</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV18usableBatteryLevelSiv"></a>
+                    <a name="//apple_ref/swift/Property/usableBatteryLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV18usableBatteryLevelSiv">usableBatteryLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">usableBatteryLevel</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV21maxRangeChargeCounterSiv"></a>
+                    <a name="//apple_ref/swift/Property/maxRangeChargeCounter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV21maxRangeChargeCounterSiv">maxRangeChargeCounter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maxRangeChargeCounter</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV26scheduledChargingStartTimeSdSgv"></a>
+                    <a name="//apple_ref/swift/Property/scheduledChargingStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV26scheduledChargingStartTimeSdSgv">scheduledChargingStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The start time of the scheduled charging</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scheduledChargingStartTime</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV12chargerPowerSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargerPower" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV12chargerPowerSiv">chargerPower</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargerPower</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV24scheduledChargingPendingSbv"></a>
+                    <a name="//apple_ref/swift/Property/scheduledChargingPending" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV24scheduledChargingPendingSbv">scheduledChargingPending</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">scheduledChargingPending</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV20notEnoughPowerToHeatSbv"></a>
+                    <a name="//apple_ref/swift/Property/notEnoughPowerToHeat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV20notEnoughPowerToHeatSbv">notEnoughPowerToHeat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">notEnoughPowerToHeat</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV24managedChargingStartTimeSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/managedChargingStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV24managedChargingStartTimeSSSgv">managedChargingStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">managedChargingStartTime</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV21chargeMilesAddedRatedSdv"></a>
+                    <a name="//apple_ref/swift/Property/chargeMilesAddedRated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV21chargeMilesAddedRatedSdv">chargeMilesAddedRated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeMilesAddedRated</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV21chargeMilesAddedIdealSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeMilesAddedIdeal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV21chargeMilesAddedIdealSiv">chargeMilesAddedIdeal</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeMilesAddedIdeal</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV27managedChargingUserCanceledSbv"></a>
+                    <a name="//apple_ref/swift/Property/managedChargingUserCanceled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV27managedChargingUserCanceledSbv">managedChargingUserCanceled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">managedChargingUserCanceled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV14chargeLimitSocSiv"></a>
+                    <a name="//apple_ref/swift/Property/chargeLimitSoc" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV14chargeLimitSocSiv">chargeLimitSoc</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chargeLimitSoc</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV9euVehicleSbv"></a>
+                    <a name="//apple_ref/swift/Property/euVehicle" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV9euVehicleSbv">euVehicle</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">euVehicle</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV9timeStampSdv"></a>
+                    <a name="//apple_ref/swift/Property/timeStamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV9timeStampSdv">timeStamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timeStamp</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit13TKChargeStateV18isChargerConnectedSbv"></a>
+                    <a name="//apple_ref/swift/Property/isChargerConnected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit13TKChargeStateV18isChargerConnectedSbv">isChargerConnected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns whether the vehicle is connected to a charger or not</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isChargerConnected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -516,7 +1366,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -14,7 +14,7 @@
     <a title="TKDriveState Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">TeslaKit Docs</a> (74% documented)</p>
+        <p><a href="../index.html">TeslaKit Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,9 +30,6 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/TKHTTPClient.html">TKHTTPClient</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
               </li>
@@ -51,6 +48,9 @@
                 <a href="../Enums/TKAccessToken/Response.html">– Response</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKChargeUnit.html">TKChargeUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKChargingState.html">TKChargingState</a>
               </li>
               <li class="nav-group-task">
@@ -60,16 +60,25 @@
                 <a href="../Enums/TKDataRequest.html">TKDataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TKDirection.html">TKDirection</a>
+                <a href="../Enums/TKDistanceUnit.html">TKDistanceUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKError.html">TKError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKHeading.html">TKHeading</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKPanoRoofState.html">TKPanoRoofState</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKRangeDisplay.html">TKRangeDisplay</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKShiftState.html">TKShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKTemperatureUnit.html">TKTemperatureUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKVehicleStatus.html">TKVehicleStatus</a>
@@ -86,10 +95,10 @@
                 <a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKHTTPClientDelegate.html">TKHTTPClientDelegate</a>
+                <a href="../Protocols/TKMappable.html">TKMappable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKMappable.html">TKMappable</a>
+                <a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a>
               </li>
             </ul>
           </li>
@@ -137,6 +146,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleConfig.html">TKVehicleConfig</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/TKVehicleOption.html">TKVehicleOption</a>
@@ -220,23 +232,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/TODO:%20Complete%20other%20properties"></a>
-                <a name="//apple_ref/swift/Section/TODO: Complete other properties" class="dashAnchor"></a>
-                <a href="#/TODO:%20Complete%20other%20properties">
-                  <h3 class="section-name">TODO: Complete other properties</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKDriveStateV5speedSSSgv"></a>
+                    <a name="/s:8TeslaKit12TKDriveStateV5speedSiv"></a>
                     <a name="//apple_ref/swift/Property/speed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV5speedSSSgv">speed</a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV5speedSiv">speed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -244,14 +245,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">speed</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -271,8 +271,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -288,9 +287,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKDriveStateV9gps_as_ofSiv"></a>
-                    <a name="//apple_ref/swift/Property/gps_as_of" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV9gps_as_ofSiv">gps_as_of</a>
+                    <a name="/s:8TeslaKit12TKDriveStateV7gpsAsOfSdv"></a>
+                    <a name="//apple_ref/swift/Property/gpsAsOf" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV7gpsAsOfSdv">gpsAsOf</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -298,14 +297,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">gps_as_of</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">gpsAsOf</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -325,8 +323,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -352,8 +349,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -369,9 +365,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKDriveStateV7headingSiv"></a>
-                    <a name="//apple_ref/swift/Property/heading" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV7headingSiv">heading</a>
+                    <a name="/s:8TeslaKit12TKDriveStateV12headingValueSdv"></a>
+                    <a name="//apple_ref/swift/Property/headingValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV12headingValueSdv">headingValue</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -379,14 +375,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">heading</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headingValue</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -396,9 +391,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKDriveStateV9timestampSiv"></a>
+                    <a name="/s:8TeslaKit12TKDriveStateV9timestampSdv"></a>
                     <a name="//apple_ref/swift/Property/timestamp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV9timestampSiv">timestamp</a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV9timestampSdv">timestamp</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -406,14 +401,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -423,9 +417,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKDriveStateV9directionAA11TKDirectionOv"></a>
+                    <a name="/s:8TeslaKit12TKDriveStateV9directionAA9TKHeadingOv"></a>
                     <a name="//apple_ref/swift/Property/direction" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV9directionAA11TKDirectionOv">direction</a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV9directionAA9TKHeadingOv">direction</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -440,7 +434,34 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKDirection.html">TKDirection</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">direction</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKHeading.html">TKHeading</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit12TKDriveStateV7headingAA9TKHeadingOv"></a>
+                    <a name="//apple_ref/swift/Property/heading" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit12TKDriveStateV7headingAA9TKHeadingOv">heading</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">heading</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKHeading.html">TKHeading</a></span></code></pre>
 
                         </div>
                       </div>
@@ -509,7 +530,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

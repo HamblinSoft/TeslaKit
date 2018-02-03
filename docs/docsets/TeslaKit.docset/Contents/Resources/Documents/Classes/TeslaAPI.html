@@ -14,7 +14,7 @@
     <a title="TeslaAPI Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">TeslaKit Docs</a> (74% documented)</p>
+        <p><a href="../index.html">TeslaKit Docs</a> (81% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,9 +30,6 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/TKHTTPClient.html">TKHTTPClient</a>
-              </li>
               <li class="nav-group-task">
                 <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
               </li>
@@ -51,6 +48,9 @@
                 <a href="../Enums/TKAccessToken/Response.html">– Response</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKChargeUnit.html">TKChargeUnit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKChargingState.html">TKChargingState</a>
               </li>
               <li class="nav-group-task">
@@ -60,16 +60,25 @@
                 <a href="../Enums/TKDataRequest.html">TKDataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TKDirection.html">TKDirection</a>
+                <a href="../Enums/TKDistanceUnit.html">TKDistanceUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKError.html">TKError</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKHeading.html">TKHeading</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKPanoRoofState.html">TKPanoRoofState</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/TKRangeDisplay.html">TKRangeDisplay</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/TKShiftState.html">TKShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKTemperatureUnit.html">TKTemperatureUnit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/TKVehicleStatus.html">TKVehicleStatus</a>
@@ -86,10 +95,10 @@
                 <a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKHTTPClientDelegate.html">TKHTTPClientDelegate</a>
+                <a href="../Protocols/TKMappable.html">TKMappable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/TKMappable.html">TKMappable</a>
+                <a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a>
               </li>
             </ul>
           </li>
@@ -139,6 +148,9 @@
                 <a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/TKVehicleConfig.html">TKVehicleConfig</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/TKVehicleOption.html">TKVehicleOption</a>
               </li>
               <li class="nav-group-task">
@@ -184,7 +196,7 @@
             <h1>TeslaAPI</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">TeslaAPI</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">TeslaAPI</span><span class="p">:</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionDelegate</span></code></pre>
 
                 </div>
               </div>
@@ -285,9 +297,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC16ownerApiClientIdSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/ownerApiClientId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC16ownerApiClientIdSSvZ">ownerApiClientId</a>
+                    <a name="/s:8TeslaKit0A3APIC16ownerApiClientIdSSv"></a>
+                    <a name="//apple_ref/swift/Property/ownerApiClientId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC16ownerApiClientIdSSv">ownerApiClientId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -302,7 +314,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ownerApiClientId</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ownerApiClientId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -312,9 +324,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC20ownerApiClientSecretSSvZ"></a>
-                    <a name="//apple_ref/swift/Variable/ownerApiClientSecret" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC20ownerApiClientSecretSSvZ">ownerApiClientSecret</a>
+                    <a name="/s:8TeslaKit0A3APIC20ownerApiClientSecretSSv"></a>
+                    <a name="//apple_ref/swift/Property/ownerApiClientSecret" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC20ownerApiClientSecretSSv">ownerApiClientSecret</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -329,7 +341,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ownerApiClientSecret</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ownerApiClientSecret</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -339,9 +351,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC10httpClientAA12TKHTTPClientCv"></a>
-                    <a name="//apple_ref/swift/Property/httpClient" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC10httpClientAA12TKHTTPClientCv">httpClient</a>
+                    <a name="/s:8TeslaKit0A3APIC8delegateAA0A11APIDelegate_pSgXwv"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC8delegateAA0A11APIDelegate_pSgXwv">delegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -349,14 +361,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>HTTPClient used to make network requests</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">httpClient</span><span class="p">:</span> <span class="kt"><a href="../Classes/TKHTTPClient.html">TKHTTPClient</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
 
                         </div>
                       </div>
@@ -366,9 +377,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APICAcA12TKHTTPClientC10httpClient_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(httpClient:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APICAcA12TKHTTPClientC10httpClient_tcfc">init(httpClient:)</a>
+                    <a name="/s:8TeslaKit0A3APICACSS16ownerApiClientId_SS0deF6SecretSd14requestTimeouttcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(ownerApiClientId:ownerApiClientSecret:requestTimeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APICACSS16ownerApiClientId_SS0deF6SecretSd14requestTimeouttcfc">init(ownerApiClientId:ownerApiClientSecret:requestTimeout:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -376,35 +387,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a new instance of TeslaAPI with an optional HTTPClient</p>
+                        <p>Initialize a new instance of TeslaAPI</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">httpClient</span><span class="p">:</span> <span class="kt"><a href="../Classes/TKHTTPClient.html">TKHTTPClient</a></span> <span class="o">=</span> <span class="nf">TKHTTPClient</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="mi">30</span><span class="p">))</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">ownerApiClientId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ownerApiClientSecret</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">requestTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>httpClient</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TKHTTPClient to be used</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -726,19 +718,19 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Convenience"></a>
-                <a name="//apple_ref/swift/Section/Convenience" class="dashAnchor"></a>
-                <a href="#/Convenience">
-                  <h3 class="section-name">Convenience</h3>
+                <a name="/Networking"></a>
+                <a name="//apple_ref/swift/Section/Networking" class="dashAnchor"></a>
+                <a href="#/Networking">
+                  <h3 class="section-name">Networking</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC4wakeyAA9TKVehicleV_yAA17TKCommandResponseVc10completiontF"></a>
-                    <a name="//apple_ref/swift/Method/wake(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC4wakeyAA9TKVehicleV_yAA17TKCommandResponseVc10completiontF">wake(_:completion:)</a>
+                    <a name="/s:8TeslaKit0A3APIC7requestXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:method:parameters:encoding:headers:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC7requestXeXeF">request(_:method:parameters:encoding:headers:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -746,47 +738,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Attempt to wake the vehicle. Required for vehicle commands.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">wake</span><span class="p">(</span><span class="n">_</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/TKCommandResponse.html">TKCommandResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">request</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TKMappable.html">TKMappable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                                 <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span><span class="p">,</span>
+                                 <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">encoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="kt">JSONEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+                                 <span class="nv">headers</span><span class="p">:</span> <span class="kt">HTTPHeaders</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                 <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">T</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>context</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TAContext</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TKVehicleCommandCompletion</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -794,9 +759,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit0A3APIC4wakeyAA9TKVehicleV_AA9TKCommandO4thenyAA0F8ResponseVc10completiontF"></a>
-                    <a name="//apple_ref/swift/Method/wake(_:then:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit0A3APIC4wakeyAA9TKVehicleV_AA9TKCommandO4thenyAA0F8ResponseVc10completiontF">wake(_:then:completion:)</a>
+                    <a name="/s:8TeslaKit0A3APIC12clearSessionyyyc10completion_tF"></a>
+                    <a name="//apple_ref/swift/Method/clearSession(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit0A3APIC12clearSessionyyyc10completion_tF">clearSession(completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -804,59 +769,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Attempt to wake vehicle and then issue a command. Wake command will be attempted several times over a time interval.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">wake</span><span class="p">(</span><span class="n">_</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt"><a href="../Structs/TKVehicle.html">TKVehicle</a></span><span class="p">,</span> <span class="n">then</span> <span class="nv">command</span><span class="p">:</span> <span class="kt"><a href="../Enums/TKCommand.html">TKCommand</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/TKCommandResponse.html">TKCommandResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">clearSession</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>context</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TAContext</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>command</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TKCommand</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completion</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>TKVehicleCommandCompletion</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -866,7 +787,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-01-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
