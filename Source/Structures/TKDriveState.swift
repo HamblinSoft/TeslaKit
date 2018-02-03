@@ -15,18 +15,32 @@ public struct TKDriveState {
     ///
     public var shiftState: TKShiftState = TKShiftState.park
 
-    // TODO: Complete other properties
-
+    ///
     public var speed: Int = 0
+
+    ///
     public var longitude: Double = 0
-    public var gps_as_of: Int = 0
+
+    ///
+    public var gpsAsOf: TimeInterval = 0
+
+    ///
     public var power: Int = 0
+
+    ///
     public var latitude: Double = 0
-    public var heading: Double = 0
+
+    ///
+    public var headingValue: Double = 0
+
+    ///
     public var timestamp: TimeInterval = 0
 
-    public var direction: TKDirection {
-        switch Double(heading) {
+    @available(*, deprecated: 10, message: "Use heading")
+    public var direction: TKHeading { return self.heading }
+
+    public var heading: TKHeading {
+        switch Double(self.headingValue) {
         case 0..<22.5: return .n
         case 22.5..<67.5: return .ne
         case 67.5..<112.5: return .e
@@ -49,9 +63,10 @@ extension TKDriveState: TKDataResponse {
     public mutating func mapping(map: Map) {
         speed <- map["speed"]
         shiftState <- (map["shift_state"], EnumTransform())
-        heading <- map["heading"]
+        headingValue <- map["heading"]
         latitude <- map["latitude"]
         longitude <- map["longitude"]
+        gpsAsOf <- map["gps_as_of"]
     }
 }
 

@@ -55,6 +55,9 @@ public struct TKVehicle {
     public var vehicleState: TKVehicleState = TKVehicleState()
 
     ///
+    public var vehicleConfig: TKVehicleConfig = TKVehicleConfig()
+
+    ///
     public init() {}
 
     ///
@@ -79,6 +82,7 @@ extension TKVehicle: TKDataResponse {
             guiSettings <- map["response.gui_settings"]
             driveState <- map["response.drive_state"]
             vehicleState <- map["response.vehicle_state"]
+            vehicleConfig <- map["response.vehicle_config"]
         } else {
             displayName <- map["display_name"]
             id <- map["id_s"]

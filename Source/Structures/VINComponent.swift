@@ -90,10 +90,28 @@ public struct VINComponent {
         case unknown = ""
 
         ///
-        case year2019 = "K"
+        case year2025 = "P"
 
         ///
-        case year2018 = "J"
+        case year2024 = "O"
+
+        ///
+        case year2023 = "N"
+
+        ///
+        case year2022 = "M"
+
+        ///
+        case year2021 = "L"
+
+        ///
+        case year2020 = "K"
+
+        ///
+        case year2019 = "J"
+
+        ///
+        case year2018 = "I"
 
         ///
         case year2017 = "H"
@@ -118,6 +136,18 @@ public struct VINComponent {
 
         ///
         case year2010 = "A"
+
+        ///
+        case year2009 = "9"
+
+        ///
+        case year2008 = "8"
+
+        ///
+        case year2007 = "7"
+
+        ///
+        case year2006 = "6"
 
         ///
         public var name: String {

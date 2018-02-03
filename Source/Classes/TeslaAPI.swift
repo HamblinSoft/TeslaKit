@@ -9,8 +9,19 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import SwiftyJSON
 
-open class TeslaAPI {
+public protocol TeslaAPIDelegate: class {
+
+    ///
+    func activityDidBegin(_ teslaAPI: TeslaAPI)
+
+    ///
+    func activityDidEnd(_ teslaAPI: TeslaAPI)
+}
+
+
+open class TeslaAPI: Alamofire.SessionDelegate {
 
 
 
@@ -27,15 +38,25 @@ open class TeslaAPI {
     /// Base owner API URL with api version
     public static let apiBaseURL: URL = baseURL.appendingPathComponent("api/\(TeslaAPI.apiVersion)")
 
-    /// HTTPClient used to make network requests
-    public let httpClient: TKHTTPClient
-
     /// Tesla API owner api client id
     public let ownerApiClientId: String
 
     /// Tesla API owner api client secret
     public let ownerApiClientSecret: String
 
+    ///
+    public weak var delegate: TeslaAPIDelegate? = nil
+
+    ///
+    private let configuration: URLSessionConfiguration
+
+    ///
+    private lazy var sessionManager: Alamofire.SessionManager = self.getSessionManager()
+
+    ///
+    private func getSessionManager() -> Alamofire.SessionManager {
+        return Alamofire.SessionManager(configuration: self.configuration, delegate: self, serverTrustPolicyManager: nil)
+    }
 
 
 
@@ -51,13 +72,18 @@ open class TeslaAPI {
 
 
 
-    /// Initialize a new instance of TeslaAPI with an optional HTTPClient
-    ///
-    /// - Parameter httpClient: TKHTTPClient to be used
-    public init(ownerApiClientId: String, ownerApiClientSecret: String, httpClient: TKHTTPClient = TKHTTPClient(timeout: 30)) {
+    /// Initialize a new instance of TeslaAPI
+    public init(ownerApiClientId: String, ownerApiClientSecret: String, requestTimeout: TimeInterval = 30) {
         self.ownerApiClientId = ownerApiClientId
         self.ownerApiClientSecret = ownerApiClientSecret
-        self.httpClient = httpClient
+
+        // Session Configuration
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+        configuration.timeoutIntervalForRequest = requestTimeout // seconds
+        self.configuration = configuration
+        super.init()
     }
 
 
@@ -106,7 +132,7 @@ open class TeslaAPI {
                                             email: email,
                                             password: password)
 
-        self.httpClient.request(TeslaAPI.baseURL.appendingPathComponent("oauth/token"),
+        self.request(TeslaAPI.baseURL.appendingPathComponent("oauth/token"),
                                 method: HTTPMethod.post,
                                 parameters: request.toJSON(),
                                 headers: self.headers,
@@ -118,7 +144,7 @@ open class TeslaAPI {
     ///
     /// - Parameter completion: Completion Handler
     open func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
-        self.httpClient.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"),
+        self.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"),
                                 method: HTTPMethod.get,
                                 headers: self.headers,
                                 completion: completion)
@@ -130,7 +156,7 @@ open class TeslaAPI {
     ///   - vehicle: The vehicle to obtain data from
     ///   - completion: Completion Handler
     open func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.httpClient.request(TKDataRequest.data.url(vehicleId: vehicle.id),
+        self.request(TKDataRequest.data.url(vehicleId: vehicle.id),
                                 method: HTTPMethod.get,
                                 headers: self.headers,
                                 completion: completion)
@@ -145,7 +171,7 @@ open class TeslaAPI {
     ///   - completion: Completion Handler
     @available(*, unavailable)
     open func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
-        self.httpClient.request(type.url(vehicleId: vehicle.id),
+        self.request(type.url(vehicleId: vehicle.id),
                                 method: HTTPMethod.get,
                                 headers: self.headers,
                                 completion: completion)
@@ -160,7 +186,7 @@ open class TeslaAPI {
     ///   - request: Optional data to be included with the command
     ///   - completion: Completion Handler
     open func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
-        self.httpClient.request(command.url(vehicleId: vehicle.id),
+        self.request(command.url(vehicleId: vehicle.id),
                                 method: HTTPMethod.post,
                                 parameters: request?.toJSON(),
                                 encoding: JSONEncoding.default,
@@ -180,6 +206,95 @@ open class TeslaAPI {
         }
     }
 
+
+
+
+    // MARK: - Networking
+
+    ///
+    open func request<T: TKMappable>(_ url: URL,
+                                     method: HTTPMethod,
+                                     parameters: Parameters? = nil,
+                                     encoding: ParameterEncoding = JSONEncoding.default,
+                                     headers: HTTPHeaders? = nil,
+                                     completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
+
+        self.delegate?.activityDidBegin(self)
+
+        self.sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { dataResponse in
+            let httpResponse: HTTPURLResponse = dataResponse.response ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
+
+            var mappedObjectOrNil: T? = nil
+
+            if let data = dataResponse.data,
+                let json = try? JSONSerialization.jsonObject(with: data),
+                let object = Mapper<T>().map(JSONObject: json) {
+                mappedObjectOrNil = object
+            }
+
+            let request = dataResponse.request ?? (try! URLRequest(url: url, method: method, headers: headers))
+            self.debugPrint(request, response: httpResponse, responseData: dataResponse.data, error: dataResponse.error)
+
+            self.delegate?.activityDidEnd(self)
+
+            completion(httpResponse, mappedObjectOrNil, dataResponse.error)
+        }
+    }
+
+    ///
+    open func clearSession(completion: @escaping () -> Void) {
+        let session = self.sessionManager.session
+        session.invalidateAndCancel()
+        session.reset {
+            self.sessionManager = self.getSessionManager()
+            completion()
+        }
+    }
+
+    /// Print the contents of URLRequest and HTTPURLResponse in a consistent format that is easy to inspect
+    private func debugPrint(_ request: URLRequest, response: HTTPURLResponse, responseData: Data? = nil, error: Error? = nil) {
+        var components: [String] = []
+
+        let httpResponse = response
+        let statusCode = httpResponse.statusCode
+
+        // Method/URL
+        if let url = request.url {
+            components.append([request.httpMethod, url.absoluteString].flatMap{$0}.joined(separator: " "))
+        }
+
+        // Request Headers
+        if let headers = request.allHTTPHeaderFields, headers.keys.count > 0 {
+            let headersString: String = "RequestHeaders:\n" + headers.map { "\($0.key): \($0.value)" }.joined(separator: "\n")
+            components.append(headersString)
+        }
+
+        // Request Data
+        if let data = request.httpBody, let json = try? JSON(data: data) {
+            components.append("RequestBody:\n\(json)")
+        }
+
+        // Response Status
+        let httpUrlResponseError = HTTPURLResponse.localizedString(forStatusCode: statusCode).capitalized
+        components.append("ResponseStatus: \(response.statusCode) \(httpUrlResponseError)")
+
+        // Response Headers
+        let responseHeaders = response.allHeaderFields
+        if responseHeaders.keys.count > 0 {
+            let headersString: String = "ResponseHeaders:\n" + responseHeaders.map { "\($0.key): \($0.value)" }.joined(separator: "\n")
+            components.append(headersString)
+        }
+
+        // Response Data
+        if let data = responseData, let json = try? JSON(data: data) {
+            components.append("ResponseBody:\n\(json)")
+        }
+
+        components.insert("", at: 0)
+        components.append("")
+        let logMessage = components.joined(separator: "\n")
+        print(logMessage)
+    }
 }
 
 

@@ -1,5 +1,5 @@
 //
-//  TKDirection.swift
+//  TKHeading.swift
 //  TeslaKit
 //
 //  Created by Jaren Hamblin on 12/24/17.
@@ -7,8 +7,11 @@
 
 import Foundation
 
+@available(*, deprecated: 10, message: "Use TKHeading")
+public typealias TKDirection = TKHeading
+
 ///
-public enum TKDirection: String {
+public enum TKHeading: String {
 
     ///
     case n

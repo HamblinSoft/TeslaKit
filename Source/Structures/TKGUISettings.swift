@@ -12,18 +12,26 @@ import ObjectMapper
 /// Returns various information about the GUI settings of the car, such as unit format and range display.
 public struct TKGUISettings {
     
+    /// Distance units (mi/hr)
+    public var distanceUnits: TKDistanceUnit = TKDistanceUnit.kilometersPerHour
+
+    /// Charge Rate units (mi/hr)
+    public var chargeRateUnits: TKChargeUnit = TKChargeUnit.kilometersPerHour
+
+    /// Temperature Units (F)
+    public var temperatureUnits: TKTemperatureUnit = TKTemperatureUnit.celsius
+
+    /// Indicates whether 24 hour time or 12 hour time is selected
+    public var is24HourTime: Bool = false
+
+    /// Range display time (Rated)
+    public var rangeDisplay: TKRangeDisplay = TKRangeDisplay.rated
+
+    /// Timestamp
+    public var timestamp: TimeInterval = 0
+
     ///
-    public var guiDistanceUnits: String? = nil
-
-    // TODO: Complete other properties
-
-    public var gui_charge_rate_units: String? = nil
-    public var timestamp: Int = 0
-    public var gui_temperature_units: String? = nil
-    public var gui_24_hour_time: Bool = false
-    public var gui_range_display: String? = nil
-
-    public var guiTemperatureUnitsIsFahrenheit: Bool { return self.gui_temperature_units?.lowercased() == "f"}
+    public var temperatureUnitsIsFahrenheit: Bool { return self.temperatureUnits == .fahrenheit }
 
     ///
     public init() {}
@@ -32,8 +40,12 @@ public struct TKGUISettings {
 extension TKGUISettings: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        guiDistanceUnits <- map["gui_distance_units"]
-        gui_temperature_units <- map["gui_temperature_units"]
+        distanceUnits <- (map["gui_distance_units"], EnumTransform())
+        chargeRateUnits <- (map["gui_charge_rate_units"], EnumTransform())
+        temperatureUnits <- (map["gui_temperature_units"], EnumTransform())
+        is24HourTime <- map["gui_24_hour_time"]
+        rangeDisplay <- (map["gui_range_display"], EnumTransform())
+        timestamp <- map["Timestamp"]
     }
 }
 
