@@ -295,6 +295,25 @@ open class TeslaAPI: Alamofire.SessionDelegate {
         let logMessage = components.joined(separator: "\n")
         print(logMessage)
     }
+
+    #if !os(watchOS)
+
+    /// Returns whether the network is reachable
+    public var isReachable: Bool {
+        let isReachable = NetworkReachabilityManager()?.isReachable ?? false
+        return isReachable
+    }
+
+    /// Returns whether the specified host is reachable
+    ///
+    /// - Parameter host: Host name
+    /// - Returns: Bool
+    public func isReachable(host: String) -> Bool {
+        let isReachable = NetworkReachabilityManager(host: host)?.isReachable ?? false
+        return isReachable
+    }
+
+    #endif
 }
 
 
