@@ -43,6 +43,7 @@
 		375D88BF200ECF2C00CD9D1E /* TKDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889B200ECF2C00CD9D1E /* TKDataResponse.swift */; };
 		375D88C0200ECF2C00CD9D1E /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889C200ECF2C00CD9D1E /* EnumCollection.swift */; };
 		375D88C1200ECF2C00CD9D1E /* TKMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889D200ECF2C00CD9D1E /* TKMappable.swift */; };
+		37F658F120294A2C00AAD681 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F222026533500409472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F212026533500409472 /* ViewController.swift */; };
 		37FB3F252026533500409472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F232026533500409472 /* Main.storyboard */; };
@@ -108,6 +109,7 @@
 		375D889B200ECF2C00CD9D1E /* TKDataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataResponse.swift; sourceTree = "<group>"; };
 		375D889C200ECF2C00CD9D1E /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		375D889D200ECF2C00CD9D1E /* TKMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKMappable.swift; sourceTree = "<group>"; };
+		37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKChargePortLatchState.swift; sourceTree = "<group>"; };
 		37FB3F1D2026533500409472 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB3F1F2026533500409472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB3F212026533500409472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		375D8876200ECF2C00CD9D1E /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */,
 				37FB3F412026672B00409472 /* TKChargeUnit.swift */,
 				375D8879200ECF2C00CD9D1E /* TKChargingState.swift */,
 				375D887C200ECF2C00CD9D1E /* TKCommand.swift */,
@@ -644,6 +647,7 @@
 				375D88A8200ECF2C00CD9D1E /* TKStringArrayTransform.swift in Sources */,
 				375D88AB200ECF2C00CD9D1E /* TKVehicleOption.swift in Sources */,
 				375D88AE200ECF2C00CD9D1E /* TKVehicleOptionTransform.swift in Sources */,
+				37F658F120294A2C00AAD681 /* TKChargePortLatchState.swift in Sources */,
 				375D88B7200ECF2C00CD9D1E /* TKVehicle.swift in Sources */,
 				375D88A1200ECF2C00CD9D1E /* TKShiftState.swift in Sources */,
 				375D88B2200ECF2C00CD9D1E /* TKSetTemperature.swift in Sources */,

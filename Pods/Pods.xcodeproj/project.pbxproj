@@ -35,6 +35,7 @@
 		351A58374B952CD795E19A5C1DA52C01 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA429151D3270A6F7F8DB3E9770096D0 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		352311FACAC4901FD9AC2BF50571AF41 /* TKVehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8120402CED53D3E56A7B5980379A9D61 /* TKVehicleOptionTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3794F36FCBD2F263912BDBDD39B82219 /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E7E12F2DB4BE0FFB38C60A044990D3 /* DictionaryTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37F658EF202949E500AAD681 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F658ED202949DD00AAD681 /* TKChargePortLatchState.swift */; };
 		37FB3F64202667B300409472 /* TKChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F56202667A300409472 /* TKChargeUnit.swift */; };
 		37FB3F65202667B300409472 /* TKDistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F54202667A300409472 /* TKDistanceUnit.swift */; };
 		37FB3F66202667B300409472 /* TKHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F53202667A200409472 /* TKHeading.swift */; };
@@ -217,6 +218,7 @@
 		30A49E41A602DACA1D3590796B28CBF4 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
 		34B1EA38E7D86682685841FD2F023923 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
 		350641011088AB573DFE6EB8FC26D7AF /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
+		37F658ED202949DD00AAD681 /* TKChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKChargePortLatchState.swift; sourceTree = "<group>"; };
 		37FB3F53202667A200409472 /* TKHeading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKHeading.swift; sourceTree = "<group>"; };
 		37FB3F54202667A300409472 /* TKDistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDistanceUnit.swift; sourceTree = "<group>"; };
 		37FB3F55202667A300409472 /* TKTemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKTemperatureUnit.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		CA04DA26AB42415E31BE87576F6F1D90 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
+				37F658ED202949DD00AAD681 /* TKChargePortLatchState.swift */,
 				37FB3F56202667A300409472 /* TKChargeUnit.swift */,
 				37FB3F54202667A300409472 /* TKDistanceUnit.swift */,
 				37FB3F53202667A200409472 /* TKHeading.swift */,
@@ -1018,6 +1021,7 @@
 				D596924EDF2A9A999256D39A43DE065D /* TKMappable.swift in Sources */,
 				789D34F913EE9552CC559C09122DCF2F /* TKMobileAccess.swift in Sources */,
 				7E43F82E9B715CDAF0A4F9A4B06EEB73 /* TKMovePanoRoof.swift in Sources */,
+				37F658EF202949E500AAD681 /* TKChargePortLatchState.swift in Sources */,
 				948E745E4ADB13E8C7754871D2A12437 /* TKOpenTrunk.swift in Sources */,
 				37FB3F67202667B300409472 /* TKRangeDisplay.swift in Sources */,
 				AC4E9BDBB86A5E0A72D226C5968F8077 /* TKPanoRoofState.swift in Sources */,
