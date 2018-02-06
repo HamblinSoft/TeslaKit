@@ -73,7 +73,7 @@ public struct TKChargeState {
     public var chargerActualCurrent: Int = 0
 
     ///
-    public var chargePortLatch: String? = nil
+    public var chargePortLatch: TKChargePortLatchState = TKChargePortLatchState.unknown
     
     ///
     public var chargeCurrentRequest: Int = 0
@@ -139,6 +139,9 @@ public struct TKChargeState {
     /// Returns whether the vehicle is connected to a charger or not
     public var isChargerConnected: Bool { return self.chargingState != .disconnected }
 
+    /// Returns whether the vehicle is improperly connected to a charger
+    public var isChargerImproperlyConnected: Bool { return self.isChargerConnected && self.chargePortLatch == .disengaged }
+
     ///
     public init() {}
 }
@@ -170,7 +173,7 @@ extension TKChargeState: TKDataResponse {
         tripCharging <- map["trip_charging"]
         chargeEnableRequest <- map["charge_enable_request"]
         chargeLimitSocStd <- map["charge_limit_soc_std"]
-        chargePortLatch <- map["charge_port_latch"]
+        chargePortLatch <- (map["charge_port_latch"], EnumTransform())
         chargeCurrentRequest <- map["charge_current_request"]
         chargerPilotCurrent <- map ["charger_pilot_current"]
         chargeRate <- map["charge_rate"]
