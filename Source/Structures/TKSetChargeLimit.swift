@@ -31,6 +31,6 @@ public struct TKSetChargeLimit {
 
 extension TKSetChargeLimit: TKMappable {
     public mutating func mapping(map: Map) {
-        limitValue <- map["limit_value"]
+        limitValue <- map["percent"]
     }
 }
