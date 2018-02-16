@@ -73,6 +73,9 @@ public struct TKVehicle {
         }
     }
 
+    /// Returns whether the vehicle is in a shift state other than park
+    public var isInMotion: Bool { return self.driveState.shiftState != .park }
+
     ///
     public init() {}
 
