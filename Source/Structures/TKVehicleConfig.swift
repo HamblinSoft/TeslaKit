@@ -52,7 +52,7 @@ public struct TKVehicleConfig {
     public var plg: Bool = false
 
     ///
-    public var motorized_charge_port: Bool = false
+    public var motorizedChargePort: Bool = false
 
     ///
     public var eu_vehicle: Bool = false
@@ -82,6 +82,7 @@ public struct TKVehicleConfig {
 extension TKVehicleConfig: TKMappable {
     public mutating func mapping(map: Map) {
         trimBadging <- map["trim_badging"]
+        motorizedChargePort <- map["motorized_charge_port"]
     }
 }
 
