@@ -121,7 +121,7 @@ public struct TKChargeState {
     public var chargeMilesAddedRated: Double = 0
     
     ///
-    public var chargeMilesAddedIdeal: Int = 0
+    public var chargeMilesAddedIdeal: Double = 0
     
     ///
     public var managedChargingUserCanceled: Bool = false
@@ -141,6 +141,9 @@ public struct TKChargeState {
 
     /// Returns whether the vehicle is improperly connected to a charger
     public var isChargerImproperlyConnected: Bool { return self.isChargerConnected && self.chargePortLatch == .disengaged }
+
+    /// Returns whether the vehicle is charging or will begin charging
+    public var isCharging: Bool { return self.chargingState == .starting || self.chargingState == .charging }
 
     ///
     public init() {}

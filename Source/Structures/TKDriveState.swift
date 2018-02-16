@@ -36,9 +36,7 @@ public struct TKDriveState {
     ///
     public var timestamp: TimeInterval = 0
 
-    @available(*, deprecated: 10, message: "Use heading")
-    public var direction: TKHeading { return self.heading }
-
+    ///
     public var heading: TKHeading {
         switch Double(self.headingValue) {
         case 0..<22.5: return .n
