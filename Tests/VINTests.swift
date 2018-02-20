@@ -66,4 +66,13 @@ class VINTests: XCTestCase {
             XCTAssertEqual(modelYear?.name, year)
         }
     }
+
+    func testVinModelS() {
+
+        let vinNumber: String = "5YJSA1E2XHF156789"
+        let vin = VIN(vinString: vinNumber)
+
+        XCTAssertEqual(vin?.make, VINComponent.Make.modelS)
+        XCTAssertEqual(vin?.modelYear, VINComponent.ModelYear.year2017)
+    }
 }
