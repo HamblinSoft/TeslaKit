@@ -169,7 +169,6 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     ///   - vehicle: The vehicle to obtain data from
     ///   - type: The type of data to request
     ///   - completion: Completion Handler
-    @available(*, unavailable)
     open func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
         self.request(type.url(vehicleId: vehicle.id),
                                 method: HTTPMethod.get,
