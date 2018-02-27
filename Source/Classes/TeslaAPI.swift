@@ -14,10 +14,13 @@ import SwiftyJSON
 public protocol TeslaAPIDelegate: class {
 
     ///
-    func activityDidBegin(_ teslaAPI: TeslaAPI)
+    func teslaApiActivityDidBegin(_ teslaAPI: TeslaAPI)
 
     ///
-    func activityDidEnd(_ teslaAPI: TeslaAPI)
+    func teslaApiActivityDidEnd(_ teslaAPI: TeslaAPI)
+
+    ///
+    func teslaApi(_ teslaAPI: TeslaAPI, didSend command: TKCommand, data: TKCommandResponse?)
 }
 
 
@@ -191,17 +194,21 @@ open class TeslaAPI: Alamofire.SessionDelegate {
                                 encoding: JSONEncoding.default,
                                 headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
 
-            guard let data = dataOrNil, httpResponse.statusCode == 200 else {
-                completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
-                return
-            }
+                                    defer {
+                                        self.delegate?.teslaApi(self, didSend: command, data: dataOrNil)
+                                    }
 
-            guard data.result else {
-                completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
-                return
-            }
+                                    guard let data = dataOrNil, httpResponse.statusCode == 200 else {
+                                        completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
+                                        return
+                                    }
 
-            completion(data)
+                                    guard data.result else {
+                                        completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
+                                        return
+                                    }
+
+                                    completion(data)
         }
     }
 
@@ -218,7 +225,7 @@ open class TeslaAPI: Alamofire.SessionDelegate {
                                      headers: HTTPHeaders? = nil,
                                      completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
 
-        self.delegate?.activityDidBegin(self)
+        self.delegate?.teslaApiActivityDidBegin(self)
 
         self.sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { dataResponse in
             let httpResponse: HTTPURLResponse = dataResponse.response ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
@@ -234,7 +241,7 @@ open class TeslaAPI: Alamofire.SessionDelegate {
             let request = dataResponse.request ?? (try! URLRequest(url: url, method: method, headers: headers))
             self.debugPrint(request, response: httpResponse, responseData: dataResponse.data, error: dataResponse.error)
 
-            self.delegate?.activityDidEnd(self)
+            self.delegate?.teslaApiActivityDidEnd(self)
 
             completion(httpResponse, mappedObjectOrNil, dataResponse.error)
         }
