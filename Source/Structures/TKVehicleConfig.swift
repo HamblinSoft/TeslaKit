@@ -73,7 +73,7 @@ public struct TKVehicleConfig {
     public var charge_port_type: String? = nil
 
     ///
-    public var exterior_color: String? = nil
+    public var exteriorColor: String? = nil
 
     ///
     public init() {}
@@ -83,6 +83,7 @@ extension TKVehicleConfig: TKMappable {
     public mutating func mapping(map: Map) {
         trimBadging <- map["trim_badging"]
         motorizedChargePort <- map["motorized_charge_port"]
+        exteriorColor <- map["exterior_color"]
     }
 }
 
