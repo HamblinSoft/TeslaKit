@@ -37,6 +37,18 @@ public struct TKDriveState {
     public var timestamp: TimeInterval = 0
 
     ///
+    public var nativeLocationSupported: Int = 0
+
+    ///
+    public var nativeType: String? = nil
+
+    ///
+    public var nativeLongitude: Double? = nil
+
+    ///
+    public var nativeLatitude: Double? = nil
+
+    ///
     public var heading: TKHeading {
         switch Double(self.headingValue) {
         case 0..<22.5: return .n
@@ -63,9 +75,14 @@ extension TKDriveState: TKDataResponse {
         headingValue <- map["heading"]
         latitude <- map["latitude"]
         longitude <- map["longitude"]
+        power <- map["power"]
         shiftState <- (map["shift_state"], EnumTransform())
         speed <- map["speed"]
         timestamp <- map["timestamp"]
+        nativeLocationSupported <- map["native_location_supported"]
+        nativeType <- map["native_type"]
+        nativeLongitude <- map["native_longitude"]
+        nativeLatitude <- map["native_latitude"]
     }
 }
 

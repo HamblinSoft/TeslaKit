@@ -40,6 +40,9 @@ public struct TKVehicle {
     public var tokens: [String] = []
 
     ///
+    public var inService: Bool = false
+
+    ///
     public var chargeState: TKChargeState = TKChargeState()
 
     ///
@@ -102,6 +105,7 @@ extension TKVehicle: TKDataResponse {
             driveState <- map["response.drive_state"]
             vehicleState <- map["response.vehicle_state"]
             vehicleConfig <- map["response.vehicle_config"]
+            inService <- map["response.in_service"]
         } else {
             displayName <- map["display_name"]
             id <- map["id_s"]

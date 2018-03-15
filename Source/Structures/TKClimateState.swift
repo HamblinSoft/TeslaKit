@@ -52,10 +52,10 @@ public struct TKClimateState {
     public var timestamp: TimeInterval = 0
 
     ///
-    public var rightTemperatureDirection: String? = nil
+    public var rightTemperatureDirection: Int? = nil
 
     ///
-    public var leftTemperatureDirection: String? = nil
+    public var leftTemperatureDirection: Int? = nil
 
     ///
     public var seatHeaterRearRight: Int = 0
@@ -76,7 +76,25 @@ public struct TKClimateState {
     public var maximumAvailableTemperature: Double = 0
 
     ///
-    public var isAutoConditioningOn: String? = nil
+    public var isAutoConditioningOn: Int = 0
+
+    ///
+    public var isPreconditioning: Int = 0
+
+    ///
+    public var sideMirrorHeaters: Int = 0
+
+    ///
+    public var batteryHeaterNoPower: Int = 0
+
+    ///
+    public var steeringWheelHeater: Int = 0
+
+    ///
+    public var batteryHeater: Int = 0
+
+    ///
+    public var wiperBladeHeater: Int = 0
 
     ///
     public init() {}
@@ -108,6 +126,12 @@ extension TKClimateState: TKDataResponse {
         smartPreconditioning <- map["smart_preconditioning"]
         timestamp <- map["timestamp"]
         seatHeaterLeft <- map["seat_heater_left"]
+        isPreconditioning <- map["is_preconditioning"]
+        sideMirrorHeaters <- map["side_mirror_heaters"]
+        batteryHeaterNoPower <- map["battery_heater_no_power"]
+        steeringWheelHeater <- map["steering_wheel_heater"]
+        batteryHeater <- map["battery_heater"]
+        wiperBladeHeater <- map["wiper_blade_heater"]
     }
 }
 

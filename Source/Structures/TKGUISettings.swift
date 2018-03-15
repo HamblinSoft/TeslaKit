@@ -44,7 +44,7 @@ extension TKGUISettings: TKDataResponse {
         is24HourTime <- map["gui_24_hour_time"]
         rangeDisplay <- (map["gui_range_display"], EnumTransform())
         temperatureUnits <- (map["gui_temperature_units"], EnumTransform())
-        timestamp <- map["Timestamp"]
+        timestamp <- map["timestamp"]
         distanceUnits <- (map["gui_distance_units"], EnumTransform())
     }
 }

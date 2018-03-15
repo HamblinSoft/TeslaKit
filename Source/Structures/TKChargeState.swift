@@ -43,7 +43,7 @@ public struct TKChargeState {
     public var fastChargerType: String? = nil
     
     ///
-    public var userChargeEnableRequest: String? = nil
+    public var userChargeEnableRequest: Int = 0
 
     /// The amount of kH added
     public var chargeEnergyAdded: Double = 0
@@ -52,10 +52,10 @@ public struct TKChargeState {
     public var chargeCurrentRequestMax: Int = 0
 
     ///
-    public var chargerPhases: String? = nil
+    public var chargerPhases: Int = 0
     
     ///
-    public var batteryHeaterOn: String? = nil
+    public var batteryHeaterOn: Int = 0
     
     ///
     public var motorizedChargePort: Bool = false
@@ -115,7 +115,7 @@ public struct TKChargeState {
     public var notEnoughPowerToHeat: Bool = false
     
     ///
-    public var managedChargingStartTime: String? = nil
+    public var managedChargingStartTime: TimeInterval? = nil
 
     ///
     public var chargeMilesAddedRated: Double = 0
@@ -135,6 +135,11 @@ public struct TKChargeState {
     ///
     public var timeStamp: TimeInterval = 0
 
+    ///
+    public var fastChargerBrand: String? = nil
+
+    ///
+    public var connChargeCable: String? = nil
 
     /// Returns whether the vehicle is connected to a charger or not
     public var isChargerConnected: Bool { return self.chargingState != .disconnected }
@@ -168,6 +173,7 @@ extension TKChargeState: TKDataResponse {
         chargePortLatch <- (map["charge_port_latch"], EnumTransform())
         chargerActualCurrent <- map["charger_actual_current"]
         chargeRate <- map["charge_rate"]
+        chargingState <- (map["charging_state"], EnumTransform())
         chargerPhases <- map["charger_phases"]
         chargerPilotCurrent <- map ["charger_pilot_current"]
         chargerPower <- map["charger_power"]
@@ -191,7 +197,8 @@ extension TKChargeState: TKDataResponse {
         tripCharging <- map["trip_charging"]
         usableBatteryLevel <- map["usable_battery_level"]
         userChargeEnableRequest <- map["user_charge_enable_request"]
-        chargingState <- (map["charging_state"], EnumTransform())
+        fastChargerBrand <- map["fast_charger_brand"]
+        connChargeCable <- map["conn_charge_cable"]
     }
 }
 
