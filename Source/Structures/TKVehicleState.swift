@@ -12,62 +12,130 @@ import ObjectMapper
 ///
 public struct TKVehicleState {
 
+    ///
     public var exteriorColor: String?
 
     // TODO: Complete other properties
 
-    public var center_display_state: Int = 0
-    public var autopark_style: String? = nil
+    ///
+    public var centerDisplayState: Int = 0
+
+    ///
+    public var autoparkStyle: String? = nil
 
     /// Returns whether remote start is active (Driver can begin keyless driving by entering the car, pressing the brake, and selecting Drive)
     public var remoteStart: Bool = false
 
+    ///
     public var odometer: Double = 0
+
+    ///
     public var rearTrunkState: Int = 0
-    public var sun_roof_percent_open: Int = 0
-    public var vehicle_name: String? = nil
+
+    ///
+    public var sunRoofPercentOpen: Int = 0
+
+    ///
+    public var vehicleName: String? = nil
 
     ///
     public var remoteStartSupported: Bool = false
-    
-    public var dark_rims: Bool = false
+
+    ///
+    public var darkRims: Bool = false
+
+    ///
     public var locked: Bool = false
-    public var rear_seat_type: Int = 0
+
+    ///
+    public var rearSeatType: Int = 0
+
+    ///
     public var rhd: Bool = false
-    public var autopark_state_v2: String? = nil
-    public var roof_color: String? = nil
-    public var rear_seat_heaters: Int = 0
+
+    ///
+    public var autoparkStateV2: String? = nil
+
+    ///
+    public var roofColor: String? = nil
+
+    ///
+    public var rearSeatHeaters: Int = 0
 
     /// Returns whether valet mode is current enabled
     public var valetMode: Bool = false
 
-    public var parsed_calendar_supported: Bool = false
-    public var api_version: Int = 0
-    public var homelink_nearby: Bool = false
-    public var autopark_state: String? = nil
-    public var last_autopark_error: String? = nil
+    ///
+    public var parsedCalendarSupported: Bool = false
+
+    ///
+    public var apiVersion: Int = 0
+
+    ///
+    public var homelinkNearby: Bool = false
+
+    ///
+    public var autoparkState: String? = nil
+
+    ///
+    public var lastAutoparkError: String? = nil
+
+    ///
     public var driverRearDoorState: Int = 0
-    public var has_spoiler: Bool = false
-    public var calendar_supported: Bool = false
-    public var sun_roof_state: String? = nil
+
+    ///
+    public var hasSpoiler: Bool = false
+
+    ///
+    public var calendarSupported: Bool = false
+
+    ///
+    public var sunRoofState: String? = nil
+
+    ///
     public var driverFrontDoorState: Int = 0
 
     /// Returns whether valet mode requires PIN
     public var valetPinNeeded: Bool = false
 
+    ///
     public var passengerRearDoorState: Int = 0
-    public var spoiler_type: String? = nil
-    public var car_type: String? = nil
-    public var perf_config: String? = nil
-    public var car_version: String? = nil
-    public var seat_type: Int = 0
-    public var third_row_seats: String? = nil
+
+    ///
+    public var spoilerType: String? = nil
+
+    ///
+    public var carType: String? = nil
+
+    ///
+    public var perfConfig: String? = nil
+
+    ///
+    public var carVersion: String? = nil
+
+    ///
+    public var seatType: Int = 0
+
+    ///
+    public var thirdRowSeats: String? = nil
+
+    ///
     public var frontTrunkState: Int = 0
-    public var notifications_supported: Bool = false
+
+    ///
+    public var notificationsSupported: Bool = false
+
+    ///
     public var passengerFrontDoorState: Int = 0
-    public var wheel_type: String? = nil
-    public var sun_roof_installed: Int = 0
-    public var timestamp: Int = 0
+
+    ///
+    public var wheelType: String? = nil
+
+    ///
+    public var sunRoofInstalled: Int = 0
+
+    ///
+    public var timestamp: TimeInterval = 0
 
     ///
     public init() {}
@@ -76,19 +144,47 @@ public struct TKVehicleState {
 extension TKVehicleState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        locked <- map["locked"]
-        exteriorColor <- map["exterior_color"]
-        odometer <- map["odometer"]
+        apiVersion <- map["api_version"]
+        autoparkState <- map["autopark_state"]
+        autoparkStateV2 <- map["autopark_state_v2"]
+        autoparkStyle <- map["autopark_style"]
+        calendarSupported <- map["calendar_supported"]
+        carType <- map["car_type"]
+        carVersion <- map["car_version"]
+        centerDisplayState <- map["center_display_state"]
+        darkRims <- map["dark_rims"]
         driverFrontDoorState <- map["df"]
         driverRearDoorState <- map["dr"]
+        exteriorColor <- map["exterior_color"]
+        frontTrunkState <- map["ft"]
+        hasSpoiler <- map["has_spoiler"]
+        homelinkNearby <- map["homelink_nearby"]
+        lastAutoparkError <- map["last_autopark_error"]
+        notificationsSupported <- map["notifications_supported"]
+        odometer <- map["odometer"]
+        parsedCalendarSupported <- map["parsed_calendar_supported"]
         passengerFrontDoorState <- map["pf"]
         passengerRearDoorState <- map["pr"]
-        frontTrunkState <- map["ft"]
+        perfConfig <- map["perf_config"]
+        rearSeatHeaters <- map["rear_seat_heaters"]
+        rearSeatType <- map["rear_seat_type"]
         rearTrunkState <- map["rt"]
-        remoteStartSupported <- map["remote_start_supported"]
         remoteStart <- map["remote_start"]
+        remoteStartSupported <- map["remote_start_supported"]
+        rhd <- map["rhd"]
+        roofColor <- map["roof_color"]
+        seatType <- map["seat_type"]
+        spoilerType <- map["spoiler_type"]
+        sunRoofInstalled <- map["sun_roof_installed"]
+        sunRoofPercentOpen <- map["sun_roof_percent_open"]
+        sunRoofState <- map["sun_roof_state"]
+        thirdRowSeats <- map["third_row_seats"]
+        timestamp <- map["timestamp"]
         valetMode <- map["valet_mode"]
         valetPinNeeded <- map["valet_pin_needed"]
+        vehicleName <- map["vehicle_name"]
+        wheelType <- map["wheel_type"]
+        locked <- map["locked"]
     }
 }
 
@@ -135,4 +231,5 @@ extension TKVehicleState: TKDataResponse {
 //    "sun_roof_installed" : 0,
 //    "timestamp" : 1513809833025
 //}
+
 

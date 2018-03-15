@@ -40,12 +40,12 @@ public struct TKGUISettings {
 extension TKGUISettings: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        distanceUnits <- (map["gui_distance_units"], EnumTransform())
         chargeRateUnits <- (map["gui_charge_rate_units"], EnumTransform())
-        temperatureUnits <- (map["gui_temperature_units"], EnumTransform())
         is24HourTime <- map["gui_24_hour_time"]
         rangeDisplay <- (map["gui_range_display"], EnumTransform())
+        temperatureUnits <- (map["gui_temperature_units"], EnumTransform())
         timestamp <- map["Timestamp"]
+        distanceUnits <- (map["gui_distance_units"], EnumTransform())
     }
 }
 

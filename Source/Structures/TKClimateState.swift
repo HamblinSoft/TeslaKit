@@ -18,28 +18,65 @@ public struct TKClimateState {
     ///
     public var fanStatus: Int = 0
 
-    // TODO: Complete other properties
-
+    ///
     public var isFrontDefrosterOn: Bool = false
-    public var is_rear_defroster_on: Bool = false
-    public var is_climate_on: Bool = false
-    public var seat_heater_rear_left: Int = 0
-    public var min_avail_temp: Double = 0
-    public var inside_temp: Double? = nil
-    public var driver_temp_setting: Double = 0
-    public var passenger_temp_setting: Double = 0
-    public var outside_temp: Double? = nil
-    public var seat_heater_rear_center: Int = 0
+
+    ///
+    public var isRearDefrosterOn: Bool = false
+
+    ///
+    public var isClimateOn: Bool = false
+
+    ///
+    public var seatHeaterRearLeft: Int = 0
+
+    ///
+    public var minimumAvailableTemperature: Double = 0
+
+    ///
+    public var insideTemperature: Double? = nil
+
+    ///
+    public var driverTemperatureSetting: Double = 0
+
+    ///
+    public var passengerTemperatureSetting: Double = 0
+
+    ///
+    public var outsideTemperature: Double? = nil
+
+    ///
+    public var seatHeaterRearCenter: Int = 0
+
+    ///
     public var timestamp: TimeInterval = 0
-    public var right_temp_direction: String? = nil
-    public var left_temp_direction: String? = nil
-    public var seat_heater_rear_right: Int = 0
-    public var seat_heater_rear_right_back: Int = 0
-    public var seat_heater_right: Int = 0
-    public var seat_heater_rear_left_back: Int = 0
-    public var smart_preconditioning: Bool = false
-    public var max_avail_temp: Double = 0
-    public var is_auto_conditioning_on: String? = nil
+
+    ///
+    public var rightTemperatureDirection: String? = nil
+
+    ///
+    public var leftTemperatureDirection: String? = nil
+
+    ///
+    public var seatHeaterRearRight: Int = 0
+
+    ///
+    public var seatHeaterRearRightBack: Int = 0
+
+    ///
+    public var seatHeaterRight: Int = 0
+
+    ///
+    public var seatHeaterRearLeftBack: Int = 0
+
+    ///
+    public var smartPreconditioning: Bool = false
+
+    ///
+    public var maximumAvailableTemperature: Double = 0
+
+    ///
+    public var isAutoConditioningOn: String? = nil
 
     ///
     public init() {}
@@ -48,17 +85,29 @@ public struct TKClimateState {
 extension TKClimateState: TKDataResponse {
 
     public mutating func mapping(map: Map) {
-        seatHeaterLeft <- map["seat_heater_left"]
+        driverTemperatureSetting <- map["driver_temp_setting"]
         fanStatus <- map["fan_status"]
+        insideTemperature <- map["inside_temp"]
+        isAutoConditioningOn <- map["is_auto_conditioning_on"]
+        isClimateOn <- map["is_climate_on"]
         isFrontDefrosterOn <- map["is_front_defroster_on"]
-        driver_temp_setting <- map["driver_temp_setting"]
-        passenger_temp_setting <- map["passenger_temp_setting"]
-        is_climate_on <- map["is_climate_on"]
-        min_avail_temp <- map["min_avail_temp"]
-        max_avail_temp <- map["max_avail_temp"]
+        isRearDefrosterOn <- map["is_rear_defroster_on"]
+        leftTemperatureDirection <- map["left_temp_direction"]
+        maximumAvailableTemperature <- map["max_avail_temp"]
+        minimumAvailableTemperature <- map["min_avail_temp"]
+        minimumAvailableTemperature <- map["min_avail_temp"]
+        outsideTemperature <- map["outside_temp"]
+        passengerTemperatureSetting <- map["passenger_temp_setting"]
+        rightTemperatureDirection <- map["right_temp_direction"]
+        seatHeaterRearCenter <- map["seat_heater_rear_center"]
+        seatHeaterRearLeft <- map["seat_heater_rear_left"]
+        seatHeaterRearLeftBack <- map["seat_heater_rear_left_back"]
+        seatHeaterRearRight <- map["seat_heater_rear_right"]
+        seatHeaterRearRightBack <- map["seat_heater_rear_right_back"]
+        seatHeaterRight <- map["seat_heater_right"]
+        smartPreconditioning <- map["smart_preconditioning"]
         timestamp <- map["timestamp"]
-        inside_temp <- map["inside_temp"]
-        outside_temp <- map["outside_temp"]
+        seatHeaterLeft <- map["seat_heater_left"]
     }
 }
 

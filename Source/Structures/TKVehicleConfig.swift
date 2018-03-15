@@ -13,37 +13,37 @@ import ObjectMapper
 public struct TKVehicleConfig {
 
     ///
-    public var wheel_type: String? = nil
+    public var wheelType: String? = nil
 
     ///
-    public var sun_roof_installed: Int = 0
+    public var sunRoofInstalled: Int = 0
 
     ///
     public var trimBadging: String = ""
 
     ///
-    public var seat_type: Int = 0
+    public var seatType: Int = 0
 
     ///
-    public var rear_seat_type: Int = 0
+    public var rearSeatType: Int = 0
 
     ///
-    public var roof_color: String? = nil
+    public var roofColor: String? = nil
 
     ///
-    public var perf_config: String? = nil
+    public var perfConfig: String? = nil
 
     ///
     public var rhd: Bool = false
 
     ///
-    public var spoiler_type: String? = nil
+    public var spoilerType: String? = nil
 
     ///
-    public var car_special_type: String? = nil
+    public var carSpecialType: String? = nil
 
     ///
-    public var has_ludicrous_mode: Bool = false
+    public var hasLudicrousMode: Bool = false
 
     ///
     public var timestamp: TimeInterval = 0
@@ -55,22 +55,22 @@ public struct TKVehicleConfig {
     public var motorizedChargePort: Bool = false
 
     ///
-    public var eu_vehicle: Bool = false
+    public var euVehicle: Bool = false
 
     ///
-    public var rear_seat_heaters: Int = 0
+    public var rearSeatHeaters: Int = 0
 
     ///
-    public var third_row_seats: String? = nil
+    public var thirdRowSeats: String? = nil
 
     ///
-    public var can_actuate_trunks: Bool = false
+    public var canActuateTrunks: Bool = false
 
     ///
-    public var car_type: String? = nil
+    public var carType: String? = nil
 
     ///
-    public var charge_port_type: String? = nil
+    public var chargePortType: String? = nil
 
     ///
     public var exteriorColor: String? = nil
@@ -81,9 +81,27 @@ public struct TKVehicleConfig {
 
 extension TKVehicleConfig: TKMappable {
     public mutating func mapping(map: Map) {
-        trimBadging <- map["trim_badging"]
-        motorizedChargePort <- map["motorized_charge_port"]
+        canActuateTrunks <- map["can_actuate_trunks"]
+        carSpecialType <- map["car_special_type"]
+        carType <- map["car_type"]
+        chargePortType <- map["charge_port_type"]
+        euVehicle <- map["eu_vehicle"]
         exteriorColor <- map["exterior_color"]
+        hasLudicrousMode <- map["has_ludicrous_mode"]
+        motorizedChargePort <- map["motorized_charge_port"]
+        perfConfig <- map["perf_config"]
+        plg <- map["plg"]
+        rearSeatHeaters <- map["rear_seat_heaters"]
+        rearSeatType <- map["rear_seat_type"]
+        rhd <- map["rhd"]
+        roofColor <- map["roof_color"]
+        seatType <- map["seat_type"]
+        spoilerType <- map["spoiler_type"]
+        sunRoofInstalled <- map["sun_roof_installed"]
+        thirdRowSeats <- map["third_row_seats"]
+        timestamp <- map["timestamp"]
+        trimBadging <- map["trim_badging"]
+        wheelType <- map["wheel_type"]
     }
 }
 
