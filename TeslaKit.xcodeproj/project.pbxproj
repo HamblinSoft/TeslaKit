@@ -345,6 +345,7 @@
 				375D8858200ECEE000CD9D1E /* Headers */,
 				375D8859200ECEE000CD9D1E /* Resources */,
 				AF8A574C31157E16F870A818 /* [CP] Copy Pods Resources */,
+				3723AC982076C71D00E80F60 /* Test Account Run Script */,
 			);
 			buildRules = (
 			);
@@ -359,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37FB3F2C2026533500409472 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
+				3723AC992076C76200E80F60 /* Test Account Run Script */,
 				C23A74C4DF6748E842372784 /* [CP] Check Pods Manifest.lock */,
 				37FB3F192026533500409472 /* Sources */,
 				37FB3F1A2026533500409472 /* Frameworks */,
@@ -379,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37FB3F3A2026534600409472 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
+				3723AC9A2076C84A00E80F60 /* Test Account Run Script */,
 				657C056701FDDEA2E82C40BB /* [CP] Check Pods Manifest.lock */,
 				37FB3F2F2026534600409472 /* Sources */,
 				37FB3F302026534600409472 /* Frameworks */,
@@ -469,6 +472,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3723AC982076C71D00E80F60 /* Test Account Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Test Account Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+		3723AC992076C76200E80F60 /* Test Account Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Test Account Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Read Test Account data from file or create file if one does not exist\n$SRCROOT/scripts/TestAccount.sh";
+		};
+		3723AC9A2076C84A00E80F60 /* Test Account Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Test Account Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Read Test Account data from file or create file if one does not exist\n$SRCROOT/scripts/TestAccount.sh";
+		};
 		3CCD046D05515F09BD255D62 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

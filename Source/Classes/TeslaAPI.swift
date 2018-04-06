@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 import ObjectMapper
 import SwiftyJSON
 
@@ -24,7 +23,7 @@ public protocol TeslaAPIDelegate: class {
 }
 
 
-open class TeslaAPI: Alamofire.SessionDelegate {
+open class TeslaAPI {
 
 
 
@@ -48,24 +47,22 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     public let ownerApiClientSecret: String
 
     ///
+    public let requestTimeout: TimeInterval
+
+    ///
     public weak var delegate: TeslaAPIDelegate? = nil
 
     ///
-    private let configuration: URLSessionConfiguration
+    //    private let configuration: URLSessionConfiguration
 
     ///
-    private lazy var sessionManager: Alamofire.SessionManager = self.getSessionManager()
-
-    ///
-    private func getSessionManager() -> Alamofire.SessionManager {
-        return Alamofire.SessionManager(configuration: self.configuration, delegate: self, serverTrustPolicyManager: nil)
-    }
+    public var session: URLSession = URLSession(configuration: .default)
 
 
 
 
     /// TODO: Consider moving this into a context
-    private var headers: HTTPHeaders = [
+    private var headers: [String: String] = [
         "content-type": "application/json",
         "cache-control": "no-cache"
     ]
@@ -79,20 +76,56 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     public init(ownerApiClientId: String, ownerApiClientSecret: String, requestTimeout: TimeInterval = 30) {
         self.ownerApiClientId = ownerApiClientId
         self.ownerApiClientSecret = ownerApiClientSecret
+        self.requestTimeout = requestTimeout
 
         // Session Configuration
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-        configuration.timeoutIntervalForRequest = requestTimeout // seconds
-        self.configuration = configuration
-        super.init()
+        //        let configuration = URLSessionConfiguration.default
+        //        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
+        //        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+        //        configuration.timeoutIntervalForRequest = requestTimeout // seconds
+        //        self.configuration = configuration
     }
 
 
 
 
+    public func request<T: TKMappable>(_ url: URL, method: String = "GET", parameters: Any? = nil, headers: [String: String] = [:], completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
 
+        let request: URLRequest = {
+            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: self.requestTimeout)
+            request.httpMethod = method
+            headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
+            if let parameters = parameters {
+                request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
+            }
+            return request
+        }()
+
+        let task = self.session.dataTask(with: request) { (dataOrNil, responseOrNil, errorOrNil) in
+
+            self.delegate?.teslaApiActivityDidEnd(self)
+
+            let response: HTTPURLResponse = (responseOrNil as? HTTPURLResponse) ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
+
+            var mappedData: T? = nil
+
+            self.debugPrint(request, response: response, responseData: dataOrNil, error: errorOrNil)
+
+            do {
+                if let data = dataOrNil {
+                    let json: Any = try JSONSerialization.jsonObject(with: data)
+                    mappedData = Mapper<T>().map(JSONObject: json)
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+
+            completion(response, mappedData, errorOrNil)
+        }
+
+        self.delegate?.teslaApiActivityDidBegin(self)
+        task.resume()
+    }
 
 
 
@@ -135,11 +168,12 @@ open class TeslaAPI: Alamofire.SessionDelegate {
                                             email: email,
                                             password: password)
 
+
         self.request(TeslaAPI.baseURL.appendingPathComponent("oauth/token"),
-                                method: HTTPMethod.post,
-                                parameters: request.toJSON(),
-                                headers: self.headers,
-                                completion: completion)
+                     method: "POST",
+                     parameters: request.toJSON(),
+                     headers: self.headers,
+                     completion: completion)
     }
 
 
@@ -148,9 +182,9 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     /// - Parameter completion: Completion Handler
     open func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
         self.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"),
-                                method: HTTPMethod.get,
-                                headers: self.headers,
-                                completion: completion)
+                     method: "GET",
+                     headers: self.headers,
+                     completion: completion)
     }
 
     /// Get all data from the vehicle
@@ -160,9 +194,9 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     ///   - completion: Completion Handler
     open func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TKDataRequest.data.url(vehicleId: vehicle.id),
-                                method: HTTPMethod.get,
-                                headers: self.headers,
-                                completion: completion)
+                     method: "GET",
+                     headers: self.headers,
+                     completion: completion)
     }
 
 
@@ -174,9 +208,9 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     ///   - completion: Completion Handler
     open func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
         self.request(type.url(vehicleId: vehicle.id),
-                                method: HTTPMethod.get,
-                                headers: self.headers,
-                                completion: completion)
+                     method: "GET",
+                     headers: self.headers,
+                     completion: completion)
     }
 
 
@@ -189,70 +223,34 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     ///   - completion: Completion Handler
     open func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
         self.request(command.url(vehicleId: vehicle.id),
-                                method: HTTPMethod.post,
-                                parameters: request?.toJSON(),
-                                encoding: JSONEncoding.default,
-                                headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
+                     method: "POST",
+                     parameters: request?.toJSON(),
+                     headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
 
-                                    defer {
-                                        self.delegate?.teslaApi(self, didSend: command, data: dataOrNil)
-                                    }
+                        defer {
+                            self.delegate?.teslaApi(self, didSend: command, data: dataOrNil)
+                        }
 
-                                    guard let data = dataOrNil, httpResponse.statusCode == 200 else {
-                                        completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
-                                        return
-                                    }
+                        guard let data = dataOrNil, httpResponse.statusCode == 200 else {
+                            completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
+                            return
+                        }
 
-                                    guard data.result else {
-                                        completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
-                                        return
-                                    }
+                        guard data.result else {
+                            completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
+                            return
+                        }
 
-                                    completion(data)
-        }
-    }
-
-
-
-
-    // MARK: - Networking
-
-    ///
-    open func request<T: TKMappable>(_ url: URL,
-                                     method: HTTPMethod,
-                                     parameters: Parameters? = nil,
-                                     encoding: ParameterEncoding = JSONEncoding.default,
-                                     headers: HTTPHeaders? = nil,
-                                     completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
-
-        self.delegate?.teslaApiActivityDidBegin(self)
-
-        self.sessionManager.request(url, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON { dataResponse in
-            let httpResponse: HTTPURLResponse = dataResponse.response ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
-
-            var mappedObjectOrNil: T? = nil
-
-            if let data = dataResponse.data,
-                let json = try? JSONSerialization.jsonObject(with: data),
-                let object = Mapper<T>().map(JSONObject: json) {
-                mappedObjectOrNil = object
-            }
-
-            let request = dataResponse.request ?? (try! URLRequest(url: url, method: method, headers: headers))
-            self.debugPrint(request, response: httpResponse, responseData: dataResponse.data, error: dataResponse.error)
-
-            self.delegate?.teslaApiActivityDidEnd(self)
-
-            completion(httpResponse, mappedObjectOrNil, dataResponse.error)
+                        completion(data)
         }
     }
 
     ///
     open func clearSession(completion: @escaping () -> Void) {
-        let session = self.sessionManager.session
+        let session = self.session
         session.invalidateAndCancel()
         session.reset {
-            self.sessionManager = self.getSessionManager()
+            self.session = URLSession(configuration: .default)
             completion()
         }
     }
@@ -306,8 +304,9 @@ open class TeslaAPI: Alamofire.SessionDelegate {
 
     /// Returns whether the network is reachable
     public var isReachable: Bool {
-        let isReachable = NetworkReachabilityManager()?.isReachable ?? false
-        return isReachable
+        //        let isReachable = NetworkReachabilityManager()?.isReachable ?? false
+        //        return isReachable
+        return true
     }
 
     /// Returns whether the specified host is reachable
@@ -315,8 +314,9 @@ open class TeslaAPI: Alamofire.SessionDelegate {
     /// - Parameter host: Host name
     /// - Returns: Bool
     public func isReachable(host: String) -> Bool {
-        let isReachable = NetworkReachabilityManager(host: host)?.isReachable ?? false
-        return isReachable
+        //        let isReachable = NetworkReachabilityManager(host: host)?.isReachable ?? false
+        //        return isReachable
+        return true
     }
 
     #endif
