@@ -190,21 +190,13 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:8TeslaKit11TKDirectiona">TKDirection</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
         <section>
           <section class="section">
             
-            <h1 id='teslakit' class='heading'>TeslaKit 📱 ⌚</h1>
+            <h1 id='teslakit' class='heading'>TeslaKit</h1>
 
 <p><a href="https://github.com/Jarious-Apps/TeslaKit"><img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat" alt="Platform"></a>
 <a href="https://github.com/CocoaPods/CocoaPods"><img src="https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat" alt="Cocoapods compatible"></a>
@@ -212,31 +204,28 @@
 <a href="http://cocoapods.org/pods/TeslaKit"><img src="https://img.shields.io/cocoapods/l/TeslaKit.svg?style=flat" alt="License"></a>
 <a href="https://swift.org"><img src="https://img.shields.io/badge/language-Swift%204-E05C43.svg?style=flat" alt="Language"></a>
 <a href="http://twitter.com/jjjjaren"><img src="https://img.shields.io/badge/twitter-@JJJJaren-00ACED.svg?style=flat" alt="Twitter"></a></p>
-<h2 id='compatibility' class='heading'>Compatibility</h2>
 
-<p>This is a universal framework that works with</p>
-
-<ul>
-<li>iOS</li>
-<li>watchOS</li>
-</ul>
-<h2 id='dependencies' class='heading'>Dependencies</h2>
+<p>TeslaKit is a framework written in Swift that makes it easy for you to interface with Tesla&rsquo;s mobile API and communicate with your Tesla automobiles.</p>
+<h1 id='features' class='heading'>Features</h1>
 
 <ul>
-<li>ObjectMapper</li>
+<li>[x] Authenticate with Tesla&rsquo;s API to obtain an access token</li>
+<li>[x] Retrieve a list of vehicles associated with your Tesla account</li>
+<li>[x] Obtain all data on your vehicle</li>
+<li>[x] Send commands to your vehicle</li>
+<li>[x] Utilizes <code>ObjectMapper</code> for <code>JSON</code> mapping</li>
+<li>[x] Uses <code>Structures</code> to maintain thread safe operations</li>
+<li>[ ] Summon and Homelink - Coming soon</li>
 </ul>
-<h2 id='example' class='heading'>Example</h2>
-
-<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
-<h2 id='installation' class='heading'>Installation</h2>
+<h1 id='installation' class='heading'>Installation</h1>
 
 <p>TeslaKit is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'TeslaKit'</span>
 </code></pre>
-<h2 id='usage' class='heading'>Usage</h2>
+<h1 id='usage' class='heading'>Usage</h1>
 
-<p>Add an ATS exception domain for <code>owner-api.teslamotors.com</code></p>
+<p>Add an ATS exception domain for <code>owner-api.teslamotors.com</code> in your info.plist</p>
 <pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSAppTransportSecurity<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;dict&gt;</span>
     <span class="nt">&lt;key&gt;</span>NSExceptionDomains<span class="nt">&lt;/key&gt;</span>
@@ -254,52 +243,65 @@ it, simply add the following line to your Podfile:</p>
 <span class="nt">&lt;/dict&gt;</span>
 </code></pre>
 
-<p>Import the <code>TeslaKit</code> library</p>
+<p>Import <code>TeslaKit</code></p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">TeslaKit</span>
 </code></pre>
+<h2 id='teslaapi' class='heading'>TeslaAPI</h2>
 
 <p>Create a new <code><a href="Classes/TeslaAPI.html">TeslaAPI</a></code> instance</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="nf">TeslaAPI</span><span class="p">(</span><span class="nv">ownerApiClientId</span><span class="p">:</span> <span class="s">"CLIENT_ID"</span><span class="p">,</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="kt">TeslaAPI</span><span class="p">(</span><span class="nv">ownerApiClientId</span><span class="p">:</span> <span class="s">"CLIENT_ID"</span><span class="p">,</span>
                         <span class="nv">ownerApiClientSecret</span><span class="p">:</span> <span class="s">"CLIENT_SECRET"</span><span class="p">)</span>
 </code></pre>
+<h2 id='access-token' class='heading'>Access Token</h2>
 
 <p>Obtain an Access Token by logging in with your Tesla account credentials</p>
 <pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="s">"elon.musk@teslakit.com"</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="s">"M@R$R0CKZ!"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
-    <span class="k">guard</span> <span class="k">let</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">accessToken</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">accessToken</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
     <span class="c1">// Set the accessToken for use with future requests</span>
     <span class="n">teslaAPI</span><span class="o">.</span><span class="nf">setAccessToken</span><span class="p">(</span><span class="n">accessToken</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
+<h2 id='vehicle-list' class='heading'>Vehicle List</h2>
 
 <p>Obtain a list of vehicles associated with your account</p>
-<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">vehicles</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="n">vehicles</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
-    <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicles</span><span class="p">:</span> <span class="p">[</span><span class="kt">TKVehicle</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">vehicles</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt">TKVehicle</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">vehicles</span><span class="o">.</span><span class="n">first</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
-    <span class="k">let</span> <span class="nv">vehicle</span><span class="p">:</span> <span class="kt">TKVehicle</span><span class="p">?</span> <span class="o">=</span> <span class="n">vehicles</span><span class="o">.</span><span class="n">first</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello, </span><span class="se">\(</span><span class="n">vehicle</span><span class="o">.</span><span class="n">displayName</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
+<h2 id='vehicle-data' class='heading'>Vehicle Data</h2>
 
-<p>Obtain vehicle data</p>
+<p>Obtain all data for a vehicle</p>
 <pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
-    <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicle</span> <span class="o">=</span> <span class="n">dataOrNil</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicle</span> <span class="o">=</span> <span class="n">dataOrNil</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
-    <span class="nf">print</span><span class="p">(</span><span class="n">vehicle</span><span class="o">.</span><span class="n">displayName</span><span class="p">,</span> <span class="n">vehicle</span><span class="o">.</span><span class="n">chargeState</span><span class="o">.</span><span class="n">batteryLevel</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Battery is at </span><span class="se">\(</span><span class="n">vehicle</span><span class="o">.</span><span class="n">chargeState</span><span class="o">.</span><span class="n">batteryLevel</span><span class="se">)</span><span class="s">%"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
+<h2 id='send-command' class='heading'>Send Command</h2>
 
-<p>Send a command</p>
+<p>Send a command to a vehicle</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">command</span><span class="p">:</span> <span class="kt">TKCommand</span> <span class="o">=</span> <span class="kt">TKCommand</span><span class="o">.</span><span class="n">unlockDoors</span>
 
 <span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">guard</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="nf">else</span> <span class="p">{</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">allErrorMessages</span><span class="p">)</span>
-        <span class="k">return</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Command sent successfully!"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"Command issued successfully!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Send a command to a vehicle with request parameters</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">TKSetTemperature</span><span class="p">(</span><span class="nv">driverTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">,</span> <span class="nv">passengerTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">)</span>
+
+<span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="o">.</span><span class="n">setTemperature</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Command sent successfully!"</span><span class="p">)</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 <h2 id='author' class='heading'>Author</h2>
@@ -317,7 +319,7 @@ it, simply add the following line to your Podfile:</p>
         </section>
         <section id="footer">
           <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-04-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

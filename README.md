@@ -1,4 +1,4 @@
-# TeslaKit 📱 ⌚
+# TeslaKit
 
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat)](https://github.com/Jarious-Apps/TeslaKit)
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://github.com/CocoaPods/CocoaPods)
@@ -7,20 +7,19 @@
 [![Language](https://img.shields.io/badge/language-Swift%204-E05C43.svg?style=flat)](https://swift.org)
 [![Twitter](https://img.shields.io/badge/twitter-@JJJJaren-00ACED.svg?style=flat)](http://twitter.com/jjjjaren)
 
-## Compatibility
-This is a universal framework that works with
-- iOS
-- watchOS
 
-## Dependencies
+TeslaKit is a framework written in Swift that makes it easy for you to interface with Tesla's mobile API and communicate with your Tesla automobiles.
 
-- ObjectMapper
+# Features
+- [x] Authenticate with Tesla's API to obtain an access token
+- [x] Retrieve a list of vehicles associated with your Tesla account
+- [x] Obtain all data on your vehicle
+- [x] Send commands to your vehicle
+- [x] Utilizes `ObjectMapper` for `JSON` mapping
+- [x] Uses `Structures` to maintain thread safe operations
+- [ ] Summon and Homelink - Coming soon
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Installation
+# Installation
 
 TeslaKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -29,9 +28,9 @@ it, simply add the following line to your Podfile:
 pod 'TeslaKit'
 ```
 
-## Usage
+# Usage
 
-Add an ATS exception domain for `owner-api.teslamotors.com`
+Add an ATS exception domain for `owner-api.teslamotors.com` in your info.plist
 
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -51,17 +50,19 @@ Add an ATS exception domain for `owner-api.teslamotors.com`
 </dict>
 ```
 
-Import the `TeslaKit` library
+Import `TeslaKit`
 ```swift
 import TeslaKit
 ```
 
+## TeslaAPI
 Create a new `TeslaAPI` instance
 ```swift
 let teslaAPI = TeslaAPI(ownerApiClientId: "CLIENT_ID",
                         ownerApiClientSecret: "CLIENT_SECRET")
 ```
 
+## Access Token
 Obtain an Access Token by logging in with your Tesla account credentials
 
 ```swift
@@ -74,42 +75,55 @@ teslaAPI.accessToken(email: "elon.musk@teslakit.com", password: "M@R$R0CKZ!") { 
 }
 ```
 
-
+## Vehicle List
 Obtain a list of vehicles associated with your account
 
 ```swift
 teslaAPI.vehicles { (httpResponse, dataOrNil, errorOrNil) in
 
-    guard let vehicles: [TKVehicle] = dataOrNil?.vehicles else { return }
+    guard let vehicle: TKVehicle = dataOrNil?.vehicles.first else { return }
 
-    let vehicle: TKVehicle? = vehicles.first
+    print("Hello, \(vehicle.displayName)")
 }
 ```
 
-Obtain vehicle data
+## Vehicle Data
+Obtain all data for a vehicle
 
 ```swift
 teslaAPI.data(for: vehicle) { (httpResponse, dataOrNil, errorOrNil) in
 
     guard let vehicle = dataOrNil else { return }
 
-    print(vehicle.displayName, vehicle.chargeState.batteryLevel)
+    print("Battery is at \(vehicle.chargeState.batteryLevel)%")
 }
 ```
 
-Send a command
+## Send Command
+Send a command to a vehicle
 
 ```swift
 let command: TKCommand = TKCommand.unlockDoors
 
 teslaAPI.send(command, to: vehicle) { response in
-    guard response.result else {
-        print(response.allErrorMessages)
-        return
+    if response.result {
+        print("Command sent successfully!")
     }
-    print("Command issued successfully!")
 }
 ```
+
+Send a command to a vehicle with request parameters
+
+```swift
+let request = TKSetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
+
+teslaAPI.send(.setTemperature, to: vehicle, request: request) { response in
+    if response.result {
+        print("Command sent successfully!")
+    }
+}
+```
+
 
 ## Author
 
