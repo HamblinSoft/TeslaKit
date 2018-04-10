@@ -120,7 +120,9 @@ open class TeslaAPI {
                 print(error.localizedDescription)
             }
 
-            completion(response, mappedData, errorOrNil)
+            DispatchQueue.main.async {
+                completion(response, mappedData, errorOrNil)
+            }
         }
 
         self.delegate?.teslaApiActivityDidBegin(self)
