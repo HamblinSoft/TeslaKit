@@ -49,6 +49,9 @@ open class TeslaAPI {
     public let requestTimeout: TimeInterval
 
     ///
+    public var debugMode: Bool = false
+
+    ///
     public weak var delegate: TeslaAPIDelegate? = nil
 
     ///
@@ -72,17 +75,11 @@ open class TeslaAPI {
 
 
     /// Initialize a new instance of TeslaAPI
-    public init(ownerApiClientId: String, ownerApiClientSecret: String, requestTimeout: TimeInterval = 30) {
+    public init(ownerApiClientId: String, ownerApiClientSecret: String, requestTimeout: TimeInterval = 30, debugMode: Bool = false) {
         self.ownerApiClientId = ownerApiClientId
         self.ownerApiClientSecret = ownerApiClientSecret
         self.requestTimeout = requestTimeout
-
-        // Session Configuration
-        //        let configuration = URLSessionConfiguration.default
-        //        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        //        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-        //        configuration.timeoutIntervalForRequest = requestTimeout // seconds
-        //        self.configuration = configuration
+        self.debugMode = debugMode
     }
 
 
@@ -108,7 +105,9 @@ open class TeslaAPI {
 
             var mappedData: T? = nil
 
-            self.debugPrint(request, response: response, responseData: dataOrNil, error: errorOrNil)
+            if self.debugMode {
+                self.debugPrint(request, response: response, responseData: dataOrNil, error: errorOrNil)
+            }
 
             do {
                 if let data = dataOrNil {
