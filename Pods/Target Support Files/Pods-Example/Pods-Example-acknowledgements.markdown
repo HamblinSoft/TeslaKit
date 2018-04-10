@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## TeslaKit
 
-Copyright (c) 2017 jjjjaren <jjjjaren@gmail.com>
+Copyright (c) 2018 HamblinSoft <jjjjaren@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

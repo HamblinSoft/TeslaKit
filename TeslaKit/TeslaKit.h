@@ -3,7 +3,7 @@
 //  TeslaKit
 //
 //  Created by Jaren Hamblin on 1/16/18.
-//  Copyright © 2018 JJJJaren. All rights reserved.
+//  Copyright © 2018 HamblinSoft. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

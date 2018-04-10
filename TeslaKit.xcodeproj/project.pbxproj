@@ -403,7 +403,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = JJJJaren;
+				ORGANIZATIONNAME = HamblinSoft;
 				TargetAttributes = {
 					375D885A200ECEE000CD9D1E = {
 						CreatedOnToolsVersion = 9.2;
