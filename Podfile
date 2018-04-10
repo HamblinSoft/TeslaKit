@@ -5,7 +5,6 @@ inhibit_all_warnings!
 
 def common_pods
     pod 'ObjectMapper', '~> 3.1'
-    pod 'SwiftyJSON', '~> 4.0'
 end
 
 target 'TeslaKit' do

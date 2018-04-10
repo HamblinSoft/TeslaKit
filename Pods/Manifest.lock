@@ -1,24 +1,24 @@
 PODS:
   - ObjectMapper (3.1.0)
-  - SwiftyJSON (4.0.0)
-  - TeslaKit (0.1.3):
+  - TeslaKit (0.1.5):
     - ObjectMapper (~> 3.1)
-    - SwiftyJSON (~> 4.0)
 
 DEPENDENCIES:
-  - ObjectMapper
-  - SwiftyJSON
+  - ObjectMapper (~> 3.1)
   - TeslaKit (from `./`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ObjectMapper
 
 EXTERNAL SOURCES:
   TeslaKit:
-    :path: ./
+    :path: "./"
 
 SPEC CHECKSUMS:
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  TeslaKit: c766d55827bc55b99c21a4427fdf5e7de5014b78
+  TeslaKit: b40b616576601144768b12303603430372adfc26
 
-PODFILE CHECKSUM: ae9506a13a69d47594a90b70f9b82855fcbffab0
+PODFILE CHECKSUM: 5c971281307dab4bc51d1737a37520a9b296bb94
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.5.0

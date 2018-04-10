@@ -8,7 +8,6 @@
 
 import Foundation
 import ObjectMapper
-import SwiftyJSON
 
 public protocol TeslaAPIDelegate: class {
 
@@ -276,7 +275,7 @@ open class TeslaAPI {
         }
 
         // Request Data
-        if let data = request.httpBody, let json = try? JSON(data: data) {
+        if let data = request.httpBody, let json = try? prettyPrint(json: data) {
             components.append("RequestBody:\n\(json)")
         }
 
@@ -292,7 +291,7 @@ open class TeslaAPI {
         }
 
         // Response Data
-        if let data = responseData, let json = try? JSON(data: data) {
+        if let data = responseData, let json = try? prettyPrint(json: data) {
             components.append("ResponseBody:\n\(json)")
         }
 
@@ -301,27 +300,6 @@ open class TeslaAPI {
         let logMessage = components.joined(separator: "\n")
         print(logMessage)
     }
-
-    #if !os(watchOS)
-
-    /// Returns whether the network is reachable
-    public var isReachable: Bool {
-        //        let isReachable = NetworkReachabilityManager()?.isReachable ?? false
-        //        return isReachable
-        return true
-    }
-
-    /// Returns whether the specified host is reachable
-    ///
-    /// - Parameter host: Host name
-    /// - Returns: Bool
-    public func isReachable(host: String) -> Bool {
-        //        let isReachable = NetworkReachabilityManager(host: host)?.isReachable ?? false
-        //        return isReachable
-        return true
-    }
-
-    #endif
 }
 
 
@@ -332,4 +310,11 @@ extension DispatchQueue {
             completion()
         }
     }
+}
+
+fileprivate func prettyPrint(json data: Data) throws -> String {
+    let json = try JSONSerialization.jsonObject(with: data)
+    let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+    let string = String(data: data, encoding: String.Encoding.utf8)
+    return string ?? ""
 }
