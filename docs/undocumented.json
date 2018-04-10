@@ -2,16 +2,30 @@
   "warnings": [
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 14,
+      "line": 12,
       "symbol": "TeslaAPIDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 24,
+      "line": 25,
       "symbol": "TeslaAPI",
       "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 91,
+      "symbol": "TeslaAPI.request(_:method:parameters:headers:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Enumerations/TKHeading.swift",
+      "line": 11,
+      "symbol": "TKDirection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
@@ -79,175 +93,21 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKChargeState.swift",
-      "line": 147,
+      "line": 158,
       "symbol": "TKChargeState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 23,
-      "symbol": "TKClimateState.isFrontDefrosterOn",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 24,
-      "symbol": "TKClimateState.is_rear_defroster_on",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 25,
-      "symbol": "TKClimateState.is_climate_on",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 26,
-      "symbol": "TKClimateState.seat_heater_rear_left",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 27,
-      "symbol": "TKClimateState.min_avail_temp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 28,
-      "symbol": "TKClimateState.inside_temp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 29,
-      "symbol": "TKClimateState.driver_temp_setting",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 30,
-      "symbol": "TKClimateState.passenger_temp_setting",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 31,
-      "symbol": "TKClimateState.outside_temp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 32,
-      "symbol": "TKClimateState.seat_heater_rear_center",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 33,
-      "symbol": "TKClimateState.timestamp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 34,
-      "symbol": "TKClimateState.right_temp_direction",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 35,
-      "symbol": "TKClimateState.left_temp_direction",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 36,
-      "symbol": "TKClimateState.seat_heater_rear_right",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 37,
-      "symbol": "TKClimateState.seat_heater_rear_right_back",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 38,
-      "symbol": "TKClimateState.seat_heater_right",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 39,
-      "symbol": "TKClimateState.seat_heater_rear_left_back",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 40,
-      "symbol": "TKClimateState.smart_preconditioning",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 41,
-      "symbol": "TKClimateState.max_avail_temp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 42,
-      "symbol": "TKClimateState.is_auto_conditioning_on",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
-      "line": 50,
+      "line": 105,
       "symbol": "TKClimateState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKDriveState.swift",
-      "line": 40,
-      "symbol": "TKDriveState.direction",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKDriveState.swift",
-      "line": 42,
-      "symbol": "TKDriveState.heading",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKDriveState.swift",
-      "line": 63,
+      "line": 73,
       "symbol": "TKDriveState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -303,7 +163,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicle.swift",
-      "line": 68,
+      "line": 90,
       "symbol": "TKVehicle.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -331,280 +191,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 15,
-      "symbol": "TKVehicleState.exteriorColor",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 19,
-      "symbol": "TKVehicleState.center_display_state",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 20,
-      "symbol": "TKVehicleState.autopark_style",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 22,
-      "symbol": "TKVehicleState.odometer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 23,
-      "symbol": "TKVehicleState.rearTrunkState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 24,
-      "symbol": "TKVehicleState.sun_roof_percent_open",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 25,
-      "symbol": "TKVehicleState.vehicle_name",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 30,
-      "symbol": "TKVehicleState.dark_rims",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 31,
-      "symbol": "TKVehicleState.locked",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 32,
-      "symbol": "TKVehicleState.rear_seat_type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 33,
-      "symbol": "TKVehicleState.rhd",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 34,
-      "symbol": "TKVehicleState.autopark_state_v2",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 35,
-      "symbol": "TKVehicleState.roof_color",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 36,
-      "symbol": "TKVehicleState.rear_seat_heaters",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 37,
-      "symbol": "TKVehicleState.valet_mode",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 38,
-      "symbol": "TKVehicleState.parsed_calendar_supported",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 39,
-      "symbol": "TKVehicleState.api_version",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 40,
-      "symbol": "TKVehicleState.homelink_nearby",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 41,
-      "symbol": "TKVehicleState.autopark_state",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 42,
-      "symbol": "TKVehicleState.last_autopark_error",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 43,
-      "symbol": "TKVehicleState.driverRearDoorState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 44,
-      "symbol": "TKVehicleState.has_spoiler",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 45,
-      "symbol": "TKVehicleState.calendar_supported",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 46,
-      "symbol": "TKVehicleState.sun_roof_state",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 47,
-      "symbol": "TKVehicleState.driverFrontDoorState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 48,
-      "symbol": "TKVehicleState.valet_pin_needed",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 49,
-      "symbol": "TKVehicleState.passengerRearDoorState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 50,
-      "symbol": "TKVehicleState.spoiler_type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 51,
-      "symbol": "TKVehicleState.car_type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 52,
-      "symbol": "TKVehicleState.perf_config",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 53,
-      "symbol": "TKVehicleState.car_version",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 54,
-      "symbol": "TKVehicleState.seat_type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 55,
-      "symbol": "TKVehicleState.third_row_seats",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 56,
-      "symbol": "TKVehicleState.frontTrunkState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 57,
-      "symbol": "TKVehicleState.notifications_supported",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 58,
-      "symbol": "TKVehicleState.passengerFrontDoorState",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 59,
-      "symbol": "TKVehicleState.wheel_type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 60,
-      "symbol": "TKVehicleState.sun_roof_installed",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 61,
-      "symbol": "TKVehicleState.timestamp",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 69,
+      "line": 146,
       "symbol": "TKVehicleState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -618,7 +205,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/VIN.swift",
-      "line": 85,
+      "line": 86,
       "symbol": "VIN.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
