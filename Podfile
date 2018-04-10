@@ -4,7 +4,6 @@
 inhibit_all_warnings!
 
 def common_pods
-    pod 'Alamofire', '~> 4.6'
     pod 'ObjectMapper', '~> 3.1'
     pod 'SwiftyJSON', '~> 4.0'
 end

@@ -1,16 +1,13 @@
 PODS:
-  - Alamofire (4.6.0)
   - ObjectMapper (3.1.0)
   - SwiftyJSON (4.0.0)
   - TeslaKit (0.1.3):
-    - Alamofire (~> 4.6)
     - ObjectMapper (~> 3.1)
     - SwiftyJSON (~> 4.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.6)
-  - ObjectMapper (~> 3.1)
-  - SwiftyJSON (~> 4.0)
+  - ObjectMapper
+  - SwiftyJSON
   - TeslaKit (from `./`)
 
 EXTERNAL SOURCES:
@@ -18,11 +15,10 @@ EXTERNAL SOURCES:
     :path: ./
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  TeslaKit: 9e66b37ef595b09dae47d32b81436e526cec2e48
+  TeslaKit: c766d55827bc55b99c21a4427fdf5e7de5014b78
 
-PODFILE CHECKSUM: 06831b76fb1986b71787d5cdb2ce08c51ba50087
+PODFILE CHECKSUM: ae9506a13a69d47594a90b70f9b82855fcbffab0
 
 COCOAPODS: 1.4.0.beta.2

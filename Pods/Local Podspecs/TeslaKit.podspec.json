@@ -21,9 +21,6 @@
   },
   "source_files": "Source/**/*",
   "dependencies": {
-    "Alamofire": [
-      "~> 4.6"
-    ],
     "ObjectMapper": [
       "~> 3.1"
     ],
