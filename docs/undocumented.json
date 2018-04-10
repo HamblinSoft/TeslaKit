@@ -16,7 +16,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 91,
+      "line": 88,
       "symbol": "TeslaAPI.request(_:method:parameters:headers:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

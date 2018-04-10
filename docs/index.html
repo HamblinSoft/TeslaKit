@@ -206,12 +206,10 @@
             
             <h1 id='teslakit' class='heading'>TeslaKit 📱 ⌚</h1>
 
-<p><a href="https://github.com/Jarious-Apps/TeslaKit"><img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat" alt="Tesla-API"></a>
-<a href="https://travis-ci.org/jjjjaren/TeslaKit"><img src="http://img.shields.io/travis/jjjjaren/TeslaKit.svg?style=flat" alt="CI Status"></a>
+<p><a href="https://github.com/Jarious-Apps/TeslaKit"><img src="https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat" alt="Platform"></a>
 <a href="https://github.com/CocoaPods/CocoaPods"><img src="https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat" alt="Cocoapods compatible"></a>
 <a href="http://cocoapods.org/pods/TeslaKit"><img src="https://img.shields.io/cocoapods/v/TeslaKit.svg?style=flat" alt="Version"></a>
 <a href="http://cocoapods.org/pods/TeslaKit"><img src="https://img.shields.io/cocoapods/l/TeslaKit.svg?style=flat" alt="License"></a>
-<a href="http://cocoapods.org/pods/TeslaKit"><img src="https://img.shields.io/cocoapods/p/TeslaKit.svg?style=flat" alt="Platform"></a>
 <a href="https://swift.org"><img src="https://img.shields.io/badge/language-Swift%204-E05C43.svg?style=flat" alt="Language"></a>
 <a href="http://twitter.com/jjjjaren"><img src="https://img.shields.io/badge/twitter-@JJJJaren-00ACED.svg?style=flat" alt="Twitter"></a></p>
 <h2 id='compatibility' class='heading'>Compatibility</h2>
@@ -236,7 +234,7 @@
 it, simply add the following line to your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'TeslaKit'</span>
 </code></pre>
-<h2 id='how-to-use' class='heading'>How to use</h2>
+<h2 id='usage' class='heading'>Usage</h2>
 
 <p>Add an ATS exception domain for <code>owner-api.teslamotors.com</code></p>
 <pre class="highlight xml"><code><span class="nt">&lt;key&gt;</span>NSAppTransportSecurity<span class="nt">&lt;/key&gt;</span>
@@ -256,7 +254,7 @@ it, simply add the following line to your Podfile:</p>
 <span class="nt">&lt;/dict&gt;</span>
 </code></pre>
 
-<p>Import <code>TeslaKit</code></p>
+<p>Import the <code>TeslaKit</code> library</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">TeslaKit</span>
 </code></pre>
 
@@ -265,7 +263,7 @@ it, simply add the following line to your Podfile:</p>
                         <span class="nv">ownerApiClientSecret</span><span class="p">:</span> <span class="s">"CLIENT_SECRET"</span><span class="p">)</span>
 </code></pre>
 
-<p>Obtain an Access Token by logging in with your Tesla Account credentials</p>
+<p>Obtain an Access Token by logging in with your Tesla account credentials</p>
 <pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="s">"elon.musk@teslakit.com"</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="s">"M@R$R0CKZ!"</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
     <span class="k">guard</span> <span class="k">let</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">accessToken</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>

@@ -1,11 +1,9 @@
 # TeslaKit 📱 ⌚
 
-[![Tesla-API](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat)](https://github.com/Jarious-Apps/TeslaKit)
-[![CI Status](http://img.shields.io/travis/jjjjaren/TeslaKit.svg?style=flat)](https://travis-ci.org/jjjjaren/TeslaKit)
+[![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg?style=flat)](https://github.com/Jarious-Apps/TeslaKit)
 [![Cocoapods compatible](https://img.shields.io/badge/Cocoapods-compatible-4BC51D.svg?style=flat)](https://github.com/CocoaPods/CocoaPods)
 [![Version](https://img.shields.io/cocoapods/v/TeslaKit.svg?style=flat)](http://cocoapods.org/pods/TeslaKit)
 [![License](https://img.shields.io/cocoapods/l/TeslaKit.svg?style=flat)](http://cocoapods.org/pods/TeslaKit)
-[![Platform](https://img.shields.io/cocoapods/p/TeslaKit.svg?style=flat)](http://cocoapods.org/pods/TeslaKit)
 [![Language](https://img.shields.io/badge/language-Swift%204-E05C43.svg?style=flat)](https://swift.org)
 [![Twitter](https://img.shields.io/badge/twitter-@JJJJaren-00ACED.svg?style=flat)](http://twitter.com/jjjjaren)
 
@@ -31,7 +29,7 @@ it, simply add the following line to your Podfile:
 pod 'TeslaKit'
 ```
 
-## How to use
+## Usage
 
 Add an ATS exception domain for `owner-api.teslamotors.com`
 
@@ -53,7 +51,7 @@ Add an ATS exception domain for `owner-api.teslamotors.com`
 </dict>
 ```
 
-Import `TeslaKit`
+Import the `TeslaKit` library
 ```swift
 import TeslaKit
 ```
@@ -64,7 +62,7 @@ let teslaAPI = TeslaAPI(ownerApiClientId: "CLIENT_ID",
                         ownerApiClientSecret: "CLIENT_SECRET")
 ```
 
-Obtain an Access Token by logging in with your Tesla Account credentials
+Obtain an Access Token by logging in with your Tesla account credentials
 
 ```swift
 teslaAPI.accessToken(email: "elon.musk@teslakit.com", password: "M@R$R0CKZ!") { (httpResponse, dataOrNil, errorOrNil) in
