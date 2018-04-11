@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import TeslaKit
+@testable import TeslaKit
 
 fileprivate let VINModelS: String = "5YJSA1E2XHF156789"
 fileprivate let VINModelX: String = "5YJXCAE45GFF00001"

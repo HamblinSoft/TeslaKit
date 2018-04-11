@@ -49,7 +49,7 @@
 		37FB3F252026533500409472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F232026533500409472 /* Main.storyboard */; };
 		37FB3F272026533500409472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F262026533500409472 /* Assets.xcassets */; };
 		37FB3F2A2026533500409472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F282026533500409472 /* LaunchScreen.storyboard */; };
-		37FB3F362026534600409472 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F352026534600409472 /* Tests.swift */; };
+		37FB3F362026534600409472 /* TKTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F352026534600409472 /* TKTestCase.swift */; };
 		37FB3F3E2026553A00409472 /* VINTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F3D2026553A00409472 /* VINTests.swift */; };
 		37FB3F4F2026675700409472 /* TKChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F412026672B00409472 /* TKChargeUnit.swift */; };
 		37FB3F502026675700409472 /* TKDistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F432026673800409472 /* TKDistanceUnit.swift */; };
@@ -57,6 +57,11 @@
 		37FB3F522026675700409472 /* TKTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F3F202666FF00409472 /* TKTemperatureUnit.swift */; };
 		37FB3F6A202668E000409472 /* TKVehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F69202668E000409472 /* TKVehicleConfig.swift */; };
 		46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */; };
+		55783557207D942600485D68 /* TestAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783556207D942600485D68 /* TestAccount.swift */; };
+		55783559207D952000485D68 /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783558207D952000485D68 /* ProductsTests.swift */; };
+		5578355B207D954C00485D68 /* ExpectationWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355A207D954C00485D68 /* ExpectationWait.swift */; };
+		5578355D207D95C600485D68 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355C207D95C600485D68 /* AuthTests.swift */; };
+		55783562207D972500485D68 /* VehicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783561207D972500485D68 /* VehicleTests.swift */; };
 		BF359FFB1D27025904CD1EF2 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6A7B0DF8B1788EA7030ACE /* Pods_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +123,7 @@
 		37FB3F292026533500409472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37FB3F2B2026533500409472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FB3F332026534600409472 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37FB3F352026534600409472 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		37FB3F352026534600409472 /* TKTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTestCase.swift; sourceTree = "<group>"; };
 		37FB3F372026534600409472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37FB3F3D2026553A00409472 /* VINTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VINTests.swift; sourceTree = "<group>"; };
 		37FB3F3F202666FF00409472 /* TKTemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKTemperatureUnit.swift; sourceTree = "<group>"; };
@@ -128,6 +133,11 @@
 		37FB3F69202668E000409472 /* TKVehicleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKVehicleConfig.swift; sourceTree = "<group>"; };
 		498F421CA069E199228DA2FB /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55783556207D942600485D68 /* TestAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAccount.swift; sourceTree = "<group>"; };
+		55783558207D952000485D68 /* ProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
+		5578355A207D954C00485D68 /* ExpectationWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationWait.swift; sourceTree = "<group>"; };
+		5578355C207D95C600485D68 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
+		55783561207D972500485D68 /* VehicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTests.swift; sourceTree = "<group>"; };
 		56CD375499BBAB2D6CB8BC1C /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		74F7A9468D541D7496163438 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D29D78D92E86477819255BFA /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -292,8 +302,9 @@
 			isa = PBXGroup;
 			children = (
 				37FB3F372026534600409472 /* Info.plist */,
-				37FB3F352026534600409472 /* Tests.swift */,
-				37FB3F3D2026553A00409472 /* VINTests.swift */,
+				5578355E207D96C300485D68 /* Classes */,
+				55783560207D96D600485D68 /* Enumerations */,
+				5578355F207D96CF00485D68 /* TestCases */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -306,6 +317,34 @@
 				DA6A7B0DF8B1788EA7030ACE /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5578355E207D96C300485D68 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				55783556207D942600485D68 /* TestAccount.swift */,
+				37FB3F352026534600409472 /* TKTestCase.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5578355F207D96CF00485D68 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				5578355C207D95C600485D68 /* AuthTests.swift */,
+				55783558207D952000485D68 /* ProductsTests.swift */,
+				37FB3F3D2026553A00409472 /* VINTests.swift */,
+				55783561207D972500485D68 /* VehicleTests.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
+		55783560207D96D600485D68 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				5578355A207D954C00485D68 /* ExpectationWait.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 		E8AD8E645DE87A58D08D7063 /* Pods */ = {
@@ -647,8 +686,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37FB3F362026534600409472 /* Tests.swift in Sources */,
+				37FB3F362026534600409472 /* TKTestCase.swift in Sources */,
+				5578355D207D95C600485D68 /* AuthTests.swift in Sources */,
+				55783559207D952000485D68 /* ProductsTests.swift in Sources */,
+				55783557207D942600485D68 /* TestAccount.swift in Sources */,
+				55783562207D972500485D68 /* VehicleTests.swift in Sources */,
 				37FB3F3E2026553A00409472 /* VINTests.swift in Sources */,
+				5578355B207D954C00485D68 /* ExpectationWait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

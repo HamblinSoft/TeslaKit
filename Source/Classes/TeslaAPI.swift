@@ -255,6 +255,43 @@ open class TeslaAPI {
         }
     }
 
+    /// Returns a list of products, i.e. Powerwall
+    public func products(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.apiBaseURL.appendingPathComponent("products"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
+    public func batterySOC(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.baseURL.appendingPathComponent("api/system_status/soe"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
+    public func meterAggregates(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.baseURL.appendingPathComponent("api/meters/aggregates"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
+    public func powerWalls(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.baseURL.appendingPathComponent("api/powerwalls"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
+    public func connectionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.baseURL.appendingPathComponent("api/sitemaster"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
+    public func versionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+        self.request(TeslaAPI.baseURL.appendingPathComponent("api/status"),
+                     headers: self.headers,
+                     completion: completion)
+    }
+
     /// Print the contents of URLRequest and HTTPURLResponse in a consistent format that is easy to inspect
     private func debugPrint(_ request: URLRequest, response: HTTPURLResponse, responseData: Data? = nil, error: Error? = nil) {
         var components: [String] = []
