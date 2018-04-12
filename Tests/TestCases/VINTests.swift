@@ -16,6 +16,9 @@ fileprivate let VINRoadster: String = "5YJRE1A31A1P01234"
 
 class VINTests: XCTestCase {
 
+
+    // MARK: - Model
+
     func testVinMakeModelS() {
         let vin = VIN(vinString: VINModelS)
         XCTAssertEqual(vin?.make, VINComponent.Make.modelS)
@@ -35,6 +38,91 @@ class VINTests: XCTestCase {
         let vin = VIN(vinString: VINRoadster)
         XCTAssertEqual(vin?.make, VINComponent.Make.roadster)
     }
+
+    // MARK: - Manufacturer
+
+    func testVinManufacturerTesla() {
+        let vin = VIN(vinString: VINModelS)
+        XCTAssertEqual(vin?.manufacturer, .tesla)
+    }
+
+    func testVinManufacturerUnknown() {
+        let vin = VIN(vinString: "0123456789012345")
+        XCTAssertEqual(vin?.manufacturer, .unknown)
+    }
+
+    // MARK: - Body Type
+
+    // MARK: - Restraint System
+
+    // MARK: - Battery Type
+
+    func testVinBatteryTypeElectric() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        XCTAssertEqual(vin?.batteryType, .electric)
+    }
+
+    func testVinBatteryTypeHighCapacity() {
+        let vin = VIN(vinString: "5YJSA1H2XHF156789")
+        XCTAssertEqual(vin?.batteryType, .highCapacity)
+    }
+
+    func testVinBatteryTypeStandardCapacity() {
+        let vin = VIN(vinString: "5YJSA1S2XHF156789")
+        XCTAssertEqual(vin?.batteryType, .standardCapacity)
+    }
+
+    func testVinBatteryTypeUltraCapacity() {
+        let vin = VIN(vinString: "5YJSA1V2XHF156789")
+        XCTAssertEqual(vin?.batteryType, .ultraCapacity)
+    }
+
+    func testVinBatteryTypeUnknown() {
+        let vin = VIN(vinString: "5YJSA1Z2XHF156789")
+        XCTAssertEqual(vin?.batteryType, .unknown)
+    }
+
+    // MARK: - Motor/Drive Unit
+
+    func testVinDriveUnitSingleMotor() {
+        let vin = VIN(vinString: "5YJSA1E1XHF156789")
+        XCTAssertEqual(vin?.driveUnit, .singleMotor)
+    }
+
+    func testVinDriveUnitDualMotor() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        XCTAssertEqual(vin?.driveUnit, .dualMotor)
+    }
+
+    func testVinDriveUnitPerformanceSingleMotor() {
+        let vin = VIN(vinString: "5YJSA1E3XHF156789")
+        XCTAssertEqual(vin?.driveUnit, .performanceSingleMotor)
+    }
+
+    func testVinDriveUnitPerformanceDualMotor() {
+        let vin = VIN(vinString: "5YJSA1E4XHF156789")
+        XCTAssertEqual(vin?.driveUnit, .performanceDualMotor)
+    }
+
+    func testVinDriveUnitPerformance() {
+        let vin = VIN(vinString: "5YJSA1EPXHF156789")
+        XCTAssertEqual(vin?.driveUnit, .performance)
+
+    }
+
+    func testVinDriveUnitUnknown() {
+        let vin = VIN(vinString: "5YJSA1EZXHF156789")
+        XCTAssertEqual(vin?.driveUnit, .unknown)
+    }
+
+    // MARK: - Check Character
+
+    func testVinCheckCharacter() {
+        let vin = VIN(vinString: "5YJSA1E1XHF156789")
+        XCTAssertEqual(vin?.checkCharacter, "X")
+    }
+
+    // MARK: - Model Year
 
     func testVinYears() {
 
@@ -63,9 +151,38 @@ class VINTests: XCTestCase {
 
         testData.forEach { (id, year) in
             let modelYear = VINComponent.ModelYear(rawValue: id)
-            XCTAssertEqual(modelYear?.name, year)
+            XCTAssertEqual(modelYear?.description, year)
         }
     }
+
+    // MARK: - Location of Manufacture
+
+    func testVinManufactureLocationFremont() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        XCTAssertEqual(vin?.manufactureLocation, .fremont)
+    }
+
+    func testVinManufactureLocationUnknown() {
+        let vin = VIN(vinString: "5YJSA1E2XHZ156789")
+        XCTAssertEqual(vin?.manufactureLocation, .unknown)
+    }
+
+    // MARK: - Serial Character
+
+    func testVinSerialCharacter() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        XCTAssertEqual(vin?.serialCharacter, "1")
+    }
+
+    // MARK: - Serial Number
+
+    func testVinSerialNumber() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        XCTAssertEqual(vin?.serialNo, "56789")
+    }
+
+
+    // MARK: - Example VINs
 
     func testVinModelS() {
 
@@ -74,5 +191,27 @@ class VINTests: XCTestCase {
 
         XCTAssertEqual(vin?.make, VINComponent.Make.modelS)
         XCTAssertEqual(vin?.modelYear, VINComponent.ModelYear.year2017)
+    }
+
+    // MARK: - Performance Tests
+
+    func testVinDecodePerformance() {
+
+        self.measure {
+            _ = VIN(vinString: "5YJSA1E2XHF156789")
+        }
+    }
+
+    // MARK: - Other
+
+    func testVinCustomStringConvertible() {
+        let vin = VIN(vinString: "5YJSA1E2XHF156789")
+        print(vin as Any)
+        VINComponent.BatteryType.allValues.forEach{print($0)}
+        VINComponent.DriveUnit.allValues.forEach{print($0)}
+        VINComponent.Make.allValues.forEach{print($0)}
+        VINComponent.Manufacturer.allValues.forEach{print($0)}
+        VINComponent.ManufactureLocation.allValues.forEach{print($0)}
+        VINComponent.ModelYear.allValues.forEach{print($0)}
     }
 }

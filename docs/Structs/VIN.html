@@ -184,6 +184,9 @@
                 <a href="../Structs/VINComponent/DriveUnit.html">– DriveUnit</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ManufactureLocation.html">– ManufactureLocation</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/VINComponent/ModelYear.html">– ModelYear</a>
               </li>
               <li class="nav-group-task">
@@ -199,7 +202,7 @@
             <h1>VIN</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VIN</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VIN</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                 </div>
               </div>
@@ -280,7 +283,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manufacturer</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Manufacturer</span> <span class="o">=</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Manufacturer</span><span class="o">.</span><span class="n">tesla</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manufacturer</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Manufacturer</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
 
                         </div>
                       </div>
@@ -306,7 +309,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">make</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Make</span> <span class="o">=</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Make</span><span class="o">.</span><span class="n">modelS</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">make</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">Make</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
 
                         </div>
                       </div>
@@ -368,6 +371,32 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:8TeslaKit3VINV11batteryTypeAA12VINComponentV07BatteryE0Ov"></a>
+                    <a name="//apple_ref/swift/Property/batteryType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit3VINV11batteryTypeAA12VINComponentV07BatteryE0Ov">batteryType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">batteryType</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">BatteryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:8TeslaKit3VINV9driveUnitAA12VINComponentV05DriveE0Ov"></a>
                     <a name="//apple_ref/swift/Property/driveUnit" class="dashAnchor"></a>
                     <a class="token" href="#/s:8TeslaKit3VINV9driveUnitAA12VINComponentV05DriveE0Ov">driveUnit</a>
@@ -384,7 +413,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">driveUnit</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">DriveUnit</span> <span class="o">=</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">DriveUnit</span><span class="o">.</span><span class="n">singleMotor</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">driveUnit</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">DriveUnit</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
 
                         </div>
                       </div>
@@ -436,7 +465,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">modelYear</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">ModelYear</span> <span class="o">=</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">ModelYear</span><span class="o">.</span><span class="n">unknown</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">modelYear</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">ModelYear</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
 
                         </div>
                       </div>
@@ -446,9 +475,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit3VINV19manufactureLocationSSv"></a>
+                    <a name="/s:8TeslaKit3VINV19manufactureLocationAA12VINComponentV011ManufactureE0Ov"></a>
                     <a name="//apple_ref/swift/Property/manufactureLocation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit3VINV19manufactureLocationSSv">manufactureLocation</a>
+                    <a class="token" href="#/s:8TeslaKit3VINV19manufactureLocationAA12VINComponentV011ManufactureE0Ov">manufactureLocation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,7 +491,33 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manufactureLocation</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">manufactureLocation</span><span class="p">:</span> <span class="kt"><a href="../Structs/VINComponent.html">VINComponent</a></span><span class="o">.</span><span class="kt">ManufactureLocation</span> <span class="o">=</span> <span class="o">.</span><span class="n">unknown</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit3VINV15serialCharacterSSv"></a>
+                    <a name="//apple_ref/swift/Property/serialCharacter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit3VINV15serialCharacterSSv">serialCharacter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">serialCharacter</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
 
                         </div>
                       </div>
@@ -547,6 +602,32 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit3VINV11descriptionSSv"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit3VINV11descriptionSSv">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -571,7 +652,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VIN</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VIN</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -583,7 +664,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-04-11)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-04-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

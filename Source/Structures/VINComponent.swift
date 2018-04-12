@@ -12,14 +12,25 @@ import Foundation
 public struct VINComponent {
 
     ///
-    public enum Manufacturer: String {
+    public enum Manufacturer: String, CustomStringConvertible, EnumCollection {
+
+        ///
+        case unknown = ""
 
         ///
         case tesla = "5YJ"
+
+        ///
+        public var description: String {
+            switch self {
+            case .unknown: return "Unknown"
+            case .tesla: return "Tesla"
+            }
+        }
     }
 
     ///
-    public enum Make: String {
+    public enum Make: String, CustomStringConvertible, EnumCollection {
 
         ///
         case unknown = ""
@@ -36,8 +47,8 @@ public struct VINComponent {
         ///
         case model3 = "3"
 
-        /// A readable display name
-        public var name: String {
+        ///
+        public var description: String {
             switch self {
             case .unknown: return "Unknown"
             case .roadster: return "Roadster"
@@ -49,7 +60,10 @@ public struct VINComponent {
     }
 
     ///
-    public enum BatteryType: String {
+    public enum BatteryType: String, CustomStringConvertible, EnumCollection {
+
+        ///
+        case unknown
 
         ///
         case electric = "E"
@@ -62,10 +76,24 @@ public struct VINComponent {
 
         ///
         case ultraCapacity = "V"
+
+        ///
+        public var description: String {
+            switch self {
+            case .unknown: return "Unknown"
+            case .electric: return "Electric"
+            case .highCapacity: return "High Capacity"
+            case .standardCapacity: return "Standard Capacity"
+            case .ultraCapacity: return "Ultra Capacity"
+            }
+        }
     }
 
     ///
-    public enum DriveUnit: String {
+    public enum DriveUnit: String, CustomStringConvertible, EnumCollection {
+
+        ///
+        case unknown
 
         ///
         case singleMotor = "1"
@@ -81,10 +109,40 @@ public struct VINComponent {
 
         ///
         case performance = "P"
+
+        ///
+        public var description: String {
+            switch self {
+            case .unknown: return "Unknown"
+            case .singleMotor: return "Single Motor"
+            case .dualMotor: return "Dual Motor"
+            case .performanceSingleMotor: return "Performance Single Motor"
+            case .performanceDualMotor: return "Performance Dual Motor"
+            case .performance: return "Performance"
+            }
+        }
     }
 
     ///
-    public enum ModelYear: String {
+    public enum ManufactureLocation: String, CustomStringConvertible, EnumCollection {
+
+        ///
+        case unknown = ""
+
+        ///
+        case fremont = "F"
+
+        ///
+        public var description: String {
+            switch self {
+            case .unknown: return "Unknown"
+            case .fremont: return "Fremont, CA, USA"
+            }
+        }
+    }
+
+    ///
+    public enum ModelYear: String, EnumCollection {
 
         ///
         case unknown = ""
@@ -150,7 +208,7 @@ public struct VINComponent {
         case year2006 = "6"
 
         ///
-        public var name: String {
+        public var description: String {
             return String(describing: self).replacingOccurrences(of: "year", with: "")
         }
     }

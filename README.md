@@ -17,6 +17,7 @@ TeslaKit is a framework written in Swift that makes it easy for you to interface
 - [x] Send commands to your vehicle
 - [x] Utilizes `ObjectMapper` for `JSON` mapping
 - [x] Uses `Structures` to maintain thread safe operations
+- [x] VIN parsing
 - [ ] Summon and Homelink - Coming soon
 
 # Installation
@@ -148,16 +149,6 @@ Enabling debug mode will print all request information to the console (default: 
 let teslaAPI = TeslaAPI(debugMode: true)
 ```
 
-```json
-{
-  "access_token": "abc123",
-  "token_type": "bearer",
-  "expires_in": 7776000,
-  "created_at": 1457385291,
-  "refresh_token": "cba321"
-}
-```
-
 ## Request Timeout
 
 Specify request timeout interval (default: ```30```)
@@ -166,7 +157,11 @@ Specify request timeout interval (default: ```30```)
 let teslaAPI = TeslaAPI(requestTimeout: 15)
 ```
 
+# VIN Parsing
 
+## VIN
+
+## VINCompnonent
 
 
 # Author

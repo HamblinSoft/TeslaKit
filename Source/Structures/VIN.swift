@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct VIN {
+public struct VIN: CustomStringConvertible {
 
     /// The minimum length to allow VIN parsing
     public static let minimumLength: Int = 15
@@ -19,10 +19,10 @@ public struct VIN {
     public var vinString: String = ""
 
     ///
-    public var manufacturer: VINComponent.Manufacturer = VINComponent.Manufacturer.tesla
+    public var manufacturer: VINComponent.Manufacturer = .unknown
 
     ///
-    public var make: VINComponent.Make = VINComponent.Make.modelS
+    public var make: VINComponent.Make = .unknown
 
     ///
     public var bodyType: String = ""
@@ -31,16 +31,22 @@ public struct VIN {
     public var restraintSystem: String = ""
 
     ///
-    public var driveUnit: VINComponent.DriveUnit = VINComponent.DriveUnit.singleMotor
+    public var batteryType: VINComponent.BatteryType = .unknown
+
+    ///
+    public var driveUnit: VINComponent.DriveUnit = .unknown
 
     ///
     public var checkCharacter: String = ""
 
     ///
-    public var modelYear: VINComponent.ModelYear = VINComponent.ModelYear.unknown
+    public var modelYear: VINComponent.ModelYear = .unknown
 
     ///
-    public var manufactureLocation: String = ""
+    public var manufactureLocation: VINComponent.ManufactureLocation = .unknown
+
+    ///
+    public var serialCharacter: String = ""
 
     ///
     public var serialNo: String = ""
@@ -53,16 +59,22 @@ public struct VIN {
         guard vinString.count > VIN.minimumLength else { return nil }
         let vin: String = vinString.uppercased()
         self.vinString = vin
-        self.manufacturer = VINComponent.Manufacturer(rawValue: String(vin[0..<3])) ?? VINComponent.Manufacturer.tesla
-        self.make = VINComponent.Make(rawValue: String(vin[3..<4])) ?? VINComponent.Make.unknown
+        self.manufacturer = VINComponent.Manufacturer(rawValue: String(vin[0..<3])) ?? .unknown
+        self.make = VINComponent.Make(rawValue: String(vin[3..<4])) ?? .unknown
         self.bodyType = String(vin[4..<5])
         self.restraintSystem = String(vin[5..<6])
-        self.bodyType = String(vin[6..<7])
-        self.driveUnit = VINComponent.DriveUnit(rawValue: String(vin[7..<8])) ?? VINComponent.DriveUnit.singleMotor
+        self.batteryType = VINComponent.BatteryType(rawValue: String(vin[6..<7])) ?? .unknown
+        self.driveUnit = VINComponent.DriveUnit(rawValue: String(vin[7..<8])) ?? .unknown
         self.checkCharacter = String(vin[8..<9])
-        self.modelYear = VINComponent.ModelYear(rawValue: String(vin[9..<10])) ?? VINComponent.ModelYear.unknown
-        self.manufactureLocation = String(vin[10..<11])
-        self.serialNo = String(vin[11...vin.count-1])
+        self.modelYear = VINComponent.ModelYear(rawValue: String(vin[9..<10])) ?? .unknown
+        self.manufactureLocation = VINComponent.ManufactureLocation(rawValue: String(vin[10..<11])) ?? .unknown
+        self.serialCharacter = String(vin[11..<12])
+        self.serialNo = String(vin[12...vin.count-1])
+    }
+
+    ///
+    public var description: String {
+        return self.vinString
     }
 }
 
