@@ -57,17 +57,23 @@ import TeslaKit
 
 ## TeslaAPI
 Create a new `TeslaAPI` instance
+
 ```swift
 let teslaAPI = TeslaAPI()
 ```
+
+Also see initialization [options](#options)
 
 ## Access Token
 Obtain an Access Token by logging in with your Tesla account credentials
 
 ```swift
-teslaAPI.accessToken(email: "elon.musk@teslakit.com", password: "M@R$R0CKZ!") { (httpResponse, dataOrNil, errorOrNil) in
+let email = "elon.musk@teslakit.com"
+let password = "M@R$R0CKZ!"
 
-    guard let accessToken: String = dataOrNil?.accessToken else { return }
+teslaAPI.accessToken(email: email, password: password) { (httpResponse, dataOrNil, errorOrNil) in
+
+    guard let accessToken = dataOrNil?.accessToken else { return }
 
     // Set the accessToken for use with future requests
     teslaAPI.setAccessToken(accessToken)
@@ -80,7 +86,7 @@ Obtain a list of vehicles associated with your account
 ```swift
 teslaAPI.vehicles { (httpResponse, dataOrNil, errorOrNil) in
 
-    guard let vehicle: TKVehicle = dataOrNil?.vehicles.first else { return }
+    guard let vehicle = dataOrNil?.vehicles.first else { return }
 
     print("Hello, \(vehicle.displayName)")
 }
@@ -102,7 +108,7 @@ teslaAPI.data(for: vehicle) { (httpResponse, dataOrNil, errorOrNil) in
 Send a command to a vehicle
 
 ```swift
-let command: TKCommand = TKCommand.unlockDoors
+let command = TKCommand.unlockDoors
 
 teslaAPI.send(command, to: vehicle) { response in
     if response.result {
@@ -123,12 +129,51 @@ teslaAPI.send(.setTemperature, to: vehicle, request: request) { response in
 }
 ```
 
+# <a name="options"></a>Options
 
-## Author
+## Client ID and Secret
+
+If the default ID and Secret no longer work, you can specify alernative ones
+
+```swift
+let teslaAPI = TeslaAPI(clientId: "SOME_CLIENT_ID", 
+                        clientSecret: "SOME_CLIENT_SECRET")
+```
+
+## Debug Mode
+
+Enabling debug mode will print all request information to the console (default: ```false```)
+
+```swift
+let teslaAPI = TeslaAPI(debugMode: true)
+```
+
+```json
+{
+  "access_token": "abc123",
+  "token_type": "bearer",
+  "expires_in": 7776000,
+  "created_at": 1457385291,
+  "refresh_token": "cba321"
+}
+```
+
+## Request Timeout
+
+Specify request timeout interval (default: ```30```)
+
+```swift
+let teslaAPI = TeslaAPI(requestTimeout: 15)
+```
+
+
+
+
+# Author
 
 jjjjaren, jjjjaren@gmail.com
 
-## License
+# License
 
 This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file.
 
