@@ -60,9 +60,6 @@ open class TeslaAPI {
     public weak var delegate: TeslaAPIDelegate? = nil
 
     ///
-    //    private let configuration: URLSessionConfiguration
-
-    ///
     public var session: URLSession = URLSession(configuration: .default)
 
 
@@ -261,37 +258,37 @@ open class TeslaAPI {
     }
 
     /// Returns a list of products, i.e. Powerwall
-    public func products(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func products(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.apiBaseURL.appendingPathComponent("products"),
                      headers: self.headers,
                      completion: completion)
     }
 
-    public func batterySOC(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func batterySOC(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.baseURL.appendingPathComponent("api/system_status/soe"),
                      headers: self.headers,
                      completion: completion)
     }
 
-    public func meterAggregates(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func meterAggregates(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.baseURL.appendingPathComponent("api/meters/aggregates"),
                      headers: self.headers,
                      completion: completion)
     }
 
-    public func powerWalls(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func powerWalls(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.baseURL.appendingPathComponent("api/powerwalls"),
                      headers: self.headers,
                      completion: completion)
     }
 
-    public func connectionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func connectionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.baseURL.appendingPathComponent("api/sitemaster"),
                      headers: self.headers,
                      completion: completion)
     }
 
-    public func versionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
+    internal func versionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
         self.request(TeslaAPI.baseURL.appendingPathComponent("api/status"),
                      headers: self.headers,
                      completion: completion)

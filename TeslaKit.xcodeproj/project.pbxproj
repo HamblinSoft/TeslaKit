@@ -384,6 +384,7 @@
 				375D8858200ECEE000CD9D1E /* Headers */,
 				375D8859200ECEE000CD9D1E /* Resources */,
 				3723AC982076C71D00E80F60 /* Test Account Run Script */,
+				55FF003F207FEE1B0011A428 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -548,6 +549,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Read Test Account data from file or create file if one does not exist\n$SRCROOT/scripts/TestAccount.sh";
+		};
+		55FF003F207FEE1B0011A428 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run SwiftLint\n#${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		657C056701FDDEA2E82C40BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
