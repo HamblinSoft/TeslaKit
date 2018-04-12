@@ -16,8 +16,43 @@
     },
     {
       "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 88,
+      "line": 93,
       "symbol": "TeslaAPI.request(_:method:parameters:headers:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 270,
+      "symbol": "TeslaAPI.batterySOC(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 276,
+      "symbol": "TeslaAPI.meterAggregates(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 282,
+      "symbol": "TeslaAPI.powerWalls(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 288,
+      "symbol": "TeslaAPI.connectionStatus(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 294,
+      "symbol": "TeslaAPI.versionStatus(completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

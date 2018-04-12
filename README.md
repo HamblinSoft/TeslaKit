@@ -58,8 +58,7 @@ import TeslaKit
 ## TeslaAPI
 Create a new `TeslaAPI` instance
 ```swift
-let teslaAPI = TeslaAPI(ownerApiClientId: "CLIENT_ID",
-                        ownerApiClientSecret: "CLIENT_SECRET")
+let teslaAPI = TeslaAPI()
 ```
 
 ## Access Token
