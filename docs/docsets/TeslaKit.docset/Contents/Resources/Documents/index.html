@@ -300,9 +300,9 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 
 <p>Send a command to a vehicle with request parameters</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">TKSetTemperature</span><span class="p">(</span><span class="nv">driverTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">,</span> <span class="nv">passengerTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="kt">TKSetTemperature</span><span class="p">(</span><span class="nv">driverTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">,</span> <span class="nv">passengerTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">)</span>
 
-<span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="o">.</span><span class="n">setTemperature</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="o">.</span><span class="n">setTemperature</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Command sent successfully!"</span><span class="p">)</span>
     <span class="p">}</span>

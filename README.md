@@ -120,9 +120,9 @@ teslaAPI.send(command, to: vehicle) { response in
 Send a command to a vehicle with request parameters
 
 ```swift
-let request = TKSetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
+let parameters = TKSetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
 
-teslaAPI.send(.setTemperature, to: vehicle, request: request) { response in
+teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response in
     if response.result {
         print("Command sent successfully!")
     }

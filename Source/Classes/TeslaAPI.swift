@@ -226,10 +226,10 @@ open class TeslaAPI {
     ///   - vehicle: The vehicle to send the command to
     ///   - request: Optional data to be included with the command
     ///   - completion: Completion Handler
-    open func send(_ command: TKCommand, to vehicle: TKVehicle, request: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
+    open func send(_ command: TKCommand, to vehicle: TKVehicle, parameters: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
         self.request(command.url(vehicleId: vehicle.id),
                      method: "POST",
-                     parameters: request?.toJSON(),
+                     parameters: parameters?.toJSON(),
                      headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
 
                         defer {
