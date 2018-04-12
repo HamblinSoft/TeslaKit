@@ -7,7 +7,7 @@ filepath="$SRCROOT/$filename"
 
 if [ -e $filepath ]
 then
-echo "File exists"
+return 0
 else
 cat <<EOF > $filepath
 {"email": "", "password": ""}
