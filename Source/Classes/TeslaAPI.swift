@@ -29,6 +29,11 @@ open class TeslaAPI {
 
     // MARK: - Static Properties
 
+    ///
+    public static let clientId: String = "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e"
+
+    ///
+    public static let clientSecret: String =  "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220"
 
     /// API version
     public static let apiVersion: Int = 1
@@ -75,7 +80,7 @@ open class TeslaAPI {
 
 
     /// Initialize a new instance of TeslaAPI
-    public init(ownerApiClientId: String, ownerApiClientSecret: String, requestTimeout: TimeInterval = 30, debugMode: Bool = false) {
+    public init(ownerApiClientId: String = TeslaAPI.clientId, ownerApiClientSecret: String = TeslaAPI.clientSecret, requestTimeout: TimeInterval = 30, debugMode: Bool = false) {
         self.ownerApiClientId = ownerApiClientId
         self.ownerApiClientSecret = ownerApiClientSecret
         self.requestTimeout = requestTimeout
