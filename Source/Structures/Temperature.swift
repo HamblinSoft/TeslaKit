@@ -8,7 +8,7 @@
 import Foundation
 
 /// An object representing a temperature unit
-public struct Temperature {
+public struct Temperature: CustomStringConvertible {
 
     ///
     public static let Degree: String = "°"
@@ -55,7 +55,13 @@ public struct Temperature {
     ///
     public var localizedFahrenheit: String { return String(format: "%.f", self.fahrenheit) + Temperature.Degree }
 
+    ///
     public func format(isFahrenheit: Bool) -> String {
         return isFahrenheit ? self.localizedFahrenheit : self.localizedCelsius
+    }
+
+    ///
+    public var description: String {
+        return self.localizedCelsius + "  " + localizedFahrenheit
     }
 }

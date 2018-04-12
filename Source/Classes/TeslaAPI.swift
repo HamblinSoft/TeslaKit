@@ -9,6 +9,7 @@
 import Foundation
 import ObjectMapper
 
+///
 public protocol TeslaAPIDelegate: class {
 
     ///
@@ -21,11 +22,8 @@ public protocol TeslaAPIDelegate: class {
     func teslaApi(_ teslaAPI: TeslaAPI, didSend command: TKCommand, data: TKCommandResponse?)
 }
 
-
+///
 open class TeslaAPI {
-
-
-
 
     // MARK: - Static Properties
 
@@ -43,6 +41,8 @@ open class TeslaAPI {
 
     /// Base owner API URL with api version
     public static let apiBaseURL: URL = baseURL.appendingPathComponent("api/\(TeslaAPI.apiVersion)")
+
+    // MARK: - Instance
 
     /// Tesla API owner api client id
     public let ownerApiClientId: String
