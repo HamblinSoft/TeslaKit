@@ -17,7 +17,7 @@ TeslaKit is a framework written in Swift that makes it easy for you to interface
 - [x] Send commands to your vehicle
 - [x] Utilizes `ObjectMapper` for `JSON` mapping
 - [x] Uses `Structures` to maintain thread safe operations
-- [x] VIN parsing
+- [x] VIN Decoder
 - [ ] Summon and Homelink - Coming soon
 
 # Installation
@@ -157,12 +157,17 @@ Specify request timeout interval (default: ```30```)
 let teslaAPI = TeslaAPI(requestTimeout: 15)
 ```
 
-# VIN Parsing
+# VIN Decoder
 
-## VIN
-
-## VINCompnonent
-
+```swift
+let vinString = "5YJSA1E2XHF999999"
+let vin = VIN(vinString: vinString)
+print(vin?.manufacturer) // Model S
+print(vin?.driveUnit)    // Dual Motor
+print(vin?.modelYear)    // TeslaKit.VINComponent.ModelYear.year2017
+print(vin?.serialNo)     // 999999
+print(vin?.vinString)    // 5YJSA1E2XHF999999
+```
 
 # Author
 

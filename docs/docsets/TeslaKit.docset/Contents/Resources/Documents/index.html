@@ -218,7 +218,7 @@
 <li>[x] Send commands to your vehicle</li>
 <li>[x] Utilizes <code>ObjectMapper</code> for <code>JSON</code> mapping</li>
 <li>[x] Uses <code>Structures</code> to maintain thread safe operations</li>
-<li>[x] VIN parsing</li>
+<li>[x] VIN Decoder</li>
 <li>[ ] Summon and Homelink - Coming soon</li>
 </ul>
 <h1 id='installation' class='heading'>Installation</h1>
@@ -329,9 +329,15 @@ it, simply add the following line to your Podfile:</p>
 <p>Specify request timeout interval (default: <code>30</code>)</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="kt">TeslaAPI</span><span class="p">(</span><span class="nv">requestTimeout</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
 </code></pre>
-<h1 id='vin-parsing' class='heading'>VIN Parsing</h1>
-<h2 id='vin' class='heading'>VIN</h2>
-<h2 id='vincompnonent' class='heading'>VINCompnonent</h2>
+<h1 id='vin-decoder' class='heading'>VIN Decoder</h1>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">vinString</span> <span class="o">=</span> <span class="s">"5YJSA1E2XHF999999"</span>
+<span class="k">let</span> <span class="nv">vin</span> <span class="o">=</span> <span class="kt">VIN</span><span class="p">(</span><span class="nv">vinString</span><span class="p">:</span> <span class="n">vinString</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">manufacturer</span><span class="p">)</span> <span class="c1">// Model S</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">driveUnit</span><span class="p">)</span>    <span class="c1">// Dual Motor</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">modelYear</span><span class="p">)</span>    <span class="c1">// TeslaKit.VINComponent.ModelYear.year2017</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">serialNo</span><span class="p">)</span>     <span class="c1">// 999999</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">vinString</span><span class="p">)</span>    <span class="c1">// 5YJSA1E2XHF999999</span>
+</code></pre>
 <h1 id='author' class='heading'>Author</h1>
 
 <p>jjjjaren, <a href="mailto:jjjjaren@gmail.com">jjjjaren@gmail.com</a></p>
