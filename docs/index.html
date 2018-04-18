@@ -260,8 +260,8 @@ it, simply add the following line to your Podfile:</p>
 <h2 id='access-token' class='heading'>Access Token</h2>
 
 <p>Obtain an Access Token by logging in with your Tesla account credentials</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">email</span> <span class="o">=</span> <span class="s">"elon.musk@teslakit.com"</span>
-<span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"M@R$R0CKZ!"</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">email</span> <span class="o">=</span> <span class="s">"e.musk@teslakit.com"</span>
+<span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"M@R$R0X!"</span>
 
 <span class="n">teslaAPI</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
@@ -315,13 +315,13 @@ it, simply add the following line to your Podfile:</p>
 <h1 id='a-name-options-a-options' class='heading'><a name="options"></a>Options</h1>
 <h2 id='client-id-and-secret' class='heading'>Client ID and Secret</h2>
 
-<p>If the default ID and Secret no longer work, you can specify alernative ones</p>
+<p>If the default ID and Secret ever become invalid, you can specify an alernative set</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="kt">TeslaAPI</span><span class="p">(</span><span class="nv">clientId</span><span class="p">:</span> <span class="s">"SOME_CLIENT_ID"</span><span class="p">,</span> 
                         <span class="nv">clientSecret</span><span class="p">:</span> <span class="s">"SOME_CLIENT_SECRET"</span><span class="p">)</span>
 </code></pre>
 <h2 id='debug-mode' class='heading'>Debug Mode</h2>
 
-<p>Enabling debug mode will print all request information to the console (default: <code>false</code>)</p>
+<p>Enabling debug mode will print all the raw request and response information to the console (default: <code>false</code>)</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="kt">TeslaAPI</span><span class="p">(</span><span class="nv">debugMode</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
 </code></pre>
 <h2 id='request-timeout' class='heading'>Request Timeout</h2>
@@ -330,13 +330,12 @@ it, simply add the following line to your Podfile:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">teslaAPI</span> <span class="o">=</span> <span class="kt">TeslaAPI</span><span class="p">(</span><span class="nv">requestTimeout</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
 </code></pre>
 <h1 id='vin-decoder' class='heading'>VIN Decoder</h1>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">vinString</span> <span class="o">=</span> <span class="s">"5YJSA1E2XHF999999"</span>
-<span class="k">let</span> <span class="nv">vin</span> <span class="o">=</span> <span class="kt">VIN</span><span class="p">(</span><span class="nv">vinString</span><span class="p">:</span> <span class="n">vinString</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">manufacturer</span><span class="p">)</span> <span class="c1">// Model S</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">driveUnit</span><span class="p">)</span>    <span class="c1">// Dual Motor</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">modelYear</span><span class="p">)</span>    <span class="c1">// TeslaKit.VINComponent.ModelYear.year2017</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">serialNo</span><span class="p">)</span>     <span class="c1">// 999999</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="p">?</span><span class="o">.</span><span class="n">vinString</span><span class="p">)</span>    <span class="c1">// 5YJSA1E2XHF999999</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">vin</span> <span class="o">=</span> <span class="kt">VIN</span><span class="p">(</span><span class="nv">vinString</span><span class="p">:</span> <span class="s">"5YJSA1E2XHF999999"</span><span class="p">)</span><span class="o">!</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="o">.</span><span class="n">make</span><span class="p">)</span>         <span class="c1">// Model S</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="o">.</span><span class="n">driveUnit</span><span class="p">)</span>    <span class="c1">// Dual Motor</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="o">.</span><span class="n">modelYear</span><span class="p">)</span>    <span class="c1">// TeslaKit.VINComponent.ModelYear.year2017</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="o">.</span><span class="n">serialNo</span><span class="p">)</span>     <span class="c1">// 999999</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">vin</span><span class="o">.</span><span class="n">vinString</span><span class="p">)</span>    <span class="c1">// 5YJSA1E2XHF999999</span>
 </code></pre>
 <h1 id='author' class='heading'>Author</h1>
 

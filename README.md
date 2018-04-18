@@ -69,8 +69,8 @@ Also see initialization [options](#options)
 Obtain an Access Token by logging in with your Tesla account credentials
 
 ```swift
-let email = "elon.musk@teslakit.com"
-let password = "M@R$R0CKZ!"
+let email = "e.musk@teslakit.com"
+let password = "M@R$R0X!"
 
 teslaAPI.accessToken(email: email, password: password) { (httpResponse, dataOrNil, errorOrNil) in
 
@@ -134,7 +134,7 @@ teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response i
 
 ## Client ID and Secret
 
-If the default ID and Secret no longer work, you can specify alernative ones
+If the default ID and Secret ever become invalid, you can specify an alernative set
 
 ```swift
 let teslaAPI = TeslaAPI(clientId: "SOME_CLIENT_ID", 
@@ -143,7 +143,7 @@ let teslaAPI = TeslaAPI(clientId: "SOME_CLIENT_ID",
 
 ## Debug Mode
 
-Enabling debug mode will print all request information to the console (default: ```false```)
+Enabling debug mode will print all the raw request and response information to the console (default: ```false```)
 
 ```swift
 let teslaAPI = TeslaAPI(debugMode: true)
@@ -160,13 +160,12 @@ let teslaAPI = TeslaAPI(requestTimeout: 15)
 # VIN Decoder
 
 ```swift
-let vinString = "5YJSA1E2XHF999999"
-let vin = VIN(vinString: vinString)
-print(vin?.manufacturer) // Model S
-print(vin?.driveUnit)    // Dual Motor
-print(vin?.modelYear)    // TeslaKit.VINComponent.ModelYear.year2017
-print(vin?.serialNo)     // 999999
-print(vin?.vinString)    // 5YJSA1E2XHF999999
+let vin = VIN(vinString: "5YJSA1E2XHF999999")!
+print(vin.make)         // Model S
+print(vin.driveUnit)    // Dual Motor
+print(vin.modelYear)    // TeslaKit.VINComponent.ModelYear.year2017
+print(vin.serialNo)     // 999999
+print(vin.vinString)    // 5YJSA1E2XHF999999
 ```
 
 # Author
