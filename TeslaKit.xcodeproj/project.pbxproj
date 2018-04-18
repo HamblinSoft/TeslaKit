@@ -385,6 +385,7 @@
 				375D8859200ECEE000CD9D1E /* Resources */,
 				3723AC982076C71D00E80F60 /* Test Account Run Script */,
 				55FF003F207FEE1B0011A428 /* SwiftLint */,
+				467381474BCEFCE2F0ED2181 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -405,6 +406,7 @@
 				37FB3F1A2026533500409472 /* Frameworks */,
 				37FB3F1B2026533500409472 /* Resources */,
 				C4BCE1B64E2FDB11D0D16D2D /* [CP] Embed Pods Frameworks */,
+				7642D5BD1C06B38C5B1BDCEA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,6 +426,8 @@
 				37FB3F2F2026534600409472 /* Sources */,
 				37FB3F302026534600409472 /* Frameworks */,
 				37FB3F312026534600409472 /* Resources */,
+				2A8DEAFB4D3531830CB986AA /* [CP] Embed Pods Frameworks */,
+				307278E9D1FF9FD920E5C324 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,6 +512,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A8DEAFB4D3531830CB986AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		307278E9D1FF9FD920E5C324 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3723AC982076C71D00E80F60 /* Test Account Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -550,6 +584,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Read Test Account data from file or create file if one does not exist\n$SRCROOT/scripts/TestAccount.sh";
 		};
+		467381474BCEFCE2F0ED2181 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		55FF003F207FEE1B0011A428 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,7 +611,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run SwiftLint\n#${PODS_ROOT}/SwiftLint/swiftlint";
+			shellScript = "# Run SwiftLint\n${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		657C056701FDDEA2E82C40BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -580,6 +629,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7642D5BD1C06B38C5B1BDCEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C23A74C4DF6748E842372784 /* [CP] Check Pods Manifest.lock */ = {

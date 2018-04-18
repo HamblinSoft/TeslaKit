@@ -13,6 +13,7 @@ target 'TeslaKit' do
 
   # Pods for TeslaKit
   common_pods
+  pod 'SwiftLint'
 
 end
 
