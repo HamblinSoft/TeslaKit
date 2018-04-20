@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TeslaKit'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'TeslaKit.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Jarious-Apps/TeslaKit.git'
+  s.homepage         = 'https://github.com/HamblinSoft/TeslaKit.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jjjjaren' => 'jjjjaren@gmail.com' }
-  s.source           = { :git => 'https://github.com/Jarious-Apps/TeslaKit.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/HamblinSoft/TeslaKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
