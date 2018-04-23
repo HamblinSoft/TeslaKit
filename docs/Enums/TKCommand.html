@@ -33,6 +33,9 @@
               <li class="nav-group-task">
                 <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI/Configuration.html">– Configuration</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -194,6 +197,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8TeslaKit11TKDirectiona">TKDirection</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -202,7 +213,7 @@
             <h1>TKCommand</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TKCommand</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Protocols/EnumCollection.html">EnumCollection</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TKCommand</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Protocols/EnumCollection.html">EnumCollection</a></span></code></pre>
 
                 </div>
               </div>
@@ -231,7 +242,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">wake</span> <span class="o">=</span> <span class="s">"wake_up"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">wake</span> <span class="o">=</span> <span class="s">"wake_up"</span></code></pre>
 
                         </div>
                       </div>
@@ -262,7 +273,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">setValetMode</span> <span class="o">=</span> <span class="s">"set_valet_mode"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setValetMode</span> <span class="o">=</span> <span class="s">"set_valet_mode"</span></code></pre>
 
                         </div>
                       </div>
@@ -293,7 +304,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">resetValetPin</span> <span class="o">=</span> <span class="s">"reset_valet_pin"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resetValetPin</span> <span class="o">=</span> <span class="s">"reset_valet_pin"</span></code></pre>
 
                         </div>
                       </div>
@@ -324,7 +335,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">openChargePort</span> <span class="o">=</span> <span class="s">"charge_port_door_open"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">openChargePort</span> <span class="o">=</span> <span class="s">"charge_port_door_open"</span></code></pre>
 
                         </div>
                       </div>
@@ -355,7 +366,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">setChargeLimitToStandard</span> <span class="o">=</span> <span class="s">"charge_standard"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setChargeLimitToStandard</span> <span class="o">=</span> <span class="s">"charge_standard"</span></code></pre>
 
                         </div>
                       </div>
@@ -386,7 +397,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">setChargeLimitToMaxRange</span> <span class="o">=</span> <span class="s">"charge_max_range"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setChargeLimitToMaxRange</span> <span class="o">=</span> <span class="s">"charge_max_range"</span></code></pre>
 
                         </div>
                       </div>
@@ -417,7 +428,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">setChargeLimit</span> <span class="o">=</span> <span class="s">"set_charge_limit"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setChargeLimit</span> <span class="o">=</span> <span class="s">"set_charge_limit"</span></code></pre>
 
                         </div>
                       </div>
@@ -448,7 +459,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">startCharging</span> <span class="o">=</span> <span class="s">"charge_start"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startCharging</span> <span class="o">=</span> <span class="s">"charge_start"</span></code></pre>
 
                         </div>
                       </div>
@@ -479,7 +490,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">stopCharging</span> <span class="o">=</span> <span class="s">"charge_stop"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">stopCharging</span> <span class="o">=</span> <span class="s">"charge_stop"</span></code></pre>
 
                         </div>
                       </div>
@@ -510,7 +521,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">flashLights</span> <span class="o">=</span> <span class="s">"flash_lights"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">flashLights</span> <span class="o">=</span> <span class="s">"flash_lights"</span></code></pre>
 
                         </div>
                       </div>
@@ -541,7 +552,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">honkHorn</span> <span class="o">=</span> <span class="s">"honk_horn"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">honkHorn</span> <span class="o">=</span> <span class="s">"honk_horn"</span></code></pre>
 
                         </div>
                       </div>
@@ -572,7 +583,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">unlockDoors</span> <span class="o">=</span> <span class="s">"door_unlock"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unlockDoors</span> <span class="o">=</span> <span class="s">"door_unlock"</span></code></pre>
 
                         </div>
                       </div>
@@ -603,7 +614,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">lockDoors</span> <span class="o">=</span> <span class="s">"door_lock"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lockDoors</span> <span class="o">=</span> <span class="s">"door_lock"</span></code></pre>
 
                         </div>
                       </div>
@@ -634,7 +645,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">setTemperature</span> <span class="o">=</span> <span class="s">"set_temps"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setTemperature</span> <span class="o">=</span> <span class="s">"set_temps"</span></code></pre>
 
                         </div>
                       </div>
@@ -665,7 +676,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">startHVAC</span> <span class="o">=</span> <span class="s">"auto_conditioning_start"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startHVAC</span> <span class="o">=</span> <span class="s">"auto_conditioning_start"</span></code></pre>
 
                         </div>
                       </div>
@@ -696,7 +707,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">stopHVAC</span> <span class="o">=</span> <span class="s">"auto_conditioning_stop"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">stopHVAC</span> <span class="o">=</span> <span class="s">"auto_conditioning_stop"</span></code></pre>
 
                         </div>
                       </div>
@@ -727,7 +738,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">movePanoRoof</span> <span class="o">=</span> <span class="s">"sun_roof_control"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">movePanoRoof</span> <span class="o">=</span> <span class="s">"sun_roof_control"</span></code></pre>
 
                         </div>
                       </div>
@@ -758,7 +769,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">remoteStart</span> <span class="o">=</span> <span class="s">"remote_start_drive"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">remoteStart</span> <span class="o">=</span> <span class="s">"remote_start_drive"</span></code></pre>
 
                         </div>
                       </div>
@@ -789,7 +800,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="n">openTrunk</span> <span class="o">=</span> <span class="s">"trunk_open"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">openTrunk</span> <span class="o">=</span> <span class="s">"trunk_open"</span></code></pre>
 
                         </div>
                       </div>
@@ -803,9 +814,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit9TKCommandO4nameSSv"></a>
+                    <a name="/s:8TeslaKit9TKCommandO4nameSSvp"></a>
                     <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit9TKCommandO4nameSSv">name</a>
+                    <a class="token" href="#/s:8TeslaKit9TKCommandO4nameSSvp">name</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -820,7 +831,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -830,36 +841,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit9TKCommandO3url10Foundation3URLVSS9vehicleId_tF"></a>
-                    <a name="//apple_ref/swift/Method/url(vehicleId:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit9TKCommandO3url10Foundation3URLVSS9vehicleId_tF">url(vehicleId:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the API URL provided a vehicleId for the command</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">url</span><span class="p">(</span><span class="nv">vehicleId</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URL</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:8TeslaKit9TKCommandO13quickCommandsSayACGvZ"></a>
+                    <a name="/s:8TeslaKit9TKCommandO13quickCommandsSayACGvpZ"></a>
                     <a name="//apple_ref/swift/Variable/quickCommands" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit9TKCommandO13quickCommandsSayACGvZ">quickCommands</a>
+                    <a class="token" href="#/s:8TeslaKit9TKCommandO13quickCommandsSayACGvpZ">quickCommands</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -874,7 +858,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">quickCommands</span><span class="p">:</span> <span class="p">[</span><span class="kt">TKCommand</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO11unlockDoorsA2CmF">unlockDoors</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO9lockDoorsA2CmF">lockDoors</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO11flashLightsA2CmF">flashLights</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO9startHVACA2CmF">startHVAC</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO8stopHVACA2CmF">stopHVAC</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO14openChargePortA2CmF">openChargePort</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO24setChargeLimitToStandardA2CmF">setChargeLimitToStandard</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO24setChargeLimitToMaxRangeA2CmF">setChargeLimitToMaxRange</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO13startChargingA2CmF">startCharging</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO12stopChargingA2CmF">stopCharging</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">quickCommands</span><span class="p">:</span> <span class="p">[</span><span class="kt">TKCommand</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO11unlockDoorsA2CmF">unlockDoors</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO9lockDoorsA2CmF">lockDoors</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO11flashLightsA2CmF">flashLights</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO9startHVACA2CmF">startHVAC</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO8stopHVACA2CmF">stopHVAC</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO14openChargePortA2CmF">openChargePort</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO24setChargeLimitToStandardA2CmF">setChargeLimitToStandard</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO24setChargeLimitToMaxRangeA2CmF">setChargeLimitToMaxRange</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO13startChargingA2CmF">startCharging</a></span><span class="p">,</span> <span class="o">.</span><span class="n"><a href="../Enums/TKCommand.html#/s:8TeslaKit9TKCommandO12stopChargingA2CmF">stopCharging</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -886,8 +870,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/Jarious-Apps/TeslaKit.git" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-04-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/HamblinSoft/TeslaKit" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-04-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

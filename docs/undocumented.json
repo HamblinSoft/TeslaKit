@@ -1,187 +1,201 @@
 {
   "warnings": [
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 90,
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 65,
+      "symbol": "TeslaAPI.configuration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Classes/TeslaAPI.swift",
+      "line": 98,
       "symbol": "TeslaAPI.request(_:method:parameters:headers:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Enumerations/TKHeading.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Enumerations/TKHeading.swift",
+      "line": 11,
+      "symbol": "TKDirection",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Enumerations/TKHeading.swift",
       "line": 54,
       "symbol": "TKHeading.shortName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": null,
       "symbol": "EnumCollection",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": 11,
       "symbol": "EnumCollection",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": 12,
       "symbol": "EnumCollection.cases()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": 13,
       "symbol": "EnumCollection.allValues",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": 18,
       "symbol": "EnumCollection.cases()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Protocols/EnumCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Protocols/EnumCollection.swift",
       "line": 32,
       "symbol": "EnumCollection.allValues",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKAccessToken.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKAccessToken.swift",
       "line": 90,
       "symbol": "TKAccessToken.Request.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKAccessToken.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKAccessToken.swift",
       "line": 102,
       "symbol": "TKAccessToken.Response.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKChargeState.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKChargeState.swift",
       "line": 158,
       "symbol": "TKChargeState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKClimateState.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKClimateState.swift",
       "line": 105,
       "symbol": "TKClimateState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKDriveState.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKDriveState.swift",
       "line": 73,
       "symbol": "TKDriveState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKGUISettings.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKGUISettings.swift",
       "line": 42,
       "symbol": "TKGUISettings.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKMobileAccess.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKMobileAccess.swift",
       "line": 28,
       "symbol": "TKMobileAccess.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKMovePanoRoof.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKMovePanoRoof.swift",
       "line": 38,
       "symbol": "TKMovePanoRoof.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKRemoteStart.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKRemoteStart.swift",
       "line": 32,
       "symbol": "TKRemoteStart.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKResetValetPIN.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKResetValetPIN.swift",
       "line": 38,
       "symbol": "TKResetValetPIN.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKSetChargeLimit.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKSetChargeLimit.swift",
       "line": 33,
       "symbol": "TKSetChargeLimit.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKSetTemperature.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKSetTemperature.swift",
       "line": 38,
       "symbol": "TKSetTemperature.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKVehicle.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicle.swift",
       "line": 90,
       "symbol": "TKVehicle.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKVehicleCollection.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleCollection.swift",
       "line": 62,
       "symbol": "TKVehicleCollection.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKVehicleCommand.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleCommand.swift",
       "line": 44,
       "symbol": "TKCommandResponse.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKVehicleConfig.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleConfig.swift",
       "line": 83,
       "symbol": "TKVehicleConfig.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/TKVehicleState.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/TKVehicleState.swift",
       "line": 146,
       "symbol": "TKVehicleState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hamblija/Code/Personal/TeslaKit/Source/Structures/VIN.swift",
+      "file": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit/Source/Structures/VIN.swift",
       "line": 98,
       "symbol": "VIN.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/hamblija/Code/Personal/TeslaKit"
+  "source_directory": "/Users/jarenhamblin/Documents/Workspace/Main/TeslaKit"
 }

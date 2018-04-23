@@ -63,7 +63,7 @@ Create a new `TeslaAPI` instance
 let teslaAPI = TeslaAPI()
 ```
 
-Also see initialization [options](#options)
+Also see initialization [configuration](#configuration)
 
 ## Access Token
 Obtain an Access Token by logging in with your Tesla account credentials
@@ -130,32 +130,37 @@ teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response i
 }
 ```
 
-# <a name="options"></a>Options
+# <a name="configuration"></a>Configuration
 
-## Client ID and Secret
+```swift
 
+// Default
+let defaultConfig = TeslaAPI.Configuration.default
+
+// Mock
+let mockConfig = TeslaAPI.Configuration.mock
+
+// Custom
+let customConfig = TeslaAPI.Configuration(baseURL: URL(string: "SOME_URL")!,
+                                            clientId: "SOME_CLIENT_ID",
+                                            clientSecret: "SOME_CLIENT_SECRET",
+                                            requestTimeout: 15)
+
+let teslaAPI = TeslaAPI(configuration: configuration, debugMode: true)
+```
+
+### Base URL
+Specify the base URL you want to use. This is useful if you want to connect to your own mock server for testing.
+
+### Client ID and Secret
 If the default ID and Secret ever become invalid, you can specify an alernative set
 
-```swift
-let teslaAPI = TeslaAPI(clientId: "SOME_CLIENT_ID", 
-                        clientSecret: "SOME_CLIENT_SECRET")
-```
-
-## Debug Mode
-
-Enabling debug mode will print all the raw request and response information to the console (default: ```false```)
-
-```swift
-let teslaAPI = TeslaAPI(debugMode: true)
-```
-
-## Request Timeout
-
+### Request Timeout
 Specify request timeout interval (default: ```30```)
 
-```swift
-let teslaAPI = TeslaAPI(requestTimeout: 15)
-```
+### Debug Mode
+Enabling debug mode will print all the raw request and response information to the console (default: ```false```)
+
 
 # VIN Decoder
 
