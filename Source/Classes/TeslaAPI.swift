@@ -22,36 +22,47 @@ public protocol TeslaAPIDelegate: class {
     func teslaApi(_ teslaAPI: TeslaAPI, didSend command: TKCommand, data: TKCommandResponse?)
 }
 
+
+
 ///
 open class TeslaAPI {
 
-    // MARK: - Static Properties
-
     ///
-    public static let clientId: String = "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e"
+    public struct Configuration {
 
-    ///
-    public static let clientSecret: String =  "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220"
+        ///
+        public let baseURL: URL
 
-    /// API version
-    public static let apiVersion: Int = 1
+        /// Tesla API owner api client id
+        public let clientId: String
 
-    /// Base owner API URL
-    public static let baseURL: URL = URL(string: "https://owner-api.teslamotors.com")!
+        /// Tesla API owner api client secret
+        public let clientSecret: String
 
-    /// Base owner API URL with api version
-    public static let apiBaseURL: URL = baseURL.appendingPathComponent("api/\(TeslaAPI.apiVersion)")
+        ///
+        public let apiVersion: Int = 1
 
-    // MARK: - Instance
+        ///
+        public let requestTimeout: TimeInterval
 
-    /// Tesla API owner api client id
-    public let ownerApiClientId: String
+        ///
+        public var apiBaseURL: URL { return self.baseURL.appendingPathComponent("api/\(self.apiVersion)") }
 
-    /// Tesla API owner api client secret
-    public let ownerApiClientSecret: String
+        ///
+        public static let `default`: Configuration = Configuration(baseURL: URL(string: "https://owner-api.teslamotors.com")!,
+                                                                   clientId: "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e",
+                                                                   clientSecret: "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220",
+                                                                   requestTimeout: 30)
 
-    ///
-    public let requestTimeout: TimeInterval
+        ///
+        public static let mock: Configuration = Configuration(baseURL: URL(string: "https://us-central1-teslaapp-dev.cloudfunctions.net/mock")!,
+                                                              clientId: "",
+                                                              clientSecret: "",
+                                                              requestTimeout: 10)
+
+    }
+
+    public let configuration: Configuration
 
     ///
     public var debugMode: Bool = false
@@ -75,12 +86,9 @@ open class TeslaAPI {
 
 
 
-
     /// Initialize a new instance of TeslaAPI
-    public init(ownerApiClientId: String = TeslaAPI.clientId, ownerApiClientSecret: String = TeslaAPI.clientSecret, requestTimeout: TimeInterval = 30, debugMode: Bool = false) {
-        self.ownerApiClientId = ownerApiClientId
-        self.ownerApiClientSecret = ownerApiClientSecret
-        self.requestTimeout = requestTimeout
+    public init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
+        self.configuration = configuration
         self.debugMode = debugMode
     }
 
@@ -90,7 +98,7 @@ open class TeslaAPI {
     public func request<T: TKMappable>(_ url: URL, method: String = "GET", parameters: Any? = nil, headers: [String: String] = [:], completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
 
         let request: URLRequest = {
-            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: self.requestTimeout)
+            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: self.configuration.requestTimeout)
             request.httpMethod = method
             headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
             if let parameters = parameters {
@@ -165,13 +173,13 @@ open class TeslaAPI {
     ///   - completion: Completion Handler
     open func accessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
         let request = TKAccessToken.Request(grantType: "password",
-                                            clientId: self.ownerApiClientId,
-                                            clientSecret: self.ownerApiClientSecret,
+                                            clientId: self.configuration.clientId,
+                                            clientSecret: self.configuration.clientSecret,
                                             email: email,
                                             password: password)
 
 
-        self.request(TeslaAPI.baseURL.appendingPathComponent("oauth/token"),
+        self.request(self.configuration.baseURL.appendingPathComponent("oauth/token"),
                      method: "POST",
                      parameters: request.toJSON(),
                      headers: self.headers,
@@ -183,7 +191,7 @@ open class TeslaAPI {
     ///
     /// - Parameter completion: Completion Handler
     open func vehicles(completion: @escaping (HTTPURLResponse, TKVehicleCollection?, Error?) -> Void) {
-        self.request(TeslaAPI.apiBaseURL.appendingPathComponent("vehicles"),
+        self.request(self.configuration.apiBaseURL.appendingPathComponent("vehicles"),
                      method: "GET",
                      headers: self.headers,
                      completion: completion)
@@ -195,7 +203,7 @@ open class TeslaAPI {
     ///   - vehicle: The vehicle to obtain data from
     ///   - completion: Completion Handler
     open func data(for vehicle: TKVehicle, completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TKDataRequest.data.url(vehicleId: vehicle.id),
+        self.request(self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/\(TKDataRequest.data.rawValue)"),
                      method: "GET",
                      headers: self.headers,
                      completion: completion)
@@ -209,7 +217,16 @@ open class TeslaAPI {
     ///   - type: The type of data to request
     ///   - completion: Completion Handler
     open func data<T: TKDataResponse>(for vehicle: TKVehicle, type: TKDataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
-        self.request(type.url(vehicleId: vehicle.id),
+
+        let url: URL = {
+            switch type {
+            case .mobileAccess: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/\(TKDataRequest.mobileAccess.rawValue)")
+            case .data: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/\(TKDataRequest.data.rawValue)")
+            default: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/data_request/\(type.rawValue)")
+            }
+        }()
+
+        self.request(url,
                      method: "GET",
                      headers: self.headers,
                      completion: completion)
@@ -224,7 +241,10 @@ open class TeslaAPI {
     ///   - request: Optional data to be included with the command
     ///   - completion: Completion Handler
     open func send(_ command: TKCommand, to vehicle: TKVehicle, parameters: TKMappable? = nil, completion: @escaping (TKCommandResponse) -> Void) {
-        self.request(command.url(vehicleId: vehicle.id),
+
+        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/command/\(command.rawValue)")
+
+        self.request(url,
                      method: "POST",
                      parameters: parameters?.toJSON(),
                      headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
@@ -259,37 +279,37 @@ open class TeslaAPI {
 
     /// Returns a list of products, i.e. Powerwall
     internal func products(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.apiBaseURL.appendingPathComponent("products"),
+        self.request(self.configuration.apiBaseURL.appendingPathComponent("products"),
                      headers: self.headers,
                      completion: completion)
     }
 
     internal func batterySOC(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.baseURL.appendingPathComponent("api/system_status/soe"),
+        self.request(self.configuration.baseURL.appendingPathComponent("api/system_status/soe"),
                      headers: self.headers,
                      completion: completion)
     }
 
     internal func meterAggregates(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.baseURL.appendingPathComponent("api/meters/aggregates"),
+        self.request(self.configuration.baseURL.appendingPathComponent("api/meters/aggregates"),
                      headers: self.headers,
                      completion: completion)
     }
 
     internal func powerWalls(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.baseURL.appendingPathComponent("api/powerwalls"),
+        self.request(self.configuration.baseURL.appendingPathComponent("api/powerwalls"),
                      headers: self.headers,
                      completion: completion)
     }
 
     internal func connectionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.baseURL.appendingPathComponent("api/sitemaster"),
+        self.request(self.configuration.baseURL.appendingPathComponent("api/sitemaster"),
                      headers: self.headers,
                      completion: completion)
     }
 
     internal func versionStatus(completion: @escaping (HTTPURLResponse, TKVehicle?, Error?) -> Void) {
-        self.request(TeslaAPI.baseURL.appendingPathComponent("api/status"),
+        self.request(self.configuration.baseURL.appendingPathComponent("api/status"),
                      headers: self.headers,
                      completion: completion)
     }

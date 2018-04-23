@@ -30,13 +30,4 @@ public enum TKDataRequest: String {
 
     ///
     case data = "data"
-
-    ///
-    public func url(vehicleId: String) -> URL {
-        switch self {
-        case .mobileAccess: return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(self.rawValue)")
-        case .data: return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(self.rawValue)")
-        default: return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/data_request/\(self.rawValue)")
-        }
-    }
 }

@@ -16,9 +16,7 @@ open class TKTestCase: XCTestCase {
 
         let testAccount = TestAccount.shared
 
-        let teslaAPI = TeslaAPI()
-
-        teslaAPI.debugMode = true
+        let teslaAPI = TeslaAPI(configuration: TeslaAPI.Configuration.default, debugMode: true)
 
         if let accessToken = testAccount.accessToken?.accessToken, testAccount.accessToken?.isExpired == false {
             teslaAPI.setAccessToken(accessToken)

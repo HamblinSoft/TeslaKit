@@ -85,11 +85,6 @@ public enum TKCommand: String, EnumCollection {
     /// Returns a readable name for the command
     public var name: String { return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized }
 
-    /// Returns the API URL provided a vehicleId for the command
-    public func url(vehicleId: String) -> URL {
-        return TeslaAPI.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/command/\(self.rawValue)")
-    }
-
     /// Commands that can be quickliy sent
     public static let quickCommands: [TKCommand] = [.unlockDoors, .lockDoors, .flashLights, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]
 }

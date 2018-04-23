@@ -16,7 +16,7 @@ open class AuthTests: TKTestCase {
 
         let expect = expectation(description: #function)
 
-        let teslaAPI = TeslaAPI()
+        let teslaAPI = TeslaAPI(configuration: TeslaAPI.Configuration.default, debugMode: true)
 
         teslaAPI.accessToken(email: testAccount.email, password: testAccount.password) { (response, dataOrNil, errorOrNil) in
             expect.fulfill()
