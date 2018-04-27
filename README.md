@@ -132,35 +132,41 @@ teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response i
 
 # <a name="configuration"></a>Configuration
 
+## Default
 ```swift
-
-// Default
-let defaultConfig = TeslaAPI.Configuration.default
-
-// Mock
-let mockConfig = TeslaAPI.Configuration.mock
-
-// Custom
-let customConfig = TeslaAPI.Configuration(baseURL: URL(string: "SOME_URL")!,
-                                            clientId: "SOME_CLIENT_ID",
-                                            clientSecret: "SOME_CLIENT_SECRET",
-                                            requestTimeout: 15)
-
-let teslaAPI = TeslaAPI(configuration: configuration, debugMode: true)
+let teslaAPI = TeslaAPI(configuration: .default) // same as TeslaAPI()
 ```
 
-### Base URL
-Specify the base URL you want to use. This is useful if you want to connect to your own mock server for testing.
+The ```default``` configuration points to Tesla's production owner API
 
-### Client ID and Secret
-If the default ID and Secret ever become invalid, you can specify an alernative set
+## Mock
+```swift
+let teslaAPI = TeslaAPI(configuration: .mock)
+```
 
-### Request Timeout
-Specify request timeout interval (default: ```30```)
+The ```mock``` configuration directs all requests to a custom server that returns a predefined responses for each of the owner API endpoints allowing you to work with some real-looking data to work with without having to own a Tesla vehicle or without having a Tesla account at all.
 
-### Debug Mode
+Note: Because this is a free service, requests are occasionally throttled.
+
+## Custom
+```swift
+let customConfig = TeslaAPI.Configuration(baseURL: URL(string: "SOME_URL")!,
+                                          clientId: "SOME_CLIENT_ID",
+                                          clientSecret: "SOME_CLIENT_SECRET",
+                                          requestTimeout: 30)
+
+let teslaAPI = TeslaAPI(configuration: customConfig)
+```
+
+The ```custom``` configuration allows you to specify your own ```baseURL```. This is convenient if you would like to point to your own environment. You can also specify an alternate ```clientId``` and ```clientSecret``` value. You can also specify a different request timeout interval (default: ```30```)
+
+## Debug Mode
+
+```swift
+let teslaAPI = TeslaAPI(debugMode: true)
+```
+
 Enabling debug mode will print all the raw request and response information to the console (default: ```false```)
-
 
 # VIN Decoder
 
