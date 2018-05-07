@@ -186,6 +186,122 @@ open class TeslaAPI {
                      completion: completion)
     }
 
+//    open func refreshToken(_ refreshToken: String, completion: @escaping (HTTPURLResponse, TKAccessToken.Response?, Error?) -> Void) {
+//        let request = TKAccessToken.Request(grantType: "refresh_token",
+//                                            clientId: self.configuration.clientId,
+//                                            clientSecret: self.configuration.clientSecret,
+//                                            refreshToken)
+//
+//
+//        self.request(self.configuration.baseURL.appendingPathComponent("oauth/token"),
+//                     method: "POST",
+//                     parameters: request.toJSON(),
+//                     headers: self.headers,
+//                     completion: completion)
+//    }
+
+    open func revokeAccessToken() {
+        /**
+         * Logout and invalidate the current auth token
+         * @param {string} authToken - Tesla provided OAuth token
+         * @param {nodeBack} callback - Node-style callback
+         */
+//        exports.logout = function logout(authToken, callback) {
+//            log(API_CALL_LEVEL, "TeslaJS.logout()");
+//
+//            callback = callback || function (err, result) { /* do nothing! */ }
+//
+//            request({
+//                method: 'POST',
+//                url: portalBaseURI + '/oauth/revoke',
+//                headers: { Authorization: "Bearer " + authToken, 'Content-Type': 'application/json; charset=utf-8' }
+//            }, function (error, response, body) {
+//
+//                callback(error, { error: error, response: response, body: body });
+//
+//                log(API_RETURN_LEVEL, "TeslaJS.logout() completed.");
+//            });
+//        }
+    }
+
+    open func setCalendarEntry() {
+
+//        /**
+//         * Set a calendar entry
+//         * @param {optionsType} options - options object
+//         * @param {object} entry - calendar entry object
+//         * @param {nodeBack} callback - Node-style callback
+//         * @returns {object} result
+//         */
+//        exports.calendar = function calendar(options, entry, callback) {
+//            post_command(options, "command/upcoming_calendar_entries", entry, callback);
+//        }
+//
+//        /**
+//         * @function calendarAsync
+//         * @param {optionsType} options - options object
+//         * @param {object} entry - calendar entry object
+//         * @returns {Promise} result
+//         */
+//        exports.calendarAsync = Promise.denodeify(exports.calendar);
+//
+//        /**
+//         * Create a calendar entry
+//         * @param {string} eventName - name of the event
+//         * @param {string} location - location of the event
+//         * @param {number} startTime - Javascript timestamp for start of event
+//         * @param {number} endTime - Javascript timestamp for end of event
+//         * @param {string} accountName - name of the calendar account
+//         * @param {string} phoneName - phone bluetooth name
+//         * @returns {object} result
+//         */
+//        exports.makeCalendarEntry = function makeCalendarEntry(eventName, location, startTime, endTime, accountName, phoneName) {
+//            var entry = {
+//                "calendar_data": {
+//                    "access_disabled": false,
+//                    "calendars": [
+//                    {
+//                    "color": "ff9a9cff",
+//                    "events": [
+//                    {
+//                    "allday": false,
+//                    "color": "ff9a9cff",
+//                    "end": endTime || new Date().getTime(),
+//                    "start": startTime || new Date().getTime(),
+//                    "cancelled": false,
+//                    "tentative": false,
+//                    "location": location || "",
+//                    "name": eventName || "Event name",
+//                    "organizer": ""
+//                    }
+//                    ],
+//                    "name": accountName || ""    // calendar account name?
+//                    }
+//                    ],
+//                    "phone_name": phoneName,    // Bluetooth name of phone
+//                    "uuid": "333239059961778"   // any random value OK?
+//                }
+//            };
+//
+//            return entry;
+//        }
+    }
+
+    open func triggerHomelink() {
+        /**
+         * Trigger homelink
+         * @param {optionsType} options - options object
+         * @param {number} lat - vehicle GPS latitude
+         * @param {number} long - vehicle GPS longitude
+         * @param {string} string - one of the tokens from vehicle JSON
+         * @param {nodeBack} callback - Node-style callback
+         * @returns {object} result
+         */
+//        exports.homelink = function homelink(options, lat, long, token, callback) {
+//            post_command(options, "command/trigger_homelink", { lat: lat, long: long, token: token } , callback);
+//        }
+    }
+
 
     /// A logged in user can have multiple vehicles under their account. This resource is primarily responsible for listing the vehicles and the basic details about them.
     ///
