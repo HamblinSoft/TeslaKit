@@ -44,8 +44,6 @@
 		375D88C0200ECF2C00CD9D1E /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889C200ECF2C00CD9D1E /* EnumCollection.swift */; };
 		375D88C1200ECF2C00CD9D1E /* TKMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889D200ECF2C00CD9D1E /* TKMappable.swift */; };
 		37D4BA8F20B7898B002009D7 /* TKRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4BA8E20B7898B002009D7 /* TKRefreshToken.swift */; };
-		37D4BA9120B79190002009D7 /* TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D885B200ECEE000CD9D1E /* TeslaKit.framework */; };
-		37D4BA9220B79190002009D7 /* TeslaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 375D885B200ECEE000CD9D1E /* TeslaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37F658F120294A2C00AAD681 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F222026533500409472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F212026533500409472 /* ViewController.swift */; };
@@ -91,7 +89,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				37D4BA9220B79190002009D7 /* TeslaKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */,
-				37D4BA9120B79190002009D7 /* TeslaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
