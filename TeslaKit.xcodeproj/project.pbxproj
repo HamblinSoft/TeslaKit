@@ -43,6 +43,9 @@
 		375D88BF200ECF2C00CD9D1E /* TKDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889B200ECF2C00CD9D1E /* TKDataResponse.swift */; };
 		375D88C0200ECF2C00CD9D1E /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889C200ECF2C00CD9D1E /* EnumCollection.swift */; };
 		375D88C1200ECF2C00CD9D1E /* TKMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889D200ECF2C00CD9D1E /* TKMappable.swift */; };
+		37D4BA8F20B7898B002009D7 /* TKRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4BA8E20B7898B002009D7 /* TKRefreshToken.swift */; };
+		37D4BA9120B79190002009D7 /* TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375D885B200ECEE000CD9D1E /* TeslaKit.framework */; };
+		37D4BA9220B79190002009D7 /* TeslaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 375D885B200ECEE000CD9D1E /* TeslaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		37F658F120294A2C00AAD681 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F222026533500409472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F212026533500409472 /* ViewController.swift */; };
@@ -66,6 +69,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		37D4BA9320B79190002009D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 375D8852200ECEE000CD9D1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 375D885A200ECEE000CD9D1E;
+			remoteInfo = TeslaKit;
+		};
 		37FB3F382026534600409472 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 375D8852200ECEE000CD9D1E /* Project object */;
@@ -74,6 +84,20 @@
 			remoteInfo = Example;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37D4BA9520B79190002009D7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				37D4BA9220B79190002009D7 /* TeslaKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0628BFB0F9F19857B23057A6 /* Pods-TeslaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +138,7 @@
 		375D889B200ECF2C00CD9D1E /* TKDataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKDataResponse.swift; sourceTree = "<group>"; };
 		375D889C200ECF2C00CD9D1E /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		375D889D200ECF2C00CD9D1E /* TKMappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKMappable.swift; sourceTree = "<group>"; };
+		37D4BA8E20B7898B002009D7 /* TKRefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKRefreshToken.swift; sourceTree = "<group>"; };
 		37F658F020294A2C00AAD681 /* TKChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKChargePortLatchState.swift; sourceTree = "<group>"; };
 		37FB3F1D2026533500409472 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB3F1F2026533500409472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */,
+				37D4BA9120B79190002009D7 /* TeslaKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +274,7 @@
 				375D8880200ECF2C00CD9D1E /* TKGUISettings.swift */,
 				375D888A200ECF2C00CD9D1E /* TKMobileAccess.swift */,
 				375D888E200ECF2C00CD9D1E /* TKMovePanoRoof.swift */,
+				37D4BA8E20B7898B002009D7 /* TKRefreshToken.swift */,
 				375D8887200ECF2C00CD9D1E /* TKRemoteStart.swift */,
 				375D888F200ECF2C00CD9D1E /* TKResetValetPIN.swift */,
 				375D8881200ECF2C00CD9D1E /* TKSetChargeLimit.swift */,
@@ -385,7 +412,6 @@
 				375D8859200ECEE000CD9D1E /* Resources */,
 				3723AC982076C71D00E80F60 /* Test Account Run Script */,
 				55FF003F207FEE1B0011A428 /* SwiftLint */,
-				467381474BCEFCE2F0ED2181 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,11 +432,12 @@
 				37FB3F1A2026533500409472 /* Frameworks */,
 				37FB3F1B2026533500409472 /* Resources */,
 				C4BCE1B64E2FDB11D0D16D2D /* [CP] Embed Pods Frameworks */,
-				7642D5BD1C06B38C5B1BDCEA /* [CP] Copy Pods Resources */,
+				37D4BA9520B79190002009D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37D4BA9420B79190002009D7 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -426,8 +453,6 @@
 				37FB3F2F2026534600409472 /* Sources */,
 				37FB3F302026534600409472 /* Frameworks */,
 				37FB3F312026534600409472 /* Resources */,
-				2A8DEAFB4D3531830CB986AA /* [CP] Embed Pods Frameworks */,
-				307278E9D1FF9FD920E5C324 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -512,36 +537,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A8DEAFB4D3531830CB986AA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		307278E9D1FF9FD920E5C324 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3723AC982076C71D00E80F60 /* Test Account Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,21 +579,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Read Test Account data from file or create file if one does not exist\n$SRCROOT/scripts/TestAccount.sh";
 		};
-		467381474BCEFCE2F0ED2181 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		55FF003F207FEE1B0011A428 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -611,7 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run SwiftLint\n${PODS_ROOT}/SwiftLint/swiftlint";
+			shellScript = "# Run SwiftLint\n#${PODS_ROOT}/SwiftLint/swiftlint";
 		};
 		657C056701FDDEA2E82C40BB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -629,21 +609,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7642D5BD1C06B38C5B1BDCEA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C23A74C4DF6748E842372784 /* [CP] Check Pods Manifest.lock */ = {
@@ -725,6 +690,7 @@
 				375D88A7200ECF2C00CD9D1E /* TKSetChargeLimit.swift in Sources */,
 				375D889E200ECF2C00CD9D1E /* TKDataRequest.swift in Sources */,
 				375D88B9200ECF2C00CD9D1E /* TKVehicleCollection.swift in Sources */,
+				37D4BA8F20B7898B002009D7 /* TKRefreshToken.swift in Sources */,
 				375D88AA200ECF2C00CD9D1E /* VIN.swift in Sources */,
 				375D88AD200ECF2C00CD9D1E /* TKRemoteStart.swift in Sources */,
 				37FB3F502026675700409472 /* TKDistanceUnit.swift in Sources */,
@@ -778,6 +744,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		37D4BA9420B79190002009D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 375D885A200ECEE000CD9D1E /* TeslaKit */;
+			targetProxy = 37D4BA9320B79190002009D7 /* PBXContainerItemProxy */;
+		};
 		37FB3F392026534600409472 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37FB3F1C2026533500409472 /* Example */;
@@ -970,6 +941,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74F7A9468D541D7496163438 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Y79Z2NR75;
@@ -986,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 498F421CA069E199228DA2FB /* Pods-Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4Y79Z2NR75;

@@ -52,6 +52,6 @@ public enum TKHeading: String {
     }
 
     public var shortName: String {
-        return self.displayName.components(separatedBy: " ").map{$0.first}.flatMap{$0}.map{String($0)}.joined()
+        return self.displayName.components(separatedBy: " ").map{$0.first}.compactMap{$0}.map{String($0)}.joined()
     }
 }

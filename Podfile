@@ -24,7 +24,7 @@ target 'Example' do
 
     target 'Tests' do
         inherit! :search_paths
-
+        
         use_frameworks!
     end
 end

@@ -16,12 +16,30 @@ open class AuthTests: TKTestCase {
 
         let expect = expectation(description: #function)
 
-        let teslaAPI = TeslaAPI(configuration: TeslaAPI.Configuration.default, debugMode: true)
+        let teslaAPI = TeslaAPI(configuration: .default, debugMode: true)
+        
+        // Get access token via credentials
+        teslaAPI.accessToken(email: testAccount.email, password: testAccount.password) { (response, data, errorOrNil) in
 
-        teslaAPI.accessToken(email: testAccount.email, password: testAccount.password) { (response, dataOrNil, errorOrNil) in
-            expect.fulfill()
             XCTAssertEqual(response.statusCode, 200)
-            XCTAssertNotNil(dataOrNil?.accessToken)
+            XCTAssertNotNil(data?.accessToken)
+            teslaAPI.setAccessToken(data?.accessToken)
+
+            // Get access token via refresh token
+            teslaAPI.refreshToken(data?.refreshToken ?? "") { (response, data2, error) in
+
+                XCTAssertEqual(response.statusCode, 200)
+                XCTAssertNotNil(data2?.accessToken)
+                teslaAPI.setAccessToken(data2?.accessToken)
+
+                // Revoke access token
+                teslaAPI.revokeAccessToken { (response, _, error) in
+                    XCTAssertEqual(response.statusCode, 200)
+                    XCTAssertNil(error)
+
+                    expect.fulfill()
+                }
+            }
         }
 
         waitForExpectations()

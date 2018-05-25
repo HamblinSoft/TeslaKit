@@ -26,7 +26,7 @@ public struct TKCommandResponse {
 
     ///
     public var allErrorMessages: String {
-        return [self.errorDescription, self.reason, self.errorDescription].flatMap{$0}.joined(separator: ". ")
+        return [self.errorDescription, self.reason, self.errorDescription].compactMap{$0}.joined(separator: ". ")
     }
 
     ///
