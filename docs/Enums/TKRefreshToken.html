@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>TKChargeUnit Enumeration Reference</title>
+    <title>TKRefreshToken Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/TKChargeUnit" class="dashAnchor"></a>
-    <a title="TKChargeUnit Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/TKRefreshToken" class="dashAnchor"></a>
+    <a title="TKRefreshToken Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">TeslaKit Docs</a> (94% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">TeslaKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        TKChargeUnit Enumeration Reference
+        TKRefreshToken Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -216,14 +216,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>TKChargeUnit</h1>
+            <h1>TKRefreshToken</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TKChargeUnit</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TKRefreshToken</span></code></pre>
 
                 </div>
               </div>
-            
+            <p>Response Object</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -231,9 +232,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKChargeUnitO12milesPerHourA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/milesPerHour" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKChargeUnitO12milesPerHourA2CmF">milesPerHour</a>
+                    <a name="/s:8TeslaKit14TKRefreshTokenO7RequestV"></a>
+                    <a name="//apple_ref/swift/Struct/Request" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKRefreshTokenO7RequestV">Request</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -241,29 +242,27 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Refresh Token Request object containing the required information to receive a new accessToken</p>
+
+                        <a href="../Enums/TKRefreshToken/Request.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">milesPerHour</span> <span class="o">=</span> <span class="s">"mi/hr"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12TKChargeUnitO17kilometersPerHourA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/kilometersPerHour" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12TKChargeUnitO17kilometersPerHourA2CmF">kilometersPerHour</a>
+                    <a name="/s:8TeslaKit14TKRefreshTokenO8Responsea"></a>
+                    <a name="//apple_ref/swift/Alias/Response" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit14TKRefreshTokenO8Responsea">Response</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,13 +270,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>The response object returned containing an accessToken</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">kilometersPerHour</span> <span class="o">=</span> <span class="s">"km/hr"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Response</span> <span class="o">=</span> <span class="kt"><a href="../Enums/TKAccessToken.html">TKAccessToken</a></span><span class="o">.</span><span class="kt">Response</span></code></pre>
 
                         </div>
                       </div>
