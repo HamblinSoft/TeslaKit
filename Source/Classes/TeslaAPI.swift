@@ -185,12 +185,6 @@ open class TeslaAPI {
                      completion: completion)
     }
 
-    public func test() {
-
-        let world = Hello.World()
-        print(world.name)
-    }
-
 
     /// Request a new access token using a refresh token
     ///

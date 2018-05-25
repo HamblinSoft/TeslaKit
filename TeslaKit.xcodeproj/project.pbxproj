@@ -61,7 +61,6 @@
 		37FB3F6A202668E000409472 /* TKVehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F69202668E000409472 /* TKVehicleConfig.swift */; };
 		46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */; };
 		55783557207D942600485D68 /* TestAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783556207D942600485D68 /* TestAccount.swift */; };
-		55783559207D952000485D68 /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783558207D952000485D68 /* ProductsTests.swift */; };
 		5578355B207D954C00485D68 /* ExpectationWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355A207D954C00485D68 /* ExpectationWait.swift */; };
 		5578355D207D95C600485D68 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355C207D95C600485D68 /* AuthTests.swift */; };
 		55783562207D972500485D68 /* VehicleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783561207D972500485D68 /* VehicleTests.swift */; };
@@ -159,7 +158,6 @@
 		498F421CA069E199228DA2FB /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55783556207D942600485D68 /* TestAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAccount.swift; sourceTree = "<group>"; };
-		55783558207D952000485D68 /* ProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
 		5578355A207D954C00485D68 /* ExpectationWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationWait.swift; sourceTree = "<group>"; };
 		5578355C207D95C600485D68 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		55783561207D972500485D68 /* VehicleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTests.swift; sourceTree = "<group>"; };
@@ -359,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				5578355C207D95C600485D68 /* AuthTests.swift */,
-				55783558207D952000485D68 /* ProductsTests.swift */,
 				37FB3F3D2026553A00409472 /* VINTests.swift */,
 				55783561207D972500485D68 /* VehicleTests.swift */,
 			);
@@ -733,7 +730,6 @@
 			files = (
 				37FB3F362026534600409472 /* TKTestCase.swift in Sources */,
 				5578355D207D95C600485D68 /* AuthTests.swift in Sources */,
-				55783559207D952000485D68 /* ProductsTests.swift in Sources */,
 				55783557207D942600485D68 /* TestAccount.swift in Sources */,
 				55783562207D972500485D68 /* VehicleTests.swift in Sources */,
 				37FB3F3E2026553A00409472 /* VINTests.swift in Sources */,
