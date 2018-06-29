@@ -8,7 +8,7 @@
 import Foundation
 
 ///
-public enum TKCommand: String, EnumCollection {
+public enum TKCommand: String, EnumCollection, CustomStringConvertible {
 
     /// Wakes up the car from the sleep state. Necessary to get some data from the car.
     case wake = "wake_up"
@@ -82,8 +82,9 @@ public enum TKCommand: String, EnumCollection {
     ///
     //    case rearDefrosterOff = "rear_defrost_off"
 
-    /// Returns a readable name for the command
-    public var name: String { return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized }
+    public var description: String {
+        return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized
+    }
 
     /// Commands that can be quickliy sent
     public static let quickCommands: [TKCommand] = [.unlockDoors, .lockDoors, .flashLights, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]

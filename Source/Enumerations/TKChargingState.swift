@@ -9,7 +9,7 @@
 import Foundation
 
 /// 
-public enum TKChargingState: String {
+public enum TKChargingState: String, CustomStringConvertible {
 
     /// The vehicle is not connected to a charger
     case disconnected = "Disconnected"
@@ -26,8 +26,7 @@ public enum TKChargingState: String {
     /// The vehicle is connected to the charger and has completed charging
     case complete = "Complete"
 
-    /// Returns a readable display name
-    public var displayName: String {
+    public var description: String {
         switch self {
         case .stopped: return "Connected"
         case .disconnected: return "Unplugged"

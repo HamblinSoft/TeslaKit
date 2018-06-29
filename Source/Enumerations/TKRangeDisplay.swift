@@ -9,11 +9,15 @@
 import Foundation
 
 ///
-public enum TKRangeDisplay: String {
+public enum TKRangeDisplay: String, CustomStringConvertible {
 
     ///
     case ideal = "Ideal"
 
     ///
     case rated = "Rated"
+
+    public var description: String {
+        return self.rawValue
+    }
 }

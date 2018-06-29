@@ -9,11 +9,18 @@
 import Foundation
 
 ///
-public enum TKTemperatureUnit: String {
+public enum TKTemperatureUnit: String, CustomStringConvertible {
 
     ///
     case fahrenheit = "F"
 
     ///
     case celsius = "C"
+
+    public var description: String {
+        switch self {
+        case .fahrenheit: return "Fahrenheit"
+        case .celsius: return "Celsius"
+        }
+    }
 }

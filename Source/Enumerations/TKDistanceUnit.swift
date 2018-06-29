@@ -9,11 +9,15 @@
 import Foundation
 
 ///
-public enum TKDistanceUnit: String {
+public enum TKDistanceUnit: String, CustomStringConvertible {
 
     ///
     case milesPerHour = "mi/hr"
 
     ///
     case kilometersPerHour = "km/hr"
+
+    public var description: String {
+        return self.rawValue
+    }
 }

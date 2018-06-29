@@ -7,11 +7,8 @@
 
 import Foundation
 
-@available(*, deprecated: 10, message: "Use TKHeading")
-public typealias TKDirection = TKHeading
-
 ///
-public enum TKHeading: String {
+public enum TKHeading: String, CustomStringConvertible {
 
     ///
     case n
@@ -38,7 +35,7 @@ public enum TKHeading: String {
     case nw
 
     ///
-    public var displayName: String {
+    public var description: String {
         switch self {
         case .n: return "North"
         case .ne: return "North East"
@@ -51,7 +48,7 @@ public enum TKHeading: String {
         }
     }
 
-    public var shortName: String {
-        return self.displayName.components(separatedBy: " ").map{$0.first}.compactMap{$0}.map{String($0)}.joined()
+    public var abbreviation: String {
+        return self.description.components(separatedBy: " ").map{$0.first}.compactMap{$0}.map{String($0)}.joined()
     }
 }

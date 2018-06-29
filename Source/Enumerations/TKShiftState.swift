@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum TKShiftState: String {
+public enum TKShiftState: String, CustomStringConvertible {
 
     ///
     case drive = "D"
@@ -24,7 +24,7 @@ public enum TKShiftState: String {
     case reverse = "R"
 
     ///
-    public var displayName: String {
+    public var description: String {
         switch self {
         case .drive: return "Drive"
         case .park: return "Park"

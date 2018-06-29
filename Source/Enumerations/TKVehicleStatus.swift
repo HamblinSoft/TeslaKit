@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents the different connection states the vehicle can be
-public enum TKVehicleStatus: String {
+public enum TKVehicleStatus: String, CustomStringConvertible {
 
     /// Vehicle is awake and connected to the network
     case online
@@ -21,5 +21,5 @@ public enum TKVehicleStatus: String {
     case asleep
 
     /// Returns a readable display name text for the status
-    public var displayName: String { return self.rawValue.capitalized }
+    public var description: String { return self.rawValue.capitalized }
 }
