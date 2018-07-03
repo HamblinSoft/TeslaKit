@@ -1,11 +1,11 @@
 PODS:
-  - ObjectMapper (3.1.0)
-  - SwiftLint (0.25.1)
-  - TeslaKit (0.1.8):
+  - ObjectMapper (3.3.0)
+  - SwiftLint (0.26.0)
+  - TeslaKit (1.0.1):
     - ObjectMapper (~> 3.1)
 
 DEPENDENCIES:
-  - ObjectMapper
+  - ObjectMapper (~> 3.1)
   - SwiftLint
   - TeslaKit (from `./`)
 
@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
-  TeslaKit: eaecd32a852b02a9004092bf9174b71ab244bc8f
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  TeslaKit: 0939b77a592893157c647106f7ffa6a08ce52368
 
-PODFILE CHECKSUM: adc193450952f7c6c17bd9f1b5a528b6120f3906
+PODFILE CHECKSUM: aa0756f8e0b5e57db082d49cdac6a7d75c3a012d
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

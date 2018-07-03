@@ -8,86 +8,86 @@
 
 /* Begin PBXBuildFile section */
 		007823613E48EA1829DD72DA721E42FA /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49121CA5441F697AAF85E3185D66DA /* EnumOperators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		00873FFCAFB34C9730A571B827D6A0C1 /* TKVehicleCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F04A5FAB44B270D5559C84255AF13 /* TKVehicleCollection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		00873FFCAFB34C9730A571B827D6A0C1 /* TKVehicleCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD42477A95A5E3A086DFCCA42A33DCD1 /* TKVehicleCollection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		04715BBA026ADADD5E4AFE2805B7DFDB /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47734214D7C51B73F9EFCEFAD0F48DC9 /* URLTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0791758C3643482B42FDE6B779A97CD1 /* TKRemoteStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEA0AC23C11D714220FDA7C0214B990 /* TKRemoteStart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0791758C3643482B42FDE6B779A97CD1 /* TKRemoteStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24495EF96BDF3A90714B25F86DA628A /* TKRemoteStart.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		07BA17A9C13D0C8372FC0686BE57A6F3 /* HexColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4070935D76EBADC7F802E24C99023E /* HexColorTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0F83C18CED233F9537CA5146861C293E /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8741E48AAE7EC73987B23270DCA5A /* DateFormatterTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1B9A9E63DC014FD56235C9DEC3A0F11D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA9BD918D7F271B240728A6971AE889 /* Temperature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1B9A9E63DC014FD56235C9DEC3A0F11D /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFE843C5EE43A6297FC34A5A5E1B66D /* Temperature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1B9FF5EC1B791984A35488434323C3E6 /* Pods-TeslaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3845A218086FCF184F69F85F933E80 /* Pods-TeslaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21FF88F0838215567407C3636B9CC8FE /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15304D2EAA071227DFAE65FA86264375 /* CustomDateFormatTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		23EA70EF1E34704763247C55C7C609CA /* VINTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEDD42A73BD85B64F4B8AA892A31E9F /* VINTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		23EA70EF1E34704763247C55C7C609CA /* VINTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E968D1A2B83824A4959F8A6522676A /* VINTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		241A384C1F60EF32A91DC8587E312448 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27307BFEBE534526609E3D26A510739 /* ISO8601DateTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		282C137A58C38E47B60A9A41BB598B06 /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C766D363EE85BB6318DEC6539F86C46A /* ImmutableMappable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2CC492BC3A13816C3F1DF0D3E335C6FA /* TKDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3EA1C517F9576455051906F390D4BD /* TKDataResponse.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2DE6945A98372CA7721218C98E1FE41F /* TKChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2572E4568A8121248D3DD43A83B83D5 /* TKChargeState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2E01F3FFCA7EB5DEE9BC78A64207FB65 /* VIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73F74A98E9CAAD953BD42F49AC65D40 /* VIN.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2CC492BC3A13816C3F1DF0D3E335C6FA /* TKDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D340D1768FB30835CC8D9777D73E396 /* TKDataResponse.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2DE6945A98372CA7721218C98E1FE41F /* TKChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44854E5D4C6BF9A41704176C9D3117 /* TKChargeState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2E01F3FFCA7EB5DEE9BC78A64207FB65 /* VIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33610E982A59B3AA2B194CA4A125F0C0 /* VIN.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2E11F9CAB16BD0BBA2A9C6D8E64E0286 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */; };
-		312C91D6FD6022885F9E440883BC745E /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6D8EDD3CF2645FD7D780E2817BE41 /* TeslaAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		312C91D6FD6022885F9E440883BC745E /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C76CC8D159638A2B403DA714AD77 /* TeslaAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		33061752A1CF47854EFA84440102E281 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8FEAA8BBFA2317FEF841622DAA2045 /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		351A58374B952CD795E19A5C1DA52C01 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314ACD886612C49F925DEC8E2C573900 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3794F36FCBD2F263912BDBDD39B82219 /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E4A08D4FCCFC40A5993A506E1B696 /* DictionaryTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3F6745C832733D15BF96FBCA605FFA94 /* TKClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F842B95E2700353F80AFB2D2B867C8 /* TKClimateState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		43BAB051BB384D86F85E8053D8A51CAA /* TKHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2557AC3F7CE12D6307C3149302EBE678 /* TKHeading.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4470C571E893835505B040615B8D15FC /* TKChargingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F924F32605F2200A47437BEC1FFC65 /* TKChargingState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		45B0605B89AB7FC455BE5D21CCA1864C /* TKStringArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BC2F4F84F07275ECDF42284BB7BB5F /* TKStringArrayTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		45FE778724DABE9D6F54C2C70D2B75BF /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFC1DDF995745C694437E5895C310CF /* EnumCollection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3F6745C832733D15BF96FBCA605FFA94 /* TKClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C7210FC844B3EAAA41EFB088E05D2 /* TKClimateState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		43BAB051BB384D86F85E8053D8A51CAA /* TKHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B5EBC0D431DB178B483BB994379A9 /* TKHeading.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4470C571E893835505B040615B8D15FC /* TKChargingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24C5E47C21FC29206B4473F6C5B9F1 /* TKChargingState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		45B0605B89AB7FC455BE5D21CCA1864C /* TKStringArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C619056710F07867A93320421139C7 /* TKStringArrayTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		45FE778724DABE9D6F54C2C70D2B75BF /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B1A0593D2CFBF07964B716BCEE218 /* EnumCollection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		488A6632466AE1651BE2BF99E3679208 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */; };
-		522CCFED84CCD49766BA635206830D15 /* TKVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AFE8D2A4744E0B6762C78D3EE309CD /* TKVehicle.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		522CCFED84CCD49766BA635206830D15 /* TKVehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EACDE823A1806BB06F1DDD17247C /* TKVehicle.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		539DD8CC97B6B8F99A6CF1FB1CBEA341 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17B85E44F60B52E372384A4C8D5831 /* Pods-Example-dummy.m */; };
 		583511A298128E7E4CC3A34EC1BCF927 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA4147B6017A5AE1C940D86AC1C6EC07 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AB3613C867E12718E333B040DEFB241 /* TKDriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7044C79E5B512AC5A3BCC9B99B6365A /* TKDriveState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		601E106D69D11A1FCE62882C0CB35A39 /* TKMobileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB792FE6EBFF9BD4B6854813467D1E9 /* TKMobileAccess.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		650893AE30BEBB2A3A3FBB84BBBE818F /* TKResetValetPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABC702CE05DF2A80A2CFA3076C91063 /* TKResetValetPIN.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6A2B67EF82BFC50B6D036D97DBFF5373 /* TKSetTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A42A9F9552C27C61A201D84563B768 /* TKSetTemperature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5AB3613C867E12718E333B040DEFB241 /* TKDriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8675481709F0697BD93DE748C30556 /* TKDriveState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		601E106D69D11A1FCE62882C0CB35A39 /* TKMobileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBF5401026E54CD525B09FC6C08B0E /* TKMobileAccess.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		650893AE30BEBB2A3A3FBB84BBBE818F /* TKResetValetPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0965AEDEBACB27C745A4C7D2B2AD37E /* TKResetValetPIN.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A2B67EF82BFC50B6D036D97DBFF5373 /* TKSetTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1005BECA23497C1307DD7A949187F /* TKSetTemperature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6F155D063EA07D8689F7B51DC792E11E /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D490B12A2C16B37205161891646F9E /* TransformOperators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6FBEA1F189C935F606F7EB9DDD2798D2 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B2531CE9F981B942661E878270C41 /* Mappable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		75A88AF49D02DC322D26318759145AE7 /* TKChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3FB274483393AE1AA0F7DE7E08292 /* TKChargeUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		784D94DAD5F31BFFE135D72B76EB6F45 /* VINComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF49482A738B54EDB93B63B173E5D3 /* VINComponent.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75A88AF49D02DC322D26318759145AE7 /* TKChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3F016BF3E7C7875331495DA7D7E990 /* TKChargeUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		784D94DAD5F31BFFE135D72B76EB6F45 /* VINComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D9419EC07B34CF35DCCE02FEDAC68 /* VINComponent.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		78C198E9BB56FB59BD494C8FA759645B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */; };
 		7C2E9D1C06AF8F1C814EA83E792ADB1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */; };
 		7DFEF328F25C30C845121D2979FFEA8D /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148D5DA1044F11514C66F2E2DC3C13CC /* DateTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E07F34462D624F8BD9C0A1E58DDAFB2 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2DA74ED118C6A0922E306D996AD8F /* Mapper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7EEA649CB8D3F5E073B9929F13D8921A /* TKAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED36DF9BDE5FADA276F2922B7438E38 /* TKAccessToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		81E63BAB032207BB6A51DB8406809E75 /* TKRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF228CED47A582C060066533DDBF3F9 /* TKRefreshToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		89F73AF4E15BBF3A40ECB141B2643950 /* TKVehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35B9AA6C3FA267B428F05764F045091 /* TKVehicleOptionTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7EEA649CB8D3F5E073B9929F13D8921A /* TKAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F18046E7BB07DAD61B53D501FE77E17 /* TKAccessToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		81E63BAB032207BB6A51DB8406809E75 /* TKRefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC1A4632EA046981985E09FD771B04 /* TKRefreshToken.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		89F73AF4E15BBF3A40ECB141B2643950 /* TKVehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1925095FAE1DDBD550D30E81FA005B /* TKVehicleOptionTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8DB8AE2676B2EB2896F339F102D763DA /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206F8BFC049B6A5EA66EC04D1125EDC /* Operators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8EF145B732B3C4A8EF51C442A4D54E01 /* TKDistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5E68F3BD4D027EC0DE950BB43E6833 /* TKDistanceUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9D34ED33B08552E3CE9AED5BD834111C /* TKCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972403563D027060632243AFE70F01BA /* TKCommand.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8EF145B732B3C4A8EF51C442A4D54E01 /* TKDistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCDAB575738D7262D249EEFD1116F28 /* TKDistanceUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9D34ED33B08552E3CE9AED5BD834111C /* TKCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6BEE9752880A3925AB0D7F63DBDBF /* TKCommand.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9F8E49A443632BA2BF46872438AE4207 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */; };
 		A128DBCF691E0F4D2AC3EEA36F7BD562 /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EDACE97E75DA0F9A7AB24F1E1387F16 /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A617A26FF670940696F9B3F411D8AC53 /* TKMovePanoRoof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E869B3F35FF93D125CB4F4A25B79935 /* TKMovePanoRoof.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A80D0CC8E60626F09FADCF762592FDE9 /* TKVehicleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC41905A6F2536A1D0E217A900B832E /* TKVehicleStatus.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AD3BA492FCE636DF016D81DFE9229358 /* TKPanoRoofState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CDD0B2B076A3E944AA6184B29D42 /* TKPanoRoofState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AE363E5EE353A6AE978510EEC6015EE8 /* TKSetChargeLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E767E2F960E73A3A9705DFEDF094B05 /* TKSetChargeLimit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AE4C3F01454F60A9AAA2DF4CA077332B /* TeslaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE89794E0187AB64300E613D36CDB5 /* TeslaKit-dummy.m */; };
+		A617A26FF670940696F9B3F411D8AC53 /* TKMovePanoRoof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B150D3FC3846DCD89367A639FFEB375 /* TKMovePanoRoof.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A80D0CC8E60626F09FADCF762592FDE9 /* TKVehicleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E181FD230C68312A7C85082A33A2C98 /* TKVehicleStatus.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AD3BA492FCE636DF016D81DFE9229358 /* TKPanoRoofState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA2E6DDCD30575E0540AD028182AC6B /* TKPanoRoofState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE363E5EE353A6AE978510EEC6015EE8 /* TKSetChargeLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1C3BEE8C27D7B7C2ABE3E5CA8A0D4 /* TKSetChargeLimit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE4C3F01454F60A9AAA2DF4CA077332B /* TeslaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 240135CD6C25A5B3AD73CAAF9691479D /* TeslaKit-dummy.m */; };
 		AEFB4BBF6A11B01B933838A316E6D236 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E32A09B7819A075808D5FB523245570 /* FromJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B676860025443E48CA6649CBB2BE1241 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515BB24BCB558A6C6816DC6C1C97492C /* ObjectMapper.framework */; };
-		B8B49C63234C1B702F7948357211B563 /* TKVehicleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFDD3E34E64F7B05A1ACAE9C461AED /* TKVehicleOption.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BA17F8F2CCD7026D443D205334C418E7 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337A5AAB621DA262CA055F0D14E92CCA /* TKChargePortLatchState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8B49C63234C1B702F7948357211B563 /* TKVehicleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0C48BCDB89DA840DB15688276C83E7 /* TKVehicleOption.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BA17F8F2CCD7026D443D205334C418E7 /* TKChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59725478D5061AADFC635ECAF6AB81F /* TKChargePortLatchState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C09C5AAA555F7F593BB5668E59AF34AD /* DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325FE27FEFD896C1B67BE16E3855876 /* DataTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C58A7B52B3A399AC2744EE5989DB1C63 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9813A76BB05F098615AAF250EEF08DFB /* TransformOf.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C7A24BD9AB80510FF509706B6C481B96 /* TKVehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB33EB94C96018E2FCD966ECAD63E25C /* TKVehicleConfig.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C7A24BD9AB80510FF509706B6C481B96 /* TKVehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B28DAC12ACA6F9861D5723E07A7A0 /* TKVehicleConfig.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C8684D7F0E0234D3DBC179333910F4A6 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4747AC143750711E23082B3192CFA605 /* EnumTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D296BF0B1D6F910139362B375EB9A974 /* TKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04605D1B6BBFEEAF11FFEB2535E60E20 /* TKError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D549B11A7E3026EF26BC129C0D494F0B /* TKDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D925708044A65A7AB7B639EEDC70DC46 /* TKDataRequest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D5EC05486A2C6B23564F4883CBB668B5 /* TKOpenTrunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0835E7A1025F29B225AA758F9F5B7 /* TKOpenTrunk.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D738BCDFAC9DCFB407B3D3718F0992CC /* TKVehicleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014FB39B162692443351A87EDD74E8D /* TKVehicleCommand.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D296BF0B1D6F910139362B375EB9A974 /* TKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4CED57EC55FC9C0928C7B104E183DB /* TKError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D549B11A7E3026EF26BC129C0D494F0B /* TKDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955A1E3CB0FC874C82216479307AF790 /* TKDataRequest.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D5EC05486A2C6B23564F4883CBB668B5 /* TKOpenTrunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C904E0A1C20D6F36EB132CC6DF521 /* TKOpenTrunk.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D738BCDFAC9DCFB407B3D3718F0992CC /* TKVehicleCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31C88544F0B8DC17EB4978F14A8944 /* TKVehicleCommand.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DA8070AA9696822F0242CC298668AFF7 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A35E14990E868BA1D1FF36FCA40AAF23 /* ObjectMapper-dummy.m */; };
-		E00705424E1411AB4B2B733D3E4C28F1 /* TKTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D64F86FDA0D71A5C5B2C2BA5B878A9 /* TKTemperatureUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E41A0BD8923551BA5F68559D3039E66C /* TeslaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE90AC4FFE013874A3995C1F2C671E17 /* TeslaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E00705424E1411AB4B2B733D3E4C28F1 /* TKTemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2606DF6BC739BCB14AD3E721088BDE0E /* TKTemperatureUnit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E41A0BD8923551BA5F68559D3039E66C /* TeslaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2A6099E0797F5C3DD80EA925B90EB39 /* TeslaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9613B1A700855B40BA199FCC8D1F436 /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB942CDC232AD7E2D6666D1093E7E2FC /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F160E010B9409C9C53FDB6EAF29A5BAA /* Pods-TeslaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABFCD9AA505C28408801164F5FEFBBC2 /* Pods-TeslaKit-dummy.m */; };
-		F2D57EFEECBF8408985870BE8C5F88D3 /* TKShiftState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CF39D97F11EEE2B108873FDBBBB5F /* TKShiftState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F2D57EFEECBF8408985870BE8C5F88D3 /* TKShiftState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B607A5A0BFB03FD3180080ED4CF62 /* TKShiftState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F36495525F247AD2D687B7D2BE4CA5B2 /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A2FD93A12A38A9D50719BEFD4F84D5 /* NSDecimalNumberTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F6372504EB05E07683036581F0624B42 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C357C4B9DD99DE718E2B7255F547F0 /* Pods-Tests-dummy.m */; };
 		F7423985F2F36672B0676F7C22C88878 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875FEF289E0D1932B3F5E1542F4A0833 /* Map.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F7BB44E34433F080716BFB48FEF617A7 /* IntegerOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D6723C3182EA38D9AC6B559DB08770 /* IntegerOperators.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F7C1B16EE8AE9974CF20148DED09874B /* TKMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469673AF4E52DF8C960E9104A565C581 /* TKMappable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F7DA0178D7F5127F690645D3D92EFBF7 /* TKGUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981AF7F31D461BC3FC1ED119D41F737 /* TKGUISettings.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7C1B16EE8AE9974CF20148DED09874B /* TKMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AEE6759A16F0F3B1ADD65C31CB10F /* TKMappable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F7DA0178D7F5127F690645D3D92EFBF7 /* TKGUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652EE891C7A8E62E8E1749E920E33E6 /* TKGUISettings.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F8793AC47379BDC2F7646F966D82968D /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E625DBD955336A57F66198AB935F4E /* MapError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FDBFCB3490AAFD81A89F8B99B7992F90 /* TKVehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FF6DF04CD1CBD759B4B198A551A88F /* TKVehicleState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FE8B80D0BE8B1A32AAF791AA73D6CAD4 /* TKRangeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4575EA34E3B05DC128CC4599132F3062 /* TKRangeDisplay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FDBFCB3490AAFD81A89F8B99B7992F90 /* TKVehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CAA07AC6C880F8892A5CBF9675D498 /* TKVehicleState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FE8B80D0BE8B1A32AAF791AA73D6CAD4 /* TKRangeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0B34E436BF2B0FD0E34727748E3711 /* TKRangeDisplay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,254 +129,258 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00EA4EB7E7BB3232E79E8A890B4B2193 /* Configuration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Configuration.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes/TeslaAPI/Configuration.html; sourceTree = "<group>"; };
+		0061ABD07AAFF78006EA8FC26A9BBC76 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/Structs.html; sourceTree = "<group>"; };
+		01599A1FBE4AE729E442D3C99B6C6324 /* Make.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Make.html; path = docs/Structs/VINComponent/Make.html; sourceTree = "<group>"; };
+		026E1D031174CBE9B48CC510C91ED9F5 /* TKAccessToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKAccessToken.html; path = docs/Enums/TKAccessToken.html; sourceTree = "<group>"; };
 		02A2FD93A12A38A9D50719BEFD4F84D5 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
-		02AFE8D2A4744E0B6762C78D3EE309CD /* TKVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicle.swift; sourceTree = "<group>"; };
-		02D479C142F4B0B6B5C7048714F20A6A /* Configuration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Configuration.html; path = docs/Classes/TeslaAPI/Configuration.html; sourceTree = "<group>"; };
-		04605D1B6BBFEEAF11FFEB2535E60E20 /* TKError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKError.swift; sourceTree = "<group>"; };
-		04859021EFA85A4645B11BAE6C9088EA /* TKMappable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMappable.html; path = docs/Protocols/TKMappable.html; sourceTree = "<group>"; };
-		06881E4EF6ABD1ABD2D12F0457386516 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
-		07C452431A7190779656F6ED7F4FC67D /* TeslaAPI.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPI.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes/TeslaAPI.html; sourceTree = "<group>"; };
+		057EBCE107FC59E4E150BD0127C7A5C5 /* TKSetTemperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetTemperature.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKSetTemperature.html; sourceTree = "<group>"; };
+		069F3F62B176A1D60A861322EEE186A0 /* TKChargeState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKChargeState.html; sourceTree = "<group>"; };
+		073C812DCDF49EEAAD83813E1D260428 /* TKRangeDisplay.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRangeDisplay.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKRangeDisplay.html; sourceTree = "<group>"; };
+		07BD6159B59D20D37BAC31DDC3E92325 /* EnumCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = EnumCollection.html; path = docs/Protocols/EnumCollection.html; sourceTree = "<group>"; };
 		08DACA8B8BDF80035C0A172EEF8F110F /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A39F0C206592DC63D2D6758AA87FDDE /* TeslaKit.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaKit.tgz; path = docs/docsets/TeslaKit.tgz; sourceTree = "<group>"; };
+		0B150D3FC3846DCD89367A639FFEB375 /* TKMovePanoRoof.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMovePanoRoof.swift; sourceTree = "<group>"; };
 		0BB2D5B536834568CF05F193F7AB2D48 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CF6D8EDD3CF2645FD7D780E2817BE41 /* TeslaAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
-		0E35A23AF0492A66D7B97BDCE0B66D80 /* TKClimateState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKClimateState.html; path = docs/Structs/TKClimateState.html; sourceTree = "<group>"; };
 		0EB2DA74ED118C6A0922E306D996AD8F /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Sources/Mapper.swift; sourceTree = "<group>"; };
+		0EF4065DAB17BE4EE27801654299A441 /* TeslaAPIDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPIDelegate.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/TeslaAPIDelegate.html; sourceTree = "<group>"; };
 		0FDA218D3D863B4706E626858A26EC64 /* Pods-TeslaKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeslaKit-resources.sh"; sourceTree = "<group>"; };
-		1147761D150EB2F3EB4FD6359C41231B /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/Enums/TKAccessToken/Request.html; sourceTree = "<group>"; };
+		0FF199BA2B80B143F29243D29DB00DFA /* TKRefreshToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRefreshToken.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKRefreshToken.html; sourceTree = "<group>"; };
+		123FE2C9AD665EFEF9AD6E9642B84904 /* TeslaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TeslaKit.xcconfig; sourceTree = "<group>"; };
+		135970B2AE79210C5DFD45BA12E6A5C5 /* ManufactureLocation.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ManufactureLocation.html; path = docs/Structs/VINComponent/ManufactureLocation.html; sourceTree = "<group>"; };
 		148D5DA1044F11514C66F2E2DC3C13CC /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = Sources/DateTransform.swift; sourceTree = "<group>"; };
-		1528E712EA7CBE60EC497F511701B9F3 /* TKChargeUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeUnit.html; path = docs/Enums/TKChargeUnit.html; sourceTree = "<group>"; };
 		15304D2EAA071227DFAE65FA86264375 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
-		166B92610A2974F1E3F7CDC0DE856CE1 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		18A1CA9626BDDE97E92E8CC553688BFB /* TKChargingState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargingState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargingState.html; sourceTree = "<group>"; };
-		1A1A92E79665D62CD8D42CE3EAB49BA4 /* TKChargeState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKChargeState.html; sourceTree = "<group>"; };
+		16219C4E0B43C1DC8929C97439C215C7 /* TKDataRequest.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDataRequest.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKDataRequest.html; sourceTree = "<group>"; };
+		16CB2B08562E743AAB502C61FC26A1AE /* TKMovePanoRoof.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMovePanoRoof.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKMovePanoRoof.html; sourceTree = "<group>"; };
+		191A406C2A29EA5239559CA4D662A036 /* TKTemperatureUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKTemperatureUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKTemperatureUnit.html; sourceTree = "<group>"; };
+		199E8417B7A55DBC07B82DE6504A0734 /* DriveUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = DriveUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/DriveUnit.html; sourceTree = "<group>"; };
+		1A45850E0654F6A5FB5BA458360C5581 /* TKSetChargeLimit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetChargeLimit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKSetChargeLimit.html; sourceTree = "<group>"; };
+		1ABC93D9E945FE840123237B1BDAC4B7 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
 		1AF3804380E45A4ED351315CF8F3C71A /* ObjectMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.xcconfig; sourceTree = "<group>"; };
-		1C5D04ED7670B915DC32E148697D8C2B /* TKVehicleOptionTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOptionTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleOptionTransform.html; sourceTree = "<group>"; };
-		1DD8768882CB2DFB599DC363C4118DD2 /* TKDataRequest.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDataRequest.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKDataRequest.html; sourceTree = "<group>"; };
+		1B93DAAB2569A4ACFF7B797107346672 /* TKHeading.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKHeading.html; path = docs/Enums/TKHeading.html; sourceTree = "<group>"; };
+		1BFE843C5EE43A6297FC34A5A5E1B66D /* Temperature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		1C3A5AD9E87C1CAE72F9B3F7A800AD6F /* Configuration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Configuration.html; path = docs/Classes/TeslaAPI/Configuration.html; sourceTree = "<group>"; };
 		1E32A09B7819A075808D5FB523245570 /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = Sources/FromJSON.swift; sourceTree = "<group>"; };
-		1E355D00B4D56B77C6E61E0501A1CD54 /* TKShiftState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKShiftState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKShiftState.html; sourceTree = "<group>"; };
-		1F43F11F4E78A2191122DCED8157A099 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
-		1FF55321A7C8D1798DD7DF6ACE7B2A9A /* TKRangeDisplay.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRangeDisplay.html; path = docs/Enums/TKRangeDisplay.html; sourceTree = "<group>"; };
-		2038CDAB6DC1B9D00DC20025D4C40157 /* EnumCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = EnumCollection.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/EnumCollection.html; sourceTree = "<group>"; };
-		20A487924189CE627CE1E9EC63436FEA /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Typealiases.html; sourceTree = "<group>"; };
-		2114B802A6937DC5666FAD34E05140BF /* TKChargingState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargingState.html; path = docs/Enums/TKChargingState.html; sourceTree = "<group>"; };
-		2143747BB4D4CA42DA261251D543EEBC /* TKVehicleCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleCollection.html; path = docs/Structs/TKVehicleCollection.html; sourceTree = "<group>"; };
-		21A0EF5ABD9DD72CE6D3E64E4B8855DF /* TKResetValetPIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKResetValetPIN.html; path = docs/Structs/TKResetValetPIN.html; sourceTree = "<group>"; };
-		221673F955F08AA01C9FF921E23C6D72 /* BatteryType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = BatteryType.html; path = docs/Structs/VINComponent/BatteryType.html; sourceTree = "<group>"; };
-		22D7BD8ACC4FFA4F3BAE4CE3D7C0050F /* TKMovePanoRoof.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMovePanoRoof.html; path = docs/Structs/TKMovePanoRoof.html; sourceTree = "<group>"; };
-		253A1C589C08E84DB4885A81F714A453 /* TKVehicleState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleState.html; path = docs/Structs/TKVehicleState.html; sourceTree = "<group>"; };
-		2557AC3F7CE12D6307C3149302EBE678 /* TKHeading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKHeading.swift; sourceTree = "<group>"; };
-		262D0B772E3183BBCABBADA3B4A36F8A /* TKStringArrayTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKStringArrayTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKStringArrayTransform.html; sourceTree = "<group>"; };
-		26401B9D9DA35D01AFC0C440C33F3829 /* TKCommandResponse.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommandResponse.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKCommandResponse.html; sourceTree = "<group>"; };
-		27CBF195D221C98064ADDB0ECAFD4140 /* DriveUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = DriveUnit.html; path = docs/Structs/VINComponent/DriveUnit.html; sourceTree = "<group>"; };
-		2858243D71006861BFB00B66FB95E754 /* TeslaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TeslaKit.xcconfig; sourceTree = "<group>"; };
+		1EC218FEB6F2BF9CCFF0A644E252D43F /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		2020C4BFCC1E9CCBB27778829A5DD396 /* Manufacturer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Manufacturer.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/Manufacturer.html; sourceTree = "<group>"; };
+		202420545C4C1C27AD843910E5B72BEA /* TKMobileAccess.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMobileAccess.html; path = docs/Structs/TKMobileAccess.html; sourceTree = "<group>"; };
+		20A7F1ACD50544F6DA991918690B58EF /* TeslaKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TeslaKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2294A217BCC3BBA11D42DAD3B7516EE9 /* Configuration.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Configuration.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes/TeslaAPI/Configuration.html; sourceTree = "<group>"; };
+		236415BF456816B3530B6184445B595B /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		240135CD6C25A5B3AD73CAAF9691479D /* TeslaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TeslaKit-dummy.m"; sourceTree = "<group>"; };
+		25D51136056D7D1A1AD863E8439866DB /* TKChargingState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargingState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargingState.html; sourceTree = "<group>"; };
+		2606DF6BC739BCB14AD3E721088BDE0E /* TKTemperatureUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTemperatureUnit.swift; sourceTree = "<group>"; };
+		279DFA6A14D6585E951F96BA263FC304 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		284B1A0593D2CFBF07964B716BCEE218 /* EnumCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		28A128A14C89B6EBA06ED4322CEC2F0A /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2AEDD42A73BD85B64F4B8AA892A31E9F /* VINTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VINTransform.swift; sourceTree = "<group>"; };
-		2BFC1DDF995745C694437E5895C310CF /* EnumCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
-		2C0396BB7F349E06FFB9DFD96E242D1B /* ManufactureLocation.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ManufactureLocation.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/ManufactureLocation.html; sourceTree = "<group>"; };
-		2CE59C2E36CA35500A2C9C3B2AE1E0D1 /* TeslaKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = TeslaKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2D4F2FC59A6386A655B4C9ACFB48013E /* TKVehicleState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleState.html; sourceTree = "<group>"; };
-		2D7F3EF062D7DCDB0293AE9943F79CC4 /* VINTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINTransform.html; path = docs/Structs/VINTransform.html; sourceTree = "<group>"; };
+		28E9C76CC8D159638A2B403DA714AD77 /* TeslaAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
+		296AA70CC1CBB7A9DD2D68FF3378A6A8 /* TKAccessToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKAccessToken.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken.html; sourceTree = "<group>"; };
+		297D5C5C55CEB2462EB0719B57378676 /* TeslaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TeslaKit.modulemap; sourceTree = "<group>"; };
+		2A6DB83C3ED7ECE7DB53F4D304A03437 /* TKMappable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMappable.html; path = docs/Protocols/TKMappable.html; sourceTree = "<group>"; };
+		2B3DACDA135E856EFEFFB572E77A7FD2 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
 		2DF8741E48AAE7EC73987B23270DCA5A /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
-		2E869B3F35FF93D125CB4F4A25B79935 /* TKMovePanoRoof.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMovePanoRoof.swift; sourceTree = "<group>"; };
-		2EF4C55D035825ECC52F52B70AC6BD2E /* TKCommandResponse.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommandResponse.html; path = docs/Structs/TKCommandResponse.html; sourceTree = "<group>"; };
-		2FA729845B59BE2501532483B3984CB4 /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDistanceUnit.html; path = docs/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
+		2E8C8007AFB5D8E862511653B638BA04 /* TKHeading.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKHeading.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKHeading.html; sourceTree = "<group>"; };
+		2EA7D5CF2C42E72708B2C0309CC36D9C /* TKVehicleConfig.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleConfig.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleConfig.html; sourceTree = "<group>"; };
+		2EF8BC5BF5519C9860F5F77DD62A39A3 /* TKVehicleCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleCollection.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleCollection.html; sourceTree = "<group>"; };
+		2EFCC84A67104A41FF55610F6C2BF969 /* TKPanoRoofState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKPanoRoofState.html; path = docs/Enums/TKPanoRoofState.html; sourceTree = "<group>"; };
 		30664D5908E1ABA3314F0FBFCBD72DD7 /* Pods-TeslaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit.release.xcconfig"; sourceTree = "<group>"; };
-		307607AA7E223C2B709EE6673B63730B /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
 		314ACD886612C49F925DEC8E2C573900 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
-		31D7949BB81880693DF3E827361C7BCD /* DriveUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = DriveUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/DriveUnit.html; sourceTree = "<group>"; };
+		3152494170D8FDFD49DE8CF580A7CB5A /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
+		31F783CB5AFBDECDD3AB7864297CFE81 /* TKChargingState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargingState.html; path = docs/Enums/TKChargingState.html; sourceTree = "<group>"; };
 		3325FE27FEFD896C1B67BE16E3855876 /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
-		337A5AAB621DA262CA055F0D14E92CCA /* TKChargePortLatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargePortLatchState.swift; sourceTree = "<group>"; };
-		352124FD0CF854CA099BC1F307634DC4 /* TKVehicle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicle.html; path = docs/Structs/TKVehicle.html; sourceTree = "<group>"; };
-		35A498C2A69397AE2107A5B0F7C9F710 /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken/Request.html; sourceTree = "<group>"; };
-		3971FCF172B61E12001B06E2001D3B77 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		3AF8F98D62F18158D5EACB59D360DAE5 /* TKMovePanoRoof.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMovePanoRoof.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKMovePanoRoof.html; sourceTree = "<group>"; };
+		33610E982A59B3AA2B194CA4A125F0C0 /* VIN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VIN.swift; sourceTree = "<group>"; };
+		36B389B08EA14EF8EA2AC027694E7265 /* TKRefreshToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRefreshToken.html; path = docs/Enums/TKRefreshToken.html; sourceTree = "<group>"; };
+		374767654E445DC48A64EC79EF7A7E4F /* TKGUISettings.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKGUISettings.html; path = docs/Structs/TKGUISettings.html; sourceTree = "<group>"; };
+		37A066C40684E65E7AB69774C52C50A2 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
+		397D2FA352C9A1BB6E85D310CF652617 /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDistanceUnit.html; path = docs/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
+		3ABAD8AE96BE048FC5B6B0DEAFF8F1BF /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		3C6F777F3A62A8DE71E2CCDF097F6B53 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
 		3CA7C3E5DF7FB60507FEAF4A87461538 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E38C113283128533097CCE8B7A458ED /* TKError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKError.html; path = docs/Enums/TKError.html; sourceTree = "<group>"; };
-		3F29ECE5ABE4AAFC32FF3FD5BBA44108 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40A1B28F9DDBC0F534377F47DD8644AB /* ModelYear.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ModelYear.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/ModelYear.html; sourceTree = "<group>"; };
+		3EF2C8F2A4F3BA259937E68A385516DD /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		3FCDAB575738D7262D249EEFD1116F28 /* TKDistanceUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDistanceUnit.swift; sourceTree = "<group>"; };
 		40BFE290C0E93DDC9BE7F3B2F7ABE39C /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		41359D18801EA6B7CFA84EB2F8975F31 /* VINComponent.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINComponent.html; path = docs/Structs/VINComponent.html; sourceTree = "<group>"; };
 		415BBE9BDDAD41261D47B8BE5769FB35 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4206F8BFC049B6A5EA66EC04D1125EDC /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
-		44F842B95E2700353F80AFB2D2B867C8 /* TKClimateState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKClimateState.swift; sourceTree = "<group>"; };
-		4575EA34E3B05DC128CC4599132F3062 /* TKRangeDisplay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRangeDisplay.swift; sourceTree = "<group>"; };
-		469673AF4E52DF8C960E9104A565C581 /* TKMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMappable.swift; sourceTree = "<group>"; };
+		43870D5D183968343FE6920B32B3350F /* TKSetTemperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetTemperature.html; path = docs/Structs/TKSetTemperature.html; sourceTree = "<group>"; };
+		44E187D1C54E8A45D109637F0463F9E8 /* VINComponent.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINComponent.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent.html; sourceTree = "<group>"; };
+		46074FE6B25A18D44201F78EB872DD9B /* TKVehicleCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleCollection.html; path = docs/Structs/TKVehicleCollection.html; sourceTree = "<group>"; };
+		46BFCAEA1F0F9803A1333E5DCD5B5FA1 /* TKTemperatureUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKTemperatureUnit.html; path = docs/Enums/TKTemperatureUnit.html; sourceTree = "<group>"; };
 		4747AC143750711E23082B3192CFA605 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
 		47734214D7C51B73F9EFCEFAD0F48DC9 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
-		4788A206EB708DBA814A333EBCA07A79 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		4839E4026156C4A1B58A0DD33C2B3CC3 /* TKStringArrayTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKStringArrayTransform.html; path = docs/Structs/TKStringArrayTransform.html; sourceTree = "<group>"; };
-		494C465974DF20C5BF7F071D5B296FBF /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs.html; sourceTree = "<group>"; };
-		4A3CA8A88DA774DC126567FC2BA8023B /* VIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VIN.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VIN.html; sourceTree = "<group>"; };
+		47CAA07AC6C880F8892A5CBF9675D498 /* TKVehicleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleState.swift; sourceTree = "<group>"; };
+		4854182258EC04DB6F909DD6F7183592 /* TKVehicleOptionTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOptionTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleOptionTransform.html; sourceTree = "<group>"; };
+		4A5C999C4398EED3913B18C29B8981BB /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/Enums.html; sourceTree = "<group>"; };
 		4A9C1C3D228AA82200C219114F94752F /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
-		4D861E77C9225B5C762F8D5CE7551788 /* ModelYear.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ModelYear.html; path = docs/Structs/VINComponent/ModelYear.html; sourceTree = "<group>"; };
-		4FCA2A53BACAC42042C7E78FE904EDF0 /* TeslaAPIDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPIDelegate.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/TeslaAPIDelegate.html; sourceTree = "<group>"; };
-		505E7A363203522CEC077504DD23539D /* TKSetChargeLimit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetChargeLimit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKSetChargeLimit.html; sourceTree = "<group>"; };
+		50EC1A4632EA046981985E09FD771B04 /* TKRefreshToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRefreshToken.swift; sourceTree = "<group>"; };
 		51416FE3A9016F989F514EFB5EA74823 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
 		515BB24BCB558A6C6816DC6C1C97492C /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5546368915E6336B99DE2ACE30B8F898 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
-		558B12BCAB3347755EFCB104E9D5AA6F /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
-		5883048BE3EE2462127E2F73B71A5321 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/Structs.html; sourceTree = "<group>"; };
-		5ACAF3E93FC40AECBE77A245730E9A19 /* TKCommand.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommand.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKCommand.html; sourceTree = "<group>"; };
-		5CEA0AC23C11D714220FDA7C0214B990 /* TKRemoteStart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRemoteStart.swift; sourceTree = "<group>"; };
-		5D98D37FDBA097978F5D1B583329FA5C /* TKGUISettings.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKGUISettings.html; path = docs/Structs/TKGUISettings.html; sourceTree = "<group>"; };
-		5DA9BD918D7F271B240728A6971AE889 /* Temperature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		54E1E24E78956AEB7E21E32421CDA111 /* TKVehicle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicle.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicle.html; sourceTree = "<group>"; };
+		5502B91C0F1BB3E02431E11B1379E6E5 /* TKVehicle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicle.html; path = docs/Structs/TKVehicle.html; sourceTree = "<group>"; };
+		593BD4DBA0BDAF990432B235E384C5BD /* TKSetChargeLimit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetChargeLimit.html; path = docs/Structs/TKSetChargeLimit.html; sourceTree = "<group>"; };
+		5B5C904E0A1C20D6F36EB132CC6DF521 /* TKOpenTrunk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKOpenTrunk.swift; sourceTree = "<group>"; };
+		5DD516ECCD8D6EE191CD373A802CAB8E /* BatteryType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = BatteryType.html; path = docs/Structs/VINComponent/BatteryType.html; sourceTree = "<group>"; };
+		5E181FD230C68312A7C85082A33A2C98 /* TKVehicleStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleStatus.swift; sourceTree = "<group>"; };
+		5E87D23329A525F93E421C67B122B3C4 /* TKChargeState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeState.html; path = docs/Structs/TKChargeState.html; sourceTree = "<group>"; };
 		5EDACE97E75DA0F9A7AB24F1E1387F16 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
-		6014FB39B162692443351A87EDD74E8D /* TKVehicleCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleCommand.swift; sourceTree = "<group>"; };
-		62FF6DF04CD1CBD759B4B198A551A88F /* TKVehicleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleState.swift; sourceTree = "<group>"; };
-		63A3A8829C7F8CB98E66E18DC7BC7B15 /* TKDataRequest.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDataRequest.html; path = docs/Enums/TKDataRequest.html; sourceTree = "<group>"; };
-		65F9BC91DDD5E956EF73C2F27902FB9E /* VINTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINTransform.html; sourceTree = "<group>"; };
-		66BC2F4F84F07275ECDF42284BB7BB5F /* TKStringArrayTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKStringArrayTransform.swift; sourceTree = "<group>"; };
-		66E30E9D9295D7E942D201E41DEFBFCC /* Temperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Temperature.html; path = docs/Structs/Temperature.html; sourceTree = "<group>"; };
-		67A42A9F9552C27C61A201D84563B768 /* TKSetTemperature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKSetTemperature.swift; sourceTree = "<group>"; };
+		5F2AE43B3BFF523F8D7D292C8EA16F87 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		629146749A874771CA39E33F5E6BD87A /* VIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VIN.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VIN.html; sourceTree = "<group>"; };
+		6727D77E072C5E0D4F162B8B73F65B22 /* ModelYear.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ModelYear.html; path = docs/Structs/VINComponent/ModelYear.html; sourceTree = "<group>"; };
 		68E3492583793B93BD184B9FCB46D8BC /* Pods-TeslaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TeslaKit.modulemap"; sourceTree = "<group>"; };
-		6B9E7F887CE331F18FE8EE4260840D76 /* VINComponent.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINComponent.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent.html; sourceTree = "<group>"; };
-		6BB0FA2A6EFBC5D4EA1E61C50F0FA9D6 /* TKTemperatureUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKTemperatureUnit.html; path = docs/Enums/TKTemperatureUnit.html; sourceTree = "<group>"; };
-		6CA665006F086D99E7FB164A6214196B /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums.html; sourceTree = "<group>"; };
+		68F05A04BBE785010F56681CA683119C /* TKResetValetPIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKResetValetPIN.html; path = docs/Structs/TKResetValetPIN.html; sourceTree = "<group>"; };
+		6923DDC3AD6190B83171A07C9849183F /* TKChargeUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargeUnit.html; sourceTree = "<group>"; };
+		6A35DBB841938FEA4938A628CEA1F44A /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
+		6BBB8278F6F03124C332B9DFDF3AC050 /* BatteryType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = BatteryType.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/BatteryType.html; sourceTree = "<group>"; };
+		6D17EACDE823A1806BB06F1DDD17247C /* TKVehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicle.swift; sourceTree = "<group>"; };
 		6D4070935D76EBADC7F802E24C99023E /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Sources/HexColorTransform.swift; sourceTree = "<group>"; };
-		6DB792FE6EBFF9BD4B6854813467D1E9 /* TKMobileAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMobileAccess.swift; sourceTree = "<group>"; };
-		6E767E2F960E73A3A9705DFEDF094B05 /* TKSetChargeLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKSetChargeLimit.swift; sourceTree = "<group>"; };
-		6E9BD3A1D31E82743DEBAE75E6E415A7 /* TKTemperatureUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKTemperatureUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKTemperatureUnit.html; sourceTree = "<group>"; };
-		6EC41905A6F2536A1D0E217A900B832E /* TKVehicleStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleStatus.swift; sourceTree = "<group>"; };
-		6F52301BD71CD42D5024341C2F404158 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken/Response.html; sourceTree = "<group>"; };
+		6E114F47CEF3D1FBEDB693AC5D304FE2 /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/Enums/TKAccessToken/Request.html; sourceTree = "<group>"; };
 		6F8E4A08D4FCCFC40A5993A506E1B696 /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
-		720625A3D8E5B0E33BBF59C6D6305714 /* VIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VIN.html; path = docs/Structs/VIN.html; sourceTree = "<group>"; };
-		729CF39D97F11EEE2B108873FDBBBB5F /* TKShiftState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKShiftState.swift; sourceTree = "<group>"; };
-		73F0835E7A1025F29B225AA758F9F5B7 /* TKOpenTrunk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKOpenTrunk.swift; sourceTree = "<group>"; };
-		740F04A5FAB44B270D5559C84255AF13 /* TKVehicleCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleCollection.swift; sourceTree = "<group>"; };
+		7165257B48D5D1704CB8EC023940B795 /* TKVehicleOptionTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOptionTransform.html; path = docs/Structs/TKVehicleOptionTransform.html; sourceTree = "<group>"; };
+		7184B93F22C8E073AA74AE1EF0AD1060 /* TKError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKError.html; path = docs/Enums/TKError.html; sourceTree = "<group>"; };
+		72FAEE24E2D4DE7897696D960182F4B0 /* TKVehicleConfig.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleConfig.html; path = docs/Structs/TKVehicleConfig.html; sourceTree = "<group>"; };
+		73CF297BC9322053D83D7D0F82C25A0C /* EnumCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = EnumCollection.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/EnumCollection.html; sourceTree = "<group>"; };
 		7426050682FF14708B4CF873120848A6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76A4BDEA906C454969D7A774FB3FD90C /* TKShiftState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKShiftState.html; path = docs/Enums/TKShiftState.html; sourceTree = "<group>"; };
-		76DD10876B2CDB3407450E9981E0AEF5 /* Manufacturer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Manufacturer.html; path = docs/Structs/VINComponent/Manufacturer.html; sourceTree = "<group>"; };
-		77039480297B7447F14535A99C2A4A34 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/Enums/TKAccessToken/Response.html; sourceTree = "<group>"; };
-		7730F055B13AFF7D43ECA1ABE18C6A16 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/TeslaKit.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
-		786C6CE322EC8F7170A45D8D242870E3 /* TKChargePortLatchState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargePortLatchState.html; path = docs/Enums/TKChargePortLatchState.html; sourceTree = "<group>"; };
-		7D46B2CD2C011B66B1BC0A0ABFE83A22 /* TKDriveState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDriveState.html; path = docs/Structs/TKDriveState.html; sourceTree = "<group>"; };
-		7D820A7C873AD39E1FC4AD33B1E57368 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
-		7ED36DF9BDE5FADA276F2922B7438E38 /* TKAccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKAccessToken.swift; sourceTree = "<group>"; };
-		827DE3688F588B2C87E23BB532D2B2F9 /* TKRemoteStart.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRemoteStart.html; path = docs/Structs/TKRemoteStart.html; sourceTree = "<group>"; };
+		756A16873535985C2FEA2B90C0BB9CA9 /* TKDriveState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDriveState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKDriveState.html; sourceTree = "<group>"; };
+		7677B902E9A9D859BA659F19B6E5FAC9 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		79D1005BECA23497C1307DD7A949187F /* TKSetTemperature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKSetTemperature.swift; sourceTree = "<group>"; };
+		7A31C88544F0B8DC17EB4978F14A8944 /* TKVehicleCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleCommand.swift; sourceTree = "<group>"; };
+		7BDAEB409C18D1BEB850BB2D2C97D5E9 /* TKCommandResponse.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommandResponse.html; path = docs/Structs/TKCommandResponse.html; sourceTree = "<group>"; };
+		7D32309063EF07953C5B8BA05F1D40F5 /* TKChargeUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeUnit.html; path = docs/Enums/TKChargeUnit.html; sourceTree = "<group>"; };
+		7D340D1768FB30835CC8D9777D73E396 /* TKDataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDataResponse.swift; sourceTree = "<group>"; };
+		7EA14A03075939E0AB8761F4546941DF /* TKCommand.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommand.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKCommand.html; sourceTree = "<group>"; };
+		7F51A47AA15051AE67C6A27D547BCB50 /* TKChargePortLatchState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargePortLatchState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargePortLatchState.html; sourceTree = "<group>"; };
+		81380E9DD440BE3FFAD70F4F7C0477A6 /* TKShiftState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKShiftState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKShiftState.html; sourceTree = "<group>"; };
+		817D9419EC07B34CF35DCCE02FEDAC68 /* VINComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VINComponent.swift; sourceTree = "<group>"; };
+		825A46553D54B399E5258A87D1846952 /* TKVehicleState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleState.html; path = docs/Structs/TKVehicleState.html; sourceTree = "<group>"; };
 		82DD92E8C88027A4D8930D519C4B3A97 /* Pods-TeslaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeslaKit.debug.xcconfig"; sourceTree = "<group>"; };
+		834B5EBC0D431DB178B483BB994379A9 /* TKHeading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKHeading.swift; sourceTree = "<group>"; };
 		83EF8F775A20D5017A3EBE1CCDE05081 /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
-		856B200919CA39D8E8BD44D9C42F83DE /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDistanceUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
-		85DBD2C01B0D0903AE92A1B2B43BD3DC /* VINComponent.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINComponent.html; path = docs/Structs/VINComponent.html; sourceTree = "<group>"; };
-		85F0AF44794DE6FE8FE39D36B686DDE0 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
-		861D71DB817E6A4966494744F2FEF0ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/TeslaKit.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		8741CDD0B2B076A3E944AA6184B29D42 /* TKPanoRoofState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKPanoRoofState.swift; sourceTree = "<group>"; };
+		84FC77274E0C564D1087E7A521A6EBFE /* TKResetValetPIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKResetValetPIN.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKResetValetPIN.html; sourceTree = "<group>"; };
+		855B607A5A0BFB03FD3180080ED4CF62 /* TKShiftState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKShiftState.swift; sourceTree = "<group>"; };
+		8652EE891C7A8E62E8E1749E920E33E6 /* TKGUISettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKGUISettings.swift; sourceTree = "<group>"; };
 		875FEF289E0D1932B3F5E1542F4A0833 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
-		87A706AE03DD2808450912CBD9D3F36E /* Manufacturer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Manufacturer.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/Manufacturer.html; sourceTree = "<group>"; };
-		88350F948B2416AB3F7AA90B998D971C /* TeslaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TeslaKit.modulemap; sourceTree = "<group>"; };
-		889315BAF9067DFB6E152E4A85206063 /* TKPanoRoofState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKPanoRoofState.html; path = docs/Enums/TKPanoRoofState.html; sourceTree = "<group>"; };
-		88F924F32605F2200A47437BEC1FFC65 /* TKChargingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargingState.swift; sourceTree = "<group>"; };
+		887A77DE5F2B79A81EA19CF3F4845391 /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKRefreshToken/Request.html; sourceTree = "<group>"; };
 		89319E83D47C0DA5D6592A866C0CAA64 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		89577D70717D4A029D5651FD3A832CA4 /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
+		8995A54EE59B3C4A43B68BBD7A0F5B04 /* DriveUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = DriveUnit.html; path = docs/Structs/VINComponent/DriveUnit.html; sourceTree = "<group>"; };
 		8A8F789EE58618365DB0F974F5A3D105 /* Pods-TeslaKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TeslaKit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B346C8427564DD956DE1BCA2C7E5284 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
-		8B35FC04597546031932D27002722AB0 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		8D3F016BF3E7C7875331495DA7D7E990 /* TKChargeUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargeUnit.swift; sourceTree = "<group>"; };
+		8F18046E7BB07DAD61B53D501FE77E17 /* TKAccessToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKAccessToken.swift; sourceTree = "<group>"; };
 		8F3845A218086FCF184F69F85F933E80 /* Pods-TeslaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TeslaKit-umbrella.h"; sourceTree = "<group>"; };
-		9268E98DB383D1B3B2452896976FCC40 /* TKVehicleOption.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOption.html; path = docs/Structs/TKVehicleOption.html; sourceTree = "<group>"; };
+		915B79E358D2A755F49CBE4705EB5900 /* TKMappable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMappable.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/TKMappable.html; sourceTree = "<group>"; };
 		92B15DA53202A69BAA0B33D98340A00E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A3D42F04C8770C0C58F54C1303F217 /* Temperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Temperature.html; path = docs/Structs/Temperature.html; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		95460FF7232203B25C410CEEAFA062BB /* TKVehicleCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleCollection.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleCollection.html; sourceTree = "<group>"; };
+		94249334CFDD54373E476FF28DF8FC5F /* TKCommand.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommand.html; path = docs/Enums/TKCommand.html; sourceTree = "<group>"; };
+		9508333972D3F29D75BE0A5BCC081BDC /* TKStringArrayTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKStringArrayTransform.html; path = docs/Structs/TKStringArrayTransform.html; sourceTree = "<group>"; };
+		955A1E3CB0FC874C82216479307AF790 /* TKDataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDataRequest.swift; sourceTree = "<group>"; };
+		95A1C3BEE8C27D7B7C2ABE3E5CA8A0D4 /* TKSetChargeLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKSetChargeLimit.swift; sourceTree = "<group>"; };
 		95E1C14AB746DA74E5A436691428A1C8 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		96D3CCD92993CD89E4EB6A706B3C085B /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		97227067D16DBFB7CDE3E01E2872E378 /* TeslaAPI.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPI.html; path = docs/Classes/TeslaAPI.html; sourceTree = "<group>"; };
-		972403563D027060632243AFE70F01BA /* TKCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKCommand.swift; sourceTree = "<group>"; };
-		9803B7C4313324D63DB52E6DEC19E24F /* TKAccessToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKAccessToken.html; path = docs/Enums/TKAccessToken.html; sourceTree = "<group>"; };
 		9813A76BB05F098615AAF250EEF08DFB /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
-		9ABC702CE05DF2A80A2CFA3076C91063 /* TKResetValetPIN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKResetValetPIN.swift; sourceTree = "<group>"; };
-		9E1D2C38B71F5138661F532D229CF779 /* TKVehicleOption.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOption.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleOption.html; sourceTree = "<group>"; };
+		997C1A609BE3DC024D986961E458406F /* TKDriveState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDriveState.html; path = docs/Structs/TKDriveState.html; sourceTree = "<group>"; };
+		99C619056710F07867A93320421139C7 /* TKStringArrayTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKStringArrayTransform.swift; sourceTree = "<group>"; };
+		9A1925095FAE1DDBD550D30E81FA005B /* TKVehicleOptionTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleOptionTransform.swift; sourceTree = "<group>"; };
+		9B147FACAF3392AD203290C8AD9E3C43 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		9B332CEB64C4A84C87AC3C56ACA49068 /* TeslaKit.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaKit.tgz; path = docs/docsets/TeslaKit.tgz; sourceTree = "<group>"; };
+		9BA2E6DDCD30575E0540AD028182AC6B /* TKPanoRoofState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKPanoRoofState.swift; sourceTree = "<group>"; };
+		9C680F634CA83F1D45B8D7EA2D222850 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken/Response.html; sourceTree = "<group>"; };
 		9E8FEAA8BBFA2317FEF841622DAA2045 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
-		9EF228CED47A582C060066533DDBF3F9 /* TKRefreshToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRefreshToken.swift; sourceTree = "<group>"; };
-		A19CEE5537F862BC74342D3FD5DE72B5 /* TKCommand.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommand.html; path = docs/Enums/TKCommand.html; sourceTree = "<group>"; };
+		9F4CED57EC55FC9C0928C7B104E183DB /* TKError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKError.swift; sourceTree = "<group>"; };
+		A0FB3CF5EA3DD435F25A23A4F01D21B5 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
 		A1FABC013D5F1E9888A70A92FAE15586 /* Pods_TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TeslaKit.framework; path = "Pods-TeslaKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A22E7AF2EB3504F457B8EA92AD714216 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		A2C7C6893034B9B90FDEA4277B8D1C34 /* EnumCollection.html */ = {isa = PBXFileReference; includeInIndex = 1; name = EnumCollection.html; path = docs/Protocols/EnumCollection.html; sourceTree = "<group>"; };
-		A35B9AA6C3FA267B428F05764F045091 /* TKVehicleOptionTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleOptionTransform.swift; sourceTree = "<group>"; };
+		A2F7D2E4FDC56B6713A4736BA89E1E45 /* TeslaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-prefix.pch"; sourceTree = "<group>"; };
 		A35E14990E868BA1D1FF36FCA40AAF23 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
-		A7D7C928E427784F1A649A398C6418D4 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Protocols.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols.html; sourceTree = "<group>"; };
+		A3F6CD2F68B8DDEE57EDAC1EDEF0F4A5 /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/Enums/TKRefreshToken/Request.html; sourceTree = "<group>"; };
+		A568E185B851044B2CED196CC996ECB3 /* TKClimateState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKClimateState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKClimateState.html; sourceTree = "<group>"; };
+		A599AC5070A8BD82D1C517CDA664776C /* VINTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINTransform.html; sourceTree = "<group>"; };
+		A8894AEDE81EF9927672D66B97AD6C7B /* TKGUISettings.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKGUISettings.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKGUISettings.html; sourceTree = "<group>"; };
+		A95B28DAC12ACA6F9861D5723E07A7A0 /* TKVehicleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleConfig.swift; sourceTree = "<group>"; };
 		A966BC520EC24213ED8A404BAD131945 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAB588D33567594E2BFB9124A93824F8 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		AAE720656B5E59DBAF6DB5E090B02EC5 /* TKShiftState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKShiftState.html; path = docs/Enums/TKShiftState.html; sourceTree = "<group>"; };
+		AB0B34E436BF2B0FD0E34727748E3711 /* TKRangeDisplay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRangeDisplay.swift; sourceTree = "<group>"; };
 		AB942CDC232AD7E2D6666D1093E7E2FC /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		ABFCD9AA505C28408801164F5FEFBBC2 /* Pods-TeslaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TeslaKit-dummy.m"; sourceTree = "<group>"; };
-		ACF6D032D23A10DED2C1FA3D54B5AED1 /* TKVehicleConfig.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleConfig.html; path = docs/Structs/TKVehicleConfig.html; sourceTree = "<group>"; };
-		AE1A8D71FE67E9D9E170F1B90F9AD2D7 /* TKHeading.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKHeading.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKHeading.html; sourceTree = "<group>"; };
-		AE2CCA381F760924A982F77C3E5772AC /* TKAccessToken.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKAccessToken.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken.html; sourceTree = "<group>"; };
-		AF2177557759C59383B374F40F7C5BB9 /* TKGUISettings.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKGUISettings.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKGUISettings.html; sourceTree = "<group>"; };
-		AF2D6B0C65084BBBD447214B0D044531 /* TKVehicle.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicle.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicle.html; sourceTree = "<group>"; };
-		AFAA0517DBFE4D3C58239DC6F760BEF0 /* TKMobileAccess.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMobileAccess.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKMobileAccess.html; sourceTree = "<group>"; };
-		AFC2766D02E5B672FE50B5306A4EBFBF /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		AC667BE6DC428A7E7F8BC233A946C9D7 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Response.html; path = docs/Enums/TKAccessToken/Response.html; sourceTree = "<group>"; };
+		ACEDA8E0BE865C25AB913DC1F6FEFFEC /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		AD42477A95A5E3A086DFCCA42A33DCD1 /* TKVehicleCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleCollection.swift; sourceTree = "<group>"; };
+		AEE22F673BEB237A1AE6F98110F8B4FF /* TKRangeDisplay.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRangeDisplay.html; path = docs/Enums/TKRangeDisplay.html; sourceTree = "<group>"; };
+		AF0F183170BD4A637894FCF9C4C586E8 /* TKCommandResponse.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKCommandResponse.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKCommandResponse.html; sourceTree = "<group>"; };
+		B058EA4DEB0D37653CDC2E62F2AB2A84 /* VINTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VINTransform.html; path = docs/Structs/VINTransform.html; sourceTree = "<group>"; };
 		B179D23867B56FB227A51DB4D460FAF0 /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		B1A73F5E5440EC7C9D3ED17C82A3AD75 /* TKDataRequest.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDataRequest.html; path = docs/Enums/TKDataRequest.html; sourceTree = "<group>"; };
 		B27307BFEBE534526609E3D26A510739 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		B2A6099E0797F5C3DD80EA925B90EB39 /* TeslaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-umbrella.h"; sourceTree = "<group>"; };
 		B2DF738A6B762A564973B64A2DA71803 /* Pods-TeslaKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TeslaKit-acknowledgements.plist"; sourceTree = "<group>"; };
-		B324326F4794552BC33988A8CC98F433 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
 		B32C2C3CC77FAA74F8C1E20B4359ABCB /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B39884554588228FD8EE8DD9EC702CE6 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
-		B3DCEBADF9986E32E811115422D95A8E /* TKChargeState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeState.html; path = docs/Structs/TKChargeState.html; sourceTree = "<group>"; };
-		B4D64F86FDA0D71A5C5B2C2BA5B878A9 /* TKTemperatureUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKTemperatureUnit.swift; sourceTree = "<group>"; };
-		B6F3C12129D626AF5B75D4ADC4A9201F /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/Typealiases.html; sourceTree = "<group>"; };
+		B361D6D7176B29C104D46C799FEAA123 /* TeslaAPIDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPIDelegate.html; path = docs/Protocols/TeslaAPIDelegate.html; sourceTree = "<group>"; };
+		B59725478D5061AADFC635ECAF6AB81F /* TKChargePortLatchState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargePortLatchState.swift; sourceTree = "<group>"; };
+		B66845FD07539F435C6B1915FF4BEED5 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		B6C4966D5D208EC25F439C25BB44941B /* TKStringArrayTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKStringArrayTransform.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKStringArrayTransform.html; sourceTree = "<group>"; };
+		B6DAD48685463F8723F935BC9CB03944 /* TKMovePanoRoof.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMovePanoRoof.html; path = docs/Structs/TKMovePanoRoof.html; sourceTree = "<group>"; };
 		B73160C4634F9BD0AC71A396C585843A /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B982F7F5D5AF0112BEB23D7554677DF1 /* Enums.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Enums.html; path = docs/Enums.html; sourceTree = "<group>"; };
+		B7F21EE8D749C224A6B2BE182016C7B1 /* ModelYear.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ModelYear.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/ModelYear.html; sourceTree = "<group>"; };
+		B8BE949E2A06B40DDCC3643765E7AEF3 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		BA0C48BCDB89DA840DB15688276C83E7 /* TKVehicleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleOption.swift; sourceTree = "<group>"; };
 		BA4147B6017A5AE1C940D86AC1C6EC07 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
-		BB33EB94C96018E2FCD966ECAD63E25C /* TKVehicleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleConfig.swift; sourceTree = "<group>"; };
-		BB96EFEC4C23EFC3B9F9DDC8776AF9DA /* Make.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Make.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/Make.html; sourceTree = "<group>"; };
 		BBF2A8127EDF29ABAA8C2FD230237309 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BD35971155BE511E310D250D19DBAB78 /* Structs.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Structs.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs.html; sourceTree = "<group>"; };
 		BE204E3E82CD03E7E98A8BFF9E017DB1 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TeslaKit.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEF353348DED9597ED1E4AD9399B95F3 /* TeslaAPIDelegate.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPIDelegate.html; path = docs/Protocols/TeslaAPIDelegate.html; sourceTree = "<group>"; };
-		BF5E68F3BD4D027EC0DE950BB43E6833 /* TKDistanceUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDistanceUnit.swift; sourceTree = "<group>"; };
+		BE37E007597ADB31C9D6A861048C823A /* TeslaAPI.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPI.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes/TeslaAPI.html; sourceTree = "<group>"; };
+		BE427095BB215A63E641A0CEAFE06084 /* Make.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Make.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/Make.html; sourceTree = "<group>"; };
+		BF45BD3585D7D820DC8A1A26BC8F2EA1 /* TKMobileAccess.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMobileAccess.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKMobileAccess.html; sourceTree = "<group>"; };
 		BF6F8A659A5DA5426B6F6A0C155113B4 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
-		C1A5B7B9A17F7075F19EA23A5C2C9B16 /* TKVehicleStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleStatus.html; path = docs/Enums/TKVehicleStatus.html; sourceTree = "<group>"; };
-		C26D141DDA36A8004ECBE8F6FB64B59E /* TKRemoteStart.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRemoteStart.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKRemoteStart.html; sourceTree = "<group>"; };
-		C468BD0DB4AFBFECFEF29A39021B8850 /* TKSetChargeLimit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetChargeLimit.html; path = docs/Structs/TKSetChargeLimit.html; sourceTree = "<group>"; };
-		C5E5D6399CEB0519B3E27E72F7ABE3B5 /* TKChargeUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargeUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargeUnit.html; sourceTree = "<group>"; };
-		C7044C79E5B512AC5A3BCC9B99B6365A /* TKDriveState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDriveState.swift; sourceTree = "<group>"; };
+		C1EB739BA6FAA7112520F2BAC640F0F5 /* TKRemoteStart.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRemoteStart.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKRemoteStart.html; sourceTree = "<group>"; };
+		C2A9A6EB96D8DB07F4304AFD787AF41E /* TKVehicleState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleState.html; sourceTree = "<group>"; };
+		C4AF48DA2D9AFC33E88D32C4039686A0 /* TKPanoRoofState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKPanoRoofState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKPanoRoofState.html; sourceTree = "<group>"; };
+		C4FBF5401026E54CD525B09FC6C08B0E /* TKMobileAccess.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMobileAccess.swift; sourceTree = "<group>"; };
+		C581B996CCFE79C51EE535EFDC4D7296 /* TKError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKError.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKError.html; sourceTree = "<group>"; };
+		C74BB7B094806E301B7D17A750AEE268 /* TKVehicleOption.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOption.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleOption.html; sourceTree = "<group>"; };
 		C766D363EE85BB6318DEC6539F86C46A /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
+		C7943FDFC594F52B8FF9161178034FCE /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
 		C79B2531CE9F981B942661E878270C41 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
 		C805945201BF2AB9E8453AD882B85D5C /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C815DA87860CA354C6B2A0F5EC3805A9 /* TeslaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-prefix.pch"; sourceTree = "<group>"; };
-		C9318A13A7DB61B758860053D5CB4F5C /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
 		C98AA6151A9108F4712C41F3EADB7D42 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CCB95067D6F60705E568447310BAF2ED /* TKSetTemperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetTemperature.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKSetTemperature.html; sourceTree = "<group>"; };
-		CF0B2B0D41F8FFBB8495FDC21339D8DF /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
-		CF3E5344CD4738D85B5C1CAAE19D46A7 /* TKResetValetPIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKResetValetPIN.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKResetValetPIN.html; sourceTree = "<group>"; };
-		D0067486FD9DA52C8D848AFF4D50F9A2 /* TKVehicleConfig.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleConfig.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKVehicleConfig.html; sourceTree = "<group>"; };
-		D0C1E856EAF6AB5946BFCCBD571EBD86 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		CB5E085BB7F519CA5114B2C1669A17DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2C357C4B9DD99DE718E2B7255F547F0 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
-		D3F3FB274483393AE1AA0F7DE7E08292 /* TKChargeUnit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargeUnit.swift; sourceTree = "<group>"; };
-		D6E8FF72849ACA3D6D6F206258D798E8 /* TKChargePortLatchState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargePortLatchState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKChargePortLatchState.html; sourceTree = "<group>"; };
-		D73F74A98E9CAAD953BD42F49AC65D40 /* VIN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VIN.swift; sourceTree = "<group>"; };
+		D39D70333684007A181CD68814DBC2F8 /* TKClimateState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKClimateState.html; path = docs/Structs/TKClimateState.html; sourceTree = "<group>"; };
+		D3E43AFAD2657C4D2EB9BDAAE2F6F0DB /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/Typealiases.html; sourceTree = "<group>"; };
+		D3E968D1A2B83824A4959F8A6522676A /* VINTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VINTransform.swift; sourceTree = "<group>"; };
+		D52F790C1BC2A89FF3EEBF9D1F20A41D /* TKVehicleStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleStatus.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKVehicleStatus.html; sourceTree = "<group>"; };
 		D75D4398C1EA7779C009AA0C37C2E2F5 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D925708044A65A7AB7B639EEDC70DC46 /* TKDataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDataRequest.swift; sourceTree = "<group>"; };
-		DA63BB95396AAD6122F21F734B30EF69 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		DAB3C623C9910BC9C9D61510C461E233 /* TKDriveState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDriveState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKDriveState.html; sourceTree = "<group>"; };
-		DB3EA1C517F9576455051906F390D4BD /* TKDataResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDataResponse.swift; sourceTree = "<group>"; };
-		DB51387278C6CFA1B23A437052077EE5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		DD3F09F186084A797CDBD0B2182D3493 /* TKSetTemperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSetTemperature.html; path = docs/Structs/TKSetTemperature.html; sourceTree = "<group>"; };
-		E0DAD75AB6D97E9E5B7EC7B107D929D8 /* TKHeading.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKHeading.html; path = docs/Enums/TKHeading.html; sourceTree = "<group>"; };
+		DA10CEDF6F3CAC4619978A1A2BEDDC44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/TeslaKit.docset/Contents/Info.plist; sourceTree = "<group>"; };
+		DAC8393BEB5F0105971E017E0DD74488 /* TKVehicleStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleStatus.html; path = docs/Enums/TKVehicleStatus.html; sourceTree = "<group>"; };
+		DC24A7FC78AF80E88E45A395C5E1E2DE /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		DCC0217B9CDE0A4744E015A7AE5ED016 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		DEEE6BDE09E5D3F5FA476D9EFFD60985 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		DF67350A13CC8829BB987C6671C8174A /* Request.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Request.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken/Request.html; sourceTree = "<group>"; };
 		E1E625DBD955336A57F66198AB935F4E /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
-		E23788924D481A4B323D2F7A2AA75784 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
-		E3997358BCBE5EF12EE5CB152D325CC2 /* TKPanoRoofState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKPanoRoofState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKPanoRoofState.html; sourceTree = "<group>"; };
-		E459C878C0DCC88E23031597E30039D5 /* Temperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Temperature.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/Temperature.html; sourceTree = "<group>"; };
-		E63179ECCAEEA981E28D93FA6AC5DD62 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
 		E6D6723C3182EA38D9AC6B559DB08770 /* IntegerOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerOperators.swift; path = Sources/IntegerOperators.swift; sourceTree = "<group>"; };
+		E6D7605D894B5DB391051EFE2CB4D844 /* ManufactureLocation.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ManufactureLocation.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/ManufactureLocation.html; sourceTree = "<group>"; };
 		E7D490B12A2C16B37205161891646F9E /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
-		E835DF74CEDD9DF1AFB05F34CC6CF7B5 /* TKVehicleStatus.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleStatus.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKVehicleStatus.html; sourceTree = "<group>"; };
-		E8DFDD3E34E64F7B05A1ACAE9C461AED /* TKVehicleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKVehicleOption.swift; sourceTree = "<group>"; };
-		E915400300807E87F5ECF8464D29FD74 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		EABE89794E0187AB64300E613D36CDB5 /* TeslaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TeslaKit-dummy.m"; sourceTree = "<group>"; };
+		EAD3BC00C2CCE8D5516808C0D79E450D /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		EB9AEE6759A16F0F3B1ADD65C31CB10F /* TKMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKMappable.swift; sourceTree = "<group>"; };
+		EBB2DD4D1DA62455A7B0DBCB4D659ED6 /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKDistanceUnit.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
 		EE17B85E44F60B52E372384A4C8D5831 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
-		F0CE3C73C750A42AE8A89FB059AD5D81 /* TKClimateState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKClimateState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/TKClimateState.html; sourceTree = "<group>"; };
-		F0CF49482A738B54EDB93B63B173E5D3 /* VINComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VINComponent.swift; sourceTree = "<group>"; };
-		F2572E4568A8121248D3DD43A83B83D5 /* TKChargeState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargeState.swift; sourceTree = "<group>"; };
-		F38E884156760AC227162F527B63089D /* TKError.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKError.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKError.html; sourceTree = "<group>"; };
-		F3F967CF5EEDD65B21F04531B3DB7C68 /* TKRangeDisplay.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRangeDisplay.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKRangeDisplay.html; sourceTree = "<group>"; };
-		F51D183EA92AF7F1271394DFB9984EF7 /* BatteryType.html */ = {isa = PBXFileReference; includeInIndex = 1; name = BatteryType.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/VINComponent/BatteryType.html; sourceTree = "<group>"; };
-		F7635344698836547C99B95AC106A326 /* TKMobileAccess.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMobileAccess.html; path = docs/Structs/TKMobileAccess.html; sourceTree = "<group>"; };
-		F981AF7F31D461BC3FC1ED119D41F737 /* TKGUISettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKGUISettings.swift; sourceTree = "<group>"; };
-		F9E1074D65683F750C824B147BD7C166 /* ManufactureLocation.html */ = {isa = PBXFileReference; includeInIndex = 1; name = ManufactureLocation.html; path = docs/Structs/VINComponent/ManufactureLocation.html; sourceTree = "<group>"; };
+		EF24C5E47C21FC29206B4473F6C5B9F1 /* TKChargingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargingState.swift; sourceTree = "<group>"; };
+		F0965AEDEBACB27C745A4C7D2B2AD37E /* TKResetValetPIN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKResetValetPIN.swift; sourceTree = "<group>"; };
+		F0BC22BEA8220C3A99C99544EDE2BD6B /* TeslaAPI.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TeslaAPI.html; path = docs/Classes/TeslaAPI.html; sourceTree = "<group>"; };
+		F0F638B6983908F5BBE124AF3FB30C6E /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/TeslaKit.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		F24495EF96BDF3A90714B25F86DA628A /* TKRemoteStart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKRemoteStart.swift; sourceTree = "<group>"; };
+		F258B7CA8494DA5F5B4DC015AF24C734 /* VIN.html */ = {isa = PBXFileReference; includeInIndex = 1; name = VIN.html; path = docs/Structs/VIN.html; sourceTree = "<group>"; };
+		F2A80BAE566410E70410BC0D5ADD6DC8 /* TKRemoteStart.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKRemoteStart.html; path = docs/Structs/TKRemoteStart.html; sourceTree = "<group>"; };
+		F364AA2DD867E46C6DB00E2EE673BBAF /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		F4779AA64BFF6F331026224BD9E647A6 /* TKVehicleOption.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOption.html; path = docs/Structs/TKVehicleOption.html; sourceTree = "<group>"; };
+		F5E0B442E6C973E066F81AE2AEEE923A /* Typealiases.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Typealiases.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Typealiases.html; sourceTree = "<group>"; };
+		F71325253EFF9DE4B9D9A593AB03567B /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
+		F83263C5DA0071A86E17F7F223F9C92C /* Temperature.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Temperature.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Structs/Temperature.html; sourceTree = "<group>"; };
+		F9BC11282ECABEF17BF63C538612C87E /* TKChargePortLatchState.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKChargePortLatchState.html; path = docs/Enums/TKChargePortLatchState.html; sourceTree = "<group>"; };
+		F9D173F5E26D6619567F49FA63121D7E /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
 		FA49121CA5441F697AAF85E3185D66DA /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
-		FC1AEF20F1A9018241BB09BAAED326FC /* Make.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Make.html; path = docs/Structs/VINComponent/Make.html; sourceTree = "<group>"; };
-		FD873869067AD3BF904A7E8919CF2748 /* TKVehicleOptionTransform.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKVehicleOptionTransform.html; path = docs/Structs/TKVehicleOptionTransform.html; sourceTree = "<group>"; };
-		FE90AC4FFE013874A3995C1F2C671E17 /* TeslaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaKit-umbrella.h"; sourceTree = "<group>"; };
-		FF249EE8928D12095B2BD01A9D1D3802 /* TKMappable.html */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMappable.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Protocols/TKMappable.html; sourceTree = "<group>"; };
+		FBF6BEE9752880A3925AB0D7F63DBDBF /* TKCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKCommand.swift; sourceTree = "<group>"; };
+		FC44854E5D4C6BF9A41704176C9D3117 /* TKChargeState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKChargeState.swift; sourceTree = "<group>"; };
+		FD8675481709F0697BD93DE748C30556 /* TKDriveState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKDriveState.swift; sourceTree = "<group>"; };
+		FDA98AE8D1AC8C02E14175017063960E /* Manufacturer.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Manufacturer.html; path = docs/Structs/VINComponent/Manufacturer.html; sourceTree = "<group>"; };
+		FF136AC38A43683DBD3B949819EF498F /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		FF8C7210FC844B3EAAA41EFB088E05D2 /* TKClimateState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TKClimateState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,7 +431,7 @@
 		02D5FBE43576FD2491E8B0F454B00BB4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A89CEBE4C2CBF4C67C5820E7653FC17E /* TeslaKit */,
+				A10EF3042AEC82AA2539C2CBABC34F18 /* TeslaKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -473,6 +477,15 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
+		24447B50D5E9AE68054CE5475A6F7C2A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28E9C76CC8D159638A2B403DA714AD77 /* TeslaAPI.swift */,
+			);
+			name = Classes;
+			path = Source/Classes;
+			sourceTree = "<group>";
+		};
 		3F3A408C6172368115869EC1AC08A46F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,62 +528,6 @@
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
-		5BCEA41E51FE044DCA3117F6520EE185 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3F29ECE5ABE4AAFC32FF3FD5BBA44108 /* Info.plist */,
-				88350F948B2416AB3F7AA90B998D971C /* TeslaKit.modulemap */,
-				2858243D71006861BFB00B66FB95E754 /* TeslaKit.xcconfig */,
-				EABE89794E0187AB64300E613D36CDB5 /* TeslaKit-dummy.m */,
-				C815DA87860CA354C6B2A0F5EC3805A9 /* TeslaKit-prefix.pch */,
-				FE90AC4FFE013874A3995C1F2C671E17 /* TeslaKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/TeslaKit";
-			sourceTree = "<group>";
-		};
-		637DC86F62C03CC10959E390AEFE158D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				0CF6D8EDD3CF2645FD7D780E2817BE41 /* TeslaAPI.swift */,
-			);
-			name = Classes;
-			path = Source/Classes;
-			sourceTree = "<group>";
-		};
-		6FC0E2C52FF7FBD7F17F7DD2B278E0E7 /* Structures */ = {
-			isa = PBXGroup;
-			children = (
-				5DA9BD918D7F271B240728A6971AE889 /* Temperature.swift */,
-				7ED36DF9BDE5FADA276F2922B7438E38 /* TKAccessToken.swift */,
-				F2572E4568A8121248D3DD43A83B83D5 /* TKChargeState.swift */,
-				44F842B95E2700353F80AFB2D2B867C8 /* TKClimateState.swift */,
-				C7044C79E5B512AC5A3BCC9B99B6365A /* TKDriveState.swift */,
-				F981AF7F31D461BC3FC1ED119D41F737 /* TKGUISettings.swift */,
-				6DB792FE6EBFF9BD4B6854813467D1E9 /* TKMobileAccess.swift */,
-				2E869B3F35FF93D125CB4F4A25B79935 /* TKMovePanoRoof.swift */,
-				73F0835E7A1025F29B225AA758F9F5B7 /* TKOpenTrunk.swift */,
-				9EF228CED47A582C060066533DDBF3F9 /* TKRefreshToken.swift */,
-				5CEA0AC23C11D714220FDA7C0214B990 /* TKRemoteStart.swift */,
-				9ABC702CE05DF2A80A2CFA3076C91063 /* TKResetValetPIN.swift */,
-				6E767E2F960E73A3A9705DFEDF094B05 /* TKSetChargeLimit.swift */,
-				67A42A9F9552C27C61A201D84563B768 /* TKSetTemperature.swift */,
-				66BC2F4F84F07275ECDF42284BB7BB5F /* TKStringArrayTransform.swift */,
-				02AFE8D2A4744E0B6762C78D3EE309CD /* TKVehicle.swift */,
-				740F04A5FAB44B270D5559C84255AF13 /* TKVehicleCollection.swift */,
-				6014FB39B162692443351A87EDD74E8D /* TKVehicleCommand.swift */,
-				BB33EB94C96018E2FCD966ECAD63E25C /* TKVehicleConfig.swift */,
-				E8DFDD3E34E64F7B05A1ACAE9C461AED /* TKVehicleOption.swift */,
-				A35B9AA6C3FA267B428F05764F045091 /* TKVehicleOptionTransform.swift */,
-				62FF6DF04CD1CBD759B4B198A551A88F /* TKVehicleState.swift */,
-				D73F74A98E9CAAD953BD42F49AC65D40 /* VIN.swift */,
-				F0CF49482A738B54EDB93B63B173E5D3 /* VINComponent.swift */,
-				2AEDD42A73BD85B64F4B8AA892A31E9F /* VINTransform.swift */,
-			);
-			name = Structures;
-			path = Source/Structures;
-			sourceTree = "<group>";
-		};
 		72A4F101D4D40D3C9EBA12D90663F5FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,26 +567,160 @@
 			);
 			sourceTree = "<group>";
 		};
-		A7ABC384EEB434E005818C53AEABB65D /* Protocols */ = {
+		8ADC5B20271FEAC1E668C7043EAEE0DF /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2BFC1DDF995745C694437E5895C310CF /* EnumCollection.swift */,
-				DB3EA1C517F9576455051906F390D4BD /* TKDataResponse.swift */,
-				469673AF4E52DF8C960E9104A565C581 /* TKMappable.swift */,
+				3EF2C8F2A4F3BA259937E68A385516DD /* badge.svg */,
+				6BBB8278F6F03124C332B9DFDF3AC050 /* BatteryType.html */,
+				5DD516ECCD8D6EE191CD373A802CAB8E /* BatteryType.html */,
+				9B147FACAF3392AD203290C8AD9E3C43 /* carat.png */,
+				7677B902E9A9D859BA659F19B6E5FAC9 /* carat.png */,
+				B8BE949E2A06B40DDCC3643765E7AEF3 /* Classes.html */,
+				1EC218FEB6F2BF9CCFF0A644E252D43F /* Classes.html */,
+				1C3A5AD9E87C1CAE72F9B3F7A800AD6F /* Configuration.html */,
+				2294A217BCC3BBA11D42DAD3B7516EE9 /* Configuration.html */,
+				6A35DBB841938FEA4938A628CEA1F44A /* dash.png */,
+				DEEE6BDE09E5D3F5FA476D9EFFD60985 /* dash.png */,
+				F0F638B6983908F5BBE124AF3FB30C6E /* docSet.dsidx */,
+				8995A54EE59B3C4A43B68BBD7A0F5B04 /* DriveUnit.html */,
+				199E8417B7A55DBC07B82DE6504A0734 /* DriveUnit.html */,
+				73CF297BC9322053D83D7D0F82C25A0C /* EnumCollection.html */,
+				07BD6159B59D20D37BAC31DDC3E92325 /* EnumCollection.html */,
+				3C6F777F3A62A8DE71E2CCDF097F6B53 /* Enums.html */,
+				4A5C999C4398EED3913B18C29B8981BB /* Enums.html */,
+				3152494170D8FDFD49DE8CF580A7CB5A /* gh.png */,
+				EAD3BC00C2CCE8D5516808C0D79E450D /* gh.png */,
+				F71325253EFF9DE4B9D9A593AB03567B /* highlight.css */,
+				B66845FD07539F435C6B1915FF4BEED5 /* highlight.css */,
+				DC24A7FC78AF80E88E45A395C5E1E2DE /* index.html */,
+				279DFA6A14D6585E951F96BA263FC304 /* index.html */,
+				DA10CEDF6F3CAC4619978A1A2BEDDC44 /* Info.plist */,
+				3ABAD8AE96BE048FC5B6B0DEAFF8F1BF /* jazzy.css */,
+				FF136AC38A43683DBD3B949819EF498F /* jazzy.css */,
+				C7943FDFC594F52B8FF9161178034FCE /* jazzy.js */,
+				2B3DACDA135E856EFEFFB572E77A7FD2 /* jazzy.js */,
+				F364AA2DD867E46C6DB00E2EE673BBAF /* jquery.min.js */,
+				236415BF456816B3530B6184445B595B /* jquery.min.js */,
+				DCC0217B9CDE0A4744E015A7AE5ED016 /* LICENSE */,
+				BE427095BB215A63E641A0CEAFE06084 /* Make.html */,
+				01599A1FBE4AE729E442D3C99B6C6324 /* Make.html */,
+				135970B2AE79210C5DFD45BA12E6A5C5 /* ManufactureLocation.html */,
+				E6D7605D894B5DB391051EFE2CB4D844 /* ManufactureLocation.html */,
+				FDA98AE8D1AC8C02E14175017063960E /* Manufacturer.html */,
+				2020C4BFCC1E9CCBB27778829A5DD396 /* Manufacturer.html */,
+				B7F21EE8D749C224A6B2BE182016C7B1 /* ModelYear.html */,
+				6727D77E072C5E0D4F162B8B73F65B22 /* ModelYear.html */,
+				1ABC93D9E945FE840123237B1BDAC4B7 /* Protocols.html */,
+				37A066C40684E65E7AB69774C52C50A2 /* Protocols.html */,
+				5F2AE43B3BFF523F8D7D292C8EA16F87 /* README.md */,
+				887A77DE5F2B79A81EA19CF3F4845391 /* Request.html */,
+				6E114F47CEF3D1FBEDB693AC5D304FE2 /* Request.html */,
+				A3F6CD2F68B8DDEE57EDAC1EDEF0F4A5 /* Request.html */,
+				DF67350A13CC8829BB987C6671C8174A /* Request.html */,
+				AC667BE6DC428A7E7F8BC233A946C9D7 /* Response.html */,
+				9C680F634CA83F1D45B8D7EA2D222850 /* Response.html */,
+				A0FB3CF5EA3DD435F25A23A4F01D21B5 /* search.json */,
+				ACEDA8E0BE865C25AB913DC1F6FEFFEC /* search.json */,
+				0061ABD07AAFF78006EA8FC26A9BBC76 /* Structs.html */,
+				BD35971155BE511E310D250D19DBAB78 /* Structs.html */,
+				F83263C5DA0071A86E17F7F223F9C92C /* Temperature.html */,
+				93A3D42F04C8770C0C58F54C1303F217 /* Temperature.html */,
+				F0BC22BEA8220C3A99C99544EDE2BD6B /* TeslaAPI.html */,
+				BE37E007597ADB31C9D6A861048C823A /* TeslaAPI.html */,
+				B361D6D7176B29C104D46C799FEAA123 /* TeslaAPIDelegate.html */,
+				0EF4065DAB17BE4EE27801654299A441 /* TeslaAPIDelegate.html */,
+				20A7F1ACD50544F6DA991918690B58EF /* TeslaKit.podspec */,
+				9B332CEB64C4A84C87AC3C56ACA49068 /* TeslaKit.tgz */,
+				296AA70CC1CBB7A9DD2D68FF3378A6A8 /* TKAccessToken.html */,
+				026E1D031174CBE9B48CC510C91ED9F5 /* TKAccessToken.html */,
+				F9BC11282ECABEF17BF63C538612C87E /* TKChargePortLatchState.html */,
+				7F51A47AA15051AE67C6A27D547BCB50 /* TKChargePortLatchState.html */,
+				069F3F62B176A1D60A861322EEE186A0 /* TKChargeState.html */,
+				5E87D23329A525F93E421C67B122B3C4 /* TKChargeState.html */,
+				7D32309063EF07953C5B8BA05F1D40F5 /* TKChargeUnit.html */,
+				6923DDC3AD6190B83171A07C9849183F /* TKChargeUnit.html */,
+				31F783CB5AFBDECDD3AB7864297CFE81 /* TKChargingState.html */,
+				25D51136056D7D1A1AD863E8439866DB /* TKChargingState.html */,
+				A568E185B851044B2CED196CC996ECB3 /* TKClimateState.html */,
+				D39D70333684007A181CD68814DBC2F8 /* TKClimateState.html */,
+				94249334CFDD54373E476FF28DF8FC5F /* TKCommand.html */,
+				7EA14A03075939E0AB8761F4546941DF /* TKCommand.html */,
+				7BDAEB409C18D1BEB850BB2D2C97D5E9 /* TKCommandResponse.html */,
+				AF0F183170BD4A637894FCF9C4C586E8 /* TKCommandResponse.html */,
+				B1A73F5E5440EC7C9D3ED17C82A3AD75 /* TKDataRequest.html */,
+				16219C4E0B43C1DC8929C97439C215C7 /* TKDataRequest.html */,
+				397D2FA352C9A1BB6E85D310CF652617 /* TKDistanceUnit.html */,
+				EBB2DD4D1DA62455A7B0DBCB4D659ED6 /* TKDistanceUnit.html */,
+				997C1A609BE3DC024D986961E458406F /* TKDriveState.html */,
+				756A16873535985C2FEA2B90C0BB9CA9 /* TKDriveState.html */,
+				C581B996CCFE79C51EE535EFDC4D7296 /* TKError.html */,
+				7184B93F22C8E073AA74AE1EF0AD1060 /* TKError.html */,
+				374767654E445DC48A64EC79EF7A7E4F /* TKGUISettings.html */,
+				A8894AEDE81EF9927672D66B97AD6C7B /* TKGUISettings.html */,
+				1B93DAAB2569A4ACFF7B797107346672 /* TKHeading.html */,
+				2E8C8007AFB5D8E862511653B638BA04 /* TKHeading.html */,
+				915B79E358D2A755F49CBE4705EB5900 /* TKMappable.html */,
+				2A6DB83C3ED7ECE7DB53F4D304A03437 /* TKMappable.html */,
+				202420545C4C1C27AD843910E5B72BEA /* TKMobileAccess.html */,
+				BF45BD3585D7D820DC8A1A26BC8F2EA1 /* TKMobileAccess.html */,
+				16CB2B08562E743AAB502C61FC26A1AE /* TKMovePanoRoof.html */,
+				B6DAD48685463F8723F935BC9CB03944 /* TKMovePanoRoof.html */,
+				2EFCC84A67104A41FF55610F6C2BF969 /* TKPanoRoofState.html */,
+				C4AF48DA2D9AFC33E88D32C4039686A0 /* TKPanoRoofState.html */,
+				AEE22F673BEB237A1AE6F98110F8B4FF /* TKRangeDisplay.html */,
+				073C812DCDF49EEAAD83813E1D260428 /* TKRangeDisplay.html */,
+				0FF199BA2B80B143F29243D29DB00DFA /* TKRefreshToken.html */,
+				36B389B08EA14EF8EA2AC027694E7265 /* TKRefreshToken.html */,
+				C1EB739BA6FAA7112520F2BAC640F0F5 /* TKRemoteStart.html */,
+				F2A80BAE566410E70410BC0D5ADD6DC8 /* TKRemoteStart.html */,
+				84FC77274E0C564D1087E7A521A6EBFE /* TKResetValetPIN.html */,
+				68F05A04BBE785010F56681CA683119C /* TKResetValetPIN.html */,
+				593BD4DBA0BDAF990432B235E384C5BD /* TKSetChargeLimit.html */,
+				1A45850E0654F6A5FB5BA458360C5581 /* TKSetChargeLimit.html */,
+				43870D5D183968343FE6920B32B3350F /* TKSetTemperature.html */,
+				057EBCE107FC59E4E150BD0127C7A5C5 /* TKSetTemperature.html */,
+				AAE720656B5E59DBAF6DB5E090B02EC5 /* TKShiftState.html */,
+				81380E9DD440BE3FFAD70F4F7C0477A6 /* TKShiftState.html */,
+				9508333972D3F29D75BE0A5BCC081BDC /* TKStringArrayTransform.html */,
+				B6C4966D5D208EC25F439C25BB44941B /* TKStringArrayTransform.html */,
+				191A406C2A29EA5239559CA4D662A036 /* TKTemperatureUnit.html */,
+				46BFCAEA1F0F9803A1333E5DCD5B5FA1 /* TKTemperatureUnit.html */,
+				5502B91C0F1BB3E02431E11B1379E6E5 /* TKVehicle.html */,
+				54E1E24E78956AEB7E21E32421CDA111 /* TKVehicle.html */,
+				2EF8BC5BF5519C9860F5F77DD62A39A3 /* TKVehicleCollection.html */,
+				46074FE6B25A18D44201F78EB872DD9B /* TKVehicleCollection.html */,
+				72FAEE24E2D4DE7897696D960182F4B0 /* TKVehicleConfig.html */,
+				2EA7D5CF2C42E72708B2C0309CC36D9C /* TKVehicleConfig.html */,
+				F4779AA64BFF6F331026224BD9E647A6 /* TKVehicleOption.html */,
+				C74BB7B094806E301B7D17A750AEE268 /* TKVehicleOption.html */,
+				4854182258EC04DB6F909DD6F7183592 /* TKVehicleOptionTransform.html */,
+				7165257B48D5D1704CB8EC023940B795 /* TKVehicleOptionTransform.html */,
+				C2A9A6EB96D8DB07F4304AFD787AF41E /* TKVehicleState.html */,
+				825A46553D54B399E5258A87D1846952 /* TKVehicleState.html */,
+				DAC8393BEB5F0105971E017E0DD74488 /* TKVehicleStatus.html */,
+				D52F790C1BC2A89FF3EEBF9D1F20A41D /* TKVehicleStatus.html */,
+				F5E0B442E6C973E066F81AE2AEEE923A /* Typealiases.html */,
+				D3E43AFAD2657C4D2EB9BDAAE2F6F0DB /* Typealiases.html */,
+				F9D173F5E26D6619567F49FA63121D7E /* undocumented.json */,
+				629146749A874771CA39E33F5E6BD87A /* VIN.html */,
+				F258B7CA8494DA5F5B4DC015AF24C734 /* VIN.html */,
+				41359D18801EA6B7CFA84EB2F8975F31 /* VINComponent.html */,
+				44E187D1C54E8A45D109637F0463F9E8 /* VINComponent.html */,
+				A599AC5070A8BD82D1C517CDA664776C /* VINTransform.html */,
+				B058EA4DEB0D37653CDC2E62F2AB2A84 /* VINTransform.html */,
 			);
-			name = Protocols;
-			path = Source/Protocols;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		A89CEBE4C2CBF4C67C5820E7653FC17E /* TeslaKit */ = {
+		A10EF3042AEC82AA2539C2CBABC34F18 /* TeslaKit */ = {
 			isa = PBXGroup;
 			children = (
-				637DC86F62C03CC10959E390AEFE158D /* Classes */,
-				E64DC5CB77031CB1BE4B64B69E67A203 /* Enumerations */,
-				DC3B62FFF54298ACC13380B960EAECC2 /* Pod */,
-				A7ABC384EEB434E005818C53AEABB65D /* Protocols */,
-				6FC0E2C52FF7FBD7F17F7DD2B278E0E7 /* Structures */,
-				5BCEA41E51FE044DCA3117F6520EE185 /* Support Files */,
+				24447B50D5E9AE68054CE5475A6F7C2A /* Classes */,
+				F5635B9FA957824F8D25A071BEE396D0 /* Enumerations */,
+				8ADC5B20271FEAC1E668C7043EAEE0DF /* Pod */,
+				F0003BD29C0F897CFDF93981C91F37DC /* Protocols */,
+				B8544C4CD3B6E16C31C5D4BC1B9E70DA /* Structures */,
+				F27B2D5C018867A01A20664CF78F27EE /* Support Files */,
 			);
 			name = TeslaKit;
 			path = ..;
@@ -643,166 +734,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DC3B62FFF54298ACC13380B960EAECC2 /* Pod */ = {
+		B8544C4CD3B6E16C31C5D4BC1B9E70DA /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				B39884554588228FD8EE8DD9EC702CE6 /* badge.svg */,
-				221673F955F08AA01C9FF921E23C6D72 /* BatteryType.html */,
-				F51D183EA92AF7F1271394DFB9984EF7 /* BatteryType.html */,
-				558B12BCAB3347755EFCB104E9D5AA6F /* carat.png */,
-				B324326F4794552BC33988A8CC98F433 /* carat.png */,
-				C9318A13A7DB61B758860053D5CB4F5C /* Classes.html */,
-				7D820A7C873AD39E1FC4AD33B1E57368 /* Classes.html */,
-				00EA4EB7E7BB3232E79E8A890B4B2193 /* Configuration.html */,
-				02D479C142F4B0B6B5C7048714F20A6A /* Configuration.html */,
-				5546368915E6336B99DE2ACE30B8F898 /* dash.png */,
-				8B35FC04597546031932D27002722AB0 /* dash.png */,
-				7730F055B13AFF7D43ECA1ABE18C6A16 /* docSet.dsidx */,
-				27CBF195D221C98064ADDB0ECAFD4140 /* DriveUnit.html */,
-				31D7949BB81880693DF3E827361C7BCD /* DriveUnit.html */,
-				A2C7C6893034B9B90FDEA4277B8D1C34 /* EnumCollection.html */,
-				2038CDAB6DC1B9D00DC20025D4C40157 /* EnumCollection.html */,
-				B982F7F5D5AF0112BEB23D7554677DF1 /* Enums.html */,
-				6CA665006F086D99E7FB164A6214196B /* Enums.html */,
-				1F43F11F4E78A2191122DCED8157A099 /* gh.png */,
-				85F0AF44794DE6FE8FE39D36B686DDE0 /* gh.png */,
-				4788A206EB708DBA814A333EBCA07A79 /* highlight.css */,
-				CF0B2B0D41F8FFBB8495FDC21339D8DF /* highlight.css */,
-				8B346C8427564DD956DE1BCA2C7E5284 /* index.html */,
-				AAB588D33567594E2BFB9124A93824F8 /* index.html */,
-				861D71DB817E6A4966494744F2FEF0ED /* Info.plist */,
-				307607AA7E223C2B709EE6673B63730B /* jazzy.css */,
-				A22E7AF2EB3504F457B8EA92AD714216 /* jazzy.css */,
-				E23788924D481A4B323D2F7A2AA75784 /* jazzy.js */,
-				DA63BB95396AAD6122F21F734B30EF69 /* jazzy.js */,
-				E63179ECCAEEA981E28D93FA6AC5DD62 /* jquery.min.js */,
-				166B92610A2974F1E3F7CDC0DE856CE1 /* jquery.min.js */,
-				E915400300807E87F5ECF8464D29FD74 /* LICENSE */,
-				BB96EFEC4C23EFC3B9F9DDC8776AF9DA /* Make.html */,
-				FC1AEF20F1A9018241BB09BAAED326FC /* Make.html */,
-				F9E1074D65683F750C824B147BD7C166 /* ManufactureLocation.html */,
-				2C0396BB7F349E06FFB9DFD96E242D1B /* ManufactureLocation.html */,
-				87A706AE03DD2808450912CBD9D3F36E /* Manufacturer.html */,
-				76DD10876B2CDB3407450E9981E0AEF5 /* Manufacturer.html */,
-				4D861E77C9225B5C762F8D5CE7551788 /* ModelYear.html */,
-				40A1B28F9DDBC0F534377F47DD8644AB /* ModelYear.html */,
-				06881E4EF6ABD1ABD2D12F0457386516 /* Protocols.html */,
-				A7D7C928E427784F1A649A398C6418D4 /* Protocols.html */,
-				DB51387278C6CFA1B23A437052077EE5 /* README.md */,
-				35A498C2A69397AE2107A5B0F7C9F710 /* Request.html */,
-				1147761D150EB2F3EB4FD6359C41231B /* Request.html */,
-				6F52301BD71CD42D5024341C2F404158 /* Response.html */,
-				77039480297B7447F14535A99C2A4A34 /* Response.html */,
-				3971FCF172B61E12001B06E2001D3B77 /* search.json */,
-				D0C1E856EAF6AB5946BFCCBD571EBD86 /* search.json */,
-				5883048BE3EE2462127E2F73B71A5321 /* Structs.html */,
-				494C465974DF20C5BF7F071D5B296FBF /* Structs.html */,
-				66E30E9D9295D7E942D201E41DEFBFCC /* Temperature.html */,
-				E459C878C0DCC88E23031597E30039D5 /* Temperature.html */,
-				97227067D16DBFB7CDE3E01E2872E378 /* TeslaAPI.html */,
-				07C452431A7190779656F6ED7F4FC67D /* TeslaAPI.html */,
-				BEF353348DED9597ED1E4AD9399B95F3 /* TeslaAPIDelegate.html */,
-				4FCA2A53BACAC42042C7E78FE904EDF0 /* TeslaAPIDelegate.html */,
-				2CE59C2E36CA35500A2C9C3B2AE1E0D1 /* TeslaKit.podspec */,
-				0A39F0C206592DC63D2D6758AA87FDDE /* TeslaKit.tgz */,
-				AE2CCA381F760924A982F77C3E5772AC /* TKAccessToken.html */,
-				9803B7C4313324D63DB52E6DEC19E24F /* TKAccessToken.html */,
-				786C6CE322EC8F7170A45D8D242870E3 /* TKChargePortLatchState.html */,
-				D6E8FF72849ACA3D6D6F206258D798E8 /* TKChargePortLatchState.html */,
-				1A1A92E79665D62CD8D42CE3EAB49BA4 /* TKChargeState.html */,
-				B3DCEBADF9986E32E811115422D95A8E /* TKChargeState.html */,
-				C5E5D6399CEB0519B3E27E72F7ABE3B5 /* TKChargeUnit.html */,
-				1528E712EA7CBE60EC497F511701B9F3 /* TKChargeUnit.html */,
-				18A1CA9626BDDE97E92E8CC553688BFB /* TKChargingState.html */,
-				2114B802A6937DC5666FAD34E05140BF /* TKChargingState.html */,
-				F0CE3C73C750A42AE8A89FB059AD5D81 /* TKClimateState.html */,
-				0E35A23AF0492A66D7B97BDCE0B66D80 /* TKClimateState.html */,
-				A19CEE5537F862BC74342D3FD5DE72B5 /* TKCommand.html */,
-				5ACAF3E93FC40AECBE77A245730E9A19 /* TKCommand.html */,
-				2EF4C55D035825ECC52F52B70AC6BD2E /* TKCommandResponse.html */,
-				26401B9D9DA35D01AFC0C440C33F3829 /* TKCommandResponse.html */,
-				1DD8768882CB2DFB599DC363C4118DD2 /* TKDataRequest.html */,
-				63A3A8829C7F8CB98E66E18DC7BC7B15 /* TKDataRequest.html */,
-				856B200919CA39D8E8BD44D9C42F83DE /* TKDistanceUnit.html */,
-				2FA729845B59BE2501532483B3984CB4 /* TKDistanceUnit.html */,
-				7D46B2CD2C011B66B1BC0A0ABFE83A22 /* TKDriveState.html */,
-				DAB3C623C9910BC9C9D61510C461E233 /* TKDriveState.html */,
-				3E38C113283128533097CCE8B7A458ED /* TKError.html */,
-				F38E884156760AC227162F527B63089D /* TKError.html */,
-				5D98D37FDBA097978F5D1B583329FA5C /* TKGUISettings.html */,
-				AF2177557759C59383B374F40F7C5BB9 /* TKGUISettings.html */,
-				E0DAD75AB6D97E9E5B7EC7B107D929D8 /* TKHeading.html */,
-				AE1A8D71FE67E9D9E170F1B90F9AD2D7 /* TKHeading.html */,
-				04859021EFA85A4645B11BAE6C9088EA /* TKMappable.html */,
-				FF249EE8928D12095B2BD01A9D1D3802 /* TKMappable.html */,
-				F7635344698836547C99B95AC106A326 /* TKMobileAccess.html */,
-				AFAA0517DBFE4D3C58239DC6F760BEF0 /* TKMobileAccess.html */,
-				3AF8F98D62F18158D5EACB59D360DAE5 /* TKMovePanoRoof.html */,
-				22D7BD8ACC4FFA4F3BAE4CE3D7C0050F /* TKMovePanoRoof.html */,
-				889315BAF9067DFB6E152E4A85206063 /* TKPanoRoofState.html */,
-				E3997358BCBE5EF12EE5CB152D325CC2 /* TKPanoRoofState.html */,
-				F3F967CF5EEDD65B21F04531B3DB7C68 /* TKRangeDisplay.html */,
-				1FF55321A7C8D1798DD7DF6ACE7B2A9A /* TKRangeDisplay.html */,
-				827DE3688F588B2C87E23BB532D2B2F9 /* TKRemoteStart.html */,
-				C26D141DDA36A8004ECBE8F6FB64B59E /* TKRemoteStart.html */,
-				21A0EF5ABD9DD72CE6D3E64E4B8855DF /* TKResetValetPIN.html */,
-				CF3E5344CD4738D85B5C1CAAE19D46A7 /* TKResetValetPIN.html */,
-				505E7A363203522CEC077504DD23539D /* TKSetChargeLimit.html */,
-				C468BD0DB4AFBFECFEF29A39021B8850 /* TKSetChargeLimit.html */,
-				CCB95067D6F60705E568447310BAF2ED /* TKSetTemperature.html */,
-				DD3F09F186084A797CDBD0B2182D3493 /* TKSetTemperature.html */,
-				1E355D00B4D56B77C6E61E0501A1CD54 /* TKShiftState.html */,
-				76A4BDEA906C454969D7A774FB3FD90C /* TKShiftState.html */,
-				4839E4026156C4A1B58A0DD33C2B3CC3 /* TKStringArrayTransform.html */,
-				262D0B772E3183BBCABBADA3B4A36F8A /* TKStringArrayTransform.html */,
-				6BB0FA2A6EFBC5D4EA1E61C50F0FA9D6 /* TKTemperatureUnit.html */,
-				6E9BD3A1D31E82743DEBAE75E6E415A7 /* TKTemperatureUnit.html */,
-				352124FD0CF854CA099BC1F307634DC4 /* TKVehicle.html */,
-				AF2D6B0C65084BBBD447214B0D044531 /* TKVehicle.html */,
-				95460FF7232203B25C410CEEAFA062BB /* TKVehicleCollection.html */,
-				2143747BB4D4CA42DA261251D543EEBC /* TKVehicleCollection.html */,
-				D0067486FD9DA52C8D848AFF4D50F9A2 /* TKVehicleConfig.html */,
-				ACF6D032D23A10DED2C1FA3D54B5AED1 /* TKVehicleConfig.html */,
-				9E1D2C38B71F5138661F532D229CF779 /* TKVehicleOption.html */,
-				9268E98DB383D1B3B2452896976FCC40 /* TKVehicleOption.html */,
-				FD873869067AD3BF904A7E8919CF2748 /* TKVehicleOptionTransform.html */,
-				1C5D04ED7670B915DC32E148697D8C2B /* TKVehicleOptionTransform.html */,
-				253A1C589C08E84DB4885A81F714A453 /* TKVehicleState.html */,
-				2D4F2FC59A6386A655B4C9ACFB48013E /* TKVehicleState.html */,
-				C1A5B7B9A17F7075F19EA23A5C2C9B16 /* TKVehicleStatus.html */,
-				E835DF74CEDD9DF1AFB05F34CC6CF7B5 /* TKVehicleStatus.html */,
-				20A487924189CE627CE1E9EC63436FEA /* Typealiases.html */,
-				B6F3C12129D626AF5B75D4ADC4A9201F /* Typealiases.html */,
-				AFC2766D02E5B672FE50B5306A4EBFBF /* undocumented.json */,
-				4A3CA8A88DA774DC126567FC2BA8023B /* VIN.html */,
-				720625A3D8E5B0E33BBF59C6D6305714 /* VIN.html */,
-				85DBD2C01B0D0903AE92A1B2B43BD3DC /* VINComponent.html */,
-				6B9E7F887CE331F18FE8EE4260840D76 /* VINComponent.html */,
-				2D7F3EF062D7DCDB0293AE9943F79CC4 /* VINTransform.html */,
-				65F9BC91DDD5E956EF73C2F27902FB9E /* VINTransform.html */,
+				1BFE843C5EE43A6297FC34A5A5E1B66D /* Temperature.swift */,
+				8F18046E7BB07DAD61B53D501FE77E17 /* TKAccessToken.swift */,
+				FC44854E5D4C6BF9A41704176C9D3117 /* TKChargeState.swift */,
+				FF8C7210FC844B3EAAA41EFB088E05D2 /* TKClimateState.swift */,
+				FD8675481709F0697BD93DE748C30556 /* TKDriveState.swift */,
+				8652EE891C7A8E62E8E1749E920E33E6 /* TKGUISettings.swift */,
+				C4FBF5401026E54CD525B09FC6C08B0E /* TKMobileAccess.swift */,
+				0B150D3FC3846DCD89367A639FFEB375 /* TKMovePanoRoof.swift */,
+				5B5C904E0A1C20D6F36EB132CC6DF521 /* TKOpenTrunk.swift */,
+				50EC1A4632EA046981985E09FD771B04 /* TKRefreshToken.swift */,
+				F24495EF96BDF3A90714B25F86DA628A /* TKRemoteStart.swift */,
+				F0965AEDEBACB27C745A4C7D2B2AD37E /* TKResetValetPIN.swift */,
+				95A1C3BEE8C27D7B7C2ABE3E5CA8A0D4 /* TKSetChargeLimit.swift */,
+				79D1005BECA23497C1307DD7A949187F /* TKSetTemperature.swift */,
+				99C619056710F07867A93320421139C7 /* TKStringArrayTransform.swift */,
+				6D17EACDE823A1806BB06F1DDD17247C /* TKVehicle.swift */,
+				AD42477A95A5E3A086DFCCA42A33DCD1 /* TKVehicleCollection.swift */,
+				7A31C88544F0B8DC17EB4978F14A8944 /* TKVehicleCommand.swift */,
+				A95B28DAC12ACA6F9861D5723E07A7A0 /* TKVehicleConfig.swift */,
+				BA0C48BCDB89DA840DB15688276C83E7 /* TKVehicleOption.swift */,
+				9A1925095FAE1DDBD550D30E81FA005B /* TKVehicleOptionTransform.swift */,
+				47CAA07AC6C880F8892A5CBF9675D498 /* TKVehicleState.swift */,
+				33610E982A59B3AA2B194CA4A125F0C0 /* VIN.swift */,
+				817D9419EC07B34CF35DCCE02FEDAC68 /* VINComponent.swift */,
+				D3E968D1A2B83824A4959F8A6522676A /* VINTransform.swift */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		E64DC5CB77031CB1BE4B64B69E67A203 /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				337A5AAB621DA262CA055F0D14E92CCA /* TKChargePortLatchState.swift */,
-				D3F3FB274483393AE1AA0F7DE7E08292 /* TKChargeUnit.swift */,
-				88F924F32605F2200A47437BEC1FFC65 /* TKChargingState.swift */,
-				972403563D027060632243AFE70F01BA /* TKCommand.swift */,
-				D925708044A65A7AB7B639EEDC70DC46 /* TKDataRequest.swift */,
-				BF5E68F3BD4D027EC0DE950BB43E6833 /* TKDistanceUnit.swift */,
-				04605D1B6BBFEEAF11FFEB2535E60E20 /* TKError.swift */,
-				2557AC3F7CE12D6307C3149302EBE678 /* TKHeading.swift */,
-				8741CDD0B2B076A3E944AA6184B29D42 /* TKPanoRoofState.swift */,
-				4575EA34E3B05DC128CC4599132F3062 /* TKRangeDisplay.swift */,
-				729CF39D97F11EEE2B108873FDBBBB5F /* TKShiftState.swift */,
-				B4D64F86FDA0D71A5C5B2C2BA5B878A9 /* TKTemperatureUnit.swift */,
-				6EC41905A6F2536A1D0E217A900B832E /* TKVehicleStatus.swift */,
-			);
-			name = Enumerations;
-			path = Source/Enumerations;
+			name = Structures;
+			path = Source/Structures;
 			sourceTree = "<group>";
 		};
 		EFC3D28CBD6B013AF6BD014A886228B6 /* Pods-TeslaKit */ = {
@@ -822,12 +784,58 @@
 			path = "Target Support Files/Pods-TeslaKit";
 			sourceTree = "<group>";
 		};
+		F0003BD29C0F897CFDF93981C91F37DC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				284B1A0593D2CFBF07964B716BCEE218 /* EnumCollection.swift */,
+				7D340D1768FB30835CC8D9777D73E396 /* TKDataResponse.swift */,
+				EB9AEE6759A16F0F3B1ADD65C31CB10F /* TKMappable.swift */,
+			);
+			name = Protocols;
+			path = Source/Protocols;
+			sourceTree = "<group>";
+		};
+		F27B2D5C018867A01A20664CF78F27EE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E085BB7F519CA5114B2C1669A17DF /* Info.plist */,
+				297D5C5C55CEB2462EB0719B57378676 /* TeslaKit.modulemap */,
+				123FE2C9AD665EFEF9AD6E9642B84904 /* TeslaKit.xcconfig */,
+				240135CD6C25A5B3AD73CAAF9691479D /* TeslaKit-dummy.m */,
+				A2F7D2E4FDC56B6713A4736BA89E1E45 /* TeslaKit-prefix.pch */,
+				B2A6099E0797F5C3DD80EA925B90EB39 /* TeslaKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/TeslaKit";
+			sourceTree = "<group>";
+		};
 		F3E9C94A49A5B9E3489253ABE35E1D0F /* SwiftLint */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = SwiftLint;
 			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		F5635B9FA957824F8D25A071BEE396D0 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				B59725478D5061AADFC635ECAF6AB81F /* TKChargePortLatchState.swift */,
+				8D3F016BF3E7C7875331495DA7D7E990 /* TKChargeUnit.swift */,
+				EF24C5E47C21FC29206B4473F6C5B9F1 /* TKChargingState.swift */,
+				FBF6BEE9752880A3925AB0D7F63DBDBF /* TKCommand.swift */,
+				955A1E3CB0FC874C82216479307AF790 /* TKDataRequest.swift */,
+				3FCDAB575738D7262D249EEFD1116F28 /* TKDistanceUnit.swift */,
+				9F4CED57EC55FC9C0928C7B104E183DB /* TKError.swift */,
+				834B5EBC0D431DB178B483BB994379A9 /* TKHeading.swift */,
+				9BA2E6DDCD30575E0540AD028182AC6B /* TKPanoRoofState.swift */,
+				AB0B34E436BF2B0FD0E34727748E3711 /* TKRangeDisplay.swift */,
+				855B607A5A0BFB03FD3180080ED4CF62 /* TKShiftState.swift */,
+				2606DF6BC739BCB14AD3E721088BDE0E /* TKTemperatureUnit.swift */,
+				5E181FD230C68312A7C85082A33A2C98 /* TKVehicleStatus.swift */,
+			);
+			name = Enumerations;
+			path = Source/Enumerations;
 			sourceTree = "<group>";
 		};
 		F8E0AC83BB738273C4EC190E7675CD17 /* Products */ = {
@@ -1242,7 +1250,7 @@
 		};
 		47009B10E59A23256611FDBCC5C605BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2858243D71006861BFB00B66FB95E754 /* TeslaKit.xcconfig */;
+			baseConfigurationReference = 123FE2C9AD665EFEF9AD6E9642B84904 /* TeslaKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1584,7 +1592,7 @@
 		};
 		E0146FBB714545C353536AB4319B9E42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2858243D71006861BFB00B66FB95E754 /* TeslaKit.xcconfig */;
+			baseConfigurationReference = 123FE2C9AD665EFEF9AD6E9642B84904 /* TeslaKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
