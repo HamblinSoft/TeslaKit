@@ -26,6 +26,9 @@
 		312C91D6FD6022885F9E440883BC745E /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E9C76CC8D159638A2B403DA714AD77 /* TeslaAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		33061752A1CF47854EFA84440102E281 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8FEAA8BBFA2317FEF841622DAA2045 /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		351A58374B952CD795E19A5C1DA52C01 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314ACD886612C49F925DEC8E2C573900 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37630B6120F947F000D17BD8 /* TKSpeedLimitSetPIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37630B6020F947F000D17BD8 /* TKSpeedLimitSetPIN.swift */; };
+		377E891120F7299F004E379A /* TKSpeedLimitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E891020F7299F004E379A /* TKSpeedLimitMode.swift */; };
+		377E891320F72C67004E379A /* TKSetSpeedLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E891220F72C67004E379A /* TKSetSpeedLimit.swift */; };
 		3794F36FCBD2F263912BDBDD39B82219 /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E4A08D4FCCFC40A5993A506E1B696 /* DictionaryTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3F6745C832733D15BF96FBCA605FFA94 /* TKClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C7210FC844B3EAAA41EFB088E05D2 /* TKClimateState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		43BAB051BB384D86F85E8053D8A51CAA /* TKHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834B5EBC0D431DB178B483BB994379A9 /* TKHeading.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -189,6 +192,9 @@
 		33610E982A59B3AA2B194CA4A125F0C0 /* VIN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = VIN.swift; sourceTree = "<group>"; };
 		36B389B08EA14EF8EA2AC027694E7265 /* TKRefreshToken.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = TKRefreshToken.html; path = docs/Enums/TKRefreshToken.html; sourceTree = "<group>"; };
 		374767654E445DC48A64EC79EF7A7E4F /* TKGUISettings.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = TKGUISettings.html; path = docs/Structs/TKGUISettings.html; sourceTree = "<group>"; };
+		37630B6020F947F000D17BD8 /* TKSpeedLimitSetPIN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSpeedLimitSetPIN.swift; sourceTree = "<group>"; };
+		377E891020F7299F004E379A /* TKSpeedLimitMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TKSpeedLimitMode.swift; sourceTree = "<group>"; };
+		377E891220F72C67004E379A /* TKSetSpeedLimit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSetSpeedLimit.swift; sourceTree = "<group>"; };
 		37A066C40684E65E7AB69774C52C50A2 /* Protocols.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Protocols.html; path = docs/Protocols.html; sourceTree = "<group>"; };
 		397D2FA352C9A1BB6E85D310CF652617 /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = TKDistanceUnit.html; path = docs/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
 		3ABAD8AE96BE048FC5B6B0DEAFF8F1BF /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
@@ -749,7 +755,10 @@
 				F24495EF96BDF3A90714B25F86DA628A /* TKRemoteStart.swift */,
 				F0965AEDEBACB27C745A4C7D2B2AD37E /* TKResetValetPIN.swift */,
 				95A1C3BEE8C27D7B7C2ABE3E5CA8A0D4 /* TKSetChargeLimit.swift */,
+				377E891220F72C67004E379A /* TKSetSpeedLimit.swift */,
 				79D1005BECA23497C1307DD7A949187F /* TKSetTemperature.swift */,
+				377E891020F7299F004E379A /* TKSpeedLimitMode.swift */,
+				37630B6020F947F000D17BD8 /* TKSpeedLimitSetPIN.swift */,
 				99C619056710F07867A93320421139C7 /* TKStringArrayTransform.swift */,
 				6D17EACDE823A1806BB06F1DDD17247C /* TKVehicle.swift */,
 				AD42477A95A5E3A086DFCCA42A33DCD1 /* TKVehicleCollection.swift */,
@@ -1091,6 +1100,8 @@
 				5AB3613C867E12718E333B040DEFB241 /* TKDriveState.swift in Sources */,
 				D296BF0B1D6F910139362B375EB9A974 /* TKError.swift in Sources */,
 				F7DA0178D7F5127F690645D3D92EFBF7 /* TKGUISettings.swift in Sources */,
+				37630B6120F947F000D17BD8 /* TKSpeedLimitSetPIN.swift in Sources */,
+				377E891120F7299F004E379A /* TKSpeedLimitMode.swift in Sources */,
 				43BAB051BB384D86F85E8053D8A51CAA /* TKHeading.swift in Sources */,
 				F7C1B16EE8AE9974CF20148DED09874B /* TKMappable.swift in Sources */,
 				601E106D69D11A1FCE62882C0CB35A39 /* TKMobileAccess.swift in Sources */,
@@ -1113,6 +1124,7 @@
 				B8B49C63234C1B702F7948357211B563 /* TKVehicleOption.swift in Sources */,
 				89F73AF4E15BBF3A40ECB141B2643950 /* TKVehicleOptionTransform.swift in Sources */,
 				FDBFCB3490AAFD81A89F8B99B7992F90 /* TKVehicleState.swift in Sources */,
+				377E891320F72C67004E379A /* TKSetSpeedLimit.swift in Sources */,
 				A80D0CC8E60626F09FADCF762592FDE9 /* TKVehicleStatus.swift in Sources */,
 				2E01F3FFCA7EB5DEE9BC78A64207FB65 /* VIN.swift in Sources */,
 				784D94DAD5F31BFFE135D72B76EB6F45 /* VINComponent.swift in Sources */,

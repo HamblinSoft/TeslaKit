@@ -82,10 +82,19 @@ public enum TKCommand: String, EnumCollection, CustomStringConvertible {
     ///
     //    case rearDefrosterOff = "rear_defrost_off"
 
+    ///
+    case speedLimitActivate = "speed_limit_activate"
+
+    ///
+    case speedLimitDeactivate = "speed_limit_deactivate"
+
+    ///
+    case speedLimitClearPIN = "speed_limit_clear_pin"
+
+    /// Set Speed Limit
+    case setSpeedLimit = "speed_limit_set_limit"
+
     public var description: String {
         return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized
     }
-
-    /// Commands that can be quickliy sent
-    public static let quickCommands: [TKCommand] = [.unlockDoors, .lockDoors, .flashLights, .startHVAC, .stopHVAC, .openChargePort, .setChargeLimitToStandard, .setChargeLimitToMaxRange, .startCharging, .stopCharging]
 }

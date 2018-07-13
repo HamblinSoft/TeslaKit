@@ -60,25 +60,6 @@ public struct TKVehicle {
     ///
     public var vehicleConfig: TKVehicleConfig = TKVehicleConfig()
 
-    /// Returns the range based on vehicle gui settings (rated/ideal)
-    public var range: Double {
-        switch self.guiSettings.rangeDisplay {
-        case .rated: return self.chargeState.batteryRange
-        case .ideal: return self.chargeState.idealBatteryRange
-        }
-    }
-
-    /// Returns the charge miles added based on vehicle gui settings (rated/ideal)
-    public var chargeMilesAdded: Double {
-        switch self.guiSettings.rangeDisplay {
-        case .rated: return self.chargeState.chargeMilesAddedRated
-        case .ideal: return self.chargeState.chargeMilesAddedIdeal
-        }
-    }
-
-    /// Returns whether the vehicle is moving
-    public var isInMotion: Bool { return self.driveState.speed > 0 }
-
     ///
     public init() {}
 

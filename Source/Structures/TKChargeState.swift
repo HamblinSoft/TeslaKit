@@ -22,15 +22,15 @@ public struct TKChargeState {
     public var fastChargerPresent: Bool = false
 
     ///
-    public var batteryRange: Double = 0.0
+    public var batteryRange: Double = 0
 
     ///
-    public var estBatteryRange: Double = 0.0
+    public var estBatteryRange: Double = 0
 
     ///
-    public var idealBatteryRange: Double = 0.0
+    public var idealBatteryRange: Double = 0
 
-    ///
+    /// Percentage
     public var batteryLevel: Double = 0.0
 
     ///

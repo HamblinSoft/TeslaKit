@@ -138,6 +138,9 @@ public struct TKVehicleState {
     public var timestamp: TimeInterval = 0
 
     ///
+    public var speedLimitMode: TKSpeedLimitMode = TKSpeedLimitMode()
+
+    ///
     public init() {}
 }
 
@@ -185,6 +188,7 @@ extension TKVehicleState: TKDataResponse {
         vehicleName <- map["vehicle_name"]
         wheelType <- map["wheel_type"]
         locked <- map["locked"]
+        speedLimitMode <- map["speed_limit_mode"]
     }
 }
 
