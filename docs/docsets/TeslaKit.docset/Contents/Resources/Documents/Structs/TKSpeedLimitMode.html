@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TKSpeedLimitMode Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/TKSpeedLimitMode" class="dashAnchor"></a>
+    <a title="TKSpeedLimitMode Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TeslaKit Docs</a> (94% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TeslaKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        TKSpeedLimitMode Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI/Configuration.html">– Configuration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken.html">TKAccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKAccessToken/Response.html">– Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKChargePortLatchState.html">TKChargePortLatchState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKChargeUnit.html">TKChargeUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKChargingState.html">TKChargingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKCommand.html">TKCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKDataRequest.html">TKDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKDistanceUnit.html">TKDistanceUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKError.html">TKError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKHeading.html">TKHeading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKPanoRoofState.html">TKPanoRoofState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKRangeDisplay.html">TKRangeDisplay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKRefreshToken.html">TKRefreshToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKRefreshToken/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKShiftState.html">TKShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKTemperatureUnit.html">TKTemperatureUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKTrunkType.html">TKTrunkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TKVehicleStatus.html">TKVehicleStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumCollection.html">EnumCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8TeslaKit14TKDataResponseP">TKDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TKMappable.html">TKMappable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/TKChargeState.html">TKChargeState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKClimateState.html">TKClimateState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKCommandResponse.html">TKCommandResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKDriveState.html">TKDriveState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKGUISettings.html">TKGUISettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKMobileAccess.html">TKMobileAccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKMovePanoRoof.html">TKMovePanoRoof</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKOpenTrunk.html">TKOpenTrunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKRemoteStart.html">TKRemoteStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKResetValetPIN.html">TKResetValetPIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSetChargeLimit.html">TKSetChargeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSetSpeedLimit.html">TKSetSpeedLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSetTemperature.html">TKSetTemperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSpeedLimitMode.html">TKSpeedLimitMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKSpeedLimitSetPIN.html">TKSpeedLimitSetPIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKStringArrayTransform.html">TKStringArrayTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicle.html">TKVehicle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleCollection.html">TKVehicleCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleConfig.html">TKVehicleConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleOption.html">TKVehicleOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleOptionTransform.html">TKVehicleOptionTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TKVehicleState.html">TKVehicleState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VIN.html">VIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent.html">VINComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Manufacturer.html">– Manufacturer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Make.html">– Make</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/BatteryType.html">– BatteryType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/DriveUnit.html">– DriveUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ManufactureLocation.html">– ManufactureLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ModelYear.html">– ModelYear</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINTransform.html">VINTransform</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>TKSpeedLimitMode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TKSpeedLimitMode</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TKMappable.html">TKMappable</a></span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV07currentD3MPHSdvp"></a>
+                    <a name="//apple_ref/swift/Property/currentLimitMPH" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV07currentD3MPHSdvp">currentLimitMPH</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">currentLimitMPH</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">90</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV10pinCodeSetSbvp"></a>
+                    <a name="//apple_ref/swift/Property/pinCodeSet" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV10pinCodeSetSbvp">pinCodeSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">pinCodeSet</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV6activeSbvp"></a>
+                    <a name="//apple_ref/swift/Property/active" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV6activeSbvp">active</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">active</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV03maxD3MPHSdvp"></a>
+                    <a name="//apple_ref/swift/Property/maxLimitMPH" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV03maxD3MPHSdvp">maxLimitMPH</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">maxLimitMPH</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">90</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV03minD3MPHSdvp"></a>
+                    <a name="//apple_ref/swift/Property/minLimitMPH" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV03minD3MPHSdvp">minLimitMPH</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">minLimitMPH</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">50</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeVACSd07currentD3MPH_Sb10pinCodeSetSb6activeSd03maxdG0Sd03mindG0tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(currentLimitMPH:pinCodeSet:active:maxLimitMPH:minLimitMPH:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeVACSd07currentD3MPH_Sb10pinCodeSetSb6activeSd03maxdG0Sd03mindG0tcfc">init(currentLimitMPH:pinCodeSet:active:maxLimitMPH:minLimitMPH:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">currentLimitMPH</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">pinCodeSet</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">active</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">maxLimitMPH</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">minLimitMPH</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit16TKSpeedLimitModeV7mappingXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/mapping(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit16TKSpeedLimitModeV7mappingXeXeF">mapping(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">mapping</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/HamblinSoft/TeslaKit" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-07-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -16,15 +16,8 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Enumerations/TKHeading.swift",
-      "line": 11,
-      "symbol": "TKDirection",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Enumerations/TKHeading.swift",
-      "line": 54,
-      "symbol": "TKHeading.shortName",
+      "line": 51,
+      "symbol": "TKHeading.abbreviation",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -127,6 +120,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/TKOpenTrunk.swift",
+      "line": 37,
+      "symbol": "TKOpenTrunk.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/TKRefreshToken.swift",
       "line": 50,
       "symbol": "TKRefreshToken.Request.mapping(map:)",
@@ -163,7 +163,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/TKVehicle.swift",
-      "line": 90,
+      "line": 71,
       "symbol": "TKVehicle.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -191,7 +191,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/TKVehicleState.swift",
-      "line": 146,
+      "line": 149,
       "symbol": "TKVehicleState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
