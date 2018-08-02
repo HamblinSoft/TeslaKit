@@ -20,6 +20,11 @@ public struct TKVehicleOptionTransform: TransformType {
     
     ///
     public let separator: String
+
+    ///
+    public init(separator: String = ",") {
+        self.separator = separator
+    }
     
     ///
     public func transformFromJSON(_ value: Any?) -> [TKVehicleOption]? {
