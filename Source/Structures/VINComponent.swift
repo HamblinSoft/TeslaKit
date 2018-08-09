@@ -148,28 +148,25 @@ public struct VINComponent {
         case unknown = ""
 
         ///
-        case year2025 = "P"
+        case year2024 = "P"
 
         ///
-        case year2024 = "O"
+        case year2023 = "O"
 
         ///
-        case year2023 = "N"
+        case year2022 = "N"
 
         ///
-        case year2022 = "M"
+        case year2021 = "M"
 
         ///
-        case year2021 = "L"
+        case year2020 = "L"
 
         ///
-        case year2020 = "K"
+        case year2019 = "K"
 
         ///
-        case year2019 = "J"
-
-        ///
-        case year2018 = "I"
+        case year2018 = "J"
 
         ///
         case year2017 = "H"
