@@ -16,10 +16,10 @@ public protocol TeslaAPIDelegate: class {
     func teslaApiActivityDidBegin(_ teslaAPI: TeslaAPI)
 
     ///
-    func teslaApiActivityDidEnd(_ teslaAPI: TeslaAPI)
+    func teslaApiActivityDidEnd(_ teslaAPI: TeslaAPI, response: HTTPURLResponse, error: Error?)
 
     ///
-    func teslaApi(_ teslaAPI: TeslaAPI, didSend command: TKCommand, data: TKCommandResponse?)
+    func teslaApi(_ teslaAPI: TeslaAPI, didSend command: TKCommand, data: TKCommandResponse?, result: TKCommandResponse)
 }
 
 
@@ -109,9 +109,9 @@ open class TeslaAPI {
 
         let task = self.session.dataTask(with: request) { (dataOrNil, responseOrNil, errorOrNil) in
 
-            self.delegate?.teslaApiActivityDidEnd(self)
-
             let response: HTTPURLResponse = (responseOrNil as? HTTPURLResponse) ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
+
+            self.delegate?.teslaApiActivityDidEnd(self, response: response, error: errorOrNil)
 
             var mappedData: T? = nil
 
@@ -281,28 +281,55 @@ open class TeslaAPI {
     ///   - request: Optional data to be included with the command
     ///   - completion: Completion Handler
     open func send(_ command: TKCommand, to vehicleId: String, json: Any? = nil, completion: @escaping (TKCommandResponse) -> Void) {
-        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/command/\(command.rawValue)")
+        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(command.endpoint)")
 
         self.request(url,
                      method: "POST",
                      parameters: json,
                      headers: self.headers) { (httpResponse, dataOrNil: TKCommandResponse?, errorOrNil) in
 
+                        var response = TKCommandResponse(result: true, reason: "")
+
                         defer {
-                            self.delegate?.teslaApi(self, didSend: command, data: dataOrNil)
+                            self.delegate?.teslaApi(self, didSend: command, data: dataOrNil, result: response)
+                            completion(response)
                         }
 
                         guard let data = dataOrNil, httpResponse.statusCode == 200 else {
-                            completion(TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)))
+                            response = TKCommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))
                             return
                         }
 
                         guard data.result else {
-                            completion(TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred"))
+                            response = TKCommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred")
                             return
                         }
 
                         completion(data)
+        }
+    }
+
+    /// Send wake up command to vehicle
+    open func wake(_ vehicle: TKVehicle, completion: @escaping (Bool, TKVehicle?, String?) -> Void) {
+        self.wake(vehicle.id, completion: completion)
+    }
+
+    /// Send wake up command to vehicle
+    open func wake(_ vehicleId: String, completion: @escaping (Bool, TKVehicle?, String?) -> Void) {
+        
+        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/wake_up")
+
+        self.request(url,
+                     method: "POST",
+                     parameters: nil,
+                     headers: self.headers) { (response, dataOrNil: TKVehicle?, errorOrNil) in
+
+                        guard let data = dataOrNil, response.statusCode == 200 else {
+                            completion(false, dataOrNil, errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: response.statusCode))
+                            return
+                        }
+
+                        completion(true, data, nil)
         }
     }
 

@@ -10,9 +10,6 @@ import Foundation
 ///
 public enum TKCommand: String, EnumCollection, CustomStringConvertible {
 
-    /// Wakes up the car from the sleep state. Necessary to get some data from the car.
-    case wake = "wake_up"
-
     /// Sets valet mode on or off with a PIN to disable it from within the car. Reuses last PIN from previous valet session. Valet Mode limits the car's top speed to 70MPH and 80kW of acceleration power. It also disables Homelink, Bluetooth and Wifi settings, and the ability to disable mobile access to the car. It also hides your favorites, home, and work locations in navigation.
     case setValetMode = "set_valet_mode"
 
@@ -93,8 +90,14 @@ public enum TKCommand: String, EnumCollection, CustomStringConvertible {
 
     /// Set Speed Limit
     case setSpeedLimit = "speed_limit_set_limit"
-
+    
+    ///
     public var description: String {
         return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized
+    }
+
+    ///
+    public var endpoint: String {
+        return "command/" + self.rawValue
     }
 }
