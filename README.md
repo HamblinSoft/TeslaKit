@@ -20,6 +20,13 @@ TeslaKit is a framework written in Swift that makes it easy for you to interface
 - [x] VIN Decoder
 - [ ] Summon and Homelink - Coming soon
 
+# Inspiration
+I have been a long time fan of Tesla ever since the original Roadster. When the Model 3 was announced, I actually camped out overnight so I could place my reservation. I am also a big Apple fan and really enjoy my Apple Watch, although wish there were more interesting complications I could add to my watch faces. So I decided to make my own app while I wait for my Model 3.
+
+Fast foward to mid-2018, I have officially released my app, called [AutoMate for Tesla](https://apple.co/2ylLmOf), on the App Store and have also received my Model 3! During development of AutoMate, I decided to separate the core Tesla API interactions into a separate project and open source it so others could also build really cool apps too.
+
+I am looking forward to seeing what people do with TeslaKit and if you're anything like me and thoroughly enjoy your car and own an Apple Watch, I think you will also enjoy AutoMate so please give it a try!
+
 # Installation
 
 TeslaKit is available through [CocoaPods](http://cocoapods.org). To install
@@ -51,7 +58,7 @@ Add an ATS exception domain for `owner-api.teslamotors.com` in your info.plist
 </dict>
 ```
 
-Import `TeslaKit`
+Add an import statement for `TeslaKit` into your file
 ```swift
 import TeslaKit
 ```
@@ -63,7 +70,7 @@ Create a new `TeslaAPI` instance
 let teslaAPI = TeslaAPI()
 ```
 
-Also see initialization [configuration](#configuration)
+Also see other initialization [configuration](#configuration) options
 
 ## Access Token
 Obtain an Access Token by logging in with your Tesla account credentials
@@ -174,10 +181,15 @@ Enabling debug mode will print all the raw request and response information to t
 let vin = VIN(vinString: "5YJSA1E2XHF999999")!
 print(vin.make)         // Model S
 print(vin.driveUnit)    // Dual Motor
-print(vin.modelYear)    // TeslaKit.VINComponent.ModelYear.year2017
+print(vin.modelYear)    // 2017
 print(vin.serialNo)     // 999999
 print(vin.vinString)    // 5YJSA1E2XHF999999
 ```
+
+# Apps Built With TeslaKit
+- [AutoMate for Tesla](https://apple.co/2ylLmOf)
+
+Is your app using TeslaKit? Let me know and I'll feature it here too!
 
 # Author
 
