@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VehicleCollection Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/VehicleCollection" class="dashAnchor"></a>
+    <a title="VehicleCollection Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">TeslaKit Docs</a> (95% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">TeslaKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        VehicleCollection Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI.html">TeslaAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TeslaAPI/Configuration.html">– Configuration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AccessToken.html">AccessToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AccessToken/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AccessToken/Response.html">– Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ChargePortLatchState.html">ChargePortLatchState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ChargingState.html">ChargingState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Command.html">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DistanceUnit.html">DistanceUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Heading.html">Heading</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/PanoRoofState.html">PanoRoofState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RangeDisplay.html">RangeDisplay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RefreshToken.html">RefreshToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RefreshToken/Request.html">– Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ShiftState.html">ShiftState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TemperatureUnit.html">TemperatureUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TrunkType.html">TrunkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/VehicleStatus.html">VehicleStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/TKMappable.html">TKMappable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:8TeslaKit12DataResponseP">DataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EnumCollection.html">EnumCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Mappable.html">Mappable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TeslaAPIDelegate.html">TeslaAPIDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ChargeState.html">ChargeState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ClimateState.html">ClimateState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CommandResponse.html">CommandResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DriveState.html">DriveState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/GUISettings.html">GUISettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MobileAccess.html">MobileAccess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MovePanoRoof.html">MovePanoRoof</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/OpenTrunk.html">OpenTrunk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RemoteStart.html">RemoteStart</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ResetValetPIN.html">ResetValetPIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SetChargeLimit.html">SetChargeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SetSpeedLimit.html">SetSpeedLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SetTemperature.html">SetTemperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SpeedLimitMode.html">SpeedLimitMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SpeedLimitSetPIN.html">SpeedLimitSetPIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/StringArrayTransform.html">StringArrayTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Temperature.html">Temperature</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VIN.html">VIN</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent.html">VINComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Manufacturer.html">– Manufacturer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/Make.html">– Make</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/BatteryType.html">– BatteryType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/DriveUnit.html">– DriveUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ManufactureLocation.html">– ManufactureLocation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINComponent/ModelYear.html">– ModelYear</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VINTransform.html">VINTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Vehicle.html">Vehicle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VehicleCollection.html">VehicleCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VehicleConfig.html">VehicleConfig</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VehicleOption.html">VehicleOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VehicleOptionTransform.html">VehicleOptionTransform</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VehicleState.html">VehicleState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8TeslaKit10ChargeUnita">ChargeUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:8TeslaKit10TKMappablea">TKMappable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VehicleCollection</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VehicleCollection</span></code></pre>
+
+                </div>
+              </div>
+            <p>Retrieve a list of your owned vehicles (includes vehicles not yet shipped!)</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit17VehicleCollectionV8vehiclesSayAA0C0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/vehicles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit17VehicleCollectionV8vehiclesSayAA0C0VGvp">vehicles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">vehicles</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Vehicle.html">Vehicle</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit17VehicleCollectionVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit17VehicleCollectionVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit17VehicleCollectionVACSayAA0C0VG8vehicles_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(vehicles:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit17VehicleCollectionVACSayAA0C0VG8vehicles_tcfc">init(vehicles:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">vehicles</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Vehicle.html">Vehicle</a></span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8TeslaKit17VehicleCollectionV7mappingXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/mapping(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit17VehicleCollectionV7mappingXeXeF">mapping(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">mapping</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/HamblinSoft/TeslaKit" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-09-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

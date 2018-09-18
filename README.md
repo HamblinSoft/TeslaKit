@@ -79,7 +79,7 @@ Obtain an Access Token by logging in with your Tesla account credentials
 let email = "e.musk@teslakit.com"
 let password = "M@R$R0X!"
 
-teslaAPI.accessToken(email: email, password: password) { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.getAccessToken(email: email, password: password) { (httpResponse, dataOrNil, errorOrNil) in
 
     guard let accessToken = dataOrNil?.accessToken else { return }
 
@@ -92,7 +92,7 @@ teslaAPI.accessToken(email: email, password: password) { (httpResponse, dataOrNi
 Obtain a list of vehicles associated with your account
 
 ```swift
-teslaAPI.vehicles { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
 
     guard let vehicle = dataOrNil?.vehicles.first else { return }
 
@@ -104,7 +104,7 @@ teslaAPI.vehicles { (httpResponse, dataOrNil, errorOrNil) in
 Obtain all data for a vehicle
 
 ```swift
-teslaAPI.data(for: vehicle) { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.getData(vehicle.id) { (httpResponse, dataOrNil, errorOrNil) in
 
     guard let vehicle = dataOrNil else { return }
 
@@ -116,7 +116,7 @@ teslaAPI.data(for: vehicle) { (httpResponse, dataOrNil, errorOrNil) in
 Send a command to a vehicle
 
 ```swift
-let command = TKCommand.unlockDoors
+let command = Command.unlockDoors
 
 teslaAPI.send(command, to: vehicle) { response in
     if response.result {
@@ -128,7 +128,7 @@ teslaAPI.send(command, to: vehicle) { response in
 Send a command to a vehicle with request parameters
 
 ```swift
-let parameters = TKSetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
+let parameters = SetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
 
 teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response in
     if response.result {
@@ -190,6 +190,9 @@ print(vin.vinString)    // 5YJSA1E2XHF999999
 - [AutoMate for Tesla](https://apple.co/2ylLmOf)
 
 Is your app using TeslaKit? Let me know and I'll feature it here too!
+
+# Tesla Referral Program
+Buying a new Tesla? Share my [referral code](https://ts.la/jaren29211) to give five friends a $100 Supercharging credit with a new Model S, Model X or Model 3 Performance!
 
 # Author
 

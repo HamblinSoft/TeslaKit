@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Example
+//  VehicleMonitorExample
 //
-//  Created by Jaren Hamblin on 2/3/18.
+//  Created by Jaren Hamblin on 9/13/18.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
 //
 
