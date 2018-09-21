@@ -19,7 +19,7 @@ public protocol Mappable: ObjectMapper.Mappable {
 }
 
 ///
-public extension TKMappable {
+public extension Mappable {
 
     ///
     public init() {

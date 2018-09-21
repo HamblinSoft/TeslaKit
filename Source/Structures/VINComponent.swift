@@ -12,7 +12,7 @@ import Foundation
 public struct VINComponent {
 
     ///
-    public enum Manufacturer: String, CustomStringConvertible, EnumCollection {
+    public enum Manufacturer: String, CustomStringConvertible, CaseIterable {
 
         ///
         case unknown = ""
@@ -30,7 +30,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum Make: String, CustomStringConvertible, EnumCollection {
+    public enum Make: String, CustomStringConvertible, CaseIterable {
 
         ///
         case unknown = ""
@@ -60,7 +60,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum BatteryType: String, CustomStringConvertible, EnumCollection {
+    public enum BatteryType: String, CustomStringConvertible, CaseIterable {
 
         ///
         case unknown
@@ -90,7 +90,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum DriveUnit: String, CustomStringConvertible, EnumCollection {
+    public enum DriveUnit: String, CustomStringConvertible, CaseIterable {
 
         ///
         case unknown
@@ -124,7 +124,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum ManufactureLocation: String, CustomStringConvertible, EnumCollection {
+    public enum ManufactureLocation: String, CustomStringConvertible, CaseIterable {
 
         ///
         case unknown = ""
@@ -142,7 +142,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum ModelYear: String, EnumCollection {
+    public enum ModelYear: String, CaseIterable {
 
         ///
         case unknown = ""

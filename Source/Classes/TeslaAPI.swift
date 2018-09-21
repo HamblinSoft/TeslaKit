@@ -274,8 +274,6 @@ open class TeslaAPI {
                             response = CommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred")
                             return
                         }
-
-                        completion(data)
         }
     }
 
@@ -352,10 +350,7 @@ open class TeslaAPI {
         let logMessage = components.joined(separator: "\n")
         print(logMessage)
     }
-}
 
-
-extension TeslaAPI {
 
     // MARK: - Convenience methods
 

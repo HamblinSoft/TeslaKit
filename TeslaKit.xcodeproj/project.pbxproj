@@ -50,7 +50,6 @@
 		37857DCA2150678E00229504 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F3F202666FF00409472 /* TemperatureUnit.swift */; };
 		37857DCB2150678E00229504 /* VehicleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D887D200ECF2C00CD9D1E /* VehicleStatus.swift */; };
 		37857DCC2150678E00229504 /* DataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889B200ECF2C00CD9D1E /* DataResponse.swift */; };
-		37857DCD2150678E00229504 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889C200ECF2C00CD9D1E /* EnumCollection.swift */; };
 		37857DCE2150678E00229504 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D889D200ECF2C00CD9D1E /* Mappable.swift */; };
 		37857DCF2150678E00229504 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8895200ECF2C00CD9D1E /* AccessToken.swift */; };
 		37857E1E21506A5E00229504 /* VehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37857E1D21506A5E00229504 /* VehicleOptionTransform.swift */; };
@@ -137,7 +136,6 @@
 		375D8895200ECF2C00CD9D1E /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
 		375D8898200ECF2C00CD9D1E /* TeslaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
 		375D889B200ECF2C00CD9D1E /* DataResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataResponse.swift; sourceTree = "<group>"; };
-		375D889C200ECF2C00CD9D1E /* EnumCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		375D889D200ECF2C00CD9D1E /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mappable.swift; sourceTree = "<group>"; };
 		37630B6220F9483500D17BD8 /* SpeedLimitSetPIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLimitSetPIN.swift; sourceTree = "<group>"; };
 		377E890E20F72539004E379A /* SpeedLimitMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLimitMode.swift; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				375D889B200ECF2C00CD9D1E /* DataResponse.swift */,
-				375D889C200ECF2C00CD9D1E /* EnumCollection.swift */,
 				375D889D200ECF2C00CD9D1E /* Mappable.swift */,
 			);
 			path = Protocols;
@@ -725,7 +722,6 @@
 				37857DB72150670E00229504 /* VehicleConfig.swift in Sources */,
 				37857DC82150678E00229504 /* RangeDisplay.swift in Sources */,
 				37857DC52150678E00229504 /* Error.swift in Sources */,
-				37857DCD2150678E00229504 /* EnumCollection.swift in Sources */,
 				37857DB82150670E00229504 /* VehicleOption.swift in Sources */,
 				37857DB92150670E00229504 /* VehicleState.swift in Sources */,
 				37857DBA2150670E00229504 /* VIN.swift in Sources */,

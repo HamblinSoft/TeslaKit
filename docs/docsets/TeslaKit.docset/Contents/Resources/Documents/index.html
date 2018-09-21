@@ -13,7 +13,7 @@
     <a title="TeslaKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">TeslaKit Docs</a> (95% documented)</p>
+        <p><a href="index.html">TeslaKit Docs</a> (96% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -94,21 +94,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/TKMappable.html">TKMappable</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:8TeslaKit12DataResponseP">DataResponse</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/EnumCollection.html">EnumCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Mappable.html">Mappable</a>
@@ -307,7 +296,7 @@ it, simply add the following line to your Podfile:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">email</span> <span class="o">=</span> <span class="s">"e.musk@teslakit.com"</span>
 <span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"M@R$R0X!"</span>
 
-<span class="n">teslaAPI</span><span class="o">.</span><span class="nf">accessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
+<span class="n">teslaAPI</span><span class="o">.</span><span class="nf">getAccessToken</span><span class="p">(</span><span class="nv">email</span><span class="p">:</span> <span class="n">email</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
     <span class="k">guard</span> <span class="k">let</span> <span class="nv">accessToken</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">accessToken</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
@@ -318,7 +307,7 @@ it, simply add the following line to your Podfile:</p>
 <h2 id='vehicle-list' class='heading'>Vehicle List</h2>
 
 <p>Obtain a list of vehicles associated with your account</p>
-<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">vehicles</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">getVehicles</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
     <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicle</span> <span class="o">=</span> <span class="n">dataOrNil</span><span class="p">?</span><span class="o">.</span><span class="n">vehicles</span><span class="o">.</span><span class="n">first</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
@@ -328,7 +317,7 @@ it, simply add the following line to your Podfile:</p>
 <h2 id='vehicle-data' class='heading'>Vehicle Data</h2>
 
 <p>Obtain all data for a vehicle</p>
-<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">teslaAPI</span><span class="o">.</span><span class="nf">getData</span><span class="p">(</span><span class="n">vehicle</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">httpResponse</span><span class="p">,</span> <span class="n">dataOrNil</span><span class="p">,</span> <span class="n">errorOrNil</span><span class="p">)</span> <span class="k">in</span>
 
     <span class="k">guard</span> <span class="k">let</span> <span class="nv">vehicle</span> <span class="o">=</span> <span class="n">dataOrNil</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
@@ -338,7 +327,7 @@ it, simply add the following line to your Podfile:</p>
 <h2 id='send-command' class='heading'>Send Command</h2>
 
 <p>Send a command to a vehicle</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">command</span> <span class="o">=</span> <span class="kt">TKCommand</span><span class="o">.</span><span class="n">unlockDoors</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">command</span> <span class="o">=</span> <span class="kt">Command</span><span class="o">.</span><span class="n">unlockDoors</span>
 
 <span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="nf">result</span> <span class="p">{</span>
@@ -348,7 +337,7 @@ it, simply add the following line to your Podfile:</p>
 </code></pre>
 
 <p>Send a command to a vehicle with request parameters</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="nf">TKSetTemperature</span><span class="p">(</span><span class="nv">driverTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">,</span> <span class="nv">passengerTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="nf">SetTemperature</span><span class="p">(</span><span class="nv">driverTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">,</span> <span class="nv">passengerTemp</span><span class="p">:</span> <span class="mf">21.0</span><span class="p">)</span>
 
 <span class="n">teslaAPI</span><span class="o">.</span><span class="nf">send</span><span class="p">(</span><span class="o">.</span><span class="n">setTemperature</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">vehicle</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="nf">result</span> <span class="p">{</span>
@@ -399,6 +388,9 @@ it, simply add the following line to your Podfile:</p>
 </ul>
 
 <p>Is your app using TeslaKit? Let me know and I&rsquo;ll feature it here too!</p>
+<h1 id='tesla-referral-program' class='heading'>Tesla Referral Program</h1>
+
+<p>Buying a new Tesla? Share my <a href="https://ts.la/jaren29211">referral code</a> to give five friends a $100 Supercharging credit with a new Model S, Model X or Model 3 Performance!</p>
 <h1 id='author' class='heading'>Author</h1>
 
 <p>jjjjaren, <a href="mailto:jjjjaren@gmail.com">jjjjaren@gmail.com</a></p>
@@ -413,7 +405,7 @@ it, simply add the following line to your Podfile:</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/HamblinSoft/TeslaKit" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-09-17)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/HamblinSoft/TeslaKit" target="_blank" rel="external">Jaren</a>. All rights reserved. (Last updated: 2018-09-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

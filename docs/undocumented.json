@@ -15,48 +15,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": null,
-      "symbol": "EnumCollection",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": 11,
-      "symbol": "EnumCollection",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": 12,
-      "symbol": "EnumCollection.cases()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": 13,
-      "symbol": "EnumCollection.allValues",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": 18,
-      "symbol": "EnumCollection.cases()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Protocols/EnumCollection.swift",
-      "line": 32,
-      "symbol": "EnumCollection.allValues",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/AccessToken.swift",
       "line": 90,
       "symbol": "AccessToken.Request.mapping(map:)",
