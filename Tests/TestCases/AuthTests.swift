@@ -19,14 +19,14 @@ open class AuthTests: TKTestCase {
         let teslaAPI = TeslaAPI(configuration: .default, debugMode: true)
         
         // Get access token via credentials
-        teslaAPI.accessToken(email: testAccount.email, password: testAccount.password) { (response, data, errorOrNil) in
+        teslaAPI.getAccessToken(email: testAccount.email, password: testAccount.password) { (response, data, errorOrNil) in
 
             XCTAssertEqual(response.statusCode, 200)
             XCTAssertNotNil(data?.accessToken)
             teslaAPI.setAccessToken(data?.accessToken)
 
             // Get access token via refresh token
-            teslaAPI.refreshToken(data?.refreshToken ?? "") { (response, data2, error) in
+            teslaAPI.getRefreshToken(data?.refreshToken ?? "") { (response, data2, error) in
 
                 XCTAssertEqual(response.statusCode, 200)
                 XCTAssertNotNil(data2?.accessToken)

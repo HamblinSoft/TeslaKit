@@ -12,7 +12,7 @@ import TeslaKit
 class TestAccount {
     var email: String = ""
     var password: String = ""
-    var accessToken: TKAccessToken.Response? = nil
+    var accessToken: AccessToken.Response? = nil
 
     init(email: String, password: String) {
         self.email = email

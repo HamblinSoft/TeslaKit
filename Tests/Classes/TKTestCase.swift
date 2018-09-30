@@ -22,7 +22,7 @@ open class TKTestCase: XCTestCase {
             teslaAPI.setAccessToken(accessToken)
             completion(teslaAPI)
         } else {
-            teslaAPI.accessToken(email: testAccount.email, password: testAccount.password) { (httpResponse, dataOrNil, errorOrNil) in
+            teslaAPI.getAccessToken(email: testAccount.email, password: testAccount.password) { (httpResponse, dataOrNil, errorOrNil) in
                 teslaAPI.setAccessToken(dataOrNil?.accessToken)
                 testAccount.accessToken = dataOrNil
                 completion(teslaAPI)

@@ -18,7 +18,7 @@ class CommandTests: TKTestCase {
 
         self.signIn { api in
 
-            api.vehicles { (response, data, error) in
+            api.getVehicles { (response, data, error) in
 
                 guard let vehicle = data?.vehicles.first else {
                     expect.fulfill()
@@ -26,7 +26,7 @@ class CommandTests: TKTestCase {
                     return
                 }
 
-                let req: TKSetSpeedLimit = TKSetSpeedLimit(limitMPH: 75)
+                let req: SetSpeedLimit = SetSpeedLimit(limitMPH: 75)
 
                 api.send(.setSpeedLimit, to: vehicle, parameters: req) { response in
 
@@ -36,7 +36,7 @@ class CommandTests: TKTestCase {
                         return
                     }
 
-                    api.data(for: vehicle) { (response, vehicle, error) in
+                    api.getData(for: vehicle) { (response, vehicle, error) in
 
                         guard let vehicle = vehicle else {
                             expect.fulfill()
@@ -46,11 +46,11 @@ class CommandTests: TKTestCase {
 
                         XCTAssertEqual(vehicle.vehicleState.speedLimitMode.currentLimitMPH, req.limitMPH)
 
-                        let req: TKSetSpeedLimit = TKSetSpeedLimit(limitMPH: vehicle.vehicleState.speedLimitMode.maxLimitMPH)
+                        let req: SetSpeedLimit = SetSpeedLimit(limitMPH: vehicle.vehicleState.speedLimitMode.maxLimitMPH)
 
                         api.send(.setSpeedLimit, to: vehicle, parameters: req) { response in
 
-                            api.data(for: vehicle) { (response, vehicle, error) in
+                            api.getData(for: vehicle) { (response, vehicle, error) in
 
                                 guard let vehicle = vehicle else {
                                     expect.fulfill()

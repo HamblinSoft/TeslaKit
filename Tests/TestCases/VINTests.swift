@@ -207,11 +207,11 @@ class VINTests: XCTestCase {
     func testVinCustomStringConvertible() {
         let vin = VIN(vinString: "5YJSA1E2XHF156789")
         print(vin as Any)
-        VINComponent.BatteryType.allValues.forEach{print($0)}
-        VINComponent.DriveUnit.allValues.forEach{print($0)}
-        VINComponent.Make.allValues.forEach{print($0)}
-        VINComponent.Manufacturer.allValues.forEach{print($0)}
-        VINComponent.ManufactureLocation.allValues.forEach{print($0)}
-        VINComponent.ModelYear.allValues.forEach{print($0)}
+        VINComponent.BatteryType.allCases.forEach{print($0)}
+        VINComponent.DriveUnit.allCases.forEach{print($0)}
+        VINComponent.Make.allCases.forEach{print($0)}
+        VINComponent.Manufacturer.allCases.forEach{print($0)}
+        VINComponent.ManufactureLocation.allCases.forEach{print($0)}
+        VINComponent.ModelYear.allCases.forEach{print($0)}
     }
 }
