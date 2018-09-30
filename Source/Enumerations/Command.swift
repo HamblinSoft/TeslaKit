@@ -16,8 +16,11 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
     /// Resets the PIN set for valet mode, if set.
     case resetValetPin = "reset_valet_pin"
 
-    /// Opens the charge port. Does not close the charge port
+    /// Opens the charge port.
     case openChargePort = "charge_port_door_open"
+
+    /// Closes the charge port.
+    case closeChargePort = "charge_port_door_close"
 
     /// Set the charge mode to standard (90% under the new percentage system introduced in 4.5).
     case setChargeLimitToStandard = "charge_standard"
