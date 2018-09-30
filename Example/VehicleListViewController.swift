@@ -49,7 +49,9 @@ class VehicleListViewController: UITableViewController {
                     self.getData(vehicle: vehicle)
                 }
 
-                self.displayAlert(title: result ? "Success" : "Failed", message: error, completion: nil)
+                self.displayAlert(title: result ? "Success" : "Failed",
+                                  message: error,
+                                  completion: nil)
             }
 
         }))
@@ -57,7 +59,31 @@ class VehicleListViewController: UITableViewController {
 
             teslaAPI.send(Command.unlockDoors, to: vehicle, completion: { response in
 
-                self.displayAlert(title: response.result ? "Success" : "Failed", message: response.allErrorMessages, completion: nil)
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
+            })
+
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Open Charge Port", style: .default, handler: { _ in
+
+            teslaAPI.send(Command.openChargePort, to: vehicle, completion: { response in
+
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
+            })
+
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Close Charge Port", style: .default, handler: { _ in
+
+            teslaAPI.send(Command.closeChargePort, to: vehicle, completion: { response in
+
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
             })
 
         }))
