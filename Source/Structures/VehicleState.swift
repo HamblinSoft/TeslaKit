@@ -142,6 +142,25 @@ public struct VehicleState {
 
     ///
     public init() {}
+
+    ///
+    public var isRearTrunkOpen: Bool { return rearTrunkState != 0 }
+
+    ///
+    public var isFrontTrunkOpen: Bool { return frontTrunkState != 0 }
+
+    ///
+    public var isDriverFrontDoorOpen: Bool { return driverFrontDoorState != 0 }
+
+    ///
+    public var isDriverRearDoorOpen: Bool { return driverRearDoorState != 0 }
+
+    ///
+    public var isPassengerFrontDoorOpen: Bool { return passengerFrontDoorState != 0 }
+
+    ///
+    public var isPassengerRearDoorOpen: Bool { return passengerRearDoorState != 0 }
+
 }
 
 extension VehicleState: DataResponse {

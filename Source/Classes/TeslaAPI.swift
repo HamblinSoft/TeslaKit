@@ -25,7 +25,7 @@ public protocol TeslaAPIDelegate: class {
 
 
 ///
-open class TeslaAPI {
+open class TeslaAPI: NSObject, URLSessionDelegate {
 
     ///
     public struct Configuration {
@@ -71,7 +71,7 @@ open class TeslaAPI {
     public weak var delegate: TeslaAPIDelegate? = nil
 
     ///
-    public var session: URLSession = URLSession(configuration: .default)
+    public var session: URLSession
 
     ///
     public var headers: [String: String] = [
@@ -79,10 +79,19 @@ open class TeslaAPI {
         "cache-control": "no-cache"
     ]
 
+
     /// Initialize a new instance of TeslaAPI
-    public init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
+    public convenience init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
+        self.init(configuration: configuration,
+                  session: URLSession(configuration: .default),
+                  debugMode: debugMode)
+    }
+
+    /// Initialize a new instance of TeslaAPI
+    public init(configuration: Configuration = Configuration.default, session: URLSession, debugMode: Bool = false) {
         self.configuration = configuration
         self.debugMode = debugMode
+        self.session = session
     }
 
     ///
@@ -90,7 +99,7 @@ open class TeslaAPI {
 
         // Create the request
         let request: URLRequest = {
-            var request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: self.configuration.requestTimeout)
+            var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: self.configuration.requestTimeout)
             request.httpMethod = method
             headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
             if let parameters = parameters {
