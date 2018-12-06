@@ -71,6 +71,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/NavigationRequest.swift",
+      "line": 27,
+      "symbol": "NavigationRequest.init(address:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/NavigationRequest.swift",
+      "line": 45,
+      "symbol": "NavigationRequest.Intent",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/OpenTrunk.swift",
       "line": 37,
       "symbol": "OpenTrunk.mapping(map:)",
@@ -149,7 +163,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleState.swift",
-      "line": 168,
+      "line": 172,
       "symbol": "VehicleState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
