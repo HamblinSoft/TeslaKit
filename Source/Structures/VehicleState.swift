@@ -15,8 +15,6 @@ public struct VehicleState {
     ///
     public var exteriorColor: String?
 
-    // TODO: Complete other properties
-
     ///
     public var centerDisplayState: Int = 0
 
@@ -141,6 +139,12 @@ public struct VehicleState {
     public var speedLimitMode: SpeedLimitMode = SpeedLimitMode()
 
     ///
+    public var softwareUpdate: SoftwareUpdate = SoftwareUpdate()
+
+    ///
+    public var mediaState: MediaState = MediaState()
+
+    ///
     public init() {}
 
     ///
@@ -208,6 +212,8 @@ extension VehicleState: DataResponse {
         wheelType <- map["wheel_type"]
         locked <- map["locked"]
         speedLimitMode <- map["speed_limit_mode"]
+        softwareUpdate <- map["software_update"]
+        mediaState <- map["media_state"]
     }
 }
 

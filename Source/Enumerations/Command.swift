@@ -93,6 +93,42 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
 
     /// Set Speed Limit
     case setSpeedLimit = "speed_limit_set_limit"
+
+    // MARK: - Media Player
+
+    ///
+    case togglePlayback = "media_toggle_playback"
+
+    ///
+    case nextTrack = "media_next_track"
+
+    ///
+    case previousTrack = "media_prev_track"
+
+    ///
+    case nextFavorite = "media_next_fav"
+
+    ///
+    case previousFavorite = "media_prev_fav"
+
+    ///
+    case volumeUp = "media_volume_up"
+
+    ///
+    case volumeDown = "media_volume_down"
+
+    // MARK: - Navigation
+
+    ///
+    case navigationRequest = "navigation_request"
+
+    // MARK: - Software Update
+
+    ///
+    case scheduleSoftwareUpdate = "schedule_software_update"
+
+    ///
+    case cancelSoftwareUpdate = "cancel_software_update"
     
     ///
     public var description: String {

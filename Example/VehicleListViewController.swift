@@ -19,7 +19,7 @@ class VehicleListViewController: UITableViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
 
 
-    private lazy var timer: Timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
+    private lazy var timer: Timer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
 
     private var vehicles: [Vehicle] = [] {
         didSet {
@@ -55,9 +55,23 @@ class VehicleListViewController: UITableViewController {
             }
 
         }))
-        actionSheet.addAction(UIAlertAction(title: "Unlock", style: .default, handler: { _ in
 
-            teslaAPI.send(Command.unlockDoors, to: vehicle, completion: { response in
+        actionSheet.addAction(UIAlertAction(title: "Send Address", style: .default, handler: { _ in
+            let address: String = """
+            3995 Alton Pkwy
+            Irvine, CA  92606
+            United States
+            """
+            teslaAPI.send(.navigationRequest, to: vehicle, parameters: NavigationRequest(address: address), completion: { response in
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
+            })
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Start Update", style: .default, handler: { _ in
+
+            teslaAPI.send(Command.scheduleSoftwareUpdate, to: vehicle, completion: { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -66,20 +80,9 @@ class VehicleListViewController: UITableViewController {
 
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Open Charge Port", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: "Cancel Update", style: .default, handler: { _ in
 
-            teslaAPI.send(Command.openChargePort, to: vehicle, completion: { response in
-
-                self.displayAlert(title: response.result ? "Success" : "Failed",
-                                  message: response.allErrorMessages,
-                                  completion: nil)
-            })
-
-        }))
-
-        actionSheet.addAction(UIAlertAction(title: "Close Charge Port", style: .default, handler: { _ in
-
-            teslaAPI.send(Command.closeChargePort, to: vehicle, completion: { response in
+            teslaAPI.send(Command.cancelSoftwareUpdate, to: vehicle, completion: { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -87,6 +90,31 @@ class VehicleListViewController: UITableViewController {
             })
 
         }))
+
+        let mediaCommands: [Command] = [
+            .togglePlayback,
+            .nextTrack,
+            .previousTrack,
+            .nextFavorite,
+            .previousFavorite,
+            .volumeUp,
+            .volumeDown
+        ]
+
+        mediaCommands.forEach { command in
+
+            actionSheet.addAction(UIAlertAction(title: command.rawValue, style: .default, handler: { _ in
+
+                teslaAPI.send(command, to: vehicle, completion: { response in
+
+                    self.displayAlert(title: response.result ? "Success" : "Failed",
+                                      message: response.allErrorMessages,
+                                      completion: nil)
+                })
+
+            }))
+        }
+
 
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(actionSheet, animated: true, completion: nil)
@@ -182,6 +210,17 @@ class VehicleListViewController: UITableViewController {
             userDefaults.lastUpdatedAt = String(describing: Date())
 
             self.descriptionLabel.text = userDefaults.lastUpdatedAt
+
+            guard let vehicle = data.vehicles.first else { return }
+
+            teslaAPI.wake(vehicle, completion: { (res, _, err) in
+
+                guard res else { return }
+
+                teslaAPI.getData(for: vehicle, completion: { (res, data, err) in
+                    print(data)
+                })
+            })
         }
     }
 

@@ -26,6 +26,9 @@
 		33061752A1CF47854EFA84440102E281 /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8FEAA8BBFA2317FEF841622DAA2045 /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		351A58374B952CD795E19A5C1DA52C01 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314ACD886612C49F925DEC8E2C573900 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3794F36FCBD2F263912BDBDD39B82219 /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8E4A08D4FCCFC40A5993A506E1B696 /* DictionaryTransform.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37CB630921B75BBA001736A0 /* NavigationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630721B75BBA001736A0 /* NavigationRequest.swift */; };
+		37CB630A21B75BBA001736A0 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630821B75BBA001736A0 /* SoftwareUpdate.swift */; };
+		37CB630E21B7605E001736A0 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630D21B7605E001736A0 /* MediaState.swift */; };
 		382E804D371FBBB5FB6D0C649705F844 /* ShiftState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D87E005496AA5157CBB26E407EAFA5 /* ShiftState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3B920F48CF3ADECBCEB3BB6847056B91 /* ChargingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5EC9ACFCAF79B83E4E07EA8C8D1145 /* ChargingState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3DB95197238583484D35557E1AAFB68D /* SetChargeLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C827A162A09F227D90B80F1E49315E /* SetChargeLimit.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -193,6 +196,9 @@
 		35D87E005496AA5157CBB26E407EAFA5 /* ShiftState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShiftState.swift; sourceTree = "<group>"; };
 		36678C7E6EF217928C735CF6C9D4EA01 /* Response.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Response.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Enums/TKAccessToken/Response.html; sourceTree = "<group>"; };
 		36A1F229C97EBA6A4C359FB9FC581FEF /* TKDistanceUnit.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = TKDistanceUnit.html; path = docs/Enums/TKDistanceUnit.html; sourceTree = "<group>"; };
+		37CB630721B75BBA001736A0 /* NavigationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRequest.swift; sourceTree = "<group>"; };
+		37CB630821B75BBA001736A0 /* SoftwareUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareUpdate.swift; sourceTree = "<group>"; };
+		37CB630D21B7605E001736A0 /* MediaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
 		39E31FB8D70D9F62EC6DB0A0F0A89DB7 /* SetTemperature.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SetTemperature.swift; sourceTree = "<group>"; };
 		3A0D72228472C493CAFD80A79D07DEEF /* TKShiftState.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = TKShiftState.html; path = docs/Enums/TKShiftState.html; sourceTree = "<group>"; };
 		3AA0A2F01829478FE01BC1FEB31DC9FA /* TeslaAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
@@ -456,8 +462,10 @@
 				78404EDB9F15DAE4C70E4DFAE8809BB0 /* ClimateState.swift */,
 				F332068CD34367EA297FFE2B68BFF983 /* DriveState.swift */,
 				915409F463580E33E3EEE541D72AB442 /* GUISettings.swift */,
+				37CB630D21B7605E001736A0 /* MediaState.swift */,
 				DA0EAEFCD5801520911E0ABEFD489287 /* MobileAccess.swift */,
 				297CF9483C7A0F95258FD24FCF29DAEB /* MovePanoRoof.swift */,
+				37CB630721B75BBA001736A0 /* NavigationRequest.swift */,
 				6A7ACAA0207FE54503DF70FE8B428D42 /* OpenTrunk.swift */,
 				08540EEFE7149AA17C065326E9B59D49 /* RefreshToken.swift */,
 				9292E0122548C992C4948AC12B93E4A3 /* RemoteStart.swift */,
@@ -465,6 +473,7 @@
 				D6C827A162A09F227D90B80F1E49315E /* SetChargeLimit.swift */,
 				91BB28FC690E57ED7A019A1F7359E7BB /* SetSpeedLimit.swift */,
 				39E31FB8D70D9F62EC6DB0A0F0A89DB7 /* SetTemperature.swift */,
+				37CB630821B75BBA001736A0 /* SoftwareUpdate.swift */,
 				DADC3A2C23838AD4AE985555AA263179 /* SpeedLimitMode.swift */,
 				707D3591D15CBC5AAD79F47398F16B2F /* SpeedLimitSetPIN.swift */,
 				D2DA7D0167B6E7E6F98F995BFDE65FCB /* StringArrayTransform.swift */,
@@ -1122,6 +1131,7 @@
 				E8F890206573E89FF22EDB8988B34F99 /* PanoRoofState.swift in Sources */,
 				AD8E84BD13A4DAA5DE0F4B4C4D0C16AD /* RangeDisplay.swift in Sources */,
 				C716AF1F471679563CC5E8EB7B53CDC4 /* RefreshToken.swift in Sources */,
+				37CB630921B75BBA001736A0 /* NavigationRequest.swift in Sources */,
 				84C459AE65A0915238DC4E90F34A6436 /* RemoteStart.swift in Sources */,
 				AF62AC3BB9853871DCE51AAA8BF91D5A /* ResetValetPIN.swift in Sources */,
 				3DB95197238583484D35557E1AAFB68D /* SetChargeLimit.swift in Sources */,
@@ -1137,12 +1147,14 @@
 				989B1D30FDC668607F67D3B22DF21DAE /* TeslaKit-dummy.m in Sources */,
 				4BECB811FB6FD09B15AA1F26B7E88D1D /* Vehicle.swift in Sources */,
 				2EAE05E186610E6B141C50AF83C8F451 /* VehicleCollection.swift in Sources */,
+				37CB630A21B75BBA001736A0 /* SoftwareUpdate.swift in Sources */,
 				C8D5E0365212CE8E7D3F54BBCBA4C56A /* VehicleCommand.swift in Sources */,
 				89CDABC16A70F8278A84420E7DAECED3 /* VehicleConfig.swift in Sources */,
 				0DC4B6C8844AE4DC288B1D9B99AEDC5C /* VehicleOption.swift in Sources */,
 				29E6333A7B0933D1633FD11221D66A4B /* VehicleOptionTransform.swift in Sources */,
 				1520653DC7A9A164C61B04249333F35C /* VehicleState.swift in Sources */,
 				A280F1A03151A469A6E41361331B7281 /* VehicleStatus.swift in Sources */,
+				37CB630E21B7605E001736A0 /* MediaState.swift in Sources */,
 				7E9028C78E3066CCE8EC2484243C3149 /* VIN.swift in Sources */,
 				FA60C779DCEF65D5AEFD85EAABF9840D /* VINComponent.swift in Sources */,
 				988D9F04B04ED94063F0FE0D067D1F1F /* VINTransform.swift in Sources */,

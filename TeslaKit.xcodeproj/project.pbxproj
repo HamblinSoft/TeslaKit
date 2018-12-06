@@ -54,6 +54,9 @@
 		37857DCF2150678E00229504 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8895200ECF2C00CD9D1E /* AccessToken.swift */; };
 		37857E1E21506A5E00229504 /* VehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37857E1D21506A5E00229504 /* VehicleOptionTransform.swift */; };
 		37857E2021506A6F00229504 /* StringArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37857E1F21506A6F00229504 /* StringArrayTransform.swift */; };
+		37CB630421B754FB001736A0 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630321B754FA001736A0 /* SoftwareUpdate.swift */; };
+		37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630521B75931001736A0 /* NavigationRequest.swift */; };
+		37CB630C21B75C98001736A0 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630B21B75C98001736A0 /* MediaState.swift */; };
 		37D796AB21506CF6002ED862 /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8898200ECF2C00CD9D1E /* TeslaAPI.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F252026533500409472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F232026533500409472 /* Main.storyboard */; };
@@ -144,6 +147,9 @@
 		377E891720F731A5004E379A /* SetSpeedLimit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimit.swift; sourceTree = "<group>"; };
 		37857E1D21506A5E00229504 /* VehicleOptionTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleOptionTransform.swift; sourceTree = "<group>"; };
 		37857E1F21506A6F00229504 /* StringArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringArrayTransform.swift; sourceTree = "<group>"; };
+		37CB630321B754FA001736A0 /* SoftwareUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareUpdate.swift; sourceTree = "<group>"; };
+		37CB630521B75931001736A0 /* NavigationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRequest.swift; sourceTree = "<group>"; };
+		37CB630B21B75C98001736A0 /* MediaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
 		37D4BA8E20B7898B002009D7 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
 		37F658F020294A2C00AAD681 /* ChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargePortLatchState.swift; sourceTree = "<group>"; };
 		37FB3F1D2026533500409472 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +284,7 @@
 				375D8880200ECF2C00CD9D1E /* GUISettings.swift */,
 				375D888A200ECF2C00CD9D1E /* MobileAccess.swift */,
 				375D888E200ECF2C00CD9D1E /* MovePanoRoof.swift */,
+				37CB630521B75931001736A0 /* NavigationRequest.swift */,
 				377E891620F731A5004E379A /* OpenTrunk.swift */,
 				37D4BA8E20B7898B002009D7 /* RefreshToken.swift */,
 				375D8887200ECF2C00CD9D1E /* RemoteStart.swift */,
@@ -285,6 +292,7 @@
 				375D8881200ECF2C00CD9D1E /* SetChargeLimit.swift */,
 				377E891720F731A5004E379A /* SetSpeedLimit.swift */,
 				375D888C200ECF2C00CD9D1E /* SetTemperature.swift */,
+				37CB630321B754FA001736A0 /* SoftwareUpdate.swift */,
 				377E890E20F72539004E379A /* SpeedLimitMode.swift */,
 				37630B6220F9483500D17BD8 /* SpeedLimitSetPIN.swift */,
 				37857E1F21506A6F00229504 /* StringArrayTransform.swift */,
@@ -299,6 +307,7 @@
 				375D8884200ECF2C00CD9D1E /* VIN.swift */,
 				375D888B200ECF2C00CD9D1E /* VINComponent.swift */,
 				375D888D200ECF2C00CD9D1E /* VINTransform.swift */,
+				37CB630B21B75C98001736A0 /* MediaState.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -709,15 +718,18 @@
 				37857DC12150678E00229504 /* ChargingState.swift in Sources */,
 				37857DAD2150670E00229504 /* ResetValetPIN.swift in Sources */,
 				37857DAE2150670E00229504 /* SetChargeLimit.swift in Sources */,
+				37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */,
 				37857DAF2150670E00229504 /* SetSpeedLimit.swift in Sources */,
 				37857DC32150678E00229504 /* DataRequest.swift in Sources */,
 				37857DB02150670E00229504 /* SetTemperature.swift in Sources */,
 				37857DB12150670E00229504 /* SpeedLimitMode.swift in Sources */,
+				37CB630421B754FB001736A0 /* SoftwareUpdate.swift in Sources */,
 				37857DB22150670E00229504 /* SpeedLimitSetPIN.swift in Sources */,
 				37857DB42150670E00229504 /* Vehicle.swift in Sources */,
 				37857DBF2150678E00229504 /* ChargePortLatchState.swift in Sources */,
 				37857DC72150678E00229504 /* PanoRoofState.swift in Sources */,
 				37857DB52150670E00229504 /* VehicleCollection.swift in Sources */,
+				37CB630C21B75C98001736A0 /* MediaState.swift in Sources */,
 				37857DB62150670E00229504 /* VehicleCommand.swift in Sources */,
 				37857DB72150670E00229504 /* VehicleConfig.swift in Sources */,
 				37857DC82150678E00229504 /* RangeDisplay.swift in Sources */,
