@@ -76,6 +76,9 @@ public struct VehicleConfig {
     public var exteriorColor: String? = nil
 
     ///
+    public var canAcceptNavigationRequests: Bool = false
+
+    ///
     public init() {}
 }
 
@@ -102,6 +105,7 @@ extension VehicleConfig: Mappable {
         timestamp <- map["timestamp"]
         trimBadging <- map["trim_badging"]
         wheelType <- map["wheel_type"]
+        canAcceptNavigationRequests <- map["can_accept_navigation_requests"]
     }
 }
 

@@ -103,7 +103,7 @@ public struct ChargeState {
     public var maxRangeChargeCounter: Int = 0
 
     /// The start time of the scheduled charging
-    public var scheduledChargingStartTime: TimeInterval? = nil
+    public var scheduledChargingStartTime: Date? = nil
 
     ///
     public var chargerPower: Int = 0
@@ -191,7 +191,7 @@ extension ChargeState: DataResponse {
         motorizedChargePort <- map["motorized_charge_port"]
         notEnoughPowerToHeat <- map["not_enough_power_to_heat"]
         scheduledChargingPending <- map["scheduled_charging_pending"]
-        scheduledChargingStartTime <- map["scheduled_charging_start_time"]
+        scheduledChargingStartTime <- (map["scheduled_charging_start_time"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'hh:mm:ss"))
         timeStamp <- map["timestamp"]
         timeToFullCharge <- map["time_to_full_charge"]
         tripCharging <- map["trip_charging"]

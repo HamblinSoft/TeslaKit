@@ -9,11 +9,33 @@
 import Foundation
 
 ///
-//public enum Error: String, Error {
+//public enum TKError: Error, LocalizedError, CustomStringConvertible {
 //
 //    ///
-//    case vehicleUnavailable = "vehicle unavailable"
+//    public enum Code: String {
+//
+//        ///
+//        case vehicleUnavailable = "vehicle unavailable"
+//
+//        ///
+//        case invalidCommand = "invalid_command"
+//    }
+//
 //
 //    ///
-//    case invalidCommand = "invalid_command"
+//    case api(code: String)
+//
+//    case invalidUsernameOrPassword
+//
+//    public var description: String {
+//        return ""
+//    }
+//
+//    public var errorDescription: String? { return nil }
+//
+//    public var failureReason: String? { return nil }
+//
+//    public var helpAnchor: String? { return nil }
+//
+//    public var recoverySuggestion: String? { return nil }
 //}

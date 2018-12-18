@@ -136,6 +136,9 @@ public struct VehicleState {
     public var timestamp: TimeInterval = 0
 
     ///
+    public var isUserPresent: Bool = false
+
+    ///
     public var speedLimitMode: SpeedLimitMode = SpeedLimitMode()
 
     ///
@@ -211,6 +214,7 @@ extension VehicleState: DataResponse {
         vehicleName <- map["vehicle_name"]
         wheelType <- map["wheel_type"]
         locked <- map["locked"]
+        isUserPresent <- map["is_user_present"]
         speedLimitMode <- map["speed_limit_mode"]
         softwareUpdate <- map["software_update"]
         mediaState <- map["media_state"]
