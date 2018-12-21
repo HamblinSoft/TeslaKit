@@ -25,11 +25,15 @@ public struct SoftwareUpdate: TKMappable {
         case scheduled = "scheduled"
 
         ///
+        case installing = "installing"
+
+        ///
         public var description: String {
             switch self {
             case .noUpdate: return "No Update"
             case .available: return "Update Available"
             case .scheduled: return "Update Scheduled"
+            case .installing: return "Installing"
             }
         }
     }

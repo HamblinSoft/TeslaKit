@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TeslaKit'
-  s.version          = '2.3'
+  s.version          = '2.3.1'
   s.summary          = 'TeslaKit is a framework written in Swift that makes it easy for you to interface with Tesla’s mobile API and communicate with your Tesla vehicles'
 
 # This description is used to generate tags and improve search results.
