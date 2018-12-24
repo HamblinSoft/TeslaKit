@@ -191,7 +191,7 @@ extension ChargeState: DataResponse {
         motorizedChargePort <- map["motorized_charge_port"]
         notEnoughPowerToHeat <- map["not_enough_power_to_heat"]
         scheduledChargingPending <- map["scheduled_charging_pending"]
-        scheduledChargingStartTime <- (map["scheduled_charging_start_time"], CustomDateFormatTransform(formatString: "yyyy-MM-dd'T'hh:mm:ss"))
+        scheduledChargingStartTime <- (map["scheduled_charging_start_time"], DateTransform())
         timeStamp <- map["timestamp"]
         timeToFullCharge <- map["time_to_full_charge"]
         tripCharging <- map["trip_charging"]

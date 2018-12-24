@@ -1,8 +1,8 @@
 //
-//  ISO8601DateTransform.swift
+//  CodableTransform.swift
 //  ObjectMapper
 //
-//  Created by Jean-Pierre Mouilleseaux on 21 Nov 2014.
+//  Created by Jari Kalinainen on 10/10/2018.
 //
 //  The MIT License (MIT)
 //
@@ -28,20 +28,38 @@
 
 import Foundation
 
-public extension DateFormatter {
-	public convenience init(withFormat format : String, locale : String) {
-		self.init()
-		self.locale = Locale(identifier: locale)
-		dateFormat = format
-	}
+/// Transforms JSON dictionary to Codable type T and back
+open class CodableTransform<T: Codable>: TransformType {
+
+    public typealias Object = T
+    public typealias JSON = Any
+
+    public init() {}
+
+    open func transformFromJSON(_ value: Any?) -> Object? {
+        guard let dict = value as? [String: Any], let data = try? JSONSerialization.data(withJSONObject: dict, options: []) else {
+            return nil
+        }
+        do {
+            let decoder = JSONDecoder()
+            let item = try decoder.decode(T.self, from: data)
+            return item
+        } catch {
+            return nil
+        }
+    }
+
+    open func transformToJSON(_ value: T?) -> JSON? {
+        guard let item = value else {
+            return nil
+        }
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(item)
+            let dictionary = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            return dictionary
+        } catch {
+            return nil
+        }
+    }
 }
-
-open class ISO8601DateTransform: DateFormatterTransform {
-	
-	static let reusableISODateFormatter = DateFormatter(withFormat: "yyyy-MM-dd'T'HH:mm:ssZZZZZ", locale: "en_US_POSIX")
-
-	public init() {
-		super.init(dateFormatter: ISO8601DateTransform.reusableISODateFormatter)
-	}
-}
-

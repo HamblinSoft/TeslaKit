@@ -8,6 +8,7 @@
 
 import XCTest
 import TeslaKit
+import ObjectMapper
 
 open class TKTestCase: XCTestCase {
 
@@ -33,5 +34,24 @@ open class TKTestCase: XCTestCase {
 
     func waitForExpectations(timeout: ExpectationWait = ExpectationWait.default) {
         waitForExpectations(timeout: timeout.rawValue, handler: nil)
+    }
+
+    func testScheduled() {
+        let ts: TimeInterval = 1545652800
+
+        var cs1 = ChargeState()
+        cs1.scheduledChargingStartTime = Date(timeIntervalSince1970: ts)
+        XCTAssertNotNil(cs1.scheduledChargingStartTime)
+        print(cs1.scheduledChargingStartTime)
+
+
+        let cs2 = ChargeState(JSON: ["scheduled_charging_start_time" : ts])!
+        XCTAssertNotNil(cs2.scheduledChargingStartTime)
+        print(cs2.scheduledChargingStartTime)
+
+        let transform = DateTransform()
+        let date = transform.transformFromJSON(ts)
+        XCTAssertNotNil(date)
+        print(date)
     }
 }

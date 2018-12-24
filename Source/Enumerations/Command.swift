@@ -129,7 +129,15 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
 
     ///
     case cancelSoftwareUpdate = "cancel_software_update"
-    
+
+    // MARK: - Seat/Wheel Heaters
+
+    ///
+//    case remoteSeatHeater = "remote_seat_heater_request"
+
+    ///
+//    case remoteSteeringWheelHeater = "remote_steering_wheel_heater_request"
+
     ///
     public var description: String {
         return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized
