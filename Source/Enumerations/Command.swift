@@ -133,10 +133,10 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
     // MARK: - Seat/Wheel Heaters
 
     ///
-//    case remoteSeatHeater = "remote_seat_heater_request"
+    case remoteSeatHeater = "remote_seat_heater_request"
 
     ///
-//    case remoteSteeringWheelHeater = "remote_steering_wheel_heater_request"
+    case remoteSteeringWheelHeater = "remote_steering_wheel_heater_request"
 
     ///
     public var description: String {

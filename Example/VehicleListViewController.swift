@@ -21,6 +21,8 @@ class VehicleListViewController: UITableViewController {
 
     private lazy var timer: Timer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
 
+    private var vehicle: Vehicle?
+
     private var vehicles: [Vehicle] = [] {
         didSet {
             self.tableView.reloadData()
@@ -38,7 +40,7 @@ class VehicleListViewController: UITableViewController {
     }
 
     @objc private func actionsButtonAction() {
-        guard let vehicle = self.vehicles.first else { return }
+        guard let vehicle = self.vehicle else { return }
         let actionSheet = UIAlertController(title: vehicle.displayName, message: nil, preferredStyle: .actionSheet)
 
         actionSheet.addAction(UIAlertAction(title: "Wake", style: .default, handler: { _ in
@@ -69,9 +71,9 @@ class VehicleListViewController: UITableViewController {
             })
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Start Update", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: "Start AC", style: .default, handler: { _ in
 
-            teslaAPI.send(Command.scheduleSoftwareUpdate, to: vehicle, completion: { response in
+            teslaAPI.send(Command.startHVAC, to: vehicle, completion: { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -80,9 +82,63 @@ class VehicleListViewController: UITableViewController {
 
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Cancel Update", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: "Seat Heater", style: .default, handler: { _ in
 
-            teslaAPI.send(Command.cancelSoftwareUpdate, to: vehicle, completion: { response in
+            let newVal = vehicle.climateState.seatHeaterLeft == 0 ? 3 : vehicle.climateState.seatHeaterLeft-1
+
+            let seatHeaters: [SeatHeater] = {
+
+                let hasRearSeatHeaters = vehicle.vehicleConfig.rearSeatHeaters > 0
+
+                if vehicle.vin?.make == .modelS || vehicle.vin?.make == .model3 {
+                    var seatHeaters: [SeatHeater] = [
+                        SeatHeater.frontLeft,
+                        SeatHeater.frontRight
+                    ]
+                    if hasRearSeatHeaters {
+                        seatHeaters.append(contentsOf: [SeatHeater.rearLeft,
+                                                        SeatHeater.rearCenter,
+                                                        SeatHeater.rearRight])
+                    }
+                    return seatHeaters
+                }
+
+                if vehicle.vin?.make == .modelX {
+                    var seatHeaters: [SeatHeater] = [
+                        SeatHeater.frontLeft,
+                        SeatHeater.frontRight
+                    ]
+                    if hasRearSeatHeaters {
+                        seatHeaters.append(contentsOf: [SeatHeater.rearLeft,
+                                                        SeatHeater.rearCenter,
+                                                        SeatHeater.rearRight,
+                                                        SeatHeater.rearLeftBack,
+                                                        SeatHeater.rearRightBack])
+                    }
+                    return seatHeaters
+                }
+
+
+                return []
+            }()
+
+            seatHeaters.forEach { seatHeater in
+
+                let req = RemoteSeatHeaterRequest(heater: seatHeater, level: newVal)
+
+                teslaAPI.send(Command.remoteSeatHeater, to: vehicle, parameters: req, completion: { response in
+
+                })
+            }
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Steering Wheel Heater", style: .default, handler: { _ in
+
+            let newVal = vehicle.climateState.steeringWheelHeater == 0 ? 3 : vehicle.climateState.steeringWheelHeater-1
+
+            let req = RemoteSteeringWheelHeaterRequest(level: newVal)
+
+            teslaAPI.send(Command.remoteSteeringWheelHeater, to: vehicle, parameters: req, completion: { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -218,6 +274,7 @@ class VehicleListViewController: UITableViewController {
                 guard res else { return }
 
                 teslaAPI.getData(for: vehicle, completion: { (res, data, err) in
+                    self.vehicle = data
                     print(data)
                 })
             })

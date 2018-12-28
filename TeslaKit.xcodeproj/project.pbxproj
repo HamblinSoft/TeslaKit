@@ -54,6 +54,9 @@
 		37857DCF2150678E00229504 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8895200ECF2C00CD9D1E /* AccessToken.swift */; };
 		37857E1E21506A5E00229504 /* VehicleOptionTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37857E1D21506A5E00229504 /* VehicleOptionTransform.swift */; };
 		37857E2021506A6F00229504 /* StringArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37857E1F21506A6F00229504 /* StringArrayTransform.swift */; };
+		3796D75121D5B5CE00A936DC /* SeatHeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796D75021D5B5CE00A936DC /* SeatHeater.swift */; };
+		3796D75421D5B5E400A936DC /* RemoteSeatHeaterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796D75221D5B5E400A936DC /* RemoteSeatHeaterRequest.swift */; };
+		3796D75521D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3796D75321D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift */; };
 		37CB630421B754FB001736A0 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630321B754FA001736A0 /* SoftwareUpdate.swift */; };
 		37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630521B75931001736A0 /* NavigationRequest.swift */; };
 		37CB630C21B75C98001736A0 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630B21B75C98001736A0 /* MediaState.swift */; };
@@ -147,6 +150,9 @@
 		377E891720F731A5004E379A /* SetSpeedLimit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimit.swift; sourceTree = "<group>"; };
 		37857E1D21506A5E00229504 /* VehicleOptionTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleOptionTransform.swift; sourceTree = "<group>"; };
 		37857E1F21506A6F00229504 /* StringArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringArrayTransform.swift; sourceTree = "<group>"; };
+		3796D75021D5B5CE00A936DC /* SeatHeater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatHeater.swift; sourceTree = "<group>"; };
+		3796D75221D5B5E400A936DC /* RemoteSeatHeaterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSeatHeaterRequest.swift; sourceTree = "<group>"; };
+		3796D75321D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSteeringWheelHeaterRequest.swift; sourceTree = "<group>"; };
 		37CB630321B754FA001736A0 /* SoftwareUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareUpdate.swift; sourceTree = "<group>"; };
 		37CB630521B75931001736A0 /* NavigationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRequest.swift; sourceTree = "<group>"; };
 		37CB630B21B75C98001736A0 /* MediaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
@@ -267,6 +273,7 @@
 				375D887E200ECF2C00CD9D1E /* Heading.swift */,
 				375D887B200ECF2C00CD9D1E /* PanoRoofState.swift */,
 				37FB3F452026674900409472 /* RangeDisplay.swift */,
+				3796D75021D5B5CE00A936DC /* SeatHeater.swift */,
 				375D887A200ECF2C00CD9D1E /* ShiftState.swift */,
 				37FB3F3F202666FF00409472 /* TemperatureUnit.swift */,
 				375D887D200ECF2C00CD9D1E /* VehicleStatus.swift */,
@@ -282,12 +289,15 @@
 				375D8892200ECF2C00CD9D1E /* ClimateState.swift */,
 				375D8890200ECF2C00CD9D1E /* DriveState.swift */,
 				375D8880200ECF2C00CD9D1E /* GUISettings.swift */,
+				37CB630B21B75C98001736A0 /* MediaState.swift */,
 				375D888A200ECF2C00CD9D1E /* MobileAccess.swift */,
 				375D888E200ECF2C00CD9D1E /* MovePanoRoof.swift */,
 				37CB630521B75931001736A0 /* NavigationRequest.swift */,
 				377E891620F731A5004E379A /* OpenTrunk.swift */,
 				37D4BA8E20B7898B002009D7 /* RefreshToken.swift */,
+				3796D75221D5B5E400A936DC /* RemoteSeatHeaterRequest.swift */,
 				375D8887200ECF2C00CD9D1E /* RemoteStart.swift */,
+				3796D75321D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift */,
 				375D888F200ECF2C00CD9D1E /* ResetValetPIN.swift */,
 				375D8881200ECF2C00CD9D1E /* SetChargeLimit.swift */,
 				377E891720F731A5004E379A /* SetSpeedLimit.swift */,
@@ -307,7 +317,6 @@
 				375D8884200ECF2C00CD9D1E /* VIN.swift */,
 				375D888B200ECF2C00CD9D1E /* VINComponent.swift */,
 				375D888D200ECF2C00CD9D1E /* VINTransform.swift */,
-				37CB630B21B75C98001736A0 /* MediaState.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -720,6 +729,7 @@
 				37857DAE2150670E00229504 /* SetChargeLimit.swift in Sources */,
 				37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */,
 				37857DAF2150670E00229504 /* SetSpeedLimit.swift in Sources */,
+				3796D75521D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift in Sources */,
 				37857DC32150678E00229504 /* DataRequest.swift in Sources */,
 				37857DB02150670E00229504 /* SetTemperature.swift in Sources */,
 				37857DB12150670E00229504 /* SpeedLimitMode.swift in Sources */,
@@ -728,8 +738,10 @@
 				37857DB42150670E00229504 /* Vehicle.swift in Sources */,
 				37857DBF2150678E00229504 /* ChargePortLatchState.swift in Sources */,
 				37857DC72150678E00229504 /* PanoRoofState.swift in Sources */,
+				3796D75421D5B5E400A936DC /* RemoteSeatHeaterRequest.swift in Sources */,
 				37857DB52150670E00229504 /* VehicleCollection.swift in Sources */,
 				37CB630C21B75C98001736A0 /* MediaState.swift in Sources */,
+				3796D75121D5B5CE00A936DC /* SeatHeater.swift in Sources */,
 				37857DB62150670E00229504 /* VehicleCommand.swift in Sources */,
 				37857DB72150670E00229504 /* VehicleConfig.swift in Sources */,
 				37857DC82150678E00229504 /* RangeDisplay.swift in Sources */,
