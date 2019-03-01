@@ -138,6 +138,11 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
     ///
     case remoteSteeringWheelHeater = "remote_steering_wheel_heater_request"
 
+    // MARK: - Sentry Mode
+
+    ///
+    case sentryMode = "set_sentry_mode"
+
     ///
     public var description: String {
         return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized

@@ -138,6 +138,9 @@ public struct VehicleState {
     ///
     public var isUserPresent: Bool = false
 
+    /// Indicates whether sentry mode is activated
+    public var sentryMode: Bool = false
+
     ///
     public var speedLimitMode: SpeedLimitMode = SpeedLimitMode()
 
@@ -218,6 +221,7 @@ extension VehicleState: DataResponse {
         speedLimitMode <- map["speed_limit_mode"]
         softwareUpdate <- map["software_update"]
         mediaState <- map["media_state"]
+        sentryMode <- map["sentry_mode"]
     }
 }
 

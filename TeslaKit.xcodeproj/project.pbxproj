@@ -61,6 +61,7 @@
 		37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630521B75931001736A0 /* NavigationRequest.swift */; };
 		37CB630C21B75C98001736A0 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CB630B21B75C98001736A0 /* MediaState.swift */; };
 		37D796AB21506CF6002ED862 /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D8898200ECF2C00CD9D1E /* TeslaAPI.swift */; };
+		37EA3D0C222910550042FBF0 /* SentryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA3D0B222910550042FBF0 /* SentryMode.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F252026533500409472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F232026533500409472 /* Main.storyboard */; };
 		37FB3F272026533500409472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F262026533500409472 /* Assets.xcassets */; };
@@ -157,6 +158,7 @@
 		37CB630521B75931001736A0 /* NavigationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRequest.swift; sourceTree = "<group>"; };
 		37CB630B21B75C98001736A0 /* MediaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
 		37D4BA8E20B7898B002009D7 /* RefreshToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
+		37EA3D0B222910550042FBF0 /* SentryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentryMode.swift; sourceTree = "<group>"; };
 		37F658F020294A2C00AAD681 /* ChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargePortLatchState.swift; sourceTree = "<group>"; };
 		37FB3F1D2026533500409472 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB3F1F2026533500409472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				375D8887200ECF2C00CD9D1E /* RemoteStart.swift */,
 				3796D75321D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift */,
 				375D888F200ECF2C00CD9D1E /* ResetValetPIN.swift */,
+				37EA3D0B222910550042FBF0 /* SentryMode.swift */,
 				375D8881200ECF2C00CD9D1E /* SetChargeLimit.swift */,
 				377E891720F731A5004E379A /* SetSpeedLimit.swift */,
 				375D888C200ECF2C00CD9D1E /* SetTemperature.swift */,
@@ -729,6 +732,7 @@
 				37857DAE2150670E00229504 /* SetChargeLimit.swift in Sources */,
 				37CB630621B75931001736A0 /* NavigationRequest.swift in Sources */,
 				37857DAF2150670E00229504 /* SetSpeedLimit.swift in Sources */,
+				37EA3D0C222910550042FBF0 /* SentryMode.swift in Sources */,
 				3796D75521D5B5E400A936DC /* RemoteSteeringWheelHeaterRequest.swift in Sources */,
 				37857DC32150678E00229504 /* DataRequest.swift in Sources */,
 				37857DB02150670E00229504 /* SetTemperature.swift in Sources */,

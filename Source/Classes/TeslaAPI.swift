@@ -380,7 +380,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     ///   - vehicle: The vehicle to send the command to
     ///   - request: Optional data to be included with the command
     ///   - completion: Completion Handler
-    open func send(_ command: Command, to vehicle: Vehicle, parameters: Mappable? = nil, completion: @escaping (CommandResponse) -> Void) {
+    open func send(_ command: Command, to vehicle: Vehicle, parameters: BaseMappable? = nil, completion: @escaping (CommandResponse) -> Void) {
         self.send(command, to: vehicle.id, json: parameters?.toJSON(), completion: completion)
     }
 }

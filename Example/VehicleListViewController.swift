@@ -58,6 +58,34 @@ class VehicleListViewController: UITableViewController {
 
         }))
 
+        actionSheet.addAction(UIAlertAction(title: "Sentry Mode On", style: .default, handler: { _ in
+
+            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: true)) { response in
+
+                if response.result {
+                    self.getData(vehicle: vehicle)
+                }
+
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
+            }
+        }))
+
+        actionSheet.addAction(UIAlertAction(title: "Sentry Mode Off", style: .default, handler: { _ in
+
+            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: false)) { response in
+
+                if response.result {
+                    self.getData(vehicle: vehicle)
+                }
+
+                self.displayAlert(title: response.result ? "Success" : "Failed",
+                                  message: response.allErrorMessages,
+                                  completion: nil)
+            }
+        }))
+
         actionSheet.addAction(UIAlertAction(title: "Send Address", style: .default, handler: { _ in
             let address: String = """
             3995 Alton Pkwy
