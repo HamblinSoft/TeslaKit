@@ -163,7 +163,7 @@
     },
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleState.swift",
-      "line": 175,
+      "line": 178,
       "symbol": "VehicleState.mapping(map:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

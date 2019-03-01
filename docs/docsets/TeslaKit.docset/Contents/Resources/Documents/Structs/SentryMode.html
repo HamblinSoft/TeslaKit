@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RefreshToken Enumeration Reference</title>
+    <title>SentryMode Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/RefreshToken" class="dashAnchor"></a>
-    <a title="RefreshToken Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Struct/SentryMode" class="dashAnchor"></a>
+    <a title="SentryMode Structure Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">TeslaKit Docs</a> (96% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">TeslaKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        RefreshToken Enumeration Reference
+        SentryMode Structure Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -252,15 +252,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>RefreshToken</h1>
+            <h1>SentryMode</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RefreshToken</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SentryMode</span><span class="p">:</span> <span class="kt">ImmutableMappable</span></code></pre>
 
                 </div>
               </div>
-            <p>Response Object</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -268,9 +267,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12RefreshTokenO7RequestV"></a>
-                    <a name="//apple_ref/swift/Struct/Request" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12RefreshTokenO7RequestV">Request</a>
+                    <a name="/s:8TeslaKit10SentryModeV4isOnSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isOn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit10SentryModeV4isOnSbvp">isOn</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -278,15 +277,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Refresh Token Request object containing the required information to receive a new accessToken</p>
-
-                        <a href="../Enums/RefreshToken/Request.html" class="slightly-smaller">See more</a>
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isOn</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -296,9 +293,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8TeslaKit12RefreshTokenO8Responsea"></a>
-                    <a name="//apple_ref/swift/Alias/Response" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8TeslaKit12RefreshTokenO8Responsea">Response</a>
+                    <a name="/s:8TeslaKit10SentryModeV4isOnACSb_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(isOn:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8TeslaKit10SentryModeV4isOnACSb_tcfc">init(isOn:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,14 +303,65 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The response object returned containing an accessToken</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Response</span> <span class="o">=</span> <span class="kt"><a href="../Enums/AccessToken.html">AccessToken</a></span><span class="o">.</span><span class="kt">Response</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">isOn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/init(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">init(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/mapping(map:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">mapping(map:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapping</span><span class="p">(</span><span class="nv">map</span><span class="p">:</span> <span class="kt">Map</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
