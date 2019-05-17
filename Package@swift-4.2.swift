@@ -13,7 +13,7 @@ let package = Package(
             targets: ["TeslaKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", from: "3.3.0"),
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper", from: "3.3.0"),
     ],
     targets: [
         .target(
