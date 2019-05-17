@@ -12,10 +12,15 @@ let package = Package(
             name: "TeslaKit",
             targets: ["TeslaKit"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/tristanhimmelman/ObjectMapper.git", from: "3.3.0"),
+    ],
     targets: [
         .target(
             name: "TeslaKit",
+            dependencies: [
+                "ObjectMapper"
+            ]
             path: "Source")
-    ],
-    swiftLanguageVersions: [.v3, .v4]
+    ]//,swiftLanguageVersions: [.v3, .v4]
 )
