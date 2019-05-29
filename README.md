@@ -79,9 +79,9 @@ Obtain an Access Token by logging in with your Tesla account credentials
 let email = "e.musk@teslakit.com"
 let password = "M@R$R0X!"
 
-teslaAPI.getAccessToken(email: email, password: password) { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.getAccessToken(email: email, password: password) { res in
 
-    guard let accessToken = dataOrNil?.accessToken else { return }
+    guard let accessToken = res.data?.accessToken else { return }
 
     // Set the accessToken for use with future requests
     teslaAPI.setAccessToken(accessToken)
@@ -92,9 +92,9 @@ teslaAPI.getAccessToken(email: email, password: password) { (httpResponse, dataO
 Obtain a list of vehicles associated with your account
 
 ```swift
-teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.vehicles { res in
 
-    guard let vehicle = dataOrNil?.vehicles.first else { return }
+    guard let vehicle = res.data.vehicles.first else { return }
 
     print("Hello, \(vehicle.displayName)")
 }
@@ -104,9 +104,9 @@ teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
 Obtain all data for a vehicle
 
 ```swift
-teslaAPI.getData(vehicle.id) { (httpResponse, dataOrNil, errorOrNil) in
+teslaAPI.data(for: vehicle.id) { res in
 
-    guard let vehicle = dataOrNil else { return }
+    guard let vehicle = res.data else { return }
 
     print("Battery is at \(vehicle.chargeState.batteryLevel)%")
 }
@@ -116,10 +116,9 @@ teslaAPI.getData(vehicle.id) { (httpResponse, dataOrNil, errorOrNil) in
 Send a command to a vehicle
 
 ```swift
-let command = Command.unlockDoors
 
-teslaAPI.send(command, to: vehicle) { response in
-    if response.result {
+teslaAPI.send(.unlockDoors, to: vehicle) { res in
+    if res.result {
         print("Command sent successfully!")
     }
 }
@@ -128,10 +127,10 @@ teslaAPI.send(command, to: vehicle) { response in
 Send a command to a vehicle with request parameters
 
 ```swift
-let parameters = SetTemperature(driverTemp: 21.0, passengerTemp: 21.0)
+let command = Command.setTemperature(SetTemperatureOptions(driverTemp: 21.0, passengerTemp: 21.0))
 
-teslaAPI.send(.setTemperature, to: vehicle, parameters: parameters) { response in
-    if response.result {
+teslaAPI.send(command, to: vehicle) { res in
+    if res.result {
         print("Command sent successfully!")
     }
 }

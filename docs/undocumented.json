@@ -1,38 +1,38 @@
 {
   "warnings": [
     {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 192,
-      "symbol": "TeslaAPI.revokeAccessToken(completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/CommandOptions/NavigationRequestOptions.swift",
-      "line": 26,
-      "symbol": "NavigationRequestOptions.init(address:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/CommandOptions/NavigationRequestOptions.swift",
-      "line": 43,
-      "symbol": "NavigationRequestOptions.Intent",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Enumerations/Command.swift",
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Command.swift",
       "line": 153,
       "symbol": "Command.rawValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Enumerations/Heading.swift",
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Heading.swift",
       "line": 51,
       "symbol": "Heading.abbreviation",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/NavigationRequestOptions.swift",
+      "line": 26,
+      "symbol": "NavigationRequestOptions.init(address:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/NavigationRequestOptions.swift",
+      "line": 43,
+      "symbol": "NavigationRequestOptions.Intent",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/TeslaAPI.swift",
+      "line": 192,
+      "symbol": "TeslaAPI.revokeAccessToken(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
