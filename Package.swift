@@ -14,7 +14,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "TeslaKit"
+            name: "TeslaKit",
             path: "Source")
     ],
     swiftLanguageVersions: [.v5]
