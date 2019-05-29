@@ -1,6 +1,6 @@
 {
   "name": "TeslaKit",
-  "version": "2.3.1",
+  "version": "3.0",
   "summary": "TeslaKit is a framework written in Swift that makes it easy for you to interface with Tesla’s mobile API and communicate with your Tesla vehicles",
   "description": "TeslaKit is a framework written in Swift that makes it easy for you to interface with Tesla’s mobile API and communicate with your Tesla vehicles",
   "homepage": "https://github.com/HamblinSoft/TeslaKit",
@@ -13,17 +13,12 @@
   },
   "source": {
     "git": "https://github.com/HamblinSoft/TeslaKit.git",
-    "tag": "2.3.1"
+    "tag": "3.0"
   },
   "platforms": {
     "ios": "8.0",
     "watchos": "4.0",
     "tvos": "11.0"
   },
-  "source_files": "Source/**/*",
-  "dependencies": {
-    "ObjectMapper": [
-      "~> 3.3"
-    ]
-  }
+  "source_files": "Source/**/*"
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 import TeslaKit
-import ObjectMapper
 
 let teslaAPI = TeslaAPI(debugMode: true)
 let userDefaults = UserDefaults.standard
