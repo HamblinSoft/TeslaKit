@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum RangeDisplay: String, CustomStringConvertible {
+public enum RangeDisplay: String, CustomStringConvertible, Decodable {
 
     ///
     case ideal = "Ideal"

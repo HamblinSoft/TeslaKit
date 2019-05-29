@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum TemperatureUnit: String, CustomStringConvertible {
+public enum TemperatureUnit: String, CustomStringConvertible, Decodable {
 
     ///
     case fahrenheit = "F"

@@ -1,6 +1,6 @@
 //
 //  VINComponent.swift
-//  TeslaApp
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 11/26/17.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
@@ -9,10 +9,10 @@
 import Foundation
 
 ///
-public struct VINComponent {
+public enum VINComponent {
 
     ///
-    public enum Manufacturer: String, CustomStringConvertible, CaseIterable {
+    public enum Manufacturer: String, CustomStringConvertible, CaseIterable, Decodable {
 
         ///
         case unknown = ""
@@ -30,7 +30,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum Make: String, CustomStringConvertible, CaseIterable {
+    public enum Make: String, CustomStringConvertible, CaseIterable, Decodable {
 
         ///
         case unknown = ""
@@ -60,7 +60,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum BatteryType: String, CustomStringConvertible, CaseIterable {
+    public enum BatteryType: String, CustomStringConvertible, CaseIterable, Decodable {
 
         ///
         case unknown
@@ -90,7 +90,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum DriveUnit: String, CustomStringConvertible, CaseIterable {
+    public enum DriveUnit: String, CustomStringConvertible, CaseIterable, Decodable {
 
         ///
         case unknown
@@ -124,7 +124,7 @@ public struct VINComponent {
     }
 
     ///
-    public enum ManufactureLocation: String, CustomStringConvertible, CaseIterable {
+    public enum ManufactureLocation: String, CustomStringConvertible, CaseIterable, Decodable {
 
         ///
         case unknown = ""
@@ -142,7 +142,15 @@ public struct VINComponent {
     }
 
     ///
-    public enum ModelYear: String, CaseIterable {
+    public enum ModelYear: String, CaseIterable, Decodable, Comparable, Equatable {
+
+        public static func == (lhs: VINComponent.ModelYear, rhs: VINComponent.ModelYear) -> Bool {
+            return lhs.year == rhs.year
+        }
+
+        public static func < (lhs: VINComponent.ModelYear, rhs: VINComponent.ModelYear) -> Bool {
+            return lhs.year < rhs.year
+        }
 
         ///
         case unknown = ""
@@ -207,6 +215,52 @@ public struct VINComponent {
         ///
         public var description: String {
             return String(describing: self).replacingOccurrences(of: "year", with: "")
+        }
+
+        ///
+        public var year: Int {
+            switch self {
+            case .unknown:
+                return 0
+            case .year2024:
+                return 2024
+            case .year2023:
+                return 2023
+            case .year2022:
+                return 2022
+            case .year2021:
+                return 2021
+            case .year2020:
+                return 2020
+            case .year2019:
+                return 2019
+            case .year2018:
+                return 2018
+            case .year2017:
+                return 2017
+            case .year2016:
+                return 2016
+            case .year2015:
+                return 2015
+            case .year2014:
+                return 2014
+            case .year2013:
+                return 2013
+            case .year2012:
+                return 2012
+            case .year2011:
+                return 2011
+            case .year2010:
+                return 2010
+            case .year2009:
+                return 2009
+            case .year2008:
+                return 2008
+            case .year2007:
+                return 2007
+            case .year2006:
+                return 2006
+            }
         }
     }
 }

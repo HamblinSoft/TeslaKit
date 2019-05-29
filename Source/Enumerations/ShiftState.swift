@@ -1,6 +1,6 @@
 //
 //  ShiftState.swift
-//  TeslaApp
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 11/20/17.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum ShiftState: String, CustomStringConvertible {
+public enum ShiftState: String, CustomStringConvertible, Decodable {
 
     ///
     case drive = "D"

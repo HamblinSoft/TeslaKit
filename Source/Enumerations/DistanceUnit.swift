@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public enum DistanceUnit: String, CustomStringConvertible {
+public enum DistanceUnit: String, CustomStringConvertible, Decodable {
 
     ///
     case imperial = "mi/hr"

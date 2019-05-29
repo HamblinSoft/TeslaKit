@@ -60,7 +60,7 @@ class VehicleListViewController: UITableViewController {
 
         actionSheet.addAction(UIAlertAction(title: "Sentry Mode On", style: .default, handler: { _ in
 
-            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: true)) { response in
+            teslaAPI.send(.sentryMode(SetSentryModeOptions(isOn: true)), to: vehicle) { response in
 
                 if response.result {
                     self.getData(vehicle: vehicle)
@@ -74,7 +74,7 @@ class VehicleListViewController: UITableViewController {
 
         actionSheet.addAction(UIAlertAction(title: "Sentry Mode Off", style: .default, handler: { _ in
 
-            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: false)) { response in
+            teslaAPI.send(.sentryMode(SetSentryModeOptions(isOn: false)), to: vehicle) { response in
 
                 if response.result {
                     self.getData(vehicle: vehicle)
@@ -92,11 +92,12 @@ class VehicleListViewController: UITableViewController {
             Irvine, CA  92606
             United States
             """
-            teslaAPI.send(.navigationRequest, to: vehicle, parameters: NavigationRequest(address: address), completion: { response in
+
+            teslaAPI.send(.navigationRequest(NavigationRequestOptions(address: address)), to: vehicle) { response in
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
                                   completion: nil)
-            })
+            }
         }))
 
         actionSheet.addAction(UIAlertAction(title: "Start AC", style: .default, handler: { _ in
@@ -110,70 +111,7 @@ class VehicleListViewController: UITableViewController {
 
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Seat Heater", style: .default, handler: { _ in
 
-            let newVal = vehicle.climateState.seatHeaterLeft == 0 ? 3 : vehicle.climateState.seatHeaterLeft-1
-
-            let seatHeaters: [SeatHeater] = {
-
-                let hasRearSeatHeaters = vehicle.vehicleConfig.rearSeatHeaters > 0
-
-                if vehicle.vin?.make == .modelS || vehicle.vin?.make == .model3 {
-                    var seatHeaters: [SeatHeater] = [
-                        SeatHeater.frontLeft,
-                        SeatHeater.frontRight
-                    ]
-                    if hasRearSeatHeaters {
-                        seatHeaters.append(contentsOf: [SeatHeater.rearLeft,
-                                                        SeatHeater.rearCenter,
-                                                        SeatHeater.rearRight])
-                    }
-                    return seatHeaters
-                }
-
-                if vehicle.vin?.make == .modelX {
-                    var seatHeaters: [SeatHeater] = [
-                        SeatHeater.frontLeft,
-                        SeatHeater.frontRight
-                    ]
-                    if hasRearSeatHeaters {
-                        seatHeaters.append(contentsOf: [SeatHeater.rearLeft,
-                                                        SeatHeater.rearCenter,
-                                                        SeatHeater.rearRight,
-                                                        SeatHeater.rearLeftBack,
-                                                        SeatHeater.rearRightBack])
-                    }
-                    return seatHeaters
-                }
-
-
-                return []
-            }()
-
-            seatHeaters.forEach { seatHeater in
-
-                let req = RemoteSeatHeaterRequest(heater: seatHeater, level: newVal)
-
-                teslaAPI.send(Command.remoteSeatHeater, to: vehicle, parameters: req, completion: { response in
-
-                })
-            }
-        }))
-
-        actionSheet.addAction(UIAlertAction(title: "Steering Wheel Heater", style: .default, handler: { _ in
-
-            let newVal = vehicle.climateState.steeringWheelHeater == 0 ? 3 : vehicle.climateState.steeringWheelHeater-1
-
-            let req = RemoteSteeringWheelHeaterRequest(level: newVal)
-
-            teslaAPI.send(Command.remoteSteeringWheelHeater, to: vehicle, parameters: req, completion: { response in
-
-                self.displayAlert(title: response.result ? "Success" : "Failed",
-                                  message: response.allErrorMessages,
-                                  completion: nil)
-            })
-
-        }))
 
         let mediaCommands: [Command] = [
             .togglePlayback,
@@ -212,13 +150,13 @@ class VehicleListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "default", for: indexPath)
         let vehicle = self.vehicles[indexPath.row]
         cell.textLabel?.text = vehicle.displayName
-        cell.detailTextLabel?.text = vehicle.status.description
+        cell.detailTextLabel?.text = vehicle.state.description
         return cell
     }
 
     private func restoreSession() {
 
-        let accessToken = userDefaults.accessToken ?? AccessToken.Response()
+        let accessToken = userDefaults.accessToken ?? AccessToken.Response(accessToken: nil, tokenType: nil, expiresIn: nil, createdAt: nil, refreshToken: nil)
         let accessTokenIsExpired = accessToken.isExpired
 
         if accessTokenIsExpired {
@@ -261,10 +199,10 @@ class VehicleListViewController: UITableViewController {
 
     private func login(email: String, password: String) {
 
-        teslaAPI.getAccessToken(email: email, password: password) { (response, data, error) in
+        teslaAPI.getAccessToken(email: email, password: password) { response in
 
-            guard let data = data, response.statusCode == 200 else {
-                self.displayAlert(title: "Authentication Failed", message: error?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: response.statusCode)) {
+            guard let data = response.data, response.statusCode == 200 else {
+                self.displayAlert(title: "Authentication Failed", message: response.error?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: response.statusCode)) {
                     self.presentLoginAlert()
                 }
                 return
@@ -285,9 +223,10 @@ class VehicleListViewController: UITableViewController {
         let isExpired = userDefaults.accessToken?.isExpired ?? true
         guard !isExpired else { return }
 
-        teslaAPI.getVehicles { (response, data, error) in
 
-            guard let data = data, response.statusCode == 200 else { return }
+        teslaAPI.vehicles { response in
+
+            guard let data = response.data, response.statusCode == 200 else { return }
 
             self.vehicles = data.vehicles
 
@@ -297,15 +236,16 @@ class VehicleListViewController: UITableViewController {
 
             guard let vehicle = data.vehicles.first else { return }
 
-            teslaAPI.wake(vehicle, completion: { (res, _, err) in
+            teslaAPI.wake(vehicle) { (isAwake, _) in
 
-                guard res else { return }
+                guard isAwake else { return }
 
-                teslaAPI.getData(for: vehicle, completion: { (res, data, err) in
-                    self.vehicle = data
+                teslaAPI.data(for: vehicle) { response in
+
+                    self.vehicle = response.data
                     print(data)
-                })
-            })
+                }
+            }
         }
     }
 
@@ -331,7 +271,7 @@ class VehicleListViewController: UITableViewController {
 
         print("forceWake", "requesting data")
 
-        teslaAPI.getData(for: vehicle) { (response, data, error) in
+        teslaAPI.data(for: vehicle) { response in
 
             attempts += 1
 
@@ -385,20 +325,17 @@ extension TeslaAPI {
 
             print("forceWake", "waking")
 
-            self.wake(vehicle) { (result, data, error) in
-                let status = data?.status ?? .asleep
-                if let error = error {
-                    errorMessages.append(error)
+            self.wake(vehicle) { (isAwake, res) in
+
+                let state = res.data?.state ?? Vehicle.State.offline
+
+                if let error = res.error {
+                    errorMessages.append(error.localizedDescription)
                 }
 
+                print("forceWake", state)
 
-                if let error = error {
-                    errorMessages.append(error)
-                }
-
-                print("forceWake", status.description)
-
-                guard result else {
+                guard isAwake else {
                     attempts += 1
                     if attempts >= maxAttempts {
                         print("forceWake", "max attempts reached")
@@ -409,14 +346,14 @@ extension TeslaAPI {
                     return
                 }
 
-                switch status {
-                case .asleep, .offline:
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                        performForceWake()
-                    }
+                switch state {
                 case .online:
                     print("forceWake", "success!")
                     completionHandler(result: true, errorMessage: nil)
+                default:
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                        performForceWake()
+                    }
                 }
             }
         }
@@ -449,11 +386,11 @@ extension UserDefaults {
 
     var accessToken: AccessToken.Response? {
         get {
-            guard let jsonString = self.string(forKey: "access_token") else { return nil }
-            return Mapper<AccessToken.Response>().map(JSONString: jsonString)
+            guard let jsonData = self.data(forKey: "access_token") else { return nil }
+            return JSONDecoder().decode(jsonData)
         }
         set {
-            self.set(newValue?.toJSONString(), forKey: "access_token")
+            self.set(newValue?.toJSONData(), forKey: "access_token")
             self.synchronize()
         }
     }
@@ -468,4 +405,3 @@ extension UserDefaults {
         }
     }
 }
-

@@ -1,13 +1,12 @@
 //
 //  VIN.swift
-//  TeslaApp
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 11/26/17.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
 //
 
 import Foundation
-import ObjectMapper
 
 ///
 public struct VIN: CustomStringConvertible {
@@ -91,11 +90,5 @@ extension String {
         let start = index(startIndex, offsetBy: bounds.lowerBound)
         let end = index(startIndex, offsetBy: bounds.upperBound)
         return String(self[start..<end])
-    }
-}
-
-extension VIN: Mappable {
-    public mutating func mapping(map: Map) {
-        
     }
 }

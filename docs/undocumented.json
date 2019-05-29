@@ -2,8 +2,29 @@
   "warnings": [
     {
       "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Classes/TeslaAPI.swift",
-      "line": 65,
-      "symbol": "TeslaAPI.configuration",
+      "line": 192,
+      "symbol": "TeslaAPI.revokeAccessToken(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/CommandOptions/NavigationRequestOptions.swift",
+      "line": 26,
+      "symbol": "NavigationRequestOptions.init(address:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/CommandOptions/NavigationRequestOptions.swift",
+      "line": 43,
+      "symbol": "NavigationRequestOptions.Intent",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Enumerations/Command.swift",
+      "line": 153,
+      "symbol": "Command.rawValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
@@ -12,160 +33,6 @@
       "line": 51,
       "symbol": "Heading.abbreviation",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/AccessToken.swift",
-      "line": 90,
-      "symbol": "AccessToken.Request.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/AccessToken.swift",
-      "line": 102,
-      "symbol": "AccessToken.Response.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/ChargeState.swift",
-      "line": 158,
-      "symbol": "ChargeState.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/ClimateState.swift",
-      "line": 105,
-      "symbol": "ClimateState.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/DriveState.swift",
-      "line": 73,
-      "symbol": "DriveState.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/GUISettings.swift",
-      "line": 42,
-      "symbol": "GUISettings.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/MobileAccess.swift",
-      "line": 28,
-      "symbol": "MobileAccess.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/MovePanoRoof.swift",
-      "line": 38,
-      "symbol": "MovePanoRoof.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/NavigationRequest.swift",
-      "line": 27,
-      "symbol": "NavigationRequest.init(address:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/NavigationRequest.swift",
-      "line": 45,
-      "symbol": "NavigationRequest.Intent",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/OpenTrunk.swift",
-      "line": 37,
-      "symbol": "OpenTrunk.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/RefreshToken.swift",
-      "line": 50,
-      "symbol": "RefreshToken.Request.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/RemoteStart.swift",
-      "line": 32,
-      "symbol": "RemoteStart.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/ResetValetPIN.swift",
-      "line": 38,
-      "symbol": "ResetValetPIN.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/SetChargeLimit.swift",
-      "line": 33,
-      "symbol": "SetChargeLimit.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/SetTemperature.swift",
-      "line": 38,
-      "symbol": "SetTemperature.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VIN.swift",
-      "line": 98,
-      "symbol": "VIN.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/Vehicle.swift",
-      "line": 71,
-      "symbol": "Vehicle.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleCollection.swift",
-      "line": 28,
-      "symbol": "VehicleCollection.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleCommand.swift",
-      "line": 44,
-      "symbol": "CommandResponse.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleConfig.swift",
-      "line": 86,
-      "symbol": "VehicleConfig.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/jarenhamblin/Documents/Code/TeslaKit/Source/Structures/VehicleState.swift",
-      "line": 175,
-      "symbol": "VehicleState.mapping(map:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],

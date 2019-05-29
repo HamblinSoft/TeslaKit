@@ -1,13 +1,12 @@
 //
 //  TeslaAPI.swift
-//  TeslaApp
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 11/19/17.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
 //
 
 import Foundation
-import ObjectMapper
 
 ///
 public protocol TeslaAPIDelegate: class {
@@ -21,7 +20,6 @@ public protocol TeslaAPIDelegate: class {
     ///
     func teslaApi(_ teslaAPI: TeslaAPI, didSend command: Command, data: CommandResponse?, result: CommandResponse)
 }
-
 
 
 ///
@@ -40,28 +38,40 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         public let clientSecret: String
 
         ///
-        public let apiVersion: Int = 1
+        public let apiVersion: Int
 
         ///
         public let requestTimeout: TimeInterval
 
         ///
-        public var apiBaseURL: URL { return self.baseURL.appendingPathComponent("api/\(self.apiVersion)") }
+        public init(baseURL: URL, clientId: String, clientSecret: String, apiVersion: Int, requestTimeout: TimeInterval) {
+            self.baseURL = baseURL
+            self.clientId = clientId
+            self.clientSecret = clientSecret
+            self.apiVersion = apiVersion
+            self.requestTimeout = requestTimeout
+        }
+
+        ///
+        public var apiBaseURL: URL { return baseURL.appendingPathComponent("api/\(apiVersion)") }
 
         ///
         public static let `default`: Configuration = Configuration(baseURL: URL(string: "https://owner-api.teslamotors.com")!,
                                                                    clientId: "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e",
                                                                    clientSecret: "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220",
+                                                                   apiVersion: 1,
                                                                    requestTimeout: 30)
 
         ///
         public static let mock: Configuration = Configuration(baseURL: URL(string: "https://us-central1-teslaapp-dev.cloudfunctions.net/mock")!,
                                                               clientId: "",
                                                               clientSecret: "",
+                                                              apiVersion: 1,
                                                               requestTimeout: 10)
 
     }
 
+    ///
     public let configuration: Configuration
 
     ///
@@ -71,7 +81,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     public weak var delegate: TeslaAPIDelegate? = nil
 
     ///
-    public var session: URLSession
+    public private(set) var session: URLSession
 
     ///
     public var headers: [String: String] = [
@@ -79,234 +89,126 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         "cache-control": "no-cache"
     ]
 
-
     /// Initialize a new instance of TeslaAPI
-    public convenience init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
-        self.init(configuration: configuration,
-                  session: URLSession(configuration: .default),
-                  debugMode: debugMode)
-    }
-
-    /// Initialize a new instance of TeslaAPI
-    public init(configuration: Configuration = Configuration.default, session: URLSession, debugMode: Bool = false) {
+    public init(configuration: Configuration = .default, session: URLSession = URLSession(configuration: .default), debugMode: Bool = false) {
         self.configuration = configuration
         self.debugMode = debugMode
         self.session = session
     }
 
     ///
-    public func request<T: Mappable>(_ url: URL, method: String = "GET", parameters: Any? = nil, headers: [String: String] = [:], completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
+    private func request<T: Encodable, U: JSONDecodable>(_ url: URL, method: HTTPMethod = .get, httpBody: T? = nil, headers: [String: String] = [:], completion: @escaping (HTTPResponse<U>) -> Void) {
+        let encoder = JSONEncoder()
+        let encodedHttpBody = try? encoder.encode(httpBody)
+        request(url, method: method, httpBody: encodedHttpBody, headers: headers, completion: completion)
+    }
+
+    ///
+    private func request<T: JSONDecodable>(_ url: URL, method: HTTPMethod = .get, httpBody: Data? = nil, headers: [String: String] = [:], completion: @escaping (HTTPResponse<T>) -> Void) {
+
+        request(url, method: method, httpBody: httpBody, headers: headers) { (response, data, error) in
+
+            func decodeData(data: Data?) throws -> T? {
+                guard let data = data else { return nil }
+                return try JSONDecoder().decode(T.self, from: data)
+            }
+
+            do {
+                let object: T? = try decodeData(data: data)
+                completion(HTTPResponse(httpResponse: response, data: object, rawData: data, error: error))
+            } catch let error {
+                completion(HTTPResponse(httpResponse: response, data: nil, rawData: data, error: error))
+            }
+        }
+    }
+
+    ///
+    private func request(_ url: URL, method: HTTPMethod, httpBody: Data?, headers: [String: String], completion: @escaping (HTTPURLResponse, Data?, Error?) -> Void) {
 
         // Create the request
         let request: URLRequest = {
-            var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: self.configuration.requestTimeout)
-            request.httpMethod = method
+            var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: configuration.requestTimeout)
+            request.httpMethod = method.rawValue
             headers.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
-            if let parameters = parameters {
-                request.httpBody = try? JSONSerialization.data(withJSONObject: parameters)
-            }
+            request.httpBody = httpBody
             return request
         }()
 
         // Create the task
-        let task = self.session.dataTask(with: request) { (dataOrNil, responseOrNil, errorOrNil) in
+        let task = session.dataTask(with: request) { [weak self] (dataOrNil, responseOrNil, errorOrNil) in
+
+            guard let self = self else { return }
 
             let response: HTTPURLResponse = (responseOrNil as? HTTPURLResponse) ?? HTTPURLResponse(url: url, statusCode: 0, httpVersion: nil, headerFields: headers)!
 
             self.delegate?.teslaApiActivityDidEnd(self, response: response, error: errorOrNil)
-
-            var mappedData: T? = nil
 
             // If debug mode, print out contents of response
             if self.debugMode {
                 self.debugPrint(request, response: response, responseData: dataOrNil, error: errorOrNil)
             }
 
-            // Attempt to serialize the response JSON and map to TeslaKit objects
-            do {
-                if let data = dataOrNil {
-                    let json: Any = try JSONSerialization.jsonObject(with: data)
-                    mappedData = Mapper<T>().map(JSONObject: json)
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-
             // Call the completion handler
             DispatchQueue.main.async {
-                completion(response, mappedData, errorOrNil)
+
+                completion(response, dataOrNil, errorOrNil)
             }
         }
 
-        self.delegate?.teslaApiActivityDidBegin(self)
+        delegate?.teslaApiActivityDidBegin(self)
 
         // Start the task immediately
         task.resume()
     }
 
-    /// Set the accessToken to be used with all requests
+    // MARK: - Authentication
+
     ///
-    /// - Parameter accessToken: String
-    public func setAccessToken(_ accessToken: String?) {
-        if let accessToken = accessToken {
-            self.headers["Authorization"] = "Bearer " + accessToken
-        } else {
-            self.headers["Authorization"] = nil
-        }
-    }
-
-    // MARK: - Core API
-
-    /// Performs the login. Takes in an plain text email and password, matching the owner's login information for https://my.teslamotors.com/user/login. Returns a access_token which is passed along as a header with all future requests to authenticate the user.
-    ///
-    /// - Parameters:
-    ///   - email: The email of the user
-    ///   - password: The password of the user
-    ///   - completion: Completion Handler
-    open func getAccessToken(email: String, password: String, completion: @escaping (HTTPURLResponse, AccessToken.Response?, Error?) -> Void) {
-        let request = AccessToken.Request(grantType: "password",
-                                            clientId: self.configuration.clientId,
-                                            clientSecret: self.configuration.clientSecret,
-                                            email: email,
-                                            password: password)        
-
-        self.request(self.configuration.baseURL.appendingPathComponent("oauth/token"),
-                     method: "POST",
-                     parameters: request.toJSON(),
-                     headers: self.headers,
-                     completion: completion)
+    open func getAccessToken(email: String, password: String, completion: @escaping (_ response: HTTPResponse<AccessToken.Response>) -> Void) {
+        request(configuration.baseURL.appendingPathComponent("oauth/token"),
+                method: .post,
+                httpBody: AccessToken.Request(grantType: "password",
+                                              clientId: configuration.clientId,
+                                              clientSecret: configuration.clientSecret,
+                                              email: email,
+                                              password: password),
+                headers: headers,
+                completion: completion)
     }
 
     /// Request a new access token using a refresh token
-    ///
-    /// - Parameters:
-    ///   - refreshToken: refreshToken from Tesla API
-    ///   - completion: Completion handler callback
-    open func getRefreshToken(_ refreshToken: String, completion: @escaping (HTTPURLResponse, RefreshToken.Response?, Error?) -> Void) {
-        let request = RefreshToken.Request(grantType: "refresh_token",
-                                            clientId: self.configuration.clientId,
-                                            clientSecret: self.configuration.clientSecret,
-                                            refreshToken: refreshToken)
-
-
-        self.request(self.configuration.baseURL.appendingPathComponent("oauth/token"),
-                     method: "POST",
-                     parameters: request.toJSON(),
-                     headers: self.headers,
-                     completion: completion)
+    open func getRefreshToken(_ refreshToken: String, completion: @escaping (_ response: HTTPResponse<RefreshToken.Response>) -> Void) {
+        request(configuration.baseURL.appendingPathComponent("oauth/token"),
+                method: .post,
+                httpBody: RefreshToken.Request(grantType: "refresh_token",
+                                               clientId: configuration.clientId,
+                                               clientSecret: configuration.clientSecret,
+                                               refreshToken: refreshToken),
+                headers: headers,
+                completion: completion)
     }
 
-    /// Logout and invalidate the current auth token
-    ///
-    /// - Parameter completion: Completion handler
-    open func revokeAccessToken(completion: @escaping (HTTPURLResponse, AccessToken.Response?, Error?) -> Void) {
-        self.request(self.configuration.baseURL.appendingPathComponent("oauth/revoke"),
-                     method: "POST",
-                     parameters: nil,
-                     headers: self.headers,
-                     completion: completion)
+    // Logout and invalidate the current auth token
+    open func revokeAccessToken(completion: @escaping (_ response: HTTPResponse<AccessToken.Response>) -> Void) {
+        request(configuration.baseURL.appendingPathComponent("oauth/revoke"),
+                method: .post,
+                httpBody: nil,
+                headers: headers,
+                completion: completion)
     }
 
-    /// A logged in user can have multiple vehicles under their account. This resource is primarily responsible for listing the vehicles and the basic details about them.
-    ///
-    /// - Parameter completion: Completion Handler
-    open func getVehicles(completion: @escaping (HTTPURLResponse, VehicleCollection?, Error?) -> Void) {
-        self.request(self.configuration.apiBaseURL.appendingPathComponent("vehicles"),
-                     method: "GET",
-                     headers: self.headers,
-                     completion: completion)
-    }
-
-    /// Get all data from the vehicle
-    ///
-    /// - Parameters:
-    ///   - vehicle: The vehicle to obtain data from
-    ///   - completion: Completion Handler
-    open func getData(_ vehicleId: String, completion: @escaping (HTTPURLResponse, Vehicle?, Error?) -> Void) {
-        self.request(self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(DataRequest.data.rawValue)"),
-                     method: "GET",
-                     headers: self.headers,
-                     completion: completion)
-    }
-
-    /// Get some data from the vehicle
-    ///
-    /// - Parameters:
-    ///   - vehicle: The vehicle to obtain data from
-    ///   - type: The type of data to request
-    ///   - completion: Completion Handler
-    @available(*, unavailable)
-    open func getData<T: DataResponse>(_ vehicleId: String, type: DataRequest, completion: @escaping (HTTPURLResponse, T?, Error?) -> Void) {
-
-        let url: URL = {
-            switch type {
-            case .mobileAccess: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(DataRequest.mobileAccess.rawValue)")
-            case .data: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(DataRequest.data.rawValue)")
-            default: return self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/data_request/\(type.rawValue)")
+    /// Set the accessToken to be used with all requests
+    open func setAccessToken(_ accessToken: String?) {
+        headers["Authorization"] = {
+            if let accessToken = accessToken {
+                return "Bearer " + accessToken
             }
+            return nil
         }()
-
-        self.request(url,
-                     method: "GET",
-                     headers: self.headers,
-                     completion: completion)
-    }
-
-    /// Send a command to the vehicle
-    ///
-    /// - Parameters:
-    ///   - command: The command to be sent
-    ///   - vehicleId: The id of the vehicle to send the command to
-    ///   - request: Optional data to be included with the command
-    ///   - completion: Completion Handler
-    open func send(_ command: Command, to vehicleId: String, json: Any? = nil, completion: @escaping (CommandResponse) -> Void) {
-        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/\(command.endpoint)")
-
-        self.request(url,
-                     method: "POST",
-                     parameters: json,
-                     headers: self.headers) { (httpResponse, dataOrNil: CommandResponse?, errorOrNil) in
-
-                        var response = CommandResponse(result: true, reason: "")
-
-                        defer {
-                            self.delegate?.teslaApi(self, didSend: command, data: dataOrNil, result: response)
-                            completion(response)
-                        }
-
-                        guard let data = dataOrNil, httpResponse.statusCode == 200 else {
-                            response = CommandResponse(result: false, reason: errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))
-                            return
-                        }
-
-                        guard data.result else {
-                            response = CommandResponse(result: false, reason: data.error ?? data.reason ?? errorOrNil?.localizedDescription ?? "An error occurred")
-                            return
-                        }
-        }
-    }
-
-    /// Send wake up command to vehicle
-    open func wake(_ vehicleId: String, completion: @escaping (Bool, Vehicle?, String?) -> Void) {
-        
-        let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/wake_up")
-
-        self.request(url,
-                     method: "POST",
-                     parameters: nil,
-                     headers: self.headers) { (response, dataOrNil: Vehicle?, errorOrNil) in
-
-                        guard let data = dataOrNil, response.statusCode == 200 else {
-                            completion(false, dataOrNil, errorOrNil?.localizedDescription ?? HTTPURLResponse.localizedString(forStatusCode: response.statusCode))
-                            return
-                        }
-
-                        completion(true, data, nil)
-        }
     }
 
     ///
-    open func clearSession(completion: @escaping () -> Void) {
+    open func reset(completion: @escaping () -> Void) {
         let session = self.session
         session.invalidateAndCancel()
         session.reset {
@@ -314,6 +216,160 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
             completion()
         }
     }
+
+    // MARK: - Vehicle List
+
+    ///
+    open func vehicles(_ completion: @escaping (_ response: HTTPResponse<VehicleList>) -> Void) {
+        request(configuration.apiBaseURL.appendingPathComponent("vehicles"),
+                method: .get,
+                httpBody: nil,
+                headers: headers,
+                completion: completion)
+    }
+
+    // MARK: - Wake Vehicle
+
+
+    ///
+    internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+        request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/wake_up"),
+                method: .post,
+                httpBody: nil,
+                headers: headers,
+                completion: completion)
+    }
+
+    ///
+    open func wake(_ vehicle: Vehicle, completion: @escaping (_ result: Bool, _ response: HTTPResponse<VehicleData>) -> Void) {
+        wake(vehicle) { (response: HTTPResponse<VehicleData>) in
+            completion(response.data?.state == .online, response)
+        }
+    }
+
+    // MARK: - Vehicle Data
+
+    /// Get all data from the vehicle
+    open func data(for vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+        request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/data"),
+                method: .get,
+                httpBody: nil,
+                headers: headers,
+                completion: completion)
+    }
+
+    // MARK: - Mobile Access
+
+    ///
+    open func mobileAccess(for vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<MobileAccess>) -> Void) {
+        request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/mobile_enabled"),
+                method: .get,
+                httpBody: nil,
+                headers: headers,
+                completion: completion)
+    }
+
+    // MARK: - Send Commands
+
+    ///
+    open func send(_ command: Command, to vehicle: Vehicle, completion: @escaping (CommandResponse) -> Void) {
+
+        let httpBody: Data? = {
+            let encoder = JSONEncoder()
+
+            switch command {
+            case .setValetMode(let options):
+                return try? encoder.encode(options)
+            case .resetValetPin(let options):
+                return try? encoder.encode(options)
+            case .openChargePort:
+                return nil
+            case .closeChargePort:
+                return nil
+            case .setChargeLimitToStandard:
+                return nil
+            case .setChargeLimitToMaxRange:
+                return nil
+            case .setChargeLimit(let options):
+                return try? encoder.encode(options)
+            case .startCharging:
+                return nil
+            case .stopCharging:
+                return nil
+            case .flashLights:
+                return nil
+            case .honkHorn:
+                return nil
+            case .unlockDoors:
+                return nil
+            case .lockDoors:
+                return nil
+            case .setTemperature(let options):
+                return try? encoder.encode(options)
+            case .startHVAC:
+                return nil
+            case .stopHVAC:
+                return nil
+            case .movePanoRoof(let options):
+                return try? encoder.encode(options)
+            case .remoteStart(let options):
+                return try? encoder.encode(options)
+            case .openTrunk(let options):
+                return try? encoder.encode(options)
+            case .speedLimitActivate(let options):
+                return try? encoder.encode(options)
+            case .speedLimitDeactivate(let options):
+                return try? encoder.encode(options)
+            case .speedLimitClearPIN(let options):
+                return try? encoder.encode(options)
+            case .setSpeedLimit(let options):
+                return try? encoder.encode(options)
+            case .togglePlayback:
+                return nil
+            case .nextTrack:
+                return nil
+            case .previousTrack:
+                return nil
+            case .nextFavorite:
+                return nil
+            case .previousFavorite:
+                return nil
+            case .volumeUp:
+                return nil
+            case .volumeDown:
+                return nil
+            case .navigationRequest(let options):
+                return try? encoder.encode(options)
+            case .scheduleSoftwareUpdate:
+                return nil
+            case .cancelSoftwareUpdate:
+                return nil
+            case .remoteSeatHeater(let options):
+                return try? encoder.encode(options)
+            case .remoteSteeringWheelHeater(let options):
+                return try? encoder.encode(options)
+            case .sentryMode(let options):
+                return try? encoder.encode(options)
+            }
+        }()
+
+        let url = configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/\(command.endpoint)")
+
+        request(url,
+                method: .post,
+                httpBody: httpBody,
+                headers: headers) { (res: HTTPResponse<CommandResponse>) in
+
+                    guard let data = res.data, res.statusCode == 200 else {
+                        completion(CommandResponse(result: false, reason: res.localizedStatusCodeDescription))
+                        return
+                    }
+
+                    completion(data)
+        }
+    }
+
+    // MARK: - Debug
 
     /// Print the contents of URLRequest and HTTPURLResponse in a consistent format that is easy to inspect
     private func debugPrint(_ request: URLRequest, response: HTTPURLResponse, responseData: Data? = nil, error: Error? = nil) {
@@ -359,32 +415,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         let logMessage = components.joined(separator: "\n")
         print(logMessage)
     }
-
-
-    // MARK: - Convenience methods
-
-    /// Send wake up command to vehicle
-    open func wake(_ vehicle: Vehicle, completion: @escaping (Bool, Vehicle?, String?) -> Void) {
-        self.wake(vehicle.id, completion: completion)
-    }
-
-    /// Request all data from vehicle
-    open func getData(for vehicle: Vehicle, completion: @escaping (HTTPURLResponse, Vehicle?, Error?) -> Void) {
-        self.getData(vehicle.id, completion: completion)
-    }
-
-    /// Send a command to the vehicle
-    ///
-    /// - Parameters:
-    ///   - command: The command to be sent
-    ///   - vehicle: The vehicle to send the command to
-    ///   - request: Optional data to be included with the command
-    ///   - completion: Completion Handler
-    open func send(_ command: Command, to vehicle: Vehicle, parameters: BaseMappable? = nil, completion: @escaping (CommandResponse) -> Void) {
-        self.send(command, to: vehicle.id, json: parameters?.toJSON(), completion: completion)
-    }
 }
-
 
 extension DispatchQueue {
 

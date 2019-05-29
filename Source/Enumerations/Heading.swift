@@ -8,7 +8,7 @@
 import Foundation
 
 ///
-public enum Heading: String, CustomStringConvertible {
+public enum Heading: String, CustomStringConvertible, Decodable {
 
     ///
     case north = "n"

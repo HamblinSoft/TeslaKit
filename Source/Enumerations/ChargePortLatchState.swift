@@ -1,6 +1,6 @@
 //
 //  ChargePortLatchState.swift
-//  Pods
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 2/5/18.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 /// The state of the charge port latch. The charge port latch locks the charging connector to the vehicle.
-public enum ChargePortLatchState: String, CustomStringConvertible {
+public enum ChargePortLatchState: String, CustomStringConvertible, Decodable {
 
     ///
     case unknown = ""

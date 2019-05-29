@@ -1,6 +1,6 @@
 //
 //  PanoRoofState.swift
-//  TeslaApp
+//  TeslaKit
 //
 //  Created by Jaren Hamblin on 11/19/17.
 //  Copyright © 2018 HamblinSoft. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 
 /// The desired state of the panoramic roof. The approximate percent open values for each state are open = 100%, close = 0%, comfort = 80%, and vent = ~15% Example: open. Possible values:  open , close , comfort , vent , move .
-public enum PanoRoofState: String, CustomStringConvertible {
+public enum PanoRoofState: String, CustomStringConvertible, JSONCodable {
 
     /// close = 0%
     case close
