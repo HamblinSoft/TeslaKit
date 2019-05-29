@@ -1,4 +1,4 @@
-// swift-tools-version:5
+// swift-tools-version:5.0
 //
 //  Package.swift
 //
@@ -12,11 +12,9 @@ let package = Package(
             name: "TeslaKit",
             targets: ["TeslaKit"])
     ],
-    dependencies: [],
     targets: [
         .target(
-            name: "TeslaKit",
-            dependencies: []
+            name: "TeslaKit"
             path: "Source")
     ],
     swiftLanguageVersions: [.v5]
