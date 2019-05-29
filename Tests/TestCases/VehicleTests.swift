@@ -20,13 +20,13 @@ class VehicleTests: TKTestCase {
 
         self.signIn { teslaAPI in
 
-            teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
+            teslaAPI.vehicles { res in
 
-                XCTAssertEqual(httpResponse.statusCode, 200)
-                XCTAssertNil(errorOrNil)
-                XCTAssertNotNil(dataOrNil)
+                XCTAssertEqual(res.httpResponse.statusCode, 200)
+                XCTAssertNil(res.error)
+                XCTAssertNotNil(res.data)
 
-                let vehicles = dataOrNil?.vehicles ?? []
+                let vehicles = res.data?.vehicles ?? []
                 XCTAssertGreaterThan(vehicles.count, 0)
 
                 expect.fulfill()
@@ -45,19 +45,19 @@ class VehicleTests: TKTestCase {
 
         self.signIn { teslaAPI in
 
-            teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
+            teslaAPI.vehicles { res in
 
-                guard let vehicle = dataOrNil?.vehicles.first else {
+                guard let vehicle = res.data?.vehicles.first else {
                     expect.fulfill()
                     XCTFail("At least one vehicle must be assiciated with the credential test account to run this test")
                     return
                 }
 
-                teslaAPI.getData(for: vehicle) { (httpResponse, vehicleOrNil, errorOrNil) in
+                teslaAPI.data(for: vehicle) { res in
 
-                    XCTAssertEqual(httpResponse.statusCode, 200)
-                    XCTAssertNil(errorOrNil)
-                    XCTAssertNotNil(vehicleOrNil)
+                    XCTAssertEqual(res.httpResponse.statusCode, 200)
+                    XCTAssertNil(res.error)
+                    XCTAssertNotNil(res.data)
 
                     expect.fulfill()
                 }

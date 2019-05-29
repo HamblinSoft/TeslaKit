@@ -4,7 +4,7 @@
 inhibit_all_warnings!
 
 def common_pods
-    #pod 'ObjectMapper', '~> 3.3'
+    
 end
 
 target 'TeslaKit' do
