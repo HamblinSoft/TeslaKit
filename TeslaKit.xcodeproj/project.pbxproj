@@ -9,58 +9,58 @@
 /* Begin PBXBuildFile section */
 		1A01BD4043B74CBEA1DFF847 /* Pods_TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA53F5C39BED55993B9DF9AF /* Pods_TeslaKit.framework */; };
 		3726158C215072CE00BD596C /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726158B215072CE00BD596C /* VehicleListViewController.swift */; };
+		3741E44D229E1B3B00697CF0 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41B229E1B3900697CF0 /* ChargeState.swift */; };
+		3741E44E229E1B3B00697CF0 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41C229E1B3900697CF0 /* RefreshToken.swift */; };
+		3741E44F229E1B3B00697CF0 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41D229E1B3900697CF0 /* VehicleState.swift */; };
+		3741E450229E1B3B00697CF0 /* RemoteStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41E229E1B3900697CF0 /* RemoteStartOptions.swift */; };
+		3741E451229E1B3B00697CF0 /* SetTemperatureOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41F229E1B3900697CF0 /* SetTemperatureOptions.swift */; };
+		3741E452229E1B3B00697CF0 /* OpenTrunkOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E420229E1B3900697CF0 /* OpenTrunkOptions.swift */; };
+		3741E453229E1B3B00697CF0 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E421229E1B3900697CF0 /* Heading.swift */; };
+		3741E454229E1B3B00697CF0 /* RemoteSeatHeaterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E422229E1B3900697CF0 /* RemoteSeatHeaterOptions.swift */; };
+		3741E455229E1B3B00697CF0 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E423229E1B3900697CF0 /* Temperature.swift */; };
+		3741E456229E1B3B00697CF0 /* GUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E424229E1B3900697CF0 /* GUISettings.swift */; };
+		3741E457229E1B3B00697CF0 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E425229E1B3900697CF0 /* Command.swift */; };
+		3741E458229E1B3B00697CF0 /* SeatPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E426229E1B3900697CF0 /* SeatPosition.swift */; };
+		3741E459229E1B3B00697CF0 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E427229E1B3900697CF0 /* HTTPResponse.swift */; };
+		3741E45A229E1B3B00697CF0 /* VINComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E428229E1B3900697CF0 /* VINComponent.swift */; };
+		3741E45B229E1B3B00697CF0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E429229E1B3900697CF0 /* HTTPMethod.swift */; };
+		3741E45C229E1B3B00697CF0 /* ShiftState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42A229E1B3900697CF0 /* ShiftState.swift */; };
+		3741E45D229E1B3B00697CF0 /* TrunkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42B229E1B3900697CF0 /* TrunkType.swift */; };
+		3741E45E229E1B3B00697CF0 /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42C229E1B3900697CF0 /* JSONCodable.swift */; };
+		3741E45F229E1B3B00697CF0 /* DriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42D229E1B3900697CF0 /* DriveState.swift */; };
+		3741E460229E1B3B00697CF0 /* SetValetModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42E229E1B3900697CF0 /* SetValetModeOptions.swift */; };
+		3741E461229E1B3B00697CF0 /* ChargingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E42F229E1B3A00697CF0 /* ChargingStatus.swift */; };
+		3741E462229E1B3B00697CF0 /* NavigationRequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E430229E1B3A00697CF0 /* NavigationRequestOptions.swift */; };
+		3741E463229E1B3B00697CF0 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E431229E1B3A00697CF0 /* TemperatureUnit.swift */; };
+		3741E464229E1B3B00697CF0 /* VIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E432229E1B3A00697CF0 /* VIN.swift */; };
+		3741E465229E1B3B00697CF0 /* RemoteSteeringWheelHeaterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E433229E1B3A00697CF0 /* RemoteSteeringWheelHeaterOptions.swift */; };
+		3741E466229E1B3B00697CF0 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E434229E1B3A00697CF0 /* DataRequest.swift */; };
+		3741E467229E1B3B00697CF0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E435229E1B3A00697CF0 /* Error.swift */; };
+		3741E468229E1B3B00697CF0 /* RangeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E436229E1B3A00697CF0 /* RangeDisplay.swift */; };
+		3741E469229E1B3B00697CF0 /* VehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E437229E1B3A00697CF0 /* VehicleConfig.swift */; };
+		3741E46A229E1B3B00697CF0 /* SetSpeedLimitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E438229E1B3A00697CF0 /* SetSpeedLimitOptions.swift */; };
+		3741E46B229E1B3B00697CF0 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E439229E1B3A00697CF0 /* VehicleList.swift */; };
+		3741E46C229E1B3B00697CF0 /* SetChargeLimitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43A229E1B3A00697CF0 /* SetChargeLimitOptions.swift */; };
+		3741E46D229E1B3B00697CF0 /* SetSpeedLimitPINOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43B229E1B3A00697CF0 /* SetSpeedLimitPINOptions.swift */; };
+		3741E46E229E1B3B00697CF0 /* ChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43C229E1B3A00697CF0 /* ChargePortLatchState.swift */; };
+		3741E46F229E1B3B00697CF0 /* PanoRoofState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43D229E1B3A00697CF0 /* PanoRoofState.swift */; };
+		3741E470229E1B3B00697CF0 /* MovePanoRoofOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43E229E1B3A00697CF0 /* MovePanoRoofOptions.swift */; };
+		3741E471229E1B3B00697CF0 /* CommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E43F229E1B3A00697CF0 /* CommandResponse.swift */; };
+		3741E472229E1B3B00697CF0 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E440229E1B3A00697CF0 /* Option.swift */; };
+		3741E473229E1B3B00697CF0 /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E441229E1B3B00697CF0 /* TeslaAPI.swift */; };
+		3741E474229E1B3B00697CF0 /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E442229E1B3B00697CF0 /* DistanceUnit.swift */; };
+		3741E475229E1B3B00697CF0 /* SpeedLimitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E443229E1B3B00697CF0 /* SpeedLimitMode.swift */; };
+		3741E476229E1B3B00697CF0 /* SetSentryModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E444229E1B3B00697CF0 /* SetSentryModeOptions.swift */; };
+		3741E477229E1B3B00697CF0 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E445229E1B3B00697CF0 /* AccessToken.swift */; };
+		3741E478229E1B3B00697CF0 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E446229E1B3B00697CF0 /* SoftwareUpdate.swift */; };
+		3741E479229E1B3B00697CF0 /* ChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E447229E1B3B00697CF0 /* ChargeUnit.swift */; };
+		3741E47A229E1B3B00697CF0 /* MobileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E448229E1B3B00697CF0 /* MobileAccess.swift */; };
+		3741E47B229E1B3B00697CF0 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E449229E1B3B00697CF0 /* Vehicle.swift */; };
+		3741E47C229E1B3B00697CF0 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E44A229E1B3B00697CF0 /* MediaState.swift */; };
+		3741E47D229E1B3B00697CF0 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E44B229E1B3B00697CF0 /* ClimateState.swift */; };
+		3741E47E229E1B3B00697CF0 /* VehicleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E44C229E1B3B00697CF0 /* VehicleUpdater.swift */; };
 		375D886C200ECEE000CD9D1E /* TeslaKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 375D885E200ECEE000CD9D1E /* TeslaKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		377A6C972294CF2500DCD871 /* TeslaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C632294CF2500DCD871 /* TeslaAPI.swift */; };
-		377A6C982294CF2500DCD871 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C642294CF2500DCD871 /* Vehicle.swift */; };
-		377A6C992294CF2500DCD871 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C652294CF2500DCD871 /* AccessToken.swift */; };
-		377A6C9A2294CF2500DCD871 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C662294CF2500DCD871 /* HTTPResponse.swift */; };
-		377A6C9B2294CF2500DCD871 /* VehicleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C672294CF2500DCD871 /* VehicleList.swift */; };
-		377A6C9C2294CF2500DCD871 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C682294CF2500DCD871 /* RefreshToken.swift */; };
-		377A6C9D2294CF2500DCD871 /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6A2294CF2500DCD871 /* ClimateState.swift */; };
-		377A6C9E2294CF2500DCD871 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6B2294CF2500DCD871 /* VehicleState.swift */; };
-		377A6C9F2294CF2500DCD871 /* VehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6C2294CF2500DCD871 /* VehicleConfig.swift */; };
-		377A6CA02294CF2500DCD871 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6D2294CF2500DCD871 /* Option.swift */; };
-		377A6CA12294CF2500DCD871 /* MobileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6E2294CF2500DCD871 /* MobileAccess.swift */; };
-		377A6CA22294CF2500DCD871 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C6F2294CF2500DCD871 /* SoftwareUpdate.swift */; };
-		377A6CA32294CF2500DCD871 /* SpeedLimitMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C702294CF2500DCD871 /* SpeedLimitMode.swift */; };
-		377A6CA42294CF2500DCD871 /* MediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C712294CF2500DCD871 /* MediaState.swift */; };
-		377A6CA52294CF2500DCD871 /* GUISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C722294CF2500DCD871 /* GUISettings.swift */; };
-		377A6CA62294CF2500DCD871 /* DriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C732294CF2500DCD871 /* DriveState.swift */; };
-		377A6CA72294CF2500DCD871 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C742294CF2500DCD871 /* ChargeState.swift */; };
-		377A6CA82294CF2500DCD871 /* SetSentryModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C762294CF2500DCD871 /* SetSentryModeOptions.swift */; };
-		377A6CA92294CF2500DCD871 /* SetValetModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C772294CF2500DCD871 /* SetValetModeOptions.swift */; };
-		377A6CAA2294CF2500DCD871 /* RemoteSeatHeaterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C782294CF2500DCD871 /* RemoteSeatHeaterOptions.swift */; };
-		377A6CAB2294CF2500DCD871 /* OpenTrunkOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C792294CF2500DCD871 /* OpenTrunkOptions.swift */; };
-		377A6CAC2294CF2500DCD871 /* RemoteStartOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7A2294CF2500DCD871 /* RemoteStartOptions.swift */; };
-		377A6CAD2294CF2500DCD871 /* NavigationRequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7B2294CF2500DCD871 /* NavigationRequestOptions.swift */; };
-		377A6CAE2294CF2500DCD871 /* SetChargeLimitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7C2294CF2500DCD871 /* SetChargeLimitOptions.swift */; };
-		377A6CAF2294CF2500DCD871 /* MovePanoRoofOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7D2294CF2500DCD871 /* MovePanoRoofOptions.swift */; };
-		377A6CB02294CF2500DCD871 /* SetTemperatureOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7E2294CF2500DCD871 /* SetTemperatureOptions.swift */; };
-		377A6CB12294CF2500DCD871 /* SetSpeedLimitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C7F2294CF2500DCD871 /* SetSpeedLimitOptions.swift */; };
-		377A6CB22294CF2500DCD871 /* RemoteSteeringWheelHeaterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C802294CF2500DCD871 /* RemoteSteeringWheelHeaterOptions.swift */; };
-		377A6CB32294CF2500DCD871 /* SetSpeedLimitPINOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C812294CF2500DCD871 /* SetSpeedLimitPINOptions.swift */; };
-		377A6CB42294CF2600DCD871 /* RangeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C832294CF2500DCD871 /* RangeDisplay.swift */; };
-		377A6CB52294CF2600DCD871 /* ChargeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C842294CF2500DCD871 /* ChargeUnit.swift */; };
-		377A6CB62294CF2600DCD871 /* ChargePortLatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C852294CF2500DCD871 /* ChargePortLatchState.swift */; };
-		377A6CB72294CF2600DCD871 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C862294CF2500DCD871 /* Error.swift */; };
-		377A6CB82294CF2600DCD871 /* SeatPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C872294CF2500DCD871 /* SeatPosition.swift */; };
-		377A6CB92294CF2600DCD871 /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C882294CF2500DCD871 /* Heading.swift */; };
-		377A6CBA2294CF2600DCD871 /* ChargingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C892294CF2500DCD871 /* ChargingStatus.swift */; };
-		377A6CBB2294CF2600DCD871 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8A2294CF2500DCD871 /* Command.swift */; };
-		377A6CBC2294CF2600DCD871 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8B2294CF2500DCD871 /* HTTPMethod.swift */; };
-		377A6CBD2294CF2600DCD871 /* ShiftState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8C2294CF2500DCD871 /* ShiftState.swift */; };
-		377A6CBE2294CF2600DCD871 /* PanoRoofState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8D2294CF2500DCD871 /* PanoRoofState.swift */; };
-		377A6CBF2294CF2600DCD871 /* TrunkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8E2294CF2500DCD871 /* TrunkType.swift */; };
-		377A6CC02294CF2600DCD871 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C8F2294CF2500DCD871 /* DataRequest.swift */; };
-		377A6CC12294CF2600DCD871 /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C902294CF2500DCD871 /* DistanceUnit.swift */; };
-		377A6CC22294CF2600DCD871 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C912294CF2500DCD871 /* TemperatureUnit.swift */; };
-		377A6CC32294CF2600DCD871 /* VIN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C932294CF2500DCD871 /* VIN.swift */; };
-		377A6CC42294CF2600DCD871 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C942294CF2500DCD871 /* Temperature.swift */; };
-		377A6CC52294CF2600DCD871 /* CommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C952294CF2500DCD871 /* CommandResponse.swift */; };
-		377A6CC62294CF2600DCD871 /* VINComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A6C962294CF2500DCD871 /* VINComponent.swift */; };
 		377E891520F72F6B004E379A /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377E891420F72F6B004E379A /* CommandTests.swift */; };
-		37D1CF5E229DFC8D00F42E07 /* JSONCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1CF5D229DFC8D00F42E07 /* JSONCodable.swift */; };
-		37D1CF63229E043B00F42E07 /* VehicleUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1CF62229E043B00F42E07 /* VehicleUpdater.swift */; };
 		37FB3F202026533500409472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F1F2026533500409472 /* AppDelegate.swift */; };
 		37FB3F252026533500409472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F232026533500409472 /* Main.storyboard */; };
 		37FB3F272026533500409472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB3F262026533500409472 /* Assets.xcassets */; };
@@ -109,60 +109,60 @@
 		0628BFB0F9F19857B23057A6 /* Pods-TeslaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit.release.xcconfig"; sourceTree = "<group>"; };
 		28DC6ABEB1D21347C7648B2E /* Pods_VehicleMonitorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleMonitorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726158B215072CE00BD596C /* VehicleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
+		3741E41B229E1B3900697CF0 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
+		3741E41C229E1B3900697CF0 /* RefreshToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
+		3741E41D229E1B3900697CF0 /* VehicleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
+		3741E41E229E1B3900697CF0 /* RemoteStartOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStartOptions.swift; sourceTree = "<group>"; };
+		3741E41F229E1B3900697CF0 /* SetTemperatureOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTemperatureOptions.swift; sourceTree = "<group>"; };
+		3741E420229E1B3900697CF0 /* OpenTrunkOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTrunkOptions.swift; sourceTree = "<group>"; };
+		3741E421229E1B3900697CF0 /* Heading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
+		3741E422229E1B3900697CF0 /* RemoteSeatHeaterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSeatHeaterOptions.swift; sourceTree = "<group>"; };
+		3741E423229E1B3900697CF0 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		3741E424229E1B3900697CF0 /* GUISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUISettings.swift; sourceTree = "<group>"; };
+		3741E425229E1B3900697CF0 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		3741E426229E1B3900697CF0 /* SeatPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatPosition.swift; sourceTree = "<group>"; };
+		3741E427229E1B3900697CF0 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		3741E428229E1B3900697CF0 /* VINComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VINComponent.swift; sourceTree = "<group>"; };
+		3741E429229E1B3900697CF0 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3741E42A229E1B3900697CF0 /* ShiftState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftState.swift; sourceTree = "<group>"; };
+		3741E42B229E1B3900697CF0 /* TrunkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrunkType.swift; sourceTree = "<group>"; };
+		3741E42C229E1B3900697CF0 /* JSONCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCodable.swift; sourceTree = "<group>"; };
+		3741E42D229E1B3900697CF0 /* DriveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveState.swift; sourceTree = "<group>"; };
+		3741E42E229E1B3900697CF0 /* SetValetModeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetValetModeOptions.swift; sourceTree = "<group>"; };
+		3741E42F229E1B3A00697CF0 /* ChargingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingStatus.swift; sourceTree = "<group>"; };
+		3741E430229E1B3A00697CF0 /* NavigationRequestOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRequestOptions.swift; sourceTree = "<group>"; };
+		3741E431229E1B3A00697CF0 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		3741E432229E1B3A00697CF0 /* VIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIN.swift; sourceTree = "<group>"; };
+		3741E433229E1B3A00697CF0 /* RemoteSteeringWheelHeaterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSteeringWheelHeaterOptions.swift; sourceTree = "<group>"; };
+		3741E434229E1B3A00697CF0 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		3741E435229E1B3A00697CF0 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		3741E436229E1B3A00697CF0 /* RangeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeDisplay.swift; sourceTree = "<group>"; };
+		3741E437229E1B3A00697CF0 /* VehicleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleConfig.swift; sourceTree = "<group>"; };
+		3741E438229E1B3A00697CF0 /* SetSpeedLimitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimitOptions.swift; sourceTree = "<group>"; };
+		3741E439229E1B3A00697CF0 /* VehicleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
+		3741E43A229E1B3A00697CF0 /* SetChargeLimitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetChargeLimitOptions.swift; sourceTree = "<group>"; };
+		3741E43B229E1B3A00697CF0 /* SetSpeedLimitPINOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimitPINOptions.swift; sourceTree = "<group>"; };
+		3741E43C229E1B3A00697CF0 /* ChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargePortLatchState.swift; sourceTree = "<group>"; };
+		3741E43D229E1B3A00697CF0 /* PanoRoofState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoRoofState.swift; sourceTree = "<group>"; };
+		3741E43E229E1B3A00697CF0 /* MovePanoRoofOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovePanoRoofOptions.swift; sourceTree = "<group>"; };
+		3741E43F229E1B3A00697CF0 /* CommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandResponse.swift; sourceTree = "<group>"; };
+		3741E440229E1B3A00697CF0 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		3741E441229E1B3B00697CF0 /* TeslaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
+		3741E442229E1B3B00697CF0 /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
+		3741E443229E1B3B00697CF0 /* SpeedLimitMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLimitMode.swift; sourceTree = "<group>"; };
+		3741E444229E1B3B00697CF0 /* SetSentryModeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSentryModeOptions.swift; sourceTree = "<group>"; };
+		3741E445229E1B3B00697CF0 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		3741E446229E1B3B00697CF0 /* SoftwareUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareUpdate.swift; sourceTree = "<group>"; };
+		3741E447229E1B3B00697CF0 /* ChargeUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeUnit.swift; sourceTree = "<group>"; };
+		3741E448229E1B3B00697CF0 /* MobileAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileAccess.swift; sourceTree = "<group>"; };
+		3741E449229E1B3B00697CF0 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		3741E44A229E1B3B00697CF0 /* MediaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
+		3741E44B229E1B3B00697CF0 /* ClimateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimateState.swift; sourceTree = "<group>"; };
+		3741E44C229E1B3B00697CF0 /* VehicleUpdater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleUpdater.swift; sourceTree = "<group>"; };
 		375D885B200ECEE000CD9D1E /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D885E200ECEE000CD9D1E /* TeslaKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeslaKit.h; sourceTree = "<group>"; };
 		375D885F200ECEE000CD9D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		377A6C632294CF2500DCD871 /* TeslaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeslaAPI.swift; sourceTree = "<group>"; };
-		377A6C642294CF2500DCD871 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		377A6C652294CF2500DCD871 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
-		377A6C662294CF2500DCD871 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
-		377A6C672294CF2500DCD871 /* VehicleList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleList.swift; sourceTree = "<group>"; };
-		377A6C682294CF2500DCD871 /* RefreshToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
-		377A6C6A2294CF2500DCD871 /* ClimateState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimateState.swift; sourceTree = "<group>"; };
-		377A6C6B2294CF2500DCD871 /* VehicleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
-		377A6C6C2294CF2500DCD871 /* VehicleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleConfig.swift; sourceTree = "<group>"; };
-		377A6C6D2294CF2500DCD871 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		377A6C6E2294CF2500DCD871 /* MobileAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileAccess.swift; sourceTree = "<group>"; };
-		377A6C6F2294CF2500DCD871 /* SoftwareUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftwareUpdate.swift; sourceTree = "<group>"; };
-		377A6C702294CF2500DCD871 /* SpeedLimitMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedLimitMode.swift; sourceTree = "<group>"; };
-		377A6C712294CF2500DCD871 /* MediaState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaState.swift; sourceTree = "<group>"; };
-		377A6C722294CF2500DCD871 /* GUISettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GUISettings.swift; sourceTree = "<group>"; };
-		377A6C732294CF2500DCD871 /* DriveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriveState.swift; sourceTree = "<group>"; };
-		377A6C742294CF2500DCD871 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
-		377A6C762294CF2500DCD871 /* SetSentryModeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSentryModeOptions.swift; sourceTree = "<group>"; };
-		377A6C772294CF2500DCD871 /* SetValetModeOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetValetModeOptions.swift; sourceTree = "<group>"; };
-		377A6C782294CF2500DCD871 /* RemoteSeatHeaterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSeatHeaterOptions.swift; sourceTree = "<group>"; };
-		377A6C792294CF2500DCD871 /* OpenTrunkOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenTrunkOptions.swift; sourceTree = "<group>"; };
-		377A6C7A2294CF2500DCD871 /* RemoteStartOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteStartOptions.swift; sourceTree = "<group>"; };
-		377A6C7B2294CF2500DCD871 /* NavigationRequestOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRequestOptions.swift; sourceTree = "<group>"; };
-		377A6C7C2294CF2500DCD871 /* SetChargeLimitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetChargeLimitOptions.swift; sourceTree = "<group>"; };
-		377A6C7D2294CF2500DCD871 /* MovePanoRoofOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovePanoRoofOptions.swift; sourceTree = "<group>"; };
-		377A6C7E2294CF2500DCD871 /* SetTemperatureOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTemperatureOptions.swift; sourceTree = "<group>"; };
-		377A6C7F2294CF2500DCD871 /* SetSpeedLimitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimitOptions.swift; sourceTree = "<group>"; };
-		377A6C802294CF2500DCD871 /* RemoteSteeringWheelHeaterOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteSteeringWheelHeaterOptions.swift; sourceTree = "<group>"; };
-		377A6C812294CF2500DCD871 /* SetSpeedLimitPINOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSpeedLimitPINOptions.swift; sourceTree = "<group>"; };
-		377A6C832294CF2500DCD871 /* RangeDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeDisplay.swift; sourceTree = "<group>"; };
-		377A6C842294CF2500DCD871 /* ChargeUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeUnit.swift; sourceTree = "<group>"; };
-		377A6C852294CF2500DCD871 /* ChargePortLatchState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargePortLatchState.swift; sourceTree = "<group>"; };
-		377A6C862294CF2500DCD871 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		377A6C872294CF2500DCD871 /* SeatPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatPosition.swift; sourceTree = "<group>"; };
-		377A6C882294CF2500DCD871 /* Heading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
-		377A6C892294CF2500DCD871 /* ChargingStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingStatus.swift; sourceTree = "<group>"; };
-		377A6C8A2294CF2500DCD871 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		377A6C8B2294CF2500DCD871 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		377A6C8C2294CF2500DCD871 /* ShiftState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftState.swift; sourceTree = "<group>"; };
-		377A6C8D2294CF2500DCD871 /* PanoRoofState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanoRoofState.swift; sourceTree = "<group>"; };
-		377A6C8E2294CF2500DCD871 /* TrunkType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrunkType.swift; sourceTree = "<group>"; };
-		377A6C8F2294CF2500DCD871 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
-		377A6C902294CF2500DCD871 /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
-		377A6C912294CF2500DCD871 /* TemperatureUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
-		377A6C932294CF2500DCD871 /* VIN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIN.swift; sourceTree = "<group>"; };
-		377A6C942294CF2500DCD871 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
-		377A6C952294CF2500DCD871 /* CommandResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandResponse.swift; sourceTree = "<group>"; };
-		377A6C962294CF2500DCD871 /* VINComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VINComponent.swift; sourceTree = "<group>"; };
 		377E891420F72F6B004E379A /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
-		37D1CF5D229DFC8D00F42E07 /* JSONCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JSONCodable.swift; path = ../Classes/JSONCodable.swift; sourceTree = "<group>"; };
-		37D1CF62229E043B00F42E07 /* VehicleUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleUpdater.swift; sourceTree = "<group>"; };
 		37FB3F1D2026533500409472 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB3F1F2026533500409472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37FB3F242026533500409472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -252,106 +252,58 @@
 		375D8875200ECF2C00CD9D1E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				37D1CF61229E042600F42E07 /* Protocols */,
-				377A6C622294CF2500DCD871 /* Classes */,
-				377A6C752294CF2500DCD871 /* CommandOptions */,
-				377A6C822294CF2500DCD871 /* Enumerations */,
-				377A6C922294CF2500DCD871 /* Structures */,
-				377A6C692294CF2500DCD871 /* VehicleData */,
+				3741E445229E1B3B00697CF0 /* AccessToken.swift */,
+				3741E43C229E1B3A00697CF0 /* ChargePortLatchState.swift */,
+				3741E41B229E1B3900697CF0 /* ChargeState.swift */,
+				3741E447229E1B3B00697CF0 /* ChargeUnit.swift */,
+				3741E42F229E1B3A00697CF0 /* ChargingStatus.swift */,
+				3741E44B229E1B3B00697CF0 /* ClimateState.swift */,
+				3741E425229E1B3900697CF0 /* Command.swift */,
+				3741E43F229E1B3A00697CF0 /* CommandResponse.swift */,
+				3741E434229E1B3A00697CF0 /* DataRequest.swift */,
+				3741E442229E1B3B00697CF0 /* DistanceUnit.swift */,
+				3741E42D229E1B3900697CF0 /* DriveState.swift */,
+				3741E435229E1B3A00697CF0 /* Error.swift */,
+				3741E424229E1B3900697CF0 /* GUISettings.swift */,
+				3741E421229E1B3900697CF0 /* Heading.swift */,
+				3741E429229E1B3900697CF0 /* HTTPMethod.swift */,
+				3741E427229E1B3900697CF0 /* HTTPResponse.swift */,
+				3741E42C229E1B3900697CF0 /* JSONCodable.swift */,
+				3741E44A229E1B3B00697CF0 /* MediaState.swift */,
+				3741E448229E1B3B00697CF0 /* MobileAccess.swift */,
+				3741E43E229E1B3A00697CF0 /* MovePanoRoofOptions.swift */,
+				3741E430229E1B3A00697CF0 /* NavigationRequestOptions.swift */,
+				3741E420229E1B3900697CF0 /* OpenTrunkOptions.swift */,
+				3741E440229E1B3A00697CF0 /* Option.swift */,
+				3741E43D229E1B3A00697CF0 /* PanoRoofState.swift */,
+				3741E436229E1B3A00697CF0 /* RangeDisplay.swift */,
+				3741E41C229E1B3900697CF0 /* RefreshToken.swift */,
+				3741E422229E1B3900697CF0 /* RemoteSeatHeaterOptions.swift */,
+				3741E41E229E1B3900697CF0 /* RemoteStartOptions.swift */,
+				3741E433229E1B3A00697CF0 /* RemoteSteeringWheelHeaterOptions.swift */,
+				3741E426229E1B3900697CF0 /* SeatPosition.swift */,
+				3741E43A229E1B3A00697CF0 /* SetChargeLimitOptions.swift */,
+				3741E444229E1B3B00697CF0 /* SetSentryModeOptions.swift */,
+				3741E438229E1B3A00697CF0 /* SetSpeedLimitOptions.swift */,
+				3741E43B229E1B3A00697CF0 /* SetSpeedLimitPINOptions.swift */,
+				3741E41F229E1B3900697CF0 /* SetTemperatureOptions.swift */,
+				3741E42E229E1B3900697CF0 /* SetValetModeOptions.swift */,
+				3741E42A229E1B3900697CF0 /* ShiftState.swift */,
+				3741E446229E1B3B00697CF0 /* SoftwareUpdate.swift */,
+				3741E443229E1B3B00697CF0 /* SpeedLimitMode.swift */,
+				3741E423229E1B3900697CF0 /* Temperature.swift */,
+				3741E431229E1B3A00697CF0 /* TemperatureUnit.swift */,
+				3741E441229E1B3B00697CF0 /* TeslaAPI.swift */,
+				3741E42B229E1B3900697CF0 /* TrunkType.swift */,
+				3741E449229E1B3B00697CF0 /* Vehicle.swift */,
+				3741E437229E1B3A00697CF0 /* VehicleConfig.swift */,
+				3741E439229E1B3A00697CF0 /* VehicleList.swift */,
+				3741E41D229E1B3900697CF0 /* VehicleState.swift */,
+				3741E44C229E1B3B00697CF0 /* VehicleUpdater.swift */,
+				3741E432229E1B3A00697CF0 /* VIN.swift */,
+				3741E428229E1B3900697CF0 /* VINComponent.swift */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		377A6C622294CF2500DCD871 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				377A6C632294CF2500DCD871 /* TeslaAPI.swift */,
-				377A6C642294CF2500DCD871 /* Vehicle.swift */,
-				377A6C652294CF2500DCD871 /* AccessToken.swift */,
-				377A6C662294CF2500DCD871 /* HTTPResponse.swift */,
-				377A6C672294CF2500DCD871 /* VehicleList.swift */,
-				377A6C682294CF2500DCD871 /* RefreshToken.swift */,
-				37D1CF62229E043B00F42E07 /* VehicleUpdater.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		377A6C692294CF2500DCD871 /* VehicleData */ = {
-			isa = PBXGroup;
-			children = (
-				377A6C6A2294CF2500DCD871 /* ClimateState.swift */,
-				377A6C6B2294CF2500DCD871 /* VehicleState.swift */,
-				377A6C6C2294CF2500DCD871 /* VehicleConfig.swift */,
-				377A6C6D2294CF2500DCD871 /* Option.swift */,
-				377A6C6E2294CF2500DCD871 /* MobileAccess.swift */,
-				377A6C6F2294CF2500DCD871 /* SoftwareUpdate.swift */,
-				377A6C702294CF2500DCD871 /* SpeedLimitMode.swift */,
-				377A6C712294CF2500DCD871 /* MediaState.swift */,
-				377A6C722294CF2500DCD871 /* GUISettings.swift */,
-				377A6C732294CF2500DCD871 /* DriveState.swift */,
-				377A6C742294CF2500DCD871 /* ChargeState.swift */,
-			);
-			path = VehicleData;
-			sourceTree = "<group>";
-		};
-		377A6C752294CF2500DCD871 /* CommandOptions */ = {
-			isa = PBXGroup;
-			children = (
-				377A6C762294CF2500DCD871 /* SetSentryModeOptions.swift */,
-				377A6C772294CF2500DCD871 /* SetValetModeOptions.swift */,
-				377A6C782294CF2500DCD871 /* RemoteSeatHeaterOptions.swift */,
-				377A6C792294CF2500DCD871 /* OpenTrunkOptions.swift */,
-				377A6C7A2294CF2500DCD871 /* RemoteStartOptions.swift */,
-				377A6C7B2294CF2500DCD871 /* NavigationRequestOptions.swift */,
-				377A6C7C2294CF2500DCD871 /* SetChargeLimitOptions.swift */,
-				377A6C7D2294CF2500DCD871 /* MovePanoRoofOptions.swift */,
-				377A6C7E2294CF2500DCD871 /* SetTemperatureOptions.swift */,
-				377A6C7F2294CF2500DCD871 /* SetSpeedLimitOptions.swift */,
-				377A6C802294CF2500DCD871 /* RemoteSteeringWheelHeaterOptions.swift */,
-				377A6C812294CF2500DCD871 /* SetSpeedLimitPINOptions.swift */,
-			);
-			path = CommandOptions;
-			sourceTree = "<group>";
-		};
-		377A6C822294CF2500DCD871 /* Enumerations */ = {
-			isa = PBXGroup;
-			children = (
-				377A6C832294CF2500DCD871 /* RangeDisplay.swift */,
-				377A6C842294CF2500DCD871 /* ChargeUnit.swift */,
-				377A6C852294CF2500DCD871 /* ChargePortLatchState.swift */,
-				377A6C862294CF2500DCD871 /* Error.swift */,
-				377A6C872294CF2500DCD871 /* SeatPosition.swift */,
-				377A6C882294CF2500DCD871 /* Heading.swift */,
-				377A6C892294CF2500DCD871 /* ChargingStatus.swift */,
-				377A6C8A2294CF2500DCD871 /* Command.swift */,
-				377A6C8B2294CF2500DCD871 /* HTTPMethod.swift */,
-				377A6C8C2294CF2500DCD871 /* ShiftState.swift */,
-				377A6C8D2294CF2500DCD871 /* PanoRoofState.swift */,
-				377A6C8E2294CF2500DCD871 /* TrunkType.swift */,
-				377A6C8F2294CF2500DCD871 /* DataRequest.swift */,
-				377A6C902294CF2500DCD871 /* DistanceUnit.swift */,
-				377A6C912294CF2500DCD871 /* TemperatureUnit.swift */,
-			);
-			path = Enumerations;
-			sourceTree = "<group>";
-		};
-		377A6C922294CF2500DCD871 /* Structures */ = {
-			isa = PBXGroup;
-			children = (
-				377A6C932294CF2500DCD871 /* VIN.swift */,
-				377A6C942294CF2500DCD871 /* Temperature.swift */,
-				377A6C952294CF2500DCD871 /* CommandResponse.swift */,
-				377A6C962294CF2500DCD871 /* VINComponent.swift */,
-			);
-			path = Structures;
-			sourceTree = "<group>";
-		};
-		37D1CF61229E042600F42E07 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				37D1CF5D229DFC8D00F42E07 /* JSONCodable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		37FB3F1E2026533500409472 /* Example */ = {
@@ -720,56 +672,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377A6CBC2294CF2600DCD871 /* HTTPMethod.swift in Sources */,
-				377A6CBB2294CF2600DCD871 /* Command.swift in Sources */,
-				377A6CB02294CF2500DCD871 /* SetTemperatureOptions.swift in Sources */,
-				377A6C9A2294CF2500DCD871 /* HTTPResponse.swift in Sources */,
-				377A6CA32294CF2500DCD871 /* SpeedLimitMode.swift in Sources */,
-				377A6CA42294CF2500DCD871 /* MediaState.swift in Sources */,
-				377A6C982294CF2500DCD871 /* Vehicle.swift in Sources */,
-				377A6CA52294CF2500DCD871 /* GUISettings.swift in Sources */,
-				377A6CA02294CF2500DCD871 /* Option.swift in Sources */,
-				377A6CAA2294CF2500DCD871 /* RemoteSeatHeaterOptions.swift in Sources */,
-				377A6CC22294CF2600DCD871 /* TemperatureUnit.swift in Sources */,
-				377A6CAD2294CF2500DCD871 /* NavigationRequestOptions.swift in Sources */,
-				377A6CB32294CF2500DCD871 /* SetSpeedLimitPINOptions.swift in Sources */,
-				377A6CC62294CF2600DCD871 /* VINComponent.swift in Sources */,
-				377A6CAC2294CF2500DCD871 /* RemoteStartOptions.swift in Sources */,
-				377A6CBD2294CF2600DCD871 /* ShiftState.swift in Sources */,
-				377A6CA62294CF2500DCD871 /* DriveState.swift in Sources */,
-				377A6C972294CF2500DCD871 /* TeslaAPI.swift in Sources */,
-				377A6CB22294CF2500DCD871 /* RemoteSteeringWheelHeaterOptions.swift in Sources */,
-				377A6CA72294CF2500DCD871 /* ChargeState.swift in Sources */,
-				377A6CC52294CF2600DCD871 /* CommandResponse.swift in Sources */,
-				377A6C9D2294CF2500DCD871 /* ClimateState.swift in Sources */,
-				377A6CBE2294CF2600DCD871 /* PanoRoofState.swift in Sources */,
-				377A6CC12294CF2600DCD871 /* DistanceUnit.swift in Sources */,
-				377A6CA92294CF2500DCD871 /* SetValetModeOptions.swift in Sources */,
-				377A6CC02294CF2600DCD871 /* DataRequest.swift in Sources */,
-				377A6CB62294CF2600DCD871 /* ChargePortLatchState.swift in Sources */,
-				377A6CBA2294CF2600DCD871 /* ChargingStatus.swift in Sources */,
-				377A6CA22294CF2500DCD871 /* SoftwareUpdate.swift in Sources */,
-				377A6CC32294CF2600DCD871 /* VIN.swift in Sources */,
-				377A6CAE2294CF2500DCD871 /* SetChargeLimitOptions.swift in Sources */,
-				377A6C9F2294CF2500DCD871 /* VehicleConfig.swift in Sources */,
-				377A6CA12294CF2500DCD871 /* MobileAccess.swift in Sources */,
-				377A6CB52294CF2600DCD871 /* ChargeUnit.swift in Sources */,
-				377A6C992294CF2500DCD871 /* AccessToken.swift in Sources */,
-				377A6C9B2294CF2500DCD871 /* VehicleList.swift in Sources */,
-				377A6CB72294CF2600DCD871 /* Error.swift in Sources */,
-				377A6C9E2294CF2500DCD871 /* VehicleState.swift in Sources */,
-				377A6CB42294CF2600DCD871 /* RangeDisplay.swift in Sources */,
-				377A6C9C2294CF2500DCD871 /* RefreshToken.swift in Sources */,
-				37D1CF5E229DFC8D00F42E07 /* JSONCodable.swift in Sources */,
-				377A6CC42294CF2600DCD871 /* Temperature.swift in Sources */,
-				377A6CB82294CF2600DCD871 /* SeatPosition.swift in Sources */,
-				377A6CAF2294CF2500DCD871 /* MovePanoRoofOptions.swift in Sources */,
-				37D1CF63229E043B00F42E07 /* VehicleUpdater.swift in Sources */,
-				377A6CB12294CF2500DCD871 /* SetSpeedLimitOptions.swift in Sources */,
-				377A6CAB2294CF2500DCD871 /* OpenTrunkOptions.swift in Sources */,
-				377A6CA82294CF2500DCD871 /* SetSentryModeOptions.swift in Sources */,
-				377A6CB92294CF2600DCD871 /* Heading.swift in Sources */,
-				377A6CBF2294CF2600DCD871 /* TrunkType.swift in Sources */,
+				3741E451229E1B3B00697CF0 /* SetTemperatureOptions.swift in Sources */,
+				3741E47B229E1B3B00697CF0 /* Vehicle.swift in Sources */,
+				3741E47A229E1B3B00697CF0 /* MobileAccess.swift in Sources */,
+				3741E452229E1B3B00697CF0 /* OpenTrunkOptions.swift in Sources */,
+				3741E455229E1B3B00697CF0 /* Temperature.swift in Sources */,
+				3741E45A229E1B3B00697CF0 /* VINComponent.swift in Sources */,
+				3741E46F229E1B3B00697CF0 /* PanoRoofState.swift in Sources */,
+				3741E468229E1B3B00697CF0 /* RangeDisplay.swift in Sources */,
+				3741E472229E1B3B00697CF0 /* Option.swift in Sources */,
+				3741E44D229E1B3B00697CF0 /* ChargeState.swift in Sources */,
+				3741E466229E1B3B00697CF0 /* DataRequest.swift in Sources */,
+				3741E479229E1B3B00697CF0 /* ChargeUnit.swift in Sources */,
+				3741E45D229E1B3B00697CF0 /* TrunkType.swift in Sources */,
+				3741E475229E1B3B00697CF0 /* SpeedLimitMode.swift in Sources */,
+				3741E467229E1B3B00697CF0 /* Error.swift in Sources */,
+				3741E456229E1B3B00697CF0 /* GUISettings.swift in Sources */,
+				3741E470229E1B3B00697CF0 /* MovePanoRoofOptions.swift in Sources */,
+				3741E47D229E1B3B00697CF0 /* ClimateState.swift in Sources */,
+				3741E450229E1B3B00697CF0 /* RemoteStartOptions.swift in Sources */,
+				3741E45E229E1B3B00697CF0 /* JSONCodable.swift in Sources */,
+				3741E464229E1B3B00697CF0 /* VIN.swift in Sources */,
+				3741E478229E1B3B00697CF0 /* SoftwareUpdate.swift in Sources */,
+				3741E461229E1B3B00697CF0 /* ChargingStatus.swift in Sources */,
+				3741E469229E1B3B00697CF0 /* VehicleConfig.swift in Sources */,
+				3741E44E229E1B3B00697CF0 /* RefreshToken.swift in Sources */,
+				3741E45B229E1B3B00697CF0 /* HTTPMethod.swift in Sources */,
+				3741E473229E1B3B00697CF0 /* TeslaAPI.swift in Sources */,
+				3741E462229E1B3B00697CF0 /* NavigationRequestOptions.swift in Sources */,
+				3741E458229E1B3B00697CF0 /* SeatPosition.swift in Sources */,
+				3741E45C229E1B3B00697CF0 /* ShiftState.swift in Sources */,
+				3741E474229E1B3B00697CF0 /* DistanceUnit.swift in Sources */,
+				3741E465229E1B3B00697CF0 /* RemoteSteeringWheelHeaterOptions.swift in Sources */,
+				3741E460229E1B3B00697CF0 /* SetValetModeOptions.swift in Sources */,
+				3741E44F229E1B3B00697CF0 /* VehicleState.swift in Sources */,
+				3741E476229E1B3B00697CF0 /* SetSentryModeOptions.swift in Sources */,
+				3741E46C229E1B3B00697CF0 /* SetChargeLimitOptions.swift in Sources */,
+				3741E45F229E1B3B00697CF0 /* DriveState.swift in Sources */,
+				3741E463229E1B3B00697CF0 /* TemperatureUnit.swift in Sources */,
+				3741E454229E1B3B00697CF0 /* RemoteSeatHeaterOptions.swift in Sources */,
+				3741E46E229E1B3B00697CF0 /* ChargePortLatchState.swift in Sources */,
+				3741E471229E1B3B00697CF0 /* CommandResponse.swift in Sources */,
+				3741E457229E1B3B00697CF0 /* Command.swift in Sources */,
+				3741E46B229E1B3B00697CF0 /* VehicleList.swift in Sources */,
+				3741E46A229E1B3B00697CF0 /* SetSpeedLimitOptions.swift in Sources */,
+				3741E47E229E1B3B00697CF0 /* VehicleUpdater.swift in Sources */,
+				3741E477229E1B3B00697CF0 /* AccessToken.swift in Sources */,
+				3741E47C229E1B3B00697CF0 /* MediaState.swift in Sources */,
+				3741E46D229E1B3B00697CF0 /* SetSpeedLimitPINOptions.swift in Sources */,
+				3741E459229E1B3B00697CF0 /* HTTPResponse.swift in Sources */,
+				3741E453229E1B3B00697CF0 /* Heading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +904,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC23C5185395D972B04B1D41 /* Pods-TeslaKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -965,6 +918,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.TeslaKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -974,6 +928,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0628BFB0F9F19857B23057A6 /* Pods-TeslaKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
