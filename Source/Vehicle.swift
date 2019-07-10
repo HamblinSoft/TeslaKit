@@ -9,7 +9,12 @@
 import Foundation
 
 ///
-public class Vehicle: JSONDecodable {
+public class Vehicle: JSONDecodable, Equatable {
+
+    ///
+    public static func ==(lhs: Vehicle, rhs: Vehicle) -> Bool {
+        return lhs.id == rhs.id
+    }
 
     /// Represents the different connection states the vehicle can be
     public enum State: String, CustomStringConvertible, Decodable {
@@ -62,6 +67,11 @@ public class Vehicle: JSONDecodable {
 
     ///
     public var optionCodes: [String] = []
+
+    ///
+    public init(id: String) {
+        self.id = id
+    }
 
     ///
     public required init(from decoder: Decoder) throws {

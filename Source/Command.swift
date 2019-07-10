@@ -90,16 +90,16 @@ public enum Command: CustomStringConvertible {
     // MARK: - Speed Limit
 
     ///
-    case speedLimitActivate(SetSpeedLimitOptions)
+    case speedLimitActivate(SpeedLimitOptions)
 
     ///
-    case speedLimitDeactivate(SetSpeedLimitOptions)
+    case speedLimitDeactivate(SpeedLimitOptions)
 
     ///
-    case speedLimitClearPIN(SetSpeedLimitPINOptions)
+    case speedLimitClearPIN(SpeedLimitPINOptions)
 
     /// Set Speed Limit
-    case setSpeedLimit(SetSpeedLimitOptions)
+    case setSpeedLimit(SpeedLimitOptions)
 
     // MARK: - Media Player
 
@@ -148,7 +148,7 @@ public enum Command: CustomStringConvertible {
     // MARK: - Sentry Mode
 
     ///
-    case sentryMode(SetSentryModeOptions)
+    case sentryMode(SentryModeOptions)
 
     public var rawValue: String {
         switch self {

@@ -230,7 +230,6 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
 
     // MARK: - Wake Vehicle
 
-
     ///
     internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
         request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/wake_up"),
@@ -247,15 +246,70 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         }
     }
 
+    ///
+    open func forceWake(_ vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ result: Bool, _ response: HTTPResponse<VehicleData>) -> Void) {
+
+        var numberOfAttempts: Int = 0
+
+        func attemptWakeCompletionHandler(result: Bool, httpResponse: HTTPResponse<VehicleData>) {
+            if result {
+                // Wake was successful
+                completion(true, httpResponse)
+
+            } else if numberOfAttempts >= attempts {
+
+                // Reached the max number of retries
+                completion(false, httpResponse)
+
+            } else {
+
+                // Retry again
+                numberOfAttempts += 1
+
+                DispatchQueue.main.async(wait: delay) {
+                    attemptWake(attemptWakeCompletionHandler)
+                }
+            }
+        }
+
+        func attemptWake(_ completion: @escaping (Bool, HTTPResponse<VehicleData>) -> Void) {
+            wake(vehicle, completion: completion)
+        }
+
+        attemptWake(attemptWakeCompletionHandler)
+    }
+
     // MARK: - Vehicle Data
 
     /// Get all data from the vehicle
-    open func data(for vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+    open func getData(for vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
         request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/data"),
                 method: .get,
                 httpBody: nil,
                 headers: headers,
                 completion: completion)
+    }
+
+    ///
+    @available(*, unavailable)
+    open func getDataIfAwake(for vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+
+        vehicles { res in
+
+            guard let vehicle = res.data?.vehicles.filter({$0 == vehicle}).first, vehicle.state == .online else {
+                completion(HTTPResponse(httpResponse: HTTPURLResponse(), data: nil, rawData: nil, error: nil))
+                return
+            }
+
+            self.getData(for: vehicle, completion: completion)
+        }
+    }
+
+    ///
+    open func forceWakeAndGetData(for vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+        forceWake(vehicle) { (result, response) in
+            self.getData(for: vehicle, completion: completion)
+        }
     }
 
     // MARK: - Mobile Access
@@ -420,7 +474,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
 extension DispatchQueue {
 
     ///
-    fileprivate func asyncAfter(seconds: Double, _ completion: @escaping ()->()) {
+    fileprivate func async(wait seconds: TimeInterval, _ completion: @escaping ()->()) {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
             completion()
         }

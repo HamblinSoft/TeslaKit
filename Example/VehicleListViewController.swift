@@ -17,25 +17,58 @@ class VehicleListViewController: UITableViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-
-    private lazy var timer: Timer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(updateVehicles), userInfo: nil, repeats: true)
-
     private var vehicle: Vehicle?
 
     private var vehicles: [Vehicle] = [] {
         didSet {
-            self.tableView.reloadData()
+            if vehicleUpdaters.count != vehicles.count {
+                tableView.reloadData()
+                vehicleUpdaters.forEach{$0.stopUpdating()}
+                vehicleUpdaters = vehicles.map { vehicle in
+                    let updater = VehicleUpdater(teslaAPI: teslaAPI)
+                    updater.setVehicle(vehicle)
+                    return updater
+                }
+                vehicleUpdaters.forEach{$0.startUpdating()}
+            }
         }
     }
+
+    private var vehicleUpdaters: [VehicleUpdater] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         teslaAPI.delegate = self
+
         headerLabel.text = "Vehicle Monitor"
+
         descriptionLabel.text = userDefaults.lastUpdatedAt
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Actions", style: .plain, target: self, action: #selector(actionsButtonAction))
-        restoreSession()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(vehicleDidUpdate), name: VehicleUpdater.didUpdateNotification, object: self)
+
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(refreshHandler(_:)), for: .valueChanged)
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.restoreSession()
+        }
+    }
+
+    @objc private func refreshHandler(_ sender: UIRefreshControl?) {
+        reloadVehicles { [weak self] in
+            guard let self = self else { return }
+            self.tableView.reloadData()
+            sender?.endRefreshing()
+        }
+    }
+
+    @objc private func vehicleDidUpdate() {
+        tableView.reloadData()
+        userDefaults.lastUpdatedAt = String(describing: Date())
+        self.descriptionLabel.text = userDefaults.lastUpdatedAt
     }
 
     @objc private func actionsButtonAction() {
@@ -44,14 +77,10 @@ class VehicleListViewController: UITableViewController {
 
         actionSheet.addAction(UIAlertAction(title: "Wake", style: .default, handler: { _ in
 
-            teslaAPI.forceWake(vehicle) { (result, error) in
+            teslaAPI.forceWake(vehicle) { (isAwake, response) in
 
-                if result {
-                    self.getData(vehicle: vehicle)
-                }
-
-                self.displayAlert(title: result ? "Success" : "Failed",
-                                  message: error,
+                self.displayAlert(title: isAwake ? "Success" : "Failed",
+                                  message: response.error?.localizedDescription ?? response.localizedStatusCodeDescription,
                                   completion: nil)
             }
 
@@ -59,11 +88,7 @@ class VehicleListViewController: UITableViewController {
 
         actionSheet.addAction(UIAlertAction(title: "Sentry Mode On", style: .default, handler: { _ in
 
-            teslaAPI.send(.sentryMode(SetSentryModeOptions(isOn: true)), to: vehicle) { response in
-
-                if response.result {
-                    self.getData(vehicle: vehicle)
-                }
+            teslaAPI.send(.sentryMode(SentryModeOptions(isOn: true)), to: vehicle) { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -73,11 +98,7 @@ class VehicleListViewController: UITableViewController {
 
         actionSheet.addAction(UIAlertAction(title: "Sentry Mode Off", style: .default, handler: { _ in
 
-            teslaAPI.send(.sentryMode(SetSentryModeOptions(isOn: false)), to: vehicle) { response in
-
-                if response.result {
-                    self.getData(vehicle: vehicle)
-                }
+            teslaAPI.send(.sentryMode(SentryModeOptions(isOn: false)), to: vehicle) { response in
 
                 self.displayAlert(title: response.result ? "Success" : "Failed",
                                   message: response.allErrorMessages,
@@ -172,7 +193,25 @@ class VehicleListViewController: UITableViewController {
         } else {
 
             teslaAPI.setAccessToken(accessToken.accessToken)
-            timer.fire()
+            reloadVehicles(completion: nil)
+        }
+    }
+
+    private func reloadVehicles(completion: (() -> Void)?) {
+
+        teslaAPI.vehicles { [weak self] res in
+
+            guard let self = self else { return }
+
+            if let data = res.data {
+                self.vehicles = data.vehicles
+
+                if self.vehicle == nil {
+                    self.vehicle = self.vehicles.first
+                }
+
+                completion?()
+            }
         }
     }
 
@@ -213,7 +252,7 @@ class VehicleListViewController: UITableViewController {
 
             teslaAPI.setAccessToken(data.accessToken)
 
-            self.timer.fire()
+            self.refreshHandler(nil)
         }
     }
 
@@ -221,7 +260,6 @@ class VehicleListViewController: UITableViewController {
 
         let isExpired = userDefaults.accessToken?.isExpired ?? true
         guard !isExpired else { return }
-
 
         teslaAPI.vehicles { response in
 
@@ -239,7 +277,7 @@ class VehicleListViewController: UITableViewController {
 
                 guard isAwake else { return }
 
-                teslaAPI.data(for: vehicle) { response in
+                teslaAPI.getData(for: vehicle) { response in
 
                     self.vehicle = response.data
                     print(data)
@@ -258,32 +296,6 @@ class VehicleListViewController: UITableViewController {
         }
     }
 
-    private func getData(vehicle: Vehicle) {
-
-        let maxAttempts = 10
-        var attempts = 0
-
-        guard attempts < maxAttempts else {
-            print("forceWake", "data request max attempts reached")
-            return
-        }
-
-        print("forceWake", "requesting data")
-
-        teslaAPI.data(for: vehicle) { response in
-
-            attempts += 1
-
-            guard response.statusCode == 200 else {
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-                    self.getData(vehicle: vehicle)
-                }
-                return
-            }
-
-            print("forceWake", "received data!")
-        }
-    }
 }
 
 extension VehicleListViewController: TeslaAPIDelegate {
@@ -302,62 +314,6 @@ extension VehicleListViewController: TeslaAPIDelegate {
 
     func teslaApi(_ teslaAPI: TeslaAPI, didSend command: Command, data: CommandResponse?, result: CommandResponse) {
 
-    }
-}
-
-extension TeslaAPI {
-
-    func forceWake(_ vehicle: Vehicle, completion: @escaping (Bool, String?) -> Void) {
-
-        let maxAttempts: Int = 5
-        var attempts: Int = 0
-        var errorMessages: [String] = []
-
-
-        func completionHandler(result: Bool, errorMessage: String?) {
-            DispatchQueue.main.async {
-                completion(result, errorMessage)
-            }
-        }
-
-        func performForceWake() {
-
-            print("forceWake", "waking")
-
-            self.wake(vehicle) { (isAwake, res) in
-
-                let state = res.data?.state ?? Vehicle.State.offline
-
-                if let error = res.error {
-                    errorMessages.append(error.localizedDescription)
-                }
-
-                print("forceWake", state)
-
-                guard isAwake else {
-                    attempts += 1
-                    if attempts >= maxAttempts {
-                        print("forceWake", "max attempts reached")
-                        completionHandler(result: false, errorMessage: errorMessages.joined(separator: ".\n"))
-                    } else {
-                        print("forceWake", "retrying")
-                    }
-                    return
-                }
-
-                switch state {
-                case .online:
-                    print("forceWake", "success!")
-                    completionHandler(result: true, errorMessage: nil)
-                default:
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-                        performForceWake()
-                    }
-                }
-            }
-        }
-
-        performForceWake()
     }
 }
 
