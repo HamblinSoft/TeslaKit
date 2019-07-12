@@ -192,7 +192,7 @@ print(vin.vinString)    // 5YJSA1E2XHF999999
 Is your app using TeslaKit? Let me know and I'll feature it here too!
 
 # Tesla Referral Program
-Buying a new Tesla? Share my [referral code](https://ts.la/jaren29211) to give five friends a $100 Supercharging credit with a new Model S, Model X or Model 3 Performance!
+Buying a new Tesla? Use my [referral code](https://ts.la/jaren29211) and receive 1,000 free Supercharger miles!
 
 # Author
 
