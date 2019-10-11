@@ -6,6 +6,8 @@
 //  Copyright © 2019 HamblinSoft. All rights reserved.
 //
 
+import Foundation
+
 ///
 public protocol JSONEncodable: Encodable {}
 
