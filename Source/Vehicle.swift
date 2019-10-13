@@ -136,6 +136,11 @@ public class VehicleData: Vehicle {
     public var vehicleConfig: VehicleConfig = VehicleConfig()
 
     ///
+    public init() {
+        super.init(id: "")
+    }
+
+    ///
     public required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
         let responseContainer = try decoder.container(keyedBy: CodingKeys.self)
