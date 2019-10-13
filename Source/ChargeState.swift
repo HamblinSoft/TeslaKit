@@ -108,7 +108,7 @@ public class ChargeState: JSONDecodable {
     public var scheduledChargingPending: Bool = false
 
     ///
-    public var notEnoughPowerToHeat: Bool = false
+    public var notEnoughPowerToHeat: Bool? = false
     
     ///
     public var managedChargingStartTime: TimeInterval? = nil
