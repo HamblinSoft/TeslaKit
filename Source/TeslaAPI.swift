@@ -231,7 +231,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     // MARK: - Wake Vehicle
 
     ///
-    internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<VehicleData>) -> Void) {
+    internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<Vehicle>) -> Void) {
         request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/wake_up"),
                 method: .post,
                 httpBody: nil,
@@ -240,18 +240,18 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     }
 
     ///
-    open func wake(_ vehicle: Vehicle, completion: @escaping (_ result: Bool, _ response: HTTPResponse<VehicleData>) -> Void) {
-        wake(vehicle) { (response: HTTPResponse<VehicleData>) in
+    open func wake(_ vehicle: Vehicle, completion: @escaping (_ result: Bool, _ response: HTTPResponse<Vehicle>) -> Void) {
+        wake(vehicle) { (response: HTTPResponse<Vehicle>) in
             completion(response.data?.state == .online, response)
         }
     }
 
     ///
-    open func forceWake(_ vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ result: Bool, _ response: HTTPResponse<VehicleData>) -> Void) {
+    open func forceWake(_ vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ result: Bool, _ response: HTTPResponse<Vehicle>) -> Void) {
 
         var numberOfAttempts: Int = 0
 
-        func attemptWakeCompletionHandler(result: Bool, httpResponse: HTTPResponse<VehicleData>) {
+        func attemptWakeCompletionHandler(result: Bool, httpResponse: HTTPResponse<Vehicle>) {
             if result {
                 // Wake was successful
                 completion(true, httpResponse)
@@ -272,7 +272,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
             }
         }
 
-        func attemptWake(_ completion: @escaping (Bool, HTTPResponse<VehicleData>) -> Void) {
+        func attemptWake(_ completion: @escaping (Bool, HTTPResponse<Vehicle>) -> Void) {
             wake(vehicle, completion: completion)
         }
 
