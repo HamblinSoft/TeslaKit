@@ -117,6 +117,8 @@ public class Vehicle: JSONDecodable, Equatable {
 ///
 public class VehicleData: Vehicle {
 
+    public static let null = VehicleData()
+
     ///
     public var chargeState: ChargeState = ChargeState()
 
