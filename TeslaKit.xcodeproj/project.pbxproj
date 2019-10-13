@@ -282,15 +282,15 @@
 				3741E41E229E1B3900697CF0 /* RemoteStartOptions.swift */,
 				3741E433229E1B3A00697CF0 /* RemoteSteeringWheelHeaterOptions.swift */,
 				3741E426229E1B3900697CF0 /* SeatPosition.swift */,
-				3741E43A229E1B3A00697CF0 /* SetChargeLimitOptions.swift */,
 				3741E444229E1B3B00697CF0 /* SentryModeOptions.swift */,
-				3741E438229E1B3A00697CF0 /* SpeedLimitOptions.swift */,
-				3741E43B229E1B3A00697CF0 /* SpeedLimitPINOptions.swift */,
+				3741E43A229E1B3A00697CF0 /* SetChargeLimitOptions.swift */,
 				3741E41F229E1B3900697CF0 /* SetTemperatureOptions.swift */,
 				3741E42E229E1B3900697CF0 /* SetValetModeOptions.swift */,
 				3741E42A229E1B3900697CF0 /* ShiftState.swift */,
 				3741E446229E1B3B00697CF0 /* SoftwareUpdate.swift */,
 				3741E443229E1B3B00697CF0 /* SpeedLimitMode.swift */,
+				3741E438229E1B3A00697CF0 /* SpeedLimitOptions.swift */,
+				3741E43B229E1B3A00697CF0 /* SpeedLimitPINOptions.swift */,
 				3741E423229E1B3900697CF0 /* Temperature.swift */,
 				3741E431229E1B3A00697CF0 /* TemperatureUnit.swift */,
 				3741E441229E1B3B00697CF0 /* TeslaAPI.swift */,
@@ -840,6 +840,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -894,6 +895,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -920,7 +922,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -944,7 +945,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.TeslaKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -961,7 +961,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -978,7 +977,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -994,7 +992,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjjjaren.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
@@ -1011,7 +1008,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjjjaren.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};

@@ -231,7 +231,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     // MARK: - Wake Vehicle
 
     ///
-    internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<Vehicle>) -> Void) {
+    internal func wake(_ vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<WakeResponse>) -> Void) {
         request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/wake_up"),
                 method: .post,
                 httpBody: nil,
@@ -240,18 +240,18 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
     }
 
     ///
-    open func wake(_ vehicle: Vehicle, completion: @escaping (_ result: Bool, _ response: HTTPResponse<Vehicle>) -> Void) {
-        wake(vehicle) { (response: HTTPResponse<Vehicle>) in
+    open func wake(_ vehicle: Vehicle, completion: @escaping (_ result: Bool, _ response: HTTPResponse<WakeResponse>) -> Void) {
+        wake(vehicle) { (response: HTTPResponse<WakeResponse>) in
             completion(response.data?.state == .online, response)
         }
     }
 
     ///
-    open func forceWake(_ vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ result: Bool, _ response: HTTPResponse<Vehicle>) -> Void) {
+    open func forceWake(_ vehicle: Vehicle, delay: TimeInterval = 3.0, attempts: Int = 10, completion: @escaping (_ result: Bool, _ response: HTTPResponse<WakeResponse>) -> Void) {
 
         var numberOfAttempts: Int = 0
 
-        func attemptWakeCompletionHandler(result: Bool, httpResponse: HTTPResponse<Vehicle>) {
+        func attemptWakeCompletionHandler(result: Bool, httpResponse: HTTPResponse<WakeResponse>) {
             if result {
                 // Wake was successful
                 completion(true, httpResponse)
@@ -272,7 +272,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
             }
         }
 
-        func attemptWake(_ completion: @escaping (Bool, HTTPResponse<Vehicle>) -> Void) {
+        func attemptWake(_ completion: @escaping (Bool, HTTPResponse<WakeResponse>) -> Void) {
             wake(vehicle, completion: completion)
         }
 
@@ -487,4 +487,39 @@ internal func prettyPrint(json data: Data) throws -> String {
     let data = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
     let string = String(data: data, encoding: String.Encoding.utf8)
     return string ?? ""
+}
+
+///
+public class WakeResponse: JSONDecodable, Equatable {
+
+    ///
+    public static func ==(lhs: WakeResponse, rhs: WakeResponse) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    ///
+    public var id: String = ""
+
+    ///
+    public var state: TeslaKit.Vehicle.State = .offline
+
+    ///
+    public init(id: String, state: TeslaKit.Vehicle.State) {
+        self.id = id
+        self.state = state
+    }
+
+    ///
+    public required init(from decoder: Decoder) throws {
+        let responseContainer = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try responseContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)
+        id = try container.decodeIfPresent(String.self, forKey: .id) ?? ""
+        state = try container.decodeIfPresent(Vehicle.State.self, forKey: .state) ?? .offline
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case response = "response"
+        case id = "id_s"
+        case state = "state"
+    }
 }
