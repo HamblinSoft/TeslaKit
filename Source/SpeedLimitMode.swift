@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public class SpeedLimitMode: JSONDecodable {
+public final class SpeedLimitMode: JSONDecodable {
 
     ///
     public var currentLimitMPH: Double = 90
@@ -36,6 +36,14 @@ public class SpeedLimitMode: JSONDecodable {
         self.active = active
         self.maxLimitMPH = maxLimitMPH
         self.minLimitMPH = minLimitMPH
+    }
+
+    public init(from decoder: Decoder) throws {
+        self.currentLimitMPH = try decoder.decodeIfPresent(CodingKeys.currentLimitMPH) ?? 90
+        self.pinCodeSet = try decoder.decodeIfPresent(CodingKeys.pinCodeSet) ?? false
+        self.active = try decoder.decodeIfPresent(CodingKeys.active) ?? false
+        self.maxLimitMPH = try decoder.decodeIfPresent(CodingKeys.maxLimitMPH) ?? 90
+        self.minLimitMPH = try decoder.decodeIfPresent(CodingKeys.minLimitMPH) ?? 50
     }
 
     ///
