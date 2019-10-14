@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A01BD4043B74CBEA1DFF847 /* Pods_TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA53F5C39BED55993B9DF9AF /* Pods_TeslaKit.framework */; };
+		372388B42354F6F200F67D28 /* NearbyChargingSites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372388B32354F6F200F67D28 /* NearbyChargingSites.swift */; };
 		3726158C215072CE00BD596C /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726158B215072CE00BD596C /* VehicleListViewController.swift */; };
 		37368FA62354F040002352E7 /* WindowControlOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37368FA52354F040002352E7 /* WindowControlOptions.swift */; };
 		3741E44D229E1B3B00697CF0 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41B229E1B3900697CF0 /* ChargeState.swift */; };
@@ -109,6 +110,7 @@
 /* Begin PBXFileReference section */
 		0628BFB0F9F19857B23057A6 /* Pods-TeslaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit.release.xcconfig"; sourceTree = "<group>"; };
 		28DC6ABEB1D21347C7648B2E /* Pods_VehicleMonitorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleMonitorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		372388B32354F6F200F67D28 /* NearbyChargingSites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyChargingSites.swift; sourceTree = "<group>"; };
 		3726158B215072CE00BD596C /* VehicleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
 		37368FA52354F040002352E7 /* WindowControlOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowControlOptions.swift; sourceTree = "<group>"; };
 		3741E41B229E1B3900697CF0 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				3741E448229E1B3B00697CF0 /* MobileAccess.swift */,
 				3741E43E229E1B3A00697CF0 /* MovePanoRoofOptions.swift */,
 				3741E430229E1B3A00697CF0 /* NavigationRequestOptions.swift */,
+				372388B32354F6F200F67D28 /* NearbyChargingSites.swift */,
 				3741E420229E1B3900697CF0 /* OpenTrunkOptions.swift */,
 				3741E440229E1B3A00697CF0 /* Option.swift */,
 				3741E43D229E1B3A00697CF0 /* PanoRoofState.swift */,
@@ -705,6 +708,7 @@
 				3741E461229E1B3B00697CF0 /* ChargingStatus.swift in Sources */,
 				3741E469229E1B3B00697CF0 /* VehicleConfig.swift in Sources */,
 				3741E44E229E1B3B00697CF0 /* RefreshToken.swift in Sources */,
+				372388B42354F6F200F67D28 /* NearbyChargingSites.swift in Sources */,
 				3741E45B229E1B3B00697CF0 /* HTTPMethod.swift in Sources */,
 				3741E473229E1B3B00697CF0 /* TeslaAPI.swift in Sources */,
 				3741E462229E1B3B00697CF0 /* NavigationRequestOptions.swift in Sources */,

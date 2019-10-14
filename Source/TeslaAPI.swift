@@ -425,6 +425,17 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         }
     }
 
+    // MARK: - Nearby Charging Sites
+
+    /// Returns destination and supercharger locations near the specified vehicle
+    open func chargingSites(near vehicle: Vehicle, completion: @escaping (_ response: HTTPResponse<NearbyChargingSites>) -> Void) {
+        request(configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicle.id)/nearby_charging_sites"),
+            method: .get,
+            httpBody: nil,
+            headers: headers,
+            completion: completion)
+    }
+
     // MARK: - Debug
 
     /// Print the contents of URLRequest and HTTPURLResponse in a consistent format that is easy to inspect
