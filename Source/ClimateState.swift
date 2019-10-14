@@ -78,10 +78,10 @@ public final class ClimateState: JSONDecodable {
     public var isAutoConditioningOn: Bool = false
 
     ///
-    public var isPreconditioning: Int = 0
+    public var isPreconditioning: Bool = false
 
     ///
-    public var sideMirrorHeaters: Int = 0
+    public var sideMirrorHeaters: Bool = false
 
     ///
     public var batteryHeaterNoPower: Int = 0
@@ -90,13 +90,13 @@ public final class ClimateState: JSONDecodable {
     public var steeringWheelHeater: Int = 0
 
     ///
-    public var batteryHeater: Int = 0
+    public var batteryHeater: Bool = false
 
     ///
-    public var wiperBladeHeater: Int = 0
+    public var wiperBladeHeater: Bool = false
 
     ///
-    public var climateKeeperMode: Bool = false
+    public var climateKeeperMode: String = "off"
 
     ///
     public var remoteHeaterControlEnabled: Bool = false
@@ -128,13 +128,13 @@ public final class ClimateState: JSONDecodable {
         self.smartPreconditioning = try decoder.decodeIfPresent(CodingKeys.smartPreconditioning) ?? false
         self.maximumAvailableTemperature = try decoder.decodeIfPresent(CodingKeys.maximumAvailableTemperature) ?? 0
         self.isAutoConditioningOn = try decoder.decodeIfPresent(CodingKeys.isAutoConditioningOn) ?? false
-        self.isPreconditioning = try decoder.decodeIfPresent(CodingKeys.isPreconditioning) ?? 0
-        self.sideMirrorHeaters = try decoder.decodeIfPresent(CodingKeys.sideMirrorHeaters) ?? 0
+        self.isPreconditioning = try decoder.decodeIfPresent(CodingKeys.isPreconditioning) ?? false
+        self.sideMirrorHeaters = try decoder.decodeIfPresent(CodingKeys.sideMirrorHeaters) ?? false
         self.batteryHeaterNoPower = try decoder.decodeIfPresent(CodingKeys.batteryHeaterNoPower) ?? 0
         self.steeringWheelHeater = try decoder.decodeIfPresent(CodingKeys.steeringWheelHeater) ?? 0
-        self.batteryHeater = try decoder.decodeIfPresent(CodingKeys.batteryHeater) ?? 0
-        self.wiperBladeHeater = try decoder.decodeIfPresent(CodingKeys.wiperBladeHeater) ?? 0
-        self.climateKeeperMode = try decoder.decodeIfPresent(CodingKeys.climateKeeperMode) ?? false
+        self.batteryHeater = try decoder.decodeIfPresent(CodingKeys.batteryHeater) ?? false
+        self.wiperBladeHeater = try decoder.decodeIfPresent(CodingKeys.wiperBladeHeater) ?? false
+        self.climateKeeperMode = try decoder.decodeIfPresent(CodingKeys.climateKeeperMode) ?? "off"
         self.remoteHeaterControlEnabled = try decoder.decodeIfPresent(CodingKeys.remoteHeaterControlEnabled) ?? false
     }
 

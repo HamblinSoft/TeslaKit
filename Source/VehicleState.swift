@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public class VehicleState: JSONDecodable {
+public final class VehicleState: JSONDecodable {
 
     ///
     public var exteriorColor: String?
@@ -151,6 +151,56 @@ public class VehicleState: JSONDecodable {
 
     ///
     public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.exteriorColor = try decoder.decodeIfPresent(CodingKeys.exteriorColor)
+        self.centerDisplayState = try decoder.decodeIfPresent(CodingKeys.centerDisplayState) ?? 0
+        self.autoparkStyle = try decoder.decodeIfPresent(CodingKeys.autoparkStyle)
+        self.remoteStart = try decoder.decodeIfPresent(CodingKeys.remoteStart) ?? false
+        self.odometer = try decoder.decodeIfPresent(CodingKeys.odometer) ?? 0
+        self.rearTrunkState = try decoder.decodeIfPresent(CodingKeys.rearTrunkState) ?? 0
+        self.sunRoofPercentOpen = try decoder.decodeIfPresent(CodingKeys.sunRoofPercentOpen) ?? 0
+        self.vehicleName = try decoder.decodeIfPresent(CodingKeys.vehicleName)
+        self.remoteStartSupported = try decoder.decodeIfPresent(CodingKeys.remoteStartSupported) ?? false
+        self.locked = try decoder.decodeIfPresent(CodingKeys.locked) ?? false
+        self.rearSeatType = try decoder.decodeIfPresent(CodingKeys.rearSeatType) ?? 0
+        self.rhd = try decoder.decodeIfPresent(CodingKeys.rhd) ?? false
+        self.autoparkStateV2 = try decoder.decodeIfPresent(CodingKeys.autoparkStateV2)
+        self.roofColor = try decoder.decodeIfPresent(CodingKeys.roofColor)
+        self.rearSeatHeaters = try decoder.decodeIfPresent(CodingKeys.rearSeatHeaters) ?? 0
+        self.valetMode = try decoder.decodeIfPresent(CodingKeys.valetMode) ?? false
+        self.parsedCalendarSupported = try decoder.decodeIfPresent(CodingKeys.parsedCalendarSupported) ?? false
+        self.apiVersion = try decoder.decodeIfPresent(CodingKeys.apiVersion) ?? 0
+        self.homelinkNearby = try decoder.decodeIfPresent(CodingKeys.homelinkNearby) ?? false
+        self.autoparkState = try decoder.decodeIfPresent(CodingKeys.autoparkState)
+        self.lastAutoparkError = try decoder.decodeIfPresent(CodingKeys.lastAutoparkError)
+        self.driverRearDoorState = try decoder.decodeIfPresent(CodingKeys.driverRearDoorState) ?? 0
+        self.calendarSupported = try decoder.decodeIfPresent(CodingKeys.calendarSupported) ?? false
+        self.sunRoofState = try decoder.decodeIfPresent(CodingKeys.sunRoofState)
+        self.driverFrontDoorState = try decoder.decodeIfPresent(CodingKeys.driverFrontDoorState) ?? 0
+        self.valetPinNeeded = try decoder.decodeIfPresent(CodingKeys.valetPinNeeded) ?? false
+        self.passengerRearDoorState = try decoder.decodeIfPresent(CodingKeys.passengerRearDoorState) ?? 0
+        self.spoilerType = try decoder.decodeIfPresent(CodingKeys.spoilerType)
+        self.carType = try decoder.decodeIfPresent(CodingKeys.carType)
+        self.perfConfig = try decoder.decodeIfPresent(CodingKeys.perfConfig)
+        self.carVersion = try decoder.decodeIfPresent(CodingKeys.carVersion)
+        self.seatType = try decoder.decodeIfPresent(CodingKeys.seatType) ?? 0
+        self.thirdRowSeats = try decoder.decodeIfPresent(CodingKeys.thirdRowSeats)
+        self.frontTrunkState = try decoder.decodeIfPresent(CodingKeys.frontTrunkState) ?? 0
+        self.notificationsSupported = try decoder.decodeIfPresent(CodingKeys.notificationsSupported) ?? false
+        self.passengerFrontDoorState = try decoder.decodeIfPresent(CodingKeys.passengerFrontDoorState) ?? 0
+        self.wheelType = try decoder.decodeIfPresent(CodingKeys.wheelType)
+        self.sunRoofInstalled = try decoder.decodeIfPresent(CodingKeys.sunRoofInstalled) ?? 0
+        self.timestamp = try decoder.decodeIfPresent(CodingKeys.timestamp) ?? 0
+        self.isUserPresent = try decoder.decodeIfPresent(CodingKeys.isUserPresent) ?? false
+        self.sentryMode = try decoder.decodeIfPresent(CodingKeys.sentryMode) ?? false
+        self.speedLimitMode = try decoder.decodeIfPresent(CodingKeys.speedLimitMode) ?? SpeedLimitMode()
+        self.softwareUpdate = try decoder.decodeIfPresent(CodingKeys.softwareUpdate) ?? SoftwareUpdate()
+        self.mediaState = try decoder.decodeIfPresent(CodingKeys.mediaState) ?? MediaState()
+        self.autoParkStateV3 = try decoder.decodeIfPresent(CodingKeys.autoParkStateV3) ?? ""
+        self.remoteStartEnabled = try decoder.decodeIfPresent(CodingKeys.remoteStartEnabled) ?? false
+    }
 
     ///
     public var isRearTrunkOpen: Bool { return rearTrunkState != 0 }

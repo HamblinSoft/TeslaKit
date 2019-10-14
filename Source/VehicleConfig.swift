@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public class VehicleConfig: JSONDecodable {
+public final class VehicleConfig: JSONDecodable {
 
     ///
     public var wheelType: String? = nil
@@ -78,10 +78,37 @@ public class VehicleConfig: JSONDecodable {
     public var hasAirSuspension: Bool = false
 
     ///
-    public var keyVersion: String = ""
+    public var keyVersion: Int = 0
 
     ///
     public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.wheelType = try decoder.decodeIfPresent(CodingKeys.wheelType)
+        self.sunRoofInstalled = try decoder.decodeIfPresent(CodingKeys.sunRoofInstalled) ?? 0
+        self.seatType = try decoder.decodeIfPresent(CodingKeys.seatType) ?? 0
+        self.rearSeatType = try decoder.decodeIfPresent(CodingKeys.rearSeatType) ?? 0
+        self.roofColor = try decoder.decodeIfPresent(CodingKeys.roofColor)
+        self.perfConfig = try decoder.decodeIfPresent(CodingKeys.perfConfig)
+        self.rhd = try decoder.decodeIfPresent(CodingKeys.rhd) ?? false
+        self.spoilerType = try decoder.decodeIfPresent(CodingKeys.spoilerType)
+        self.carSpecialType = try decoder.decodeIfPresent(CodingKeys.carSpecialType)
+        self.hasLudicrousMode = try decoder.decodeIfPresent(CodingKeys.hasLudicrousMode) ?? false
+        self.timestamp = try decoder.decodeIfPresent(CodingKeys.timestamp) ?? 0
+        self.plg = try decoder.decodeIfPresent(CodingKeys.plg) ?? false
+        self.motorizedChargePort = try decoder.decodeIfPresent(CodingKeys.motorizedChargePort) ?? false
+        self.euVehicle = try decoder.decodeIfPresent(CodingKeys.euVehicle) ?? false
+        self.rearSeatHeaters = try decoder.decodeIfPresent(CodingKeys.rearSeatHeaters) ?? 0
+        self.thirdRowSeats = try decoder.decodeIfPresent(CodingKeys.thirdRowSeats)
+        self.canActuateTrunks = try decoder.decodeIfPresent(CodingKeys.canActuateTrunks) ?? false
+        self.carType = try decoder.decodeIfPresent(CodingKeys.carType)
+        self.chargePortType = try decoder.decodeIfPresent(CodingKeys.chargePortType)
+        self.exteriorColor = try decoder.decodeIfPresent(CodingKeys.exteriorColor)
+        self.canAcceptNavigationRequests = try decoder.decodeIfPresent(CodingKeys.canAcceptNavigationRequests) ?? false
+        self.hasAirSuspension = try decoder.decodeIfPresent(CodingKeys.hasAirSuspension) ?? false
+        self.keyVersion = try decoder.decodeIfPresent(CodingKeys.keyVersion) ?? 0
+    }
 
     private enum CodingKeys: String, CodingKey {
         case canActuateTrunks = "can_actuate_trunks"
