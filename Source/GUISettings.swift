@@ -9,7 +9,7 @@
 import Foundation
 
 /// Returns various information about the GUI settings of the car, such as unit format and range display.
-public class GUISettings: JSONDecodable {
+public final class GUISettings: JSONDecodable {
     
     /// Distance units (mi/hr)
     public var distanceUnits: DistanceUnit = DistanceUnit.metric
@@ -34,6 +34,16 @@ public class GUISettings: JSONDecodable {
 
     ///
     public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.distanceUnits = try decoder.decodeIfPresent(CodingKeys.distanceUnits) ?? .metric
+        self.chargeRateUnits = try decoder.decodeIfPresent(CodingKeys.chargeRateUnits) ?? .metric
+        self.temperatureUnits = try decoder.decodeIfPresent(CodingKeys.temperatureUnits) ?? .celsius
+        self.is24HourTime = try decoder.decodeIfPresent(CodingKeys.is24HourTime) ?? false
+        self.rangeDisplay = try decoder.decodeIfPresent(CodingKeys.rangeDisplay) ?? .rated
+        self.timestamp = try decoder.decodeIfPresent(CodingKeys.timestamp) ?? 0
+    }
 
     private enum CodingKeys: String, CodingKey {
         case chargeRateUnits = "gui_charge_rate_units"
