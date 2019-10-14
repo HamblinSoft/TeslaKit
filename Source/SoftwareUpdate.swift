@@ -52,14 +52,26 @@ public final class SoftwareUpdate: JSONDecodable {
     public var warningTimeRemaining: Double?
 
     ///
+    public var installPercent: Double?
+
+    ///
+    public var downloadPercent: Double?
+
+    ///
+    public var version: String?
+
+    ///
     public init() {}
 
     ///
-    public init(status: Status, expectedDuration: TimeInterval?, scheduledTime: Double?, warningTimeRemaining: Double?) {
+    public init(status: Status, expectedDuration: TimeInterval?, scheduledTime: Double?, warningTimeRemaining: Double?, installPercent: Double?, downloadPercent: Double?, version: String?) {
         self.status = status
         self.expectedDuration = expectedDuration
         self.scheduledTime = scheduledTime
         self.warningTimeRemaining = warningTimeRemaining
+        self.installPercent = installPercent
+        self.downloadPercent = downloadPercent
+        self.version = version
     }
 
     ///
@@ -68,6 +80,9 @@ public final class SoftwareUpdate: JSONDecodable {
         self.expectedDuration = try decoder.decodeIfPresent(CodingKeys.expectedDuration)
         self.scheduledTime = try decoder.decodeIfPresent(CodingKeys.scheduledTime)
         self.warningTimeRemaining = try decoder.decodeIfPresent(CodingKeys.warningTimeRemaining)
+        self.installPercent = try decoder.decodeIfPresent(CodingKeys.installPercent)
+        self.downloadPercent = try decoder.decodeIfPresent(CodingKeys.downloadPercent)
+        self.version = try decoder.decodeIfPresent(CodingKeys.version)
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -75,5 +90,14 @@ public final class SoftwareUpdate: JSONDecodable {
         case expectedDuration = "expected_duration_sec"
         case scheduledTime = "scheduled_time_ms"
         case warningTimeRemaining = "warning_time_remaining_ms"
+        case installPercent = "install_perc"
+        case downloadPercent = "download_perc"
+        case version
     }
 }
+
+//"status" : "available",
+//"install_perc" : 10,
+//"download_perc" : 100,
+//"expected_duration_sec" : 1500,
+//"version" : "2019.32.12.2"
