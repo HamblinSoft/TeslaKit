@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Codextended
 
 /// Response object containing information about the charge state of the vehicle
 public final class ChargeState: JSONDecodable {

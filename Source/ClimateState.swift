@@ -9,7 +9,7 @@
 import Foundation
 
 /// Response object containing information about the current temperature and climate control state of a vehicle
-public class ClimateState: JSONDecodable {
+public final class ClimateState: JSONDecodable {
 
     ///
     public var seatHeaterLeft: Int = 0
@@ -103,6 +103,40 @@ public class ClimateState: JSONDecodable {
 
     ///
     public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.seatHeaterLeft = try decoder.decodeIfPresent(CodingKeys.seatHeaterLeft) ?? 0
+        self.fanStatus = try decoder.decodeIfPresent(CodingKeys.fanStatus) ?? 0
+        self.isFrontDefrosterOn = try decoder.decodeIfPresent(CodingKeys.isFrontDefrosterOn) ?? false
+        self.isRearDefrosterOn = try decoder.decodeIfPresent(CodingKeys.isRearDefrosterOn) ?? false
+        self.isClimateOn = try decoder.decodeIfPresent(CodingKeys.isClimateOn) ?? false
+        self.seatHeaterRearLeft = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearLeft) ?? 0
+        self.minimumAvailableTemperature = try decoder.decodeIfPresent(CodingKeys.minimumAvailableTemperature) ?? 0
+        self.insideTemperature = try decoder.decodeIfPresent(CodingKeys.insideTemperature)
+        self.driverTemperatureSetting = try decoder.decodeIfPresent(CodingKeys.driverTemperatureSetting) ?? 0
+        self.passengerTemperatureSetting = try decoder.decodeIfPresent(CodingKeys.passengerTemperatureSetting) ?? 0
+        self.outsideTemperature = try decoder.decodeIfPresent(CodingKeys.outsideTemperature)
+        self.seatHeaterRearCenter = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearCenter) ?? 0
+        self.timestamp = try decoder.decodeIfPresent(CodingKeys.timestamp) ?? 0
+        self.rightTemperatureDirection = try decoder.decodeIfPresent(CodingKeys.rightTemperatureDirection)
+        self.leftTemperatureDirection = try decoder.decodeIfPresent(CodingKeys.leftTemperatureDirection)
+        self.seatHeaterRearRight = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearRight) ?? 0
+        self.seatHeaterRearRightBack = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearRightBack) ?? 0
+        self.seatHeaterRight = try decoder.decodeIfPresent(CodingKeys.seatHeaterRight) ?? 0
+        self.seatHeaterRearLeftBack = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearLeftBack) ?? 0
+        self.smartPreconditioning = try decoder.decodeIfPresent(CodingKeys.smartPreconditioning) ?? false
+        self.maximumAvailableTemperature = try decoder.decodeIfPresent(CodingKeys.maximumAvailableTemperature) ?? 0
+        self.isAutoConditioningOn = try decoder.decodeIfPresent(CodingKeys.isAutoConditioningOn) ?? 0
+        self.isPreconditioning = try decoder.decodeIfPresent(CodingKeys.isPreconditioning) ?? 0
+        self.sideMirrorHeaters = try decoder.decodeIfPresent(CodingKeys.sideMirrorHeaters) ?? 0
+        self.batteryHeaterNoPower = try decoder.decodeIfPresent(CodingKeys.batteryHeaterNoPower) ?? 0
+        self.steeringWheelHeater = try decoder.decodeIfPresent(CodingKeys.steeringWheelHeater) ?? 0
+        self.batteryHeater = try decoder.decodeIfPresent(CodingKeys.batteryHeater) ?? 0
+        self.wiperBladeHeater = try decoder.decodeIfPresent(CodingKeys.wiperBladeHeater) ?? 0
+        self.climateKeeperMode = try decoder.decodeIfPresent(CodingKeys.climateKeeperMode) ?? false
+        self.remoteHeaterControlEnabled = try decoder.decodeIfPresent(CodingKeys.remoteHeaterControlEnabled) ?? false
+    }
 
     private enum CodingKeys: String, CodingKey {
         case driverTemperatureSetting = "driver_temp_setting"
