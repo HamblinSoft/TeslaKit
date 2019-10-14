@@ -75,7 +75,7 @@ public final class ClimateState: JSONDecodable {
     public var maximumAvailableTemperature: Double = 0
 
     ///
-    public var isAutoConditioningOn: Int = 0
+    public var isAutoConditioningOn: Bool = false
 
     ///
     public var isPreconditioning: Int = 0
@@ -127,7 +127,7 @@ public final class ClimateState: JSONDecodable {
         self.seatHeaterRearLeftBack = try decoder.decodeIfPresent(CodingKeys.seatHeaterRearLeftBack) ?? 0
         self.smartPreconditioning = try decoder.decodeIfPresent(CodingKeys.smartPreconditioning) ?? false
         self.maximumAvailableTemperature = try decoder.decodeIfPresent(CodingKeys.maximumAvailableTemperature) ?? 0
-        self.isAutoConditioningOn = try decoder.decodeIfPresent(CodingKeys.isAutoConditioningOn) ?? 0
+        self.isAutoConditioningOn = try decoder.decodeIfPresent(CodingKeys.isAutoConditioningOn) ?? false
         self.isPreconditioning = try decoder.decodeIfPresent(CodingKeys.isPreconditioning) ?? 0
         self.sideMirrorHeaters = try decoder.decodeIfPresent(CodingKeys.sideMirrorHeaters) ?? 0
         self.batteryHeaterNoPower = try decoder.decodeIfPresent(CodingKeys.batteryHeaterNoPower) ?? 0
