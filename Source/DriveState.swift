@@ -9,7 +9,7 @@
 import Foundation
 
 /// Response object containing information about the driving and position state of the vehicle
-public class DriveState: JSONDecodable {
+public final class DriveState: JSONDecodable {
 
     ///
     public var shiftState: ShiftState = ShiftState.park
@@ -65,6 +65,22 @@ public class DriveState: JSONDecodable {
 
     ///
     public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.shiftState = try decoder.decodeIfPresent(CodingKeys.shiftState) ?? .park
+        self.speed = try decoder.decodeIfPresent(CodingKeys.speed) ?? 0
+        self.longitude = try decoder.decodeIfPresent(CodingKeys.longitude) ?? 0
+        self.gpsAsOf = try decoder.decodeIfPresent(CodingKeys.gpsAsOf) ?? 0
+        self.power = try decoder.decodeIfPresent(CodingKeys.power) ?? 0
+        self.latitude = try decoder.decodeIfPresent(CodingKeys.latitude) ?? 0
+        self.headingValue = try decoder.decodeIfPresent(CodingKeys.headingValue) ?? 0
+        self.timestamp = try decoder.decodeIfPresent(CodingKeys.timestamp) ?? 0
+        self.nativeLocationSupported = try decoder.decodeIfPresent(CodingKeys.nativeLocationSupported) ?? 0
+        self.nativeType = try decoder.decodeIfPresent(CodingKeys.nativeType)
+        self.nativeLongitude = try decoder.decodeIfPresent(CodingKeys.nativeLongitude)
+        self.nativeLatitude = try decoder.decodeIfPresent(CodingKeys.nativeLatitude)
+    }
 
     private enum CodingKeys: String, CodingKey {
         case gpsAsOf = "gps_as_of"
