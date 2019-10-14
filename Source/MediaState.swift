@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public class MediaState: JSONDecodable {
+public final class MediaState: JSONDecodable {
 
     ///
     public var remoteControlEnabled: Bool = false
@@ -20,6 +20,11 @@ public class MediaState: JSONDecodable {
     ///
     public init(remoteControlEnabled: Bool) {
         self.remoteControlEnabled = remoteControlEnabled
+    }
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.remoteControlEnabled = try decoder.decodeIfPresent(CodingKeys.remoteControlEnabled) ?? false
     }
 
     private enum CodingKeys: String, CodingKey {
