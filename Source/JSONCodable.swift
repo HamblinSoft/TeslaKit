@@ -45,7 +45,7 @@ extension JSONEncodable {
 extension JSONDecoder {
 
     ///
-    public func decode<T: JSONCodable>(_ data: Data) -> T? {
+    public func decode<T: JSONDecodable>(_ data: Data) -> T? {
         return try? decode(T.self, from: data)
     }
 }
