@@ -404,6 +404,8 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
                 return try? encoder.encode(options)
             case .sentryMode(let options):
                 return try? encoder.encode(options)
+            case .windowControl(let options):
+                return try? encoder.encode(options)
             }
         }()
 

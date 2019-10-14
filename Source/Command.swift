@@ -150,6 +150,12 @@ public enum Command: CustomStringConvertible {
     ///
     case sentryMode(SentryModeOptions)
 
+    case windowControl(WindowControlOptions)
+
+    public static let windowControlVent = Command.windowControl(WindowControlOptions(command: .vent))
+
+    public static let windowControlClose = Command.windowControl(WindowControlOptions(command: .close))
+
     public var rawValue: String {
         switch self {
         case .setValetMode: return "set_valet_mode"
@@ -193,6 +199,7 @@ public enum Command: CustomStringConvertible {
         case .remoteSeatHeater: return "remote_seat_heater_request"
         case .remoteSteeringWheelHeater: return "remote_steering_wheel_heater_request"
         case .sentryMode: return "set_sentry_mode"
+        case .windowControl: return "window_control"
         }
     }
 

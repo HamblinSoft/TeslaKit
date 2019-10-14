@@ -150,6 +150,21 @@ public final class VehicleState: JSONDecodable {
     public var remoteStartEnabled: Bool = false
 
     ///
+    public var sentryModeAvailable: Bool = false
+
+    ///
+    public var fdWindow: Int = 0
+
+    ///
+    public var fpWindow: Int = 0
+
+    ///
+    public var rdWindow: Int = 0
+
+    ///
+    public var rpWindow: Int = 0
+
+    ///
     public init() {}
 
     ///
@@ -200,6 +215,11 @@ public final class VehicleState: JSONDecodable {
         self.mediaState = try decoder.decodeIfPresent(CodingKeys.mediaState) ?? MediaState()
         self.autoParkStateV3 = try decoder.decodeIfPresent(CodingKeys.autoParkStateV3) ?? ""
         self.remoteStartEnabled = try decoder.decodeIfPresent(CodingKeys.remoteStartEnabled) ?? false
+        self.sentryModeAvailable = try decoder.decodeIfPresent(CodingKeys.sentryModeAvailable) ?? false
+        self.fdWindow = try decoder.decodeIfPresent(CodingKeys.fdWindow) ?? 0
+        self.fpWindow = try decoder.decodeIfPresent(CodingKeys.fpWindow) ?? 0
+        self.rdWindow = try decoder.decodeIfPresent(CodingKeys.rdWindow) ?? 0
+        self.rpWindow = try decoder.decodeIfPresent(CodingKeys.rpWindow) ?? 0
     }
 
     ///
@@ -219,6 +239,9 @@ public final class VehicleState: JSONDecodable {
 
     ///
     public var isPassengerRearDoorOpen: Bool { return passengerRearDoorState != 0 }
+
+    ///
+    public var isWindowOpen: Bool { return [fdWindow, fpWindow, rdWindow, rpWindow].contains(1) }
 
     private enum CodingKeys: String, CodingKey {
         case apiVersion = "api_version"
@@ -267,6 +290,11 @@ public final class VehicleState: JSONDecodable {
         case sentryMode = "sentry_mode"
         case autoParkStateV3 = "autopark_state_v3"
         case remoteStartEnabled = "remote_start_enabled"
+        case sentryModeAvailable = "sentry_mode_available"
+        case fdWindow = "fd_window"
+        case fpWindow = "fp_window"
+        case rdWindow = "rd_window"
+        case rpWindow = "rp_window"
     }
 }
 

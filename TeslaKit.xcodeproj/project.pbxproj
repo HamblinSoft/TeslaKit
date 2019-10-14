@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A01BD4043B74CBEA1DFF847 /* Pods_TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA53F5C39BED55993B9DF9AF /* Pods_TeslaKit.framework */; };
 		3726158C215072CE00BD596C /* VehicleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726158B215072CE00BD596C /* VehicleListViewController.swift */; };
+		37368FA62354F040002352E7 /* WindowControlOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37368FA52354F040002352E7 /* WindowControlOptions.swift */; };
 		3741E44D229E1B3B00697CF0 /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41B229E1B3900697CF0 /* ChargeState.swift */; };
 		3741E44E229E1B3B00697CF0 /* RefreshToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41C229E1B3900697CF0 /* RefreshToken.swift */; };
 		3741E44F229E1B3B00697CF0 /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741E41D229E1B3900697CF0 /* VehicleState.swift */; };
@@ -109,6 +110,7 @@
 		0628BFB0F9F19857B23057A6 /* Pods-TeslaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeslaKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeslaKit/Pods-TeslaKit.release.xcconfig"; sourceTree = "<group>"; };
 		28DC6ABEB1D21347C7648B2E /* Pods_VehicleMonitorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VehicleMonitorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3726158B215072CE00BD596C /* VehicleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleListViewController.swift; sourceTree = "<group>"; };
+		37368FA52354F040002352E7 /* WindowControlOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowControlOptions.swift; sourceTree = "<group>"; };
 		3741E41B229E1B3900697CF0 /* ChargeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeState.swift; sourceTree = "<group>"; };
 		3741E41C229E1B3900697CF0 /* RefreshToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshToken.swift; sourceTree = "<group>"; };
 		3741E41D229E1B3900697CF0 /* VehicleState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleState.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				3741E41D229E1B3900697CF0 /* VehicleState.swift */,
 				3741E432229E1B3A00697CF0 /* VIN.swift */,
 				3741E428229E1B3900697CF0 /* VINComponent.swift */,
+				37368FA52354F040002352E7 /* WindowControlOptions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -415,6 +418,8 @@
 			dependencies = (
 			);
 			name = TeslaKit;
+			packageProductDependencies = (
+			);
 			productName = TeslaKit;
 			productReference = 375D885B200ECEE000CD9D1E /* TeslaKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -498,6 +503,8 @@
 				Base,
 			);
 			mainGroup = 375D8851200ECEE000CD9D1E;
+			packageReferences = (
+			);
 			productRefGroup = 375D885C200ECEE000CD9D1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -690,6 +697,7 @@
 				3741E456229E1B3B00697CF0 /* GUISettings.swift in Sources */,
 				3741E470229E1B3B00697CF0 /* MovePanoRoofOptions.swift in Sources */,
 				3741E47D229E1B3B00697CF0 /* ClimateState.swift in Sources */,
+				37368FA62354F040002352E7 /* WindowControlOptions.swift in Sources */,
 				3741E450229E1B3B00697CF0 /* RemoteStartOptions.swift in Sources */,
 				3741E45E229E1B3B00697CF0 /* JSONCodable.swift in Sources */,
 				3741E464229E1B3B00697CF0 /* VIN.swift in Sources */,

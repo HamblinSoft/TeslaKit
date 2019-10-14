@@ -41,6 +41,7 @@
 		2B152C171DBBB130247418E7A2ACE2F4 /* OpenTrunkOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B08A034250CDB9D05967ED987E1702 /* OpenTrunkOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2FB5FD5E6C8437E7D5EBDBBA977E1C21 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED459B8FC40A9FE0345D3B1D9D1BD328 /* HTTPResponse.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3041F545A351D7F3F8A64448786ABF8E /* DriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4421EBC72F8DEA586EB2D8EE43B8A32C /* DriveState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		37368FA82354F14F002352E7 /* WindowControlOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37368FA72354F14F002352E7 /* WindowControlOptions.swift */; };
 		3A41EE52BB04F30DA8E2BD76BB5735E6 /* RangeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16FE045EA1957C1BBEFE3D7A4976099 /* RangeDisplay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3FB021B26F0C69C02F945D717C70338A /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39B63AE2CA1D1C19C1663104F2A9140 /* Temperature.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		43DA2C9222F21F5DC50230B7FAF74925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -173,6 +174,7 @@
 		369330B9A9FF7F26FEA35442C99A4D3C /* Pods_TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		370EA20C1D9D4E495D0A394332B0A687 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
 		371EAC831E9EF048F7D544D22D660D56 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
+		37368FA72354F14F002352E7 /* WindowControlOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowControlOptions.swift; path = Source/WindowControlOptions.swift; sourceTree = "<group>"; };
 		37EFE15A02B4ADE563612B45AC3074E3 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		382F553D1D6FF6CF295EA196E8E35D28 /* DriveState.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = DriveState.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/Classes/DriveState.html; sourceTree = "<group>"; };
 		38B97600C39FEA0C0DF81966569965A7 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/TeslaKit.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 		2A6BAEF87F2879F38D99B206115CDE4D /* TeslaKit */ = {
 			isa = PBXGroup;
 			children = (
+				37368FA72354F14F002352E7 /* WindowControlOptions.swift */,
 				9CBE1BCDABDBE1CCA49F951ECB2AF2AE /* AccessToken.swift */,
 				C8E7556640B05CDD3C08E687F16018F1 /* ChargePortLatchState.swift */,
 				34E97E9120184C2ECD3BFACAC4F83268 /* ChargeState.swift */,
@@ -1005,6 +1008,7 @@
 				59DD648F722CE672B6A3C969B3471527 /* SetTemperatureOptions.swift in Sources */,
 				D99D2BBF4413720F35C16AD3DC80A224 /* SetValetModeOptions.swift in Sources */,
 				76618764FBA053AC869E3C6A32E1F1B2 /* ShiftState.swift in Sources */,
+				37368FA82354F14F002352E7 /* WindowControlOptions.swift in Sources */,
 				90CB158198BBAD7CE3FF950E48AC7728 /* SoftwareUpdate.swift in Sources */,
 				F42B272FC2E50077687483F660187B0A /* SpeedLimitMode.swift in Sources */,
 				3FB021B26F0C69C02F945D717C70338A /* Temperature.swift in Sources */,
