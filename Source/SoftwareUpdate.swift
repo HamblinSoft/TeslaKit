@@ -9,7 +9,7 @@
 import Foundation
 
 ///
-public class SoftwareUpdate: JSONDecodable {
+public final class SoftwareUpdate: JSONDecodable {
 
     ///
     public enum Status: String, CustomStringConvertible, Decodable {
@@ -52,6 +52,9 @@ public class SoftwareUpdate: JSONDecodable {
     public var warningTimeRemaining: Double?
 
     ///
+    public init() {}
+
+    ///
     public init(status: Status, expectedDuration: TimeInterval?, scheduledTime: Double?, warningTimeRemaining: Double?) {
         self.status = status
         self.expectedDuration = expectedDuration
@@ -60,7 +63,12 @@ public class SoftwareUpdate: JSONDecodable {
     }
 
     ///
-    public init() {}
+    public init(from decoder: Decoder) throws {
+        self.status = try decoder.decodeIfPresent(CodingKeys.status) ?? .noUpdate
+        self.expectedDuration = try decoder.decodeIfPresent(CodingKeys.expectedDuration)
+        self.scheduledTime = try decoder.decodeIfPresent(CodingKeys.scheduledTime)
+        self.warningTimeRemaining = try decoder.decodeIfPresent(CodingKeys.warningTimeRemaining)
+    }
 
     private enum CodingKeys: String, CodingKey {
         case status = "status"
