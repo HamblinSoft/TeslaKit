@@ -110,7 +110,7 @@ class VehicleTests: TKTestCase {
     "backseat_token" : null,
     "user_id" : 1,
     "color" : null,
-    "id_s" : "",
+    "id_s" : "abc123",
     "vehicle_state" : {
       "software_update" : {
         "status" : "",
@@ -265,7 +265,9 @@ class VehicleTests: TKTestCase {
 """
 
         do {
-            let data = try JSONDecoder().decode(VehicleData.self, from: jsonString.data(using: .utf8)!)
+            let vehicleData = try JSONDecoder().decode(VehicleData.self, from: jsonString.data(using: .utf8)!)
+            XCTAssertNotNil(vehicleData.id)
+            XCTAssertFalse(vehicleData.id.isEmpty)
         } catch {
             print(error)
             XCTFail(error.localizedDescription)

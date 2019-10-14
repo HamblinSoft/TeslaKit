@@ -147,6 +147,17 @@ public class VehicleData: Vehicle {
         try super.init(from: decoder)
         let responseContainer = try decoder.container(keyedBy: CodingKeys.self)
         let container = try responseContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)
+        id = try container.decodeIfPresent(String.self, forKey: .id) ?? ""
+        state = try container.decodeIfPresent(Vehicle.State.self, forKey: .state) ?? .offline
+        backseatToken = try container.decodeIfPresent(String.self, forKey: .backseatToken)
+        inService = try container.decodeIfPresent(Bool.self, forKey: .inService) ?? false
+        apiVersion = try container.decodeIfPresent(Int.self, forKey: .apiVersion) ?? 0
+        color = try container.decodeIfPresent(String.self, forKey: .color)
+        displayName = try container.decodeIfPresent(String.self, forKey: .displayName)
+        tokens = try container.decodeIfPresent([String].self, forKey: .tokens) ?? []
+        backseatTokenUpdatedAt = try container.decodeIfPresent(TimeInterval.self, forKey: .backseatTokenUpdatedAt)
+        calendarEnabled = try container.decodeIfPresent(Bool.self, forKey: .calendarEnabled) ?? false
+        optionCodes = try container.decodeIfPresent(String.self, forKey: .optionCodes)?.components(separatedBy: ",") ?? []
         chargeState = try container.decodeIfPresent(ChargeState.self, forKey: .chargeState) ?? ChargeState()
         climateState = try container.decodeIfPresent(ClimateState.self, forKey: .climateState) ?? ClimateState()
         guiSettings = try container.decodeIfPresent(GUISettings.self, forKey: .guiSettings) ?? GUISettings()
@@ -156,6 +167,18 @@ public class VehicleData: Vehicle {
     }
 
     private enum CodingKeys: String, CodingKey {
+        case id = "id_s"
+        case state = "state"
+        case backseatToken = "backseat_token"
+        case inService = "in_service"
+        case vin = "vin"
+        case apiVersion = "api_version"
+        case color = "color"
+        case displayName = "display_name"
+        case tokens = "tokens"
+        case backseatTokenUpdatedAt = "backseat_token_updated_at"
+        case calendarEnabled = "calendar_enabled"
+        case optionCodes = "option_codes"
         case response = "response"
         case chargeState = "charge_state"
         case climateState = "climate_state"
