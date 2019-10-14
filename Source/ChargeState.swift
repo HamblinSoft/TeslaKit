@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import Codextended
 
 /// Response object containing information about the charge state of the vehicle
-public class ChargeState: JSONDecodable {
+public final class ChargeState: JSONDecodable {
 
     ///
     public var chargingStatus: ChargingStatus = ChargingStatus.stopped
@@ -99,7 +100,7 @@ public class ChargeState: JSONDecodable {
     public var maxRangeChargeCounter: Int = 0
 
     /// The start time of the scheduled charging
-    public var scheduledChargingStartTime: Date? = nil
+    public var scheduledChargingStartTime: TimeInterval? = nil
 
     ///
     public var chargerPower: Int = 0
@@ -137,6 +138,56 @@ public class ChargeState: JSONDecodable {
     ///
     public var chargePortColdWeatherMode: Bool = false
 
+    ///
+    public init() {}
+
+    ///
+    public init(from decoder: Decoder) throws {
+        self.chargingStatus = try decoder.decodeIfPresent(CodingKeys.chargingStatus) ?? .stopped
+        self.chargeToMaxRange = try decoder.decodeIfPresent(CodingKeys.chargeToMaxRange) ?? false
+        self.fastChargerPresent = try decoder.decodeIfPresent(CodingKeys.fastChargerPresent) ?? false
+        self.batteryRange = try decoder.decodeIfPresent(CodingKeys.batteryRange) ?? 0
+        self.estBatteryRange = try decoder.decodeIfPresent(CodingKeys.estBatteryRange) ?? 0
+        self.idealBatteryRange = try decoder.decodeIfPresent(CodingKeys.idealBatteryRange) ?? 0
+        self.batteryLevel = try decoder.decodeIfPresent(CodingKeys.batteryLevel) ?? 0
+        self.timeToFullCharge = try decoder.decodeIfPresent(CodingKeys.timeToFullCharge) ?? 0
+        self.chargePortDoorOpen = try decoder.decodeIfPresent(CodingKeys.chargePortDoorOpen) ?? false
+        self.fastChargerType = try decoder.decodeIfPresent(CodingKeys.fastChargerType)
+        self.userChargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.userChargeEnableRequest) ?? 0
+        self.chargeEnergyAdded = try decoder.decodeIfPresent(CodingKeys.chargeEnergyAdded) ?? 0
+        self.chargeCurrentRequestMax = try decoder.decodeIfPresent(CodingKeys.chargeCurrentRequestMax) ?? 0
+        self.chargerPhases = try decoder.decodeIfPresent(CodingKeys.chargerPhases)
+        self.batteryHeaterOn = try decoder.decodeIfPresent(CodingKeys.batteryHeaterOn) ?? false
+        self.tripCharging = try decoder.decodeIfPresent(CodingKeys.tripCharging) ?? false
+        self.chargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.chargeEnableRequest) ?? false
+        self.chargeLimitSocStd = try decoder.decodeIfPresent(CodingKeys.chargeLimitSocStd) ?? 0
+        self.chargerActualCurrent = try decoder.decodeIfPresent(CodingKeys.chargerActualCurrent) ?? 0
+        self.chargePortLatch = try decoder.decodeIfPresent(CodingKeys.chargePortLatch) ?? .unknown
+        self.chargeCurrentRequest = try decoder.decodeIfPresent(CodingKeys.chargeCurrentRequest) ?? 0
+        self.chargerVoltage = try decoder.decodeIfPresent(CodingKeys.chargerVoltage) ?? 0
+        self.managedChargingActive = try decoder.decodeIfPresent(CodingKeys.managedChargingActive) ?? false
+        self.chargerPilotCurrent = try decoder.decodeIfPresent(CodingKeys.chargerPilotCurrent) ?? 0
+        self.chargeRate = try decoder.decodeIfPresent(CodingKeys.chargeRate) ?? 0
+        self.chargeLimitSocMax = try decoder.decodeIfPresent(CodingKeys.chargeLimitSocMax) ?? 0
+        self.chargeLimitSocMin = try decoder.decodeIfPresent(CodingKeys.chargeLimitSocMin) ?? 0
+        self.usableBatteryLevel = try decoder.decodeIfPresent(CodingKeys.usableBatteryLevel) ?? 0
+        self.maxRangeChargeCounter = try decoder.decodeIfPresent(CodingKeys.maxRangeChargeCounter) ?? 0
+        self.scheduledChargingStartTime = try decoder.decodeIfPresent(CodingKeys.scheduledChargingStartTime)
+        self.chargerPower = try decoder.decodeIfPresent(CodingKeys.chargerPower) ?? 0
+        self.scheduledChargingPending = try decoder.decodeIfPresent(CodingKeys.scheduledChargingPending) ?? false
+        self.notEnoughPowerToHeat = try decoder.decodeIfPresent(CodingKeys.notEnoughPowerToHeat)
+        self.managedChargingStartTime = try decoder.decodeIfPresent(CodingKeys.managedChargingStartTime)
+        self.chargeMilesAddedRated = try decoder.decodeIfPresent(CodingKeys.chargeMilesAddedRated) ?? 0
+        self.chargeMilesAddedIdeal = try decoder.decodeIfPresent(CodingKeys.chargeMilesAddedIdeal) ?? 0
+        self.managedChargingUserCanceled = try decoder.decodeIfPresent(CodingKeys.managedChargingUserCanceled) ?? false
+        self.chargeLimitSoc = try decoder.decodeIfPresent(CodingKeys.chargeLimitSoc) ?? 0
+        self.timeStamp = try decoder.decodeIfPresent(CodingKeys.timeStamp) ?? 0
+        self.fastChargerBrand = try decoder.decodeIfPresent(CodingKeys.fastChargerBrand)
+        self.connChargeCable = try decoder.decodeIfPresent(CodingKeys.connChargeCable)
+        self.chargePortColdWeatherMode = try decoder.decodeIfPresent(CodingKeys.chargePortColdWeatherMode) ?? false
+
+    }
+
     /// Returns whether the vehicle is connected to a charger or not
     public var isChargerConnected: Bool { return chargingStatus != .disconnected }
 
@@ -145,9 +196,6 @@ public class ChargeState: JSONDecodable {
 
     /// Returns whether the vehicle is charging or will begin charging
     public var isCharging: Bool { return chargingStatus == .starting || chargingStatus == .charging }
-
-    ///
-    public init() {}
 
     private enum CodingKeys: String, CodingKey {
         case batteryHeaterOn = "battery_heater_on"
@@ -239,4 +287,3 @@ public class ChargeState: JSONDecodable {
 //    "eu_vehicle" : false,
 //    "charging_state" : "Disconnected"
 //}
-
