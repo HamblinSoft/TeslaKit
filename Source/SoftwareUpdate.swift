@@ -52,10 +52,10 @@ public final class SoftwareUpdate: JSONDecodable {
     public var warningTimeRemaining: Double?
 
     ///
-    public var installPercent: Double?
+    public var installPercent: Int?
 
     ///
-    public var downloadPercent: Double?
+    public var downloadPercent: Int?
 
     ///
     public var version: String?
@@ -64,7 +64,7 @@ public final class SoftwareUpdate: JSONDecodable {
     public init() {}
 
     ///
-    public init(status: Status, expectedDuration: TimeInterval?, scheduledTime: Double?, warningTimeRemaining: Double?, installPercent: Double?, downloadPercent: Double?, version: String?) {
+    public init(status: Status, expectedDuration: TimeInterval?, scheduledTime: Double?, warningTimeRemaining: Double?, installPercent: Int?, downloadPercent: Int?, version: String?) {
         self.status = status
         self.expectedDuration = expectedDuration
         self.scheduledTime = scheduledTime
