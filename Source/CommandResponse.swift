@@ -9,7 +9,7 @@
 import Foundation
 
 /// The vehicle command response object indicating whether the command was issued successfully
-public class CommandResponse: JSONDecodable {
+public final class CommandResponse: JSONDecodable {
 
     /// Commmand result
     public let result: Bool
@@ -36,10 +36,28 @@ public class CommandResponse: JSONDecodable {
         self.errorDescription = reason
     }
 
+    public init(from decoder: Decoder) throws {
+        let responseContainer = try decoder.container(keyedBy: CodingKeys.self)
+        self.error = try responseContainer.decodeIfPresent(String.self, forKey: .error)
+        self.errorDescription = try responseContainer.decodeIfPresent(String.self, forKey: .errorDescription)
+
+        let container = try responseContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)
+        self.result = try container.decodeIfPresent(Bool.self, forKey: .result) ?? false
+        self.reason = try container.decodeIfPresent(String.self, forKey: .reason) ?? ""
+    }
+
     private enum CodingKeys: String, CodingKey {
-        case result = "response.result"
-        case reason = "response.reason"
+        case response = "response"
+        case result = "result"
+        case reason = "reason"
         case error = "error"
         case errorDescription = "error_description"
     }
 }
+
+//{
+//  "response" : {
+//    "result" : true,
+//    "reason" : ""
+//  }
+//}
