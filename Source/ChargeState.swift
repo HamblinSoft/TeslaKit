@@ -138,6 +138,9 @@ public final class ChargeState: JSONDecodable {
     public var chargePortColdWeatherMode: Bool = false
 
     ///
+    public var minutesToFullCharge: Int = 0
+
+    ///
     public init() {}
 
     ///
@@ -184,7 +187,7 @@ public final class ChargeState: JSONDecodable {
         self.fastChargerBrand = try decoder.decodeIfPresent(CodingKeys.fastChargerBrand)
         self.connChargeCable = try decoder.decodeIfPresent(CodingKeys.connChargeCable)
         self.chargePortColdWeatherMode = try decoder.decodeIfPresent(CodingKeys.chargePortColdWeatherMode) ?? false
-
+        self.minutesToFullCharge = try decoder.decodeIfPresent(CodingKeys.minutesToFullCharge) ?? 0
     }
 
     /// Returns whether the vehicle is connected to a charger or not
@@ -239,6 +242,7 @@ public final class ChargeState: JSONDecodable {
         case fastChargerBrand = "fast_charger_brand"
         case connChargeCable = "conn_charge_cable"
         case chargePortColdWeatherMode = "charge_port_cold_weather_mode"
+        case minutesToFullCharge = "minutes_to_full_charge"
     }
 }
 
