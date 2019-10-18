@@ -42,7 +42,7 @@ public final class ChargeState: JSONDecodable {
     public var fastChargerType: String? = nil
     
     ///
-    public var userChargeEnableRequest: Int = 0
+    public var userChargeEnableRequest: Bool = false
 
     /// The amount of kH added
     public var chargeEnergyAdded: Double = 0
@@ -155,7 +155,7 @@ public final class ChargeState: JSONDecodable {
         self.timeToFullCharge = try decoder.decodeIfPresent(CodingKeys.timeToFullCharge) ?? 0
         self.chargePortDoorOpen = try decoder.decodeIfPresent(CodingKeys.chargePortDoorOpen) ?? false
         self.fastChargerType = try decoder.decodeIfPresent(CodingKeys.fastChargerType)
-        self.userChargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.userChargeEnableRequest) ?? 0
+        self.userChargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.userChargeEnableRequest) ?? false
         self.chargeEnergyAdded = try decoder.decodeIfPresent(CodingKeys.chargeEnergyAdded) ?? 0
         self.chargeCurrentRequestMax = try decoder.decodeIfPresent(CodingKeys.chargeCurrentRequestMax) ?? 0
         self.chargerPhases = try decoder.decodeIfPresent(CodingKeys.chargerPhases)
