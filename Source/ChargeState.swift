@@ -84,7 +84,7 @@ public final class ChargeState: JSONDecodable {
     public var chargerPilotCurrent: Int = 0
     
     ///
-    public var chargeRate: Int = 0
+    public var chargeRate: Double = 0
     
     ///
     public var chargeLimitSocMax: Int = 0

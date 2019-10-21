@@ -116,7 +116,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
             do {
                 let object: T? = try decodeData(data: data)
                 completion(HTTPResponse(httpResponse: response, data: object, rawData: data, error: error))
-            } catch let error {
+            } catch {
                 completion(HTTPResponse(httpResponse: response, data: nil, rawData: data, error: error))
             }
         }
