@@ -81,6 +81,9 @@ public final class VehicleConfig: JSONDecodable {
     public var keyVersion: Int = 0
 
     ///
+    public var canAccessNavigationRequests: Bool = false
+
+    ///
     public init() {}
 
     ///
@@ -108,6 +111,7 @@ public final class VehicleConfig: JSONDecodable {
         self.canAcceptNavigationRequests = try decoder.decodeIfPresent(CodingKeys.canAcceptNavigationRequests) ?? false
         self.hasAirSuspension = try decoder.decodeIfPresent(CodingKeys.hasAirSuspension) ?? false
         self.keyVersion = try decoder.decodeIfPresent(CodingKeys.keyVersion) ?? 0
+        self.canAccessNavigationRequests = try decoder.decodeIfPresent(CodingKeys.canAccessNavigationRequests) ?? false
     }
 
     private enum CodingKeys: String, CodingKey {
@@ -134,6 +138,7 @@ public final class VehicleConfig: JSONDecodable {
         case canAcceptNavigationRequests = "can_accept_navigation_requests"
         case hasAirSuspension = "has_air_suspension"
         case keyVersion = "key_version"
+        case canAccessNavigationRequests = "can_accept_navigation_requests"
     }
 }
 
