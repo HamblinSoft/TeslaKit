@@ -42,7 +42,7 @@ public final class ChargeState: JSONDecodable {
     public var fastChargerType: String? = nil
     
     ///
-    public var userChargeEnableRequest: Int = 0
+    public var userChargeEnableRequest: Bool = false
 
     /// The amount of kH added
     public var chargeEnergyAdded: Double = 0
@@ -138,6 +138,9 @@ public final class ChargeState: JSONDecodable {
     public var chargePortColdWeatherMode: Bool = false
 
     ///
+    public var minutesToFullCharge: Int = 0
+
+    ///
     public init() {}
 
     ///
@@ -152,7 +155,7 @@ public final class ChargeState: JSONDecodable {
         self.timeToFullCharge = try decoder.decodeIfPresent(CodingKeys.timeToFullCharge) ?? 0
         self.chargePortDoorOpen = try decoder.decodeIfPresent(CodingKeys.chargePortDoorOpen) ?? false
         self.fastChargerType = try decoder.decodeIfPresent(CodingKeys.fastChargerType)
-        self.userChargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.userChargeEnableRequest) ?? 0
+        self.userChargeEnableRequest = try decoder.decodeIfPresent(CodingKeys.userChargeEnableRequest) ?? false
         self.chargeEnergyAdded = try decoder.decodeIfPresent(CodingKeys.chargeEnergyAdded) ?? 0
         self.chargeCurrentRequestMax = try decoder.decodeIfPresent(CodingKeys.chargeCurrentRequestMax) ?? 0
         self.chargerPhases = try decoder.decodeIfPresent(CodingKeys.chargerPhases)
@@ -184,7 +187,7 @@ public final class ChargeState: JSONDecodable {
         self.fastChargerBrand = try decoder.decodeIfPresent(CodingKeys.fastChargerBrand)
         self.connChargeCable = try decoder.decodeIfPresent(CodingKeys.connChargeCable)
         self.chargePortColdWeatherMode = try decoder.decodeIfPresent(CodingKeys.chargePortColdWeatherMode) ?? false
-
+        self.minutesToFullCharge = try decoder.decodeIfPresent(CodingKeys.minutesToFullCharge) ?? 0
     }
 
     /// Returns whether the vehicle is connected to a charger or not
@@ -239,6 +242,7 @@ public final class ChargeState: JSONDecodable {
         case fastChargerBrand = "fast_charger_brand"
         case connChargeCable = "conn_charge_cable"
         case chargePortColdWeatherMode = "charge_port_cold_weather_mode"
+        case minutesToFullCharge = "minutes_to_full_charge"
     }
 }
 
