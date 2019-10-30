@@ -519,9 +519,13 @@ public class WakeResponse: JSONDecodable, Equatable {
     public var state: TeslaKit.Vehicle.State = .offline
 
     ///
-    public init(id: String, state: TeslaKit.Vehicle.State) {
+    public var inService: Bool = false
+
+    ///
+    public init(id: String, state: TeslaKit.Vehicle.State, inService: Bool) {
         self.id = id
         self.state = state
+        self.inService = inService
     }
 
     ///
@@ -530,11 +534,13 @@ public class WakeResponse: JSONDecodable, Equatable {
         let container = try responseContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .response)
         id = try container.decodeIfPresent(String.self, forKey: .id) ?? ""
         state = try container.decodeIfPresent(Vehicle.State.self, forKey: .state) ?? .offline
+        inService = try container.decodeIfPresent(Bool.self, forKey: .inService) ?? false
     }
 
     private enum CodingKeys: String, CodingKey {
         case response = "response"
         case id = "id_s"
         case state = "state"
+        case inService = "in_service"
     }
 }
