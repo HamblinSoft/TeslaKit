@@ -142,7 +142,11 @@ public struct VINComponent {
     }
 
     ///
-    public enum ModelYear: String, CaseIterable {
+    public enum ModelYear: String, CaseIterable, Equatable, Comparable {
+
+        public static func < (lhs: VINComponent.ModelYear, rhs: VINComponent.ModelYear) -> Bool {
+            return Int(lhs.description) ?? 0 < Int(rhs.description) ?? 0
+        }
 
         ///
         case unknown = ""

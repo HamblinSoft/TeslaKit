@@ -145,7 +145,7 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
 
     // MARK: - Window Control
 
-    /// 
+    ///
     case windowControl = "window_control"
 
     ///

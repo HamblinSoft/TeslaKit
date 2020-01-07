@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 ///
-public struct SentryMode: ImmutableMappable {
+public struct SentryMode: TKMappable {
 
     ///
     public let isOn: Bool
