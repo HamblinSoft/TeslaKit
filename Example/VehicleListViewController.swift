@@ -58,10 +58,8 @@ class VehicleListViewController: UITableViewController {
 
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Sentry Mode On", style: .default, handler: { _ in
-
-            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: true)) { response in
-
+        actionSheet.addAction(UIAlertAction(title: "Close Windows", style: .default, handler: { _ in
+            teslaAPI.send(.windowControl, to: vehicle, parameters: WindowControlRequest(command: .close)) { response in
                 if response.result {
                     self.getData(vehicle: vehicle)
                 }
@@ -72,10 +70,8 @@ class VehicleListViewController: UITableViewController {
             }
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Sentry Mode Off", style: .default, handler: { _ in
-
-            teslaAPI.send(.sentryMode, to: vehicle, parameters: SentryMode(isOn: false)) { response in
-
+        actionSheet.addAction(UIAlertAction(title: "Vent Windows", style: .default, handler: { _ in
+            teslaAPI.send(.windowControl, to: vehicle, parameters: WindowControlRequest(command: .vent)) { response in
                 if response.result {
                     self.getData(vehicle: vehicle)
                 }

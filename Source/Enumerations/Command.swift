@@ -143,6 +143,11 @@ public enum Command: String, CaseIterable, CustomStringConvertible {
     ///
     case sentryMode = "set_sentry_mode"
 
+    // MARK: - Window Control
+
+    /// 
+    case windowControl = "window_control"
+
     ///
     public var description: String {
         return self.rawValue.replacingOccurrences(of: "_", with: " ").capitalized

@@ -69,6 +69,7 @@
 		37FB3F362026534600409472 /* TKTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F352026534600409472 /* TKTestCase.swift */; };
 		37FB3F3E2026553A00409472 /* VINTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F3D2026553A00409472 /* VINTests.swift */; };
 		46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */; };
+		550BF72D23C43C5D00E85F8F /* WindowControlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF72C23C43C5D00E85F8F /* WindowControlRequest.swift */; };
 		55783557207D942600485D68 /* TestAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783556207D942600485D68 /* TestAccount.swift */; };
 		5578355B207D954C00485D68 /* ExpectationWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355A207D954C00485D68 /* ExpectationWait.swift */; };
 		5578355D207D95C600485D68 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355C207D95C600485D68 /* AuthTests.swift */; };
@@ -177,6 +178,7 @@
 		37FB3F69202668E000409472 /* VehicleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleConfig.swift; sourceTree = "<group>"; };
 		498F421CA069E199228DA2FB /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550BF72C23C43C5D00E85F8F /* WindowControlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowControlRequest.swift; sourceTree = "<group>"; };
 		55783556207D942600485D68 /* TestAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAccount.swift; sourceTree = "<group>"; };
 		5578355A207D954C00485D68 /* ExpectationWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationWait.swift; sourceTree = "<group>"; };
 		5578355C207D95C600485D68 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				375D8884200ECF2C00CD9D1E /* VIN.swift */,
 				375D888B200ECF2C00CD9D1E /* VINComponent.swift */,
 				375D888D200ECF2C00CD9D1E /* VINTransform.swift */,
+				550BF72C23C43C5D00E85F8F /* WindowControlRequest.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -670,7 +673,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TeslaKit/TeslaKit.framework",
 			);
@@ -681,7 +684,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0ABF4696209CC55E0F843C8 /* [CP] Check Pods Manifest.lock */ = {
@@ -748,6 +751,7 @@
 				3796D75121D5B5CE00A936DC /* SeatHeater.swift in Sources */,
 				37857DB62150670E00229504 /* VehicleCommand.swift in Sources */,
 				37857DB72150670E00229504 /* VehicleConfig.swift in Sources */,
+				550BF72D23C43C5D00E85F8F /* WindowControlRequest.swift in Sources */,
 				37857DC82150678E00229504 /* RangeDisplay.swift in Sources */,
 				37857DC52150678E00229504 /* Error.swift in Sources */,
 				37857DB82150670E00229504 /* VehicleOption.swift in Sources */,
@@ -878,6 +882,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -932,6 +937,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -955,7 +961,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.TeslaKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -977,7 +982,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.TeslaKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -994,7 +998,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1011,7 +1014,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamblinSoft.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1027,7 +1029,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjjjaren.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
@@ -1044,7 +1045,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jjjjaren.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
