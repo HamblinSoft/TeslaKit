@@ -83,7 +83,8 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
 
     /// Initialize a new instance of TeslaAPI
     public convenience init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
-        let certificatePinner = CertificatePinner(domains: ["owner-api.teslamotors.com": true])
+        let domains: [String: Bool] = configuration.baseURL == Configuration.default.baseURL ? ["owner-api.teslamotors.com": true] : [:]
+        let certificatePinner = CertificatePinner(domains: domains)
         let session = URLSession(configuration: .default, delegate: certificatePinner, delegateQueue: nil)
         self.init(configuration: configuration,
                   session: session,
