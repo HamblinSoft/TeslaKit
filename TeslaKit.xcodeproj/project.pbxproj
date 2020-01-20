@@ -70,6 +70,9 @@
 		37FB3F3E2026553A00409472 /* VINTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FB3F3D2026553A00409472 /* VINTests.swift */; };
 		46F1938A78A5AA95B2383DB4 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */; };
 		550BF72D23C43C5D00E85F8F /* WindowControlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF72C23C43C5D00E85F8F /* WindowControlRequest.swift */; };
+		5537D2A823D625D200283BEF /* Certificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537D2A523D625D200283BEF /* Certificate.swift */; };
+		5537D2A923D625D200283BEF /* CertificatePinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5537D2A623D625D200283BEF /* CertificatePinner.swift */; };
+		5537D2AA23D625D200283BEF /* Certificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5537D2A723D625D200283BEF /* Certificate.cer */; };
 		55783557207D942600485D68 /* TestAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55783556207D942600485D68 /* TestAccount.swift */; };
 		5578355B207D954C00485D68 /* ExpectationWait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355A207D954C00485D68 /* ExpectationWait.swift */; };
 		5578355D207D95C600485D68 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5578355C207D95C600485D68 /* AuthTests.swift */; };
@@ -179,6 +182,9 @@
 		498F421CA069E199228DA2FB /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		4FEB2BF7526EBC71C3A39AB2 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		550BF72C23C43C5D00E85F8F /* WindowControlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowControlRequest.swift; sourceTree = "<group>"; };
+		5537D2A523D625D200283BEF /* Certificate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Certificate.swift; sourceTree = "<group>"; };
+		5537D2A623D625D200283BEF /* CertificatePinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CertificatePinner.swift; sourceTree = "<group>"; };
+		5537D2A723D625D200283BEF /* Certificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = Certificate.cer; sourceTree = "<group>"; };
 		55783556207D942600485D68 /* TestAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAccount.swift; sourceTree = "<group>"; };
 		5578355A207D954C00485D68 /* ExpectationWait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationWait.swift; sourceTree = "<group>"; };
 		5578355C207D95C600485D68 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
@@ -330,6 +336,9 @@
 		375D8896200ECF2C00CD9D1E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5537D2A723D625D200283BEF /* Certificate.cer */,
+				5537D2A523D625D200283BEF /* Certificate.swift */,
+				5537D2A623D625D200283BEF /* CertificatePinner.swift */,
 				375D8898200ECF2C00CD9D1E /* TeslaAPI.swift */,
 			);
 			path = Classes;
@@ -552,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5537D2AA23D625D200283BEF /* Certificate.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +736,7 @@
 				37857DCE2150678E00229504 /* Mappable.swift in Sources */,
 				37857E2021506A6F00229504 /* StringArrayTransform.swift in Sources */,
 				37857DA82150670E00229504 /* MobileAccess.swift in Sources */,
+				5537D2A823D625D200283BEF /* Certificate.swift in Sources */,
 				37857DA92150670E00229504 /* MovePanoRoof.swift in Sources */,
 				37857DAA2150670E00229504 /* OpenTrunk.swift in Sources */,
 				37857DAB2150670E00229504 /* RefreshToken.swift in Sources */,
@@ -756,6 +767,7 @@
 				37857DC52150678E00229504 /* Error.swift in Sources */,
 				37857DB82150670E00229504 /* VehicleOption.swift in Sources */,
 				37857DB92150670E00229504 /* VehicleState.swift in Sources */,
+				5537D2A923D625D200283BEF /* CertificatePinner.swift in Sources */,
 				37857DBA2150670E00229504 /* VIN.swift in Sources */,
 				37857DCB2150678E00229504 /* VehicleStatus.swift in Sources */,
 				37857DBB2150670E00229504 /* VINComponent.swift in Sources */,

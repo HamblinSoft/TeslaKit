@@ -27,6 +27,7 @@ public protocol TeslaAPIDelegate: class {
 ///
 open class TeslaAPI: NSObject, URLSessionDelegate {
 
+
     ///
     public struct Configuration {
 
@@ -82,8 +83,10 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
 
     /// Initialize a new instance of TeslaAPI
     public convenience init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
+        let certificatePinner = CertificatePinner(domains: ["owner-api.teslamotors.com": true])
+        let session = URLSession(configuration: .default, delegate: certificatePinner, delegateQueue: nil)
         self.init(configuration: configuration,
-                  session: URLSession(configuration: .default),
+                  session: session,
                   debugMode: debugMode)
     }
 
