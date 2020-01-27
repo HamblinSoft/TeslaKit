@@ -27,6 +27,13 @@ class CertificatePinner: NSObject, URLSessionDelegate {
                 return
         }
 
+        guard domains.count > 0 else {
+            completionHandler(.cancelAuthenticationChallenge, nil)
+            return
+        }
+
+
+
         for (domain, pin) in domains {
             // Check if pinning is required
             guard pin else {

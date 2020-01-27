@@ -27,24 +27,26 @@ public protocol TeslaAPIDelegate: class {
 ///
 open class TeslaAPI: NSObject, URLSessionDelegate {
 
-
     ///
     public struct Configuration {
 
         ///
-        public let baseURL: URL
+        public var baseURL: URL
 
         /// Tesla API owner api client id
-        public let clientId: String
+        public var clientId: String
 
         /// Tesla API owner api client secret
-        public let clientSecret: String
+        public var clientSecret: String
 
         ///
-        public let apiVersion: Int = 1
+        public var apiVersion: Int = 1
 
         ///
-        public let requestTimeout: TimeInterval
+        public var requestTimeout: TimeInterval
+
+        ///
+        public var pin: Bool
 
         ///
         public var apiBaseURL: URL { return self.baseURL.appendingPathComponent("api/\(self.apiVersion)") }
@@ -53,13 +55,22 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         public static let `default`: Configuration = Configuration(baseURL: URL(string: "https://owner-api.teslamotors.com")!,
                                                                    clientId: "e4a9949fcfa04068f59abb5a658f2bac0a3428e4652315490b659d5ab3f35a9e",
                                                                    clientSecret: "c75f14bbadc8bee3a7594412c31416f8300256d7668ea7e6e7f06727bfb9d220",
-                                                                   requestTimeout: 30)
+                                                                   requestTimeout: 30,
+                                                                   pin: true)
 
         ///
         public static let mock: Configuration = Configuration(baseURL: URL(string: "https://us-central1-teslaapp-dev.cloudfunctions.net/mock")!,
                                                               clientId: "",
                                                               clientSecret: "",
-                                                              requestTimeout: 10)
+                                                              requestTimeout: 10,
+                                                              pin: false)
+
+        ///
+        public static let noPinning: Configuration = {
+            var config = Configuration.default
+            config.pin = false
+            return config
+        }()
 
     }
 
@@ -80,10 +91,10 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
         "cache-control": "no-cache"
     ]
 
-
     /// Initialize a new instance of TeslaAPI
     public convenience init(configuration: Configuration = Configuration.default, debugMode: Bool = false) {
-        let domains: [String: Bool] = configuration.baseURL == Configuration.default.baseURL ? ["owner-api.teslamotors.com": true] : [:]
+        let urlString = Configuration.default.baseURL.absoluteString.replacingOccurrences(of: "https://", with: "").replacingOccurrences(of: "http://", with: "")
+        let domains: [String: Bool] = [urlString: configuration.pin]
         let certificatePinner = CertificatePinner(domains: domains)
         let session = URLSession(configuration: .default, delegate: certificatePinner, delegateQueue: nil)
         self.init(configuration: configuration,
@@ -172,7 +183,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
                                             clientId: self.configuration.clientId,
                                             clientSecret: self.configuration.clientSecret,
                                             email: email,
-                                            password: password)        
+                                            password: password)
 
         self.request(self.configuration.baseURL.appendingPathComponent("oauth/token"),
                      method: "POST",
@@ -292,7 +303,7 @@ open class TeslaAPI: NSObject, URLSessionDelegate {
 
     /// Send wake up command to vehicle
     open func wake(_ vehicleId: String, completion: @escaping (Bool, Vehicle?, String?) -> Void) {
-        
+
         let url = self.configuration.apiBaseURL.appendingPathComponent("vehicles/\(vehicleId)/wake_up")
 
         self.request(url,
