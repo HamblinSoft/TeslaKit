@@ -22,15 +22,15 @@ public protocol Mappable: ObjectMapper.Mappable {
 public extension Mappable {
 
     ///
-    public init() {
+    init() {
         self.init()
     }
 
     ///
-    public init?(map: Map) {
+    init?(map: Map) {
         self.init()
     }
 
     ///
-    public var data: Data? { return try? JSONSerialization.data(withJSONObject: self.toJSON()) }
+    var data: Data? { return try? JSONSerialization.data(withJSONObject: self.toJSON()) }
 }
