@@ -48,6 +48,9 @@ public struct VINComponent {
         case model3 = "3"
 
         ///
+        case modelY = "Y"
+
+        ///
         public var description: String {
             switch self {
             case .unknown: return "Unknown"
@@ -55,6 +58,7 @@ public struct VINComponent {
             case .modelS: return "Model S"
             case .modelX: return "Model X"
             case .model3: return "Model 3"
+            case .modelY: return "Model Y"
             }
         }
     }

@@ -12,6 +12,7 @@ import XCTest
 fileprivate let VINModelS: String = "5YJSA1E2XHF156789"
 fileprivate let VINModelX: String = "5YJXCAE45GFF00001"
 fileprivate let VINModel3: String = "5YJ3E1A34A1P01234"
+fileprivate let VINModelY: String = "5YJYE1A34A1P01234"
 fileprivate let VINRoadster: String = "5YJRE1A31A1P01234"
 
 class VINTests: XCTestCase {
@@ -32,6 +33,11 @@ class VINTests: XCTestCase {
     func testVinMakeModel3() {
         let vin = VIN(vinString: VINModel3)
         XCTAssertEqual(vin?.make, VINComponent.Make.model3)
+    }
+
+    func testVinMakeModelY() {
+        let vin = VIN(vinString: VINModelY)
+        XCTAssertEqual(vin?.make, VINComponent.Make.modelY)
     }
 
     func testVinMakeRoadster() {
